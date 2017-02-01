@@ -2,4 +2,9 @@ import Prelude     (IO)
 import Application (appMain)
 
 main :: IO ()
-main = appMain
+--ADDED
+main = do
+    man <- newManager
+    warp 3000 $ App man
+--END ADDED
+--main = appMain

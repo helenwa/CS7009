@@ -14,7 +14,8 @@ import qualified Data.Text.Encoding as TE
 -- starts running, such as database connections. Every handler will have
 -- access to the data present here.
 data App = App
-    { appSettings    :: AppSettings
+    { httpManager    :: Manager
+    , appSettings    :: AppSettings
     , appStatic      :: Static -- ^ Settings for static file serving.
     , appHttpManager :: Manager
     , appLogger      :: Logger
@@ -50,12 +51,15 @@ type Form x = Html -> MForm (HandlerT App IO) (FormResult x, Widget)
 -- Please see the documentation for the Yesod typeclass. There are a number
 -- of settings which can be configured by overriding methods here.
 instance Yesod App where
+    --ADDED
+    approot = ApprootStatic "http://localhost:3000"
+    --END ADDED
     -- Controls the base of generated URLs. For more information on modifying,
     -- see: https://github.com/yesodweb/yesod/wiki/Overriding-approot
-    approot = ApprootRequest $ \app req ->
-        case appRoot $ appSettings app of
-            Nothing -> getApprootText guessApproot app req
-            Just root -> root
+    --approot = ApprootRequest $ \app req ->
+    --    case appRoot $ appSettings app of
+    --        Nothing -> getApprootText guessApproot app req
+    --        Just root -> root
 
     -- Store session data on the client in encrypted cookies,
     -- default session idle timeout is 120 minutes

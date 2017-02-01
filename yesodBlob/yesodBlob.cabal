@@ -85,7 +85,9 @@ library
                  , time
                  , case-insensitive
                  , wai
-                 , github
+                 , yesod-auth
+--                 , yesod-auth-browserid
+                 , yesod-auth-oauth2
 
 executable         yesodBlob
     if flag(library-only)
@@ -93,7 +95,7 @@ executable         yesodBlob
 
     main-is:           main.hs
     hs-source-dirs:    app
-    build-depends:     base, yesodBlob, github
+    build-depends:     base, yesodBlob
 
     ghc-options:       -threaded -rtsopts -with-rtsopts=-N
 
@@ -151,4 +153,3 @@ test-suite test
                  , classy-prelude
                  , classy-prelude-yesod
                  , aeson
-                 , github

@@ -1,5 +1,4 @@
 {-# OPTIONS_GHC -fno-warn-orphans #-}
-{-# LANGUAGE OverloadedStrings #-}
 module Application
     ( getApplicationDev
     , appMain
@@ -33,13 +32,6 @@ import System.Log.FastLogger                (defaultBufSize, newStdoutLoggerSet,
 import Handler.Common
 import Handler.Home
 import Handler.Comment
-import Common
-import Prelude ()
-
-import Data.Maybe (fromMaybe)
-import qualified GitHub
-import qualified GitHub.Endpoints.Users as GitHub
-
 -- This line actually creates our YesodDispatch instance. It is the second half
 -- of the call to mkYesodData which occurs in Foundation.hs. Please see the
 -- comments there for more details.
@@ -135,10 +127,7 @@ appMain = do
 
     -- Run the application with Warp
     runSettings (warpSettings foundation) app
-    --AUTH ADDED
-    auth <- getAuth
-    possibleUser <- GitHub.userInfoFor' auth "mike-burns"
-    putStrLn $ either (("Error: " <>) . tshow) formatUser possibleUser
+  
 
 
 --------------------------------------------------------------
@@ -164,31 +153,3 @@ shutdownApp _ = return ()
 handler :: Handler a -> IO a
 handler h = getAppSettings >>= makeFoundation >>= flip unsafeHandler h
 
---AUTH ADDED
-formatUser :: GitHub.User -> Text
-formatUser user =
-  (formatName userName login) <> "\t" <> (fromMaybe "" company) <> "\t" <>
-    (fromMaybe "" location) <> "\n" <>
-    (fromMaybe "" blog) <> "\t" <> "<" <> (fromMaybe "" email) <> ">" <> "\n" <>
-    GitHub.getUrl htmlUrl <> "\t" <> tshow createdAt <> "\n" <>
-    "hireable: " <> formatHireable (fromMaybe False isHireable) <> "\n\n" <>
-    (fromMaybe "" bio)
-  where
-    userName = GitHub.userName user
-    login = GitHub.userLogin user
-    company = GitHub.userCompany user
-    location = GitHub.userLocation user
-    blog = GitHub.userBlog user
-    email = GitHub.userEmail user
-    htmlUrl = GitHub.userHtmlUrl user
-    createdAt = GitHub.userCreatedAt user
-    isHireable = GitHub.userHireable user
-    bio = GitHub.userBio user
-
-formatName :: Maybe Text -> GitHub.Name GitHub.User -> Text
-formatName Nothing login = GitHub.untagName login
-formatName (Just name) login = name <> "(" <> GitHub.untagName login <> ")"
-
-formatHireable :: Bool -> Text
-formatHireable True = "yes"
-formatHireable False = "no"
