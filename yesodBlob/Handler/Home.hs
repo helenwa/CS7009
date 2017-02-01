@@ -5,20 +5,6 @@ import Yesod.Form.Bootstrap3 (BootstrapFormLayout (..), renderBootstrap3)
 import Text.Julius (RawJS (..))
 
 --ADDED
-{-# LANGUAGE MultiParamTypeClasses #-}
-{-# LANGUAGE OverloadedStrings     #-}
-{-# LANGUAGE QuasiQuotes           #-}
-{-# LANGUAGE TemplateHaskell       #-}
-{-# LANGUAGE TypeFamilies          #-}
-import           Data.Default                (def)
-import           Data.Text                   (Text)
-import           Network.HTTP.Client.Conduit (Manager, newManager)
-import           Yesod
-import           Yesod.Auth
-import           Yesod.Auth.BrowserId
-import           Yesod.Auth.GoogleEmail2
-
-
 -- Replace with Google client ID.
 clientId :: Text
 clientId = "9a0d46d298b4a566b942"
@@ -47,10 +33,10 @@ instance YesodAuth App where
     loginDest _ = HomeR
     logoutDest _ = HomeR
 
-    authPlugins _ =
-        [ authBrowserId def
-        , authGoogleEmail clientId clientSecret
-        ]
+    --authPlugins _ =
+     --   [ authBrowserId def
+    --    , authGoogleEmail clientId clientSecret
+    --    ]
 
     authHttpManager = httpManager
 
@@ -60,8 +46,7 @@ instance YesodAuth App where
 
 
 --END ADDED
-	
-	
+
 -- This is a handler function for the GET request method on the HomeR
 -- resource pattern. All of your resource patterns are defined in
 -- config/routes
