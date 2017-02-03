@@ -1,0 +1,32 @@
+Configuring conduit-combinators-1.0.8.3...
+Building conduit-combinators-1.0.8.3...
+Preprocessing library conduit-combinators-1.0.8.3...
+[1 of 5] Compiling Data.Conduit.Combinators.Stream ( Data\Conduit\Combinators\Stream.hs, .stack-work\dist\2672c1f3\build\Data\Conduit\Combinators\Stream.o )
+[2 of 5] Compiling Data.Conduit.Combinators.Internal ( Data\Conduit\Combinators\Internal.hs, .stack-work\dist\2672c1f3\build\Data\Conduit\Combinators\Internal.o )
+[3 of 5] Compiling Data.Conduit.Combinators ( Data\Conduit\Combinators.hs, .stack-work\dist\2672c1f3\build\Data\Conduit\Combinators.o )
+[4 of 5] Compiling Data.Conduit.Combinators.Unqualified ( Data\Conduit\Combinators\Unqualified.hs, .stack-work\dist\2672c1f3\build\Data\Conduit\Combinators\Unqualified.o )
+
+Data\Conduit\Combinators\Unqualified.hs:193:1: Warning:
+    The import of `Prelude' is redundant
+      except perhaps to import instances from `Prelude'
+    To import instances alone, use: import Prelude()
+
+Data\Conduit\Combinators\Unqualified.hs:200:1: Warning:
+    The qualified import of `Data.Conduit.List' is redundant
+      except perhaps to import instances from `Data.Conduit.List'
+    To import instances alone, use: import Data.Conduit.List()
+
+Data\Conduit\Combinators\Unqualified.hs:202:1: Warning:
+    The import of `Data.Maybe' is redundant
+      except perhaps to import instances from `Data.Maybe'
+    To import instances alone, use: import Data.Maybe()
+
+Data\Conduit\Combinators\Unqualified.hs:212:1: Warning:
+    The qualified import of `Prelude' is redundant
+      except perhaps to import instances from `Prelude'
+    To import instances alone, use: import Prelude()
+[5 of 5] Compiling Conduit          ( Conduit.hs, .stack-work\dist\2672c1f3\build\Conduit.o )
+In-place registering conduit-combinators-1.0.8.3...
+Installing library in
+C:\sr\snapshots\390fdce8\lib\x86_64-windows-ghc-7.10.3\conduit-combinators-1.0.8.3-KatnVq3S8vUIpm0SaGxTdl
+Registering conduit-combinators-1.0.8.3...

@@ -1,0 +1,31 @@
+Configuring persistent-template-2.1.8.1...
+Building persistent-template-2.1.8.1...
+Preprocessing library persistent-template-2.1.8.1...
+
+Database\Persist\TH.hs:12:14: Warning:
+    -XOverlappingInstances is deprecated: instead use per-instance pragmas OVERLAPPING/OVERLAPPABLE/OVERLAPS
+[1 of 1] Compiling Database.Persist.TH ( Database\Persist\TH.hs, .stack-work\dist\2672c1f3\build\Database\Persist\TH.o )
+
+Database\Persist\TH.hs:66:1: Warning:
+    The import of `Data.Monoid' is redundant
+      except perhaps to import instances from `Data.Monoid'
+    To import instances alone, use: import Data.Monoid()
+
+Database\Persist\TH.hs:75:1: Warning:
+    The import of `Control.Applicative' is redundant
+      except perhaps to import instances from `Control.Applicative'
+    To import instances alone, use: import Control.Applicative()
+
+Database\Persist\TH.hs:79:1: Warning:
+    The import of `parseUrlPieceMaybe'
+    from module `Web.HttpApiData' is redundant
+
+Database\Persist\TH.hs:240:26: Warning: Defined but not used: `x'
+
+Database\Persist\TH.hs:272:22: Warning:
+    This binding for `ent' shadows the existing binding
+      bound at Database\Persist\TH.hs:252:41
+In-place registering persistent-template-2.1.8.1...
+Installing library in
+C:\sr\snapshots\390fdce8\lib\x86_64-windows-ghc-7.10.3\persistent-template-2.1.8.1-K9kpcyi1Ufi2qDiQDQlbXH
+Registering persistent-template-2.1.8.1...

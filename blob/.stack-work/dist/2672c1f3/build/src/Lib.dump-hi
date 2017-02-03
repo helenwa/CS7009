@@ -1,0 +1,111 @@
+
+==================== FINAL INTERFACE ====================
+2017-02-03 15:53:03.3008201 UTC
+
+interface blob_3Io9c1JF9Yx5KmxhulkHmf:Lib 7103
+  interface hash: 330909275f49a305081c93095d234036
+  ABI hash: 5bd29220ca29b506afec1f7b1214b180
+  export-list hash: 7993dc116fa36dec11c8bb3c0b8e284d
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 01850929f4971af4d7e012f5eb4bf8eb
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Lib.someFunc
+module dependencies:
+package dependencies: base-4.8.2.0* ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Monoid
+                         base-4.8.2.0:Data.Type.Equality base-4.8.2.0:GHC.Generics
+import  -/  base-4.8.2.0:GHC.Base a4939789b2cfd60b36ed163e56a623cd
+import  -/  base-4.8.2.0:GHC.List 0c736920522bbd14b770342776012ab6
+import  -/  base-4.8.2.0:GHC.Show 0e1d8380a8fb0cfb07ebeda3b70cbf38
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  base-4.8.2.0:System.IO 638c10c4fd4901a0aca5b77c9f14123d
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+b5d710dcf19a4b17e3e65e88519519bd
+  someFunc :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Lib.someFunc1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+9c41a6a5e12a20ff6d02013dbc95037d
+  someFunc1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Lib.someFunc9
+                        GHC.Types.True
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   Lib.someFunc2
+                   GHC.Types.True
+                   ipv }) -}
+e2b0ff640826bd775c7dc08ebb898246
+  someFunc2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   "My name's first "#
+                   Lib.someFunc3) -}
+b0f71d5624a9c3f26d44ea44b23fef0a
+  someFunc3 :: [GHC.Types.Char]
+  {- Unfolding: (case GHC.Show.$wshowSignedInt
+                        0
+                        4
+                        (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                 GHC.Base.++
+                   @ GHC.Types.Char
+                   (GHC.Types.: @ GHC.Types.Char ww5 ww6)
+                   Lib.someFunc4 }) -}
+d0e781a4cee94c6e277c16e7cd4c1a16
+  someFunc4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   " letters are "#
+                   Lib.someFunc5) -}
+b5454acfed4c31b8d768a16ae88e931f
+  someFunc5 :: [GHC.Types.Char]
+  {- Unfolding: (Lib.someFunc6 Lib.someFunc_count) -}
+441ea2202b2cfecbc5c41726e7e38517
+  someFunc6 :: GHC.Types.Int -> [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackFoldrCString#
+                   @ (GHC.Types.Int -> [GHC.Types.Char])
+                   "Stephen"#
+                   Lib.someFunc8
+                   Lib.someFunc7) -}
+3f12484885d13fa87fd31634d9c1d9a8
+  someFunc7 :: GHC.Types.Int -> [GHC.Types.Char]
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (GHC.List.flipSeqTake
+                   @ [GHC.Types.Char]
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+1e5b4fb1f189a31291a98857c120a029
+  someFunc8 ::
+    GHC.Types.Char
+    -> (GHC.Types.Int -> [GHC.Types.Char])
+    -> GHC.Types.Int
+    -> [GHC.Types.Char]
+  {- Arity: 3, HasNoCafRefs,
+     Unfolding: (GHC.List.takeFB
+                   @ GHC.Types.Char
+                   @ [GHC.Types.Char]
+                   (GHC.Types.: @ GHC.Types.Char)
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+c8beb07e3d2fb021b75edb7f5d5f84d6
+  someFunc9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "sneaky"#) -}
+15a594c56cd04c57b7b56a903ed34606
+  someFunc_count :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 4) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

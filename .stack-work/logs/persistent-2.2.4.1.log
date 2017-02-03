@@ -1,0 +1,135 @@
+Configuring persistent-2.2.4.1...
+Building persistent-2.2.4.1...
+Preprocessing library persistent-2.2.4.1...
+
+Database\Persist\Class\PersistField.hs:7:14: Warning:
+    -XOverlappingInstances is deprecated: instead use per-instance pragmas OVERLAPPING/OVERLAPPABLE/OVERLAPS
+
+Database\Persist\Sql\Class.hs:9:14: Warning:
+    -XOverlappingInstances is deprecated: instead use per-instance pragmas OVERLAPPING/OVERLAPPABLE/OVERLAPS
+[ 1 of 23] Compiling Database.Persist.Class.PersistConfig ( Database\Persist\Class\PersistConfig.hs, .stack-work\dist\2672c1f3\build\Database\Persist\Class\PersistConfig.o )
+
+Database\Persist\Class\PersistConfig.hs:12:1: Warning:
+    The import of `Control.Applicative' is redundant
+      except perhaps to import instances from `Control.Applicative'
+    To import instances alone, use: import Control.Applicative()
+[ 2 of 23] Compiling Database.Persist.Types.Base ( Database\Persist\Types\Base.hs, .stack-work\dist\2672c1f3\build\Database\Persist\Types\Base.o )
+
+Database\Persist\Types\Base.hs:10:1: Warning:
+    Module `Control.Monad.Trans.Error' is deprecated:
+      Use Control.Monad.Trans.Except instead
+
+Database\Persist\Types\Base.hs:19:1: Warning:
+    The import of `Control.Applicative' is redundant
+      except perhaps to import instances from `Control.Applicative'
+    To import instances alone, use: import Control.Applicative()
+
+Database\Persist\Types\Base.hs:22:1: Warning:
+    The qualified import of `Data.Text.Read' is redundant
+      except perhaps to import instances from `Data.Text.Read'
+    To import instances alone, use: import Data.Text.Read()
+
+Database\Persist\Types\Base.hs:93:10: Warning:
+    No explicit implementation for
+      `fromPathPiece' and `toPathPiece'
+    In the instance declaration for `PathPiece Checkmark'
+
+Database\Persist\Types\Base.hs:260:10: Warning:
+    In the use of type constructor or class `Error'
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+Database\Persist\Types\Base.hs:260:10: Warning:
+    In the use of type constructor or class `Error'
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+[ 3 of 23] Compiling Database.Persist.Class.PersistField ( Database\Persist\Class\PersistField.hs, .stack-work\dist\2672c1f3\build\Database\Persist\Class\PersistField.o )
+
+Database\Persist\Class\PersistField.hs:22:1: Warning:
+    The import of `Control.Applicative' is redundant
+      except perhaps to import instances from `Control.Applicative'
+    To import instances alone, use: import Control.Applicative()
+
+Database\Persist\Class\PersistField.hs:24:1: Warning:
+    The import of `Word' from module `Data.Word' is redundant
+
+Database\Persist\Class\PersistField.hs:252:26: Warning:
+    This binding for `x' shadows the existing binding
+      bound at Database\Persist\Class\PersistField.hs:246:22
+
+Database\Persist\Class\PersistField.hs:254:21: Warning:
+    In the use of `parseTime'
+    (imported from Data.Time, but defined in time-1.5.0.1:Data.Time.Format.Parse):
+    Deprecated: "use "parseTimeM True" instead"
+[ 4 of 23] Compiling Database.Persist.Class.PersistEntity ( Database\Persist\Class\PersistEntity.hs, .stack-work\dist\2672c1f3\build\Database\Persist\Class\PersistEntity.o )
+
+Database\Persist\Class\PersistEntity.hs:37:1: Warning:
+    The import of `Control.Applicative' is redundant
+      except perhaps to import instances from `Control.Applicative'
+    To import instances alone, use: import Control.Applicative()
+
+Database\Persist\Class\PersistEntity.hs:38:1: Warning:
+    The import of `Data.Monoid' is redundant
+      except perhaps to import instances from `Data.Monoid'
+    To import instances alone, use: import Data.Monoid()
+[ 5 of 23] Compiling Database.Persist.Types ( Database\Persist\Types.hs, .stack-work\dist\2672c1f3\build\Database\Persist\Types.o )
+[ 6 of 23] Compiling Database.Persist.Quasi ( Database\Persist\Quasi.hs, .stack-work\dist\2672c1f3\build\Database\Persist\Quasi.o )
+
+Database\Persist\Quasi.hs:27:1: Warning:
+    The import of `Data.Monoid' is redundant
+      except perhaps to import instances from `Data.Monoid'
+    To import instances alone, use: import Data.Monoid()
+[ 7 of 23] Compiling Database.Persist.Class.PersistStore ( Database\Persist\Class\PersistStore.hs, .stack-work\dist\2672c1f3\build\Database\Persist\Class\PersistStore.o )
+[ 8 of 23] Compiling Database.Persist.Class.PersistQuery ( Database\Persist\Class\PersistQuery.hs, .stack-work\dist\2672c1f3\build\Database\Persist\Class\PersistQuery.o )
+[ 9 of 23] Compiling Database.Persist.Class.DeleteCascade ( Database\Persist\Class\DeleteCascade.hs, .stack-work\dist\2672c1f3\build\Database\Persist\Class\DeleteCascade.o )
+[10 of 23] Compiling Database.Persist.Class.PersistUnique ( Database\Persist\Class\PersistUnique.hs, .stack-work\dist\2672c1f3\build\Database\Persist\Class\PersistUnique.o )
+
+Database\Persist\Class\PersistUnique.hs:20:1: Warning:
+    The import of `Data.Monoid' is redundant
+      except perhaps to import instances from `Data.Monoid'
+    To import instances alone, use: import Data.Monoid()
+[11 of 23] Compiling Database.Persist.Class ( Database\Persist\Class.hs, .stack-work\dist\2672c1f3\build\Database\Persist\Class.o )
+[12 of 23] Compiling Database.Persist.Sql.Types ( Database\Persist\Sql\Types.hs, .stack-work\dist\2672c1f3\build\Database\Persist\Sql\Types.o )
+[13 of 23] Compiling Database.Persist.Sql.Internal ( Database\Persist\Sql\Internal.hs, .stack-work\dist\2672c1f3\build\Database\Persist\Sql\Internal.o )
+
+Database\Persist\Sql\Internal.hs:14:1: Warning:
+    The import of `Data.Monoid' is redundant
+      except perhaps to import instances from `Data.Monoid'
+    To import instances alone, use: import Data.Monoid()
+[14 of 23] Compiling Database.Persist ( Database\Persist.hs, .stack-work\dist\2672c1f3\build\Database\Persist.o )
+[15 of 23] Compiling Database.Persist.Sql.Class ( Database\Persist\Sql\Class.hs, .stack-work\dist\2672c1f3\build\Database\Persist\Sql\Class.o )
+
+Database\Persist\Sql\Class.hs:16:1: Warning:
+    The import of `Control.Applicative' is redundant
+      except perhaps to import instances from `Control.Applicative'
+    To import instances alone, use: import Control.Applicative()
+
+Database\Persist\Sql\Class.hs:70:23: Warning:
+    Defined but not used: `ent'
+
+Database\Persist\Sql\Class.hs:224:11: Warning:
+    In the use of `bitSize' (imported from Data.Bits):
+    Deprecated: "Use 'bitSizeMaybe' or 'finiteBitSize' instead"
+[16 of 23] Compiling Database.Persist.Sql.Raw ( Database\Persist\Sql\Raw.hs, .stack-work\dist\2672c1f3\build\Database\Persist\Sql\Raw.o )
+[17 of 23] Compiling Database.Persist.Sql.Run ( Database\Persist\Sql\Run.hs, .stack-work\dist\2672c1f3\build\Database\Persist\Sql\Run.o )
+[18 of 23] Compiling Database.Persist.Sql.Migration ( Database\Persist\Sql\Migration.hs, .stack-work\dist\2672c1f3\build\Database\Persist\Sql\Migration.o )
+[19 of 23] Compiling Database.Persist.Sql.Util ( Database\Persist\Sql\Util.hs, .stack-work\dist\2672c1f3\build\Database\Persist\Sql\Util.o )
+[20 of 23] Compiling Database.Persist.Sql.Orphan.PersistStore ( Database\Persist\Sql\Orphan\PersistStore.hs, .stack-work\dist\2672c1f3\build\Database\Persist\Sql\Orphan\PersistStore.o )
+
+Database\Persist\Sql\Orphan\PersistStore.hs:28:1: Warning:
+    The import of `mappend' from module `Data.Monoid' is redundant
+[21 of 23] Compiling Database.Persist.Sql.Orphan.PersistQuery ( Database\Persist\Sql\Orphan\PersistQuery.hs, .stack-work\dist\2672c1f3\build\Database\Persist\Sql\Orphan\PersistQuery.o )
+
+Database\Persist\Sql\Orphan\PersistQuery.hs:20:1: Warning:
+    The import of `Monoid' from module `Data.Monoid' is redundant
+[22 of 23] Compiling Database.Persist.Sql.Orphan.PersistUnique ( Database\Persist\Sql\Orphan\PersistUnique.hs, .stack-work\dist\2672c1f3\build\Database\Persist\Sql\Orphan\PersistUnique.o )
+
+Database\Persist\Sql\Orphan\PersistUnique.hs:13:1: Warning:
+    The import of `Data.Monoid' is redundant
+      except perhaps to import instances from `Data.Monoid'
+    To import instances alone, use: import Data.Monoid()
+[23 of 23] Compiling Database.Persist.Sql ( Database\Persist\Sql.hs, .stack-work\dist\2672c1f3\build\Database\Persist\Sql.o )
+In-place registering persistent-2.2.4.1...
+Installing library in
+C:\sr\snapshots\390fdce8\lib\x86_64-windows-ghc-7.10.3\persistent-2.2.4.1-0OmAEDm6AASKhZZoiarun7
+Registering persistent-2.2.4.1...

@@ -1,0 +1,167 @@
+Configuring yesod-form-1.4.10...
+Building yesod-form-1.4.10...
+Preprocessing library yesod-form-1.4.10...
+[ 1 of 20] Compiling Yesod.Form.Types ( Yesod\Form\Types.hs, .stack-work\dist\2672c1f3\build\Yesod\Form\Types.o )
+
+Yesod\Form\Types.hs:26:1: Warning:
+    The import of `Data.Monoid' is redundant
+      except perhaps to import instances from `Data.Monoid'
+    To import instances alone, use: import Data.Monoid()
+
+Yesod\Form\Types.hs:31:1: Warning:
+    The import of `Control.Applicative' is redundant
+      except perhaps to import instances from `Control.Applicative'
+    To import instances alone, use: import Control.Applicative()
+
+Yesod\Form\Types.hs:38:1: Warning:
+    The import of `Data.Traversable' is redundant
+      except perhaps to import instances from `Data.Traversable'
+    To import instances alone, use: import Data.Traversable()
+
+Yesod\Form\Types.hs:39:1: Warning:
+    The import of `Data.Foldable' is redundant
+      except perhaps to import instances from `Data.Foldable'
+    To import instances alone, use: import Data.Foldable()
+
+Yesod\Form\Types.hs:71:19: Warning: Defined but not used: `errs'
+[ 2 of 20] Compiling Yesod.Form.Functions ( Yesod\Form\Functions.hs, .stack-work\dist\2672c1f3\build\Yesod\Form\Functions.o )
+
+Yesod\Form\Functions.hs:62:1: Warning:
+    The import of `Yesod.Core.Handler' is redundant
+      except perhaps to import instances from `Yesod.Core.Handler'
+    To import instances alone, use: import Yesod.Core.Handler()
+
+Yesod\Form\Functions.hs:64:1: Warning:
+    The import of `Text.Hamlet' is redundant
+      except perhaps to import instances from `Text.Hamlet'
+    To import instances alone, use: import Text.Hamlet()
+
+Yesod\Form\Functions.hs:65:1: Warning:
+    The import of `mempty' from module `Data.Monoid' is redundant
+[ 3 of 20] Compiling Yesod.Form.Input ( Yesod\Form\Input.hs, .stack-work\dist\2672c1f3\build\Yesod\Form\Input.o )
+
+Yesod\Form\Input.hs:18:1: Warning:
+    The import of `Control.Applicative' is redundant
+      except perhaps to import instances from `Control.Applicative'
+    To import instances alone, use: import Control.Applicative()
+[ 4 of 20] Compiling Yesod.Form.Bootstrap3 ( Yesod\Form\Bootstrap3.hs, .stack-work\dist\2672c1f3\build\Yesod\Form\Bootstrap3.o )
+[ 5 of 20] Compiling Yesod.Form.I18n.English ( Yesod\Form\I18n\English.hs, .stack-work\dist\2672c1f3\build\Yesod\Form\I18n\English.o )
+
+Yesod\Form\I18n\English.hs:5:1: Warning:
+    The import of `Data.Monoid' is redundant
+      except perhaps to import instances from `Data.Monoid'
+    To import instances alone, use: import Data.Monoid()
+[ 6 of 20] Compiling Yesod.Form.Fields ( Yesod\Form\Fields.hs, .stack-work\dist\2672c1f3\build\Yesod\Form\Fields.o )
+
+Yesod\Form\Fields.hs:66:1: Warning:
+    The import of `Text.Hamlet' is redundant
+      except perhaps to import instances from `Text.Hamlet'
+    To import instances alone, use: import Text.Hamlet()
+
+Yesod\Form\Fields.hs:71:1: Warning:
+    The import of `Text.Cassius' is redundant
+      except perhaps to import instances from `Text.Cassius'
+    To import instances alone, use: import Text.Cassius()
+
+Yesod\Form\Fields.hs:103:1: Warning:
+    The import of `runDB, YesodPersist'
+    from module `Yesod.Persist' is redundant
+
+Yesod\Form\Fields.hs:106:1: Warning:
+    The import of `<$>' from module `Control.Applicative' is redundant
+
+Yesod\Form\Fields.hs:493:31: Warning: Defined but not used: `isReq'
+[ 7 of 20] Compiling Yesod.Form.MassInput ( Yesod\Form\MassInput.hs, .stack-work\dist\2672c1f3\build\Yesod\Form\MassInput.o )
+
+Yesod\Form\MassInput.hs:23:1: Warning:
+    The import of `Data.Traversable' is redundant
+      except perhaps to import instances from `Data.Traversable'
+    To import instances alone, use: import Data.Traversable()
+[ 8 of 20] Compiling Yesod.Form.I18n.Portuguese ( Yesod\Form\I18n\Portuguese.hs, .stack-work\dist\2672c1f3\build\Yesod\Form\I18n\Portuguese.o )
+
+Yesod\Form\I18n\Portuguese.hs:5:1: Warning:
+    The import of `Data.Monoid' is redundant
+      except perhaps to import instances from `Data.Monoid'
+    To import instances alone, use: import Data.Monoid()
+[ 9 of 20] Compiling Yesod.Form.I18n.Swedish ( Yesod\Form\I18n\Swedish.hs, .stack-work\dist\2672c1f3\build\Yesod\Form\I18n\Swedish.o )
+
+Yesod\Form\I18n\Swedish.hs:5:1: Warning:
+    The import of `Data.Monoid' is redundant
+      except perhaps to import instances from `Data.Monoid'
+    To import instances alone, use: import Data.Monoid()
+[10 of 20] Compiling Yesod.Form.I18n.German ( Yesod\Form\I18n\German.hs, .stack-work\dist\2672c1f3\build\Yesod\Form\I18n\German.o )
+
+Yesod\Form\I18n\German.hs:5:1: Warning:
+    The import of `Data.Monoid' is redundant
+      except perhaps to import instances from `Data.Monoid'
+    To import instances alone, use: import Data.Monoid()
+[11 of 20] Compiling Yesod.Form.I18n.French ( Yesod\Form\I18n\French.hs, .stack-work\dist\2672c1f3\build\Yesod\Form\I18n\French.o )
+
+Yesod\Form\I18n\French.hs:5:1: Warning:
+    The import of `Data.Monoid' is redundant
+      except perhaps to import instances from `Data.Monoid'
+    To import instances alone, use: import Data.Monoid()
+[12 of 20] Compiling Yesod.Form.I18n.Norwegian ( Yesod\Form\I18n\Norwegian.hs, .stack-work\dist\2672c1f3\build\Yesod\Form\I18n\Norwegian.o )
+
+Yesod\Form\I18n\Norwegian.hs:5:1: Warning:
+    The import of `Data.Monoid' is redundant
+      except perhaps to import instances from `Data.Monoid'
+    To import instances alone, use: import Data.Monoid()
+[13 of 20] Compiling Yesod.Form.I18n.Japanese ( Yesod\Form\I18n\Japanese.hs, .stack-work\dist\2672c1f3\build\Yesod\Form\I18n\Japanese.o )
+
+Yesod\Form\I18n\Japanese.hs:5:1: Warning:
+    The import of `Data.Monoid' is redundant
+      except perhaps to import instances from `Data.Monoid'
+    To import instances alone, use: import Data.Monoid()
+[14 of 20] Compiling Yesod.Form.I18n.Czech ( Yesod\Form\I18n\Czech.hs, .stack-work\dist\2672c1f3\build\Yesod\Form\I18n\Czech.o )
+
+Yesod\Form\I18n\Czech.hs:5:1: Warning:
+    The import of `Data.Monoid' is redundant
+      except perhaps to import instances from `Data.Monoid'
+    To import instances alone, use: import Data.Monoid()
+[15 of 20] Compiling Yesod.Form.I18n.Russian ( Yesod\Form\I18n\Russian.hs, .stack-work\dist\2672c1f3\build\Yesod\Form\I18n\Russian.o )
+
+Yesod\Form\I18n\Russian.hs:5:1: Warning:
+    The import of `Data.Monoid' is redundant
+      except perhaps to import instances from `Data.Monoid'
+    To import instances alone, use: import Data.Monoid()
+[16 of 20] Compiling Yesod.Form.I18n.Dutch ( Yesod\Form\I18n\Dutch.hs, .stack-work\dist\2672c1f3\build\Yesod\Form\I18n\Dutch.o )
+
+Yesod\Form\I18n\Dutch.hs:5:1: Warning:
+    The import of `Data.Monoid' is redundant
+      except perhaps to import instances from `Data.Monoid'
+    To import instances alone, use: import Data.Monoid()
+[17 of 20] Compiling Yesod.Form.I18n.Spanish ( Yesod\Form\I18n\Spanish.hs, .stack-work\dist\2672c1f3\build\Yesod\Form\I18n\Spanish.o )
+
+Yesod\Form\I18n\Spanish.hs:6:1: Warning:
+    The import of `Data.Monoid' is redundant
+      except perhaps to import instances from `Data.Monoid'
+    To import instances alone, use: import Data.Monoid()
+[18 of 20] Compiling Yesod.Form       ( Yesod\Form.hs, .stack-work\dist\2672c1f3\build\Yesod\Form.o )
+[19 of 20] Compiling Yesod.Form.Jquery ( Yesod\Form\Jquery.hs, .stack-work\dist\2672c1f3\build\Yesod\Form\Jquery.o )
+
+Yesod\Form\Jquery.hs:21:1: Warning:
+    The import of `Text.Hamlet' is redundant
+      except perhaps to import instances from `Text.Hamlet'
+    To import instances alone, use: import Text.Hamlet()
+
+Yesod\Form\Jquery.hs:22:1: Warning:
+    The import of `julius' from module `Text.Julius' is redundant
+
+Yesod\Form\Jquery.hs:24:1: Warning:
+    The import of `Data.Monoid' is redundant
+      except perhaps to import instances from `Data.Monoid'
+    To import instances alone, use: import Data.Monoid()
+[20 of 20] Compiling Yesod.Form.Nic   ( Yesod\Form\Nic.hs, .stack-work\dist\2672c1f3\build\Yesod\Form\Nic.o )
+
+Yesod\Form\Nic.hs:22:1: Warning:
+    The import of `Text.Hamlet' is redundant
+      except perhaps to import instances from `Text.Hamlet'
+    To import instances alone, use: import Text.Hamlet()
+
+Yesod\Form\Nic.hs:23:1: Warning:
+    The import of `julius' from module `Text.Julius' is redundant
+In-place registering yesod-form-1.4.10...
+Installing library in
+C:\sr\snapshots\390fdce8\lib\x86_64-windows-ghc-7.10.3\yesod-form-1.4.10-6dNhqMGkkYM8FfkW2wUlYA
+Registering yesod-form-1.4.10...

@@ -1,0 +1,29 @@
+Configuring hjsmin-0.2.0.2...
+Building hjsmin-0.2.0.2...
+Preprocessing library hjsmin-0.2.0.2...
+[1 of 2] Compiling Text.Jasmine.Pretty ( Text\Jasmine\Pretty.hs, .stack-work\dist\2672c1f3\build\Text\Jasmine\Pretty.o )
+[2 of 2] Compiling Text.Jasmine     ( Text\Jasmine.hs, .stack-work\dist\2672c1f3\build\Text\Jasmine.o )
+
+Text\Jasmine.hs:8:1: Warning:
+    The import of `Control.Applicative' is redundant
+      except perhaps to import instances from `Control.Applicative'
+    To import instances alone, use: import Control.Applicative()
+In-place registering hjsmin-0.2.0.2...
+Preprocessing executable 'hjsmin' for hjsmin-0.2.0.2...
+[1 of 2] Compiling Text.Jasmine     ( Text\Jasmine.hs, .stack-work\dist\2672c1f3\build\hjsmin\hjsmin-tmp\Text\Jasmine.o )
+
+Text\Jasmine.hs:8:1: Warning:
+    The import of `Control.Applicative' is redundant
+      except perhaps to import instances from `Control.Applicative'
+    To import instances alone, use: import Control.Applicative()
+[2 of 2] Compiling Main             ( hjsmin.hs, .stack-work\dist\2672c1f3\build\hjsmin\hjsmin-tmp\Main.o )
+
+hjsmin.hs:6:1: Warning:
+    The import of `Data.Monoid' is redundant
+      except perhaps to import instances from `Data.Monoid'
+    To import instances alone, use: import Data.Monoid()
+Linking .stack-work\dist\2672c1f3\build\hjsmin\hjsmin.exe ...
+Installing library in
+C:\sr\snapshots\390fdce8\lib\x86_64-windows-ghc-7.10.3\hjsmin-0.2.0.2-JswnAkkEvOBLw2P6c4P6De
+Installing executable(s) in C:\sr\snapshots\390fdce8\bin
+Registering hjsmin-0.2.0.2...
