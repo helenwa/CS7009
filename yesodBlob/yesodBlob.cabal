@@ -86,8 +86,9 @@ library
                  , case-insensitive
                  , wai
                  , yesod-auth
---                 , yesod-auth-browserid
+                 , yesod-auth-oauth
                  , yesod-auth-oauth2
+                 , hoauth2
 
 executable         yesodBlob
     if flag(library-only)

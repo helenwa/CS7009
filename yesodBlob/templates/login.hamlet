@@ -1,0 +1,5 @@
+<div>
+  <div>
+    <a href="@{AuthR githuburl}">Git Login
+<div>
+  #{show sess}

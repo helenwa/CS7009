@@ -3,19 +3,22 @@ module Handler.Home where
 import Import
 import Yesod.Form.Bootstrap3 (BootstrapFormLayout (..), renderBootstrap3)
 import Text.Julius (RawJS (..))
-
+import Yesod.Auth
+import Yesod.Auth.OAuth2.Github
 --ADDED
+
+
 -- Replace with Google client ID.
-clientId :: Text
-clientId = "9a0d46d298b4a566b942"
+--clientId :: Text
+--clientId = "9a0d46d298b4a566b942"
 
 -- Replace with Google secret ID.
-clientSecret :: Text
-clientSecret = "b4c128887e732dee6eb4ebeaae99e840d86e5d1f"
+--clientSecret :: Text
+--clientSecret = "b4c128887e732dee6eb4ebeaae99e840d86e5d1f"
 
---data App = App
---    { httpManager :: Manager
---    }
+data App = App
+    { httpManager :: Manager
+    }
 --END ADDED
 
 
@@ -24,29 +27,6 @@ data FileForm = FileForm
     { fileInfo :: FileInfo
     , fileDescription :: Text
     }
-
---ADDED
-instance YesodAuth App where
-    type AuthId App = Text
-    getAuthId = return . Just . credsIdent
-
-    loginDest _ = HomeR
-    logoutDest _ = HomeR
-
-    --authPlugins _ =
-     --   [ authBrowserId def
-    --    , authGoogleEmail clientId clientSecret
-    --    ]
-
-    authHttpManager = httpManager
-
-    -- The default maybeAuthId assumes a Persistent database. We're going for a
-    -- simpler AuthId, so we'll just do a direct lookup in the session.
-    maybeAuthId = lookupSession "_ID"
-
-
---END ADDED
-
 -- This is a handler function for the GET request method on the HomeR
 -- resource pattern. All of your resource patterns are defined in
 -- config/routes
@@ -54,27 +34,23 @@ instance YesodAuth App where
 -- The majority of the code you will write in Yesod lives in these handler
 -- functions. You can spread them across multiple files if you are so
 -- inclined, or create a single monolithic file.
+getAuthR :: Handler Html
+
 getHomeR :: Handler Html
 getHomeR = do
+    sess <- getSession
+    
     maid <- maybeAuthId
-    defaultLayout
-        [whamlet|
-            <p>Your current auth ID: #{show maid}
-            $maybe _ <- maid
-                <p>
-                    <a href=@{AuthR LogoutR}>Logout
-            $nothing
-                <p>
-                    <a href=@{AuthR LoginR}>Go to the login page
-        |]
-    --(formWidget, formEnctype) <- generateFormPost sampleForm
-    --let submission = Nothing :: Maybe FileForm
-    --    handlerName = "getHomeR" :: Text
-    --defaultLayout $ do
-    --    let (commentFormId, commentTextareaId, commentListId) = commentIds
-    --    aDomId <- newIdent
-    --    setTitle "Welcome To Yesod!"
-    --    $(widgetFile "homepage")
+    --defaultLayout
+    --    [whamlet|
+    --        <p>Your current auth ID: #{show maid}
+    --        $maybe _ <- maid
+    --            <p>
+    --                <a href=@{AuthR LogoutR}>Logout
+    --        $nothing
+    --            <p>
+    --                <a href=@{AuthR LoginR}>Go to the login page
+    --    |]
 --END ADDED
 postHomeR :: Handler Html
 postHomeR = do
