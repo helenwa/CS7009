@@ -201,12 +201,15 @@ instance YesodAuth App where
 
     authenticate creds = runDB $ do
         x <- getBy $ UniqueUser $ credsIdent creds
+        --save creds to session
         mapM_ (uncurry setSession) $ credsExtra creds
         case x of
             Just (Entity uid _) -> return $ Authenticated uid
             Nothing -> Authenticated <$> insert User
                 { userIdent = credsIdent creds
                 , userPassword = Nothing
+                --, access_token = credsExtra creds accessToken
+                --, login = credsExtra creds login
                 }
             
 
