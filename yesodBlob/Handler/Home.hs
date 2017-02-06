@@ -3,7 +3,6 @@ module Handler.Home where
 import Import
 import Yesod.Form.Bootstrap3 (BootstrapFormLayout (..), renderBootstrap3)
 import Text.Julius (RawJS (..))
-import Foundation
 
 -- Define our data that will be used for creating the form.
 data FileForm = FileForm
@@ -20,17 +19,14 @@ data FileForm = FileForm
 -- inclined, or create a single monolithic file.
 getHomeR :: Handler Html
 getHomeR = do
-    maid <- maybeAuthId
-    defaultLayout
-        [whamlet|
-            <p>Your current auth ID: #{show maid}
-            $maybe _ <- maid
-                <p>
-                    <a href=@{AuthR}>Logout
-            $nothing
-                <p>
-                    <a href=@{AuthR}>Go to the login page
-        |]
+    (formWidget, formEnctype) <- generateFormPost sampleForm
+    let submission = Nothing :: Maybe FileForm
+        handlerName = "getHomeR" :: Text
+    defaultLayout $ do
+        let (commentFormId, commentTextareaId, commentListId) = commentIds
+        aDomId <- newIdent
+        setTitle "Welcome To Yesod!"
+        $(widgetFile "homepage")
 
 postHomeR :: Handler Html
 postHomeR = do
