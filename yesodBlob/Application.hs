@@ -33,8 +33,6 @@ import Handler.Common
 import Handler.Home
 import Handler.Comment
 
-import Yesod.Auth
-import Yesod.Auth.OAuth2.Github
 
 -- This line actually creates our YesodDispatch instance. It is the second half
 -- of the call to mkYesodData which occurs in Foundation.hs. Please see the
@@ -156,8 +154,3 @@ shutdownApp _ = return ()
 handler :: Handler a -> IO a
 handler h = getAppSettings >>= makeFoundation >>= flip unsafeHandler h
 
-clientId :: Text
-clientId = "9a0d46d298b4a566b942"
-
-clientSecret :: Text
-clientSecret = "b4c128887e732dee6eb4ebeaae99e840d86e5d1f"

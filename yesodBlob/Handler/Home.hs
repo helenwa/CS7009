@@ -3,6 +3,7 @@ module Handler.Home where
 import Import
 import Yesod.Form.Bootstrap3 (BootstrapFormLayout (..), renderBootstrap3)
 import Text.Julius (RawJS (..))
+import Foundation
 
 -- Define our data that will be used for creating the form.
 data FileForm = FileForm
@@ -25,10 +26,10 @@ getHomeR = do
             <p>Your current auth ID: #{show maid}
             $maybe _ <- maid
                 <p>
-                    <a href=@{AuthR LogoutR}>Logout
+                    <a href=@{AuthR}>Logout
             $nothing
                 <p>
-                    <a href=@{AuthR LoginR}>Go to the login page
+                    <a href=@{AuthR}>Go to the login page
         |]
 
 postHomeR :: Handler Html

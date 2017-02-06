@@ -177,11 +177,13 @@ instance YesodAuth App where
     -- simpler AuthId, so we'll just do a direct lookup in the session.
     maybeAuthId = lookupSession "_ID"
 
-    
+maybeAuthId :: Text  
+maybeAuthId = ""
 clientId :: Text
 clientId = "9a0d46d298b4a566b942"
 
 clientSecret :: Text
+
 clientSecret = "b4c128887e732dee6eb4ebeaae99e840d86e5d1f"
 
 

@@ -13,6 +13,7 @@
                     <h1 #start>Starting
 
                     <h2>You need to login
-                    <a href="http://www.yesodweb.com/book/" .btn.btn-info.btn-lg>
+                    <a href="@{AuthR}" .btn.btn-info.btn-lg>
                         Login Button
+                    <p> @{maybeAuthId}
                         
