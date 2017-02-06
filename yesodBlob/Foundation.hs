@@ -201,12 +201,14 @@ instance YesodAuth App where
 
     authenticate creds = runDB $ do
         x <- getBy $ UniqueUser $ credsIdent creds
+        mapM_ (uncurry setSession) $ credsExtra creds
         case x of
             Just (Entity uid _) -> return $ Authenticated uid
             Nothing -> Authenticated <$> insert User
                 { userIdent = credsIdent creds
                 , userPassword = Nothing
                 }
+            
 
     -- You can add other plugins like Google Email, email or OAuth here
     authPlugins app = [oauth2Github clientId clientSecret]
