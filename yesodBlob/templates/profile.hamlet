@@ -9,5 +9,9 @@
     <p>
       Your data is protected with us <strong><span class="username">#{userIdent user}</span></strong>! 
       <br>#{show sess}
-      <br>#{show log}
+      <br>#{textName} has #{repNo} repositorys
+      <br>#{repositorys}
+      
+      <br>#{stared}
+      
      
