@@ -7,8 +7,23 @@
       This page is protected and access is allowed only for authenticated users.
 
     <p>
-      Your data is protected with us <strong><span class="username">#{userIdent user}</span></strong>! 
-      <br>#{show sess}
+      Your data is protected with us <strong><span class="username">#{textName}</span></strong>! 
+      
+    <svg width="960" height="1060">
+    <script src="https://d3js.org/d3.v4.min.js">
+    <script>
+        var svg = d3.select("svg"),
+            width = +svg.attr("width"),
+            height = +svg.attr("height");
+        
+        var root = d3.stratify()
+            .id(function(d) { return d.name; })
+            .parentId(function(d) { return d.parent; })
+            (#{repositorys});
+        
+        var tree = d3.tree()
+    <p>
+      <!--br>#{show sess}-->
       <br>#{textName} has #{repNo} repositorys
       <br>#{repositorys}
       
