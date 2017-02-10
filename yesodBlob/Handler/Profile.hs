@@ -11,6 +11,7 @@ import Data.Maybe
 import Data.Text.Encoding
 import Data.Text hiding(intercalate, map, lookup)
 import Data.Map hiding(intercalate, map, lookup)
+import GitHub.Auth
 
 getProfileR :: Handler Html 
 getProfileR = do
@@ -20,8 +21,9 @@ getProfileR = do
     let log = lookup "login" sess
     let token = lookup "access_token" sess
     let textName = Data.Text.Encoding.decodeUtf8 (fromJust log)
+    let auth = Just $ GitHub.Auth.OAuth $ fromJust token 
     repositorys <- liftIO $ repos textName
-    stared <- liftIO $ stars textName Nothing 
+    stared <- liftIO $ stars textName auth  
     let repNo = Data.List.length repositorys
     defaultLayout $ do
         setTitle . toHtml $ userIdent user  <> "'s User page"
@@ -36,7 +38,7 @@ repos userName = do
             return $ "Error: " Data.List.++ (show error)
             
        (Right repos) -> do 
-            return $ intercalate "\n\n" $ map show repos
+            return $ intercalate "" $ map show repos
             
 --Get repositorys stared by user
 stars :: Text -> Maybe Auth-> IO (String)

@@ -18,12 +18,12 @@
         
         var root = d3.stratify()
             .id(function(d) { return d.name; })
-            .parentId(function(d) { return d.parent; })
-            (#{repositorys});
+            .parentId(function(d) { return d.parent; });
+            //( #{repositorys} );
         
         var tree = d3.tree()
     <p>
-      <!--br>#{show sess}-->
+      <br>#{show sess}>
       <br>#{textName} has #{repNo} repositorys
       <br>#{repositorys}
       
