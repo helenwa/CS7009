@@ -1,0 +1,206 @@
+Configuring compact-string-fix-0.3.2...
+Building compact-string-fix-0.3.2...
+Preprocessing library compact-string-fix-0.3.2...
+[1 of 8] Compiling Data.CompactString.Internal ( Data\CompactString\Internal.hs, .stack-work\dist\b7fec021\build\Data\CompactString\Internal.o )
+
+Data\CompactString\Internal.hs:33:23: warning: [-Wtabs]
+    Tab character found here, and in one further location.
+    Please use spaces instead.
+
+Data\CompactString\Internal.hs:62:18: warning:
+    * Ignoring unusable UNPACK pragma on the first argument of `:*:'
+    * In the definition of data constructor `:*:'
+      In the data type declaration for `PairS'
+
+Data\CompactString\Internal.hs:62:18: warning:
+    * Ignoring unusable UNPACK pragma on the second argument of `:*:'
+    * In the definition of data constructor `:*:'
+      In the data type declaration for `PairS'
+
+Data\CompactString\Internal.hs:63:28: warning:
+    * Ignoring unusable UNPACK pragma on the first argument of `JustS'
+    * In the definition of data constructor `JustS'
+      In the data type declaration for `MaybeS'
+
+Data\CompactString\Internal.hs:135:17: warning: [-Wunused-do-bind]
+    A do-notation statement discarded a result of type `Int'
+    Suppress this warning by saying `_ <- pokeChar enc dst c'
+
+Data\CompactString\Internal.hs:143:17: warning: [-Wunused-do-bind]
+    A do-notation statement discarded a result of type `Int'
+    Suppress this warning by saying `_ <- pokeChar enc dst c'
+
+Data\CompactString\Internal.hs:252:25: warning: [-Wdeprecations]
+    In the use of `inlinePerformIO'
+    (imported from Data.ByteString.Internal):
+    Deprecated: "If you think you know what you are doing, use 'unsafePerformIO'. If you are sure you know what you are doing, use 'unsafeDupablePerformIO'. If you enjoy sharing an address space with a malevolent agent of chaos, try 'accursedUnutterablePerformIO'."
+
+Data\CompactString\Internal.hs:257:28: warning: [-Wdeprecations]
+    In the use of `inlinePerformIO'
+    (imported from Data.ByteString.Internal):
+    Deprecated: "If you think you know what you are doing, use 'unsafePerformIO'. If you are sure you know what you are doing, use 'unsafeDupablePerformIO'. If you enjoy sharing an address space with a malevolent agent of chaos, try 'accursedUnutterablePerformIO'."
+[2 of 8] Compiling Data.CompactString.Fusion ( Data\CompactString\Fusion.hs, .stack-work\dist\b7fec021\build\Data\CompactString\Fusion.o )
+
+Data\CompactString\Fusion.hs:11:1: warning: [-Wtabs]
+    Tab character found here, and in six further locations.
+    Please use spaces instead.
+[3 of 8] Compiling Data.CompactString.Unsafe ( Data\CompactString\Unsafe.hs, .stack-work\dist\b7fec021\build\Data\CompactString\Unsafe.o )
+[4 of 8] Compiling Data.CompactString.Encodings ( Data\CompactString\Encodings.hs, .stack-work\dist\b7fec021\build\Data\CompactString\Encodings.o )
+
+Data\CompactString\Encodings.hs:117:15: warning: [-Wtabs]
+    Tab character found here.
+    Please use spaces instead.
+[5 of 8] Compiling Data.CompactString ( Data\CompactString.hs, .stack-work\dist\b7fec021\build\Data\CompactString.o )
+
+Data\CompactString.hs:214:1: warning: [-Wunused-imports]
+    The import of `Data.Monoid' is redundant
+      except perhaps to import instances from `Data.Monoid'
+    To import instances alone, use: import Data.Monoid()
+
+Data\CompactString.hs:271:10: warning: [-Wredundant-constraints]
+    * Redundant constraint: Encoding a
+    * In the instance declaration for `Eq (CompactString a)'
+
+Data\CompactString.hs:310:32: warning: [-Wdeprecations]
+    In the use of `inlinePerformIO'
+    (imported from Data.CompactString.Internal, but defined in Data.ByteString.Internal):
+    Deprecated: "If you think you know what you are doing, use 'unsafePerformIO'. If you are sure you know what you are doing, use 'unsafeDupablePerformIO'. If you enjoy sharing an address space with a malevolent agent of chaos, try 'accursedUnutterablePerformIO'."
+
+Data\CompactString.hs:315:27: warning: [-Wdeprecations]
+    In the use of `inlinePerformIO'
+    (imported from Data.CompactString.Internal, but defined in Data.ByteString.Internal):
+    Deprecated: "If you think you know what you are doing, use 'unsafePerformIO'. If you are sure you know what you are doing, use 'unsafeDupablePerformIO'. If you enjoy sharing an address space with a malevolent agent of chaos, try 'accursedUnutterablePerformIO'."
+
+Data\CompactString.hs:321:1: warning: [-Winline-rule-shadowing]
+    Rule "CompactString pack/unpack" may never fire
+      because `pack' might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma for `pack'
+
+Data\CompactString.hs:321:1: warning: [-Winline-rule-shadowing]
+    Rule "CompactString pack/unpack" may never fire
+      because `unpack' might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma for `unpack'
+
+Data\CompactString.hs:323:1: warning: [-Winline-rule-shadowing]
+    Rule "CompactString unpack/pack" may never fire
+      because `unpack' might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma for `unpack'
+
+Data\CompactString.hs:323:1: warning: [-Winline-rule-shadowing]
+    Rule "CompactString unpack/pack" may never fire
+      because `pack' might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma for `pack'
+
+Data\CompactString.hs:443:19: warning: [-Wdeprecations]
+    In the use of `inlinePerformIO'
+    (imported from Data.CompactString.Internal, but defined in Data.ByteString.Internal):
+    Deprecated: "If you think you know what you are doing, use 'unsafePerformIO'. If you are sure you know what you are doing, use 'unsafeDupablePerformIO'. If you enjoy sharing an address space with a malevolent agent of chaos, try 'accursedUnutterablePerformIO'."
+
+Data\CompactString.hs:790:12: warning: [-Wdeprecations]
+    In the use of `inlinePerformIO'
+    (imported from Data.CompactString.Internal, but defined in Data.ByteString.Internal):
+    Deprecated: "If you think you know what you are doing, use 'unsafePerformIO'. If you are sure you know what you are doing, use 'unsafeDupablePerformIO'. If you enjoy sharing an address space with a malevolent agent of chaos, try 'accursedUnutterablePerformIO'."
+
+Data\CompactString.hs:829:7: warning: [-Wdeprecations]
+    In the use of `inlinePerformIO'
+    (imported from Data.ByteString.Internal):
+    Deprecated: "If you think you know what you are doing, use 'unsafePerformIO'. If you are sure you know what you are doing, use 'unsafeDupablePerformIO'. If you enjoy sharing an address space with a malevolent agent of chaos, try 'accursedUnutterablePerformIO'."
+
+Data\CompactString.hs:848:1: warning: [-Winline-rule-shadowing]
+    Rule "CompactString: compare' UTF8" may never fire
+      because compare' might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma for compare'
+
+Data\CompactString.hs:850:1: warning: [-Winline-rule-shadowing]
+    Rule "CompactString: compare' UTF32BE" may never fire
+      because compare' might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma for compare'
+
+Data\CompactString.hs:852:1: warning: [-Winline-rule-shadowing]
+    Rule "CompactString: compare' ASCII" may never fire
+      because compare' might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma for compare'
+
+Data\CompactString.hs:854:1: warning: [-Winline-rule-shadowing]
+    Rule "CompactString: compare' Latin1" may never fire
+      because compare' might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma for compare'
+
+Data\CompactString.hs:866:1: warning: [-Wredundant-constraints]
+    * Redundant constraint: Encoding a
+    * In the type signature for:
+           unsafeFromByteStringAs :: Encoding a =>
+                                     a -> ByteString -> CompactString a
+
+Data\CompactString.hs:916:1: warning: [-Winline-rule-shadowing]
+    Rule "CompactString: to/fromByteString" may never fire
+      because `toByteString' might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma for `toByteString'
+
+Data\CompactString.hs:916:1: warning: [-Winline-rule-shadowing]
+    Rule "CompactString: to/fromByteString" may never fire
+      because `unsafeFromByteString' might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma for `unsafeFromByteString'
+
+Data\CompactString.hs:919:1: warning: [-Winline-rule-shadowing]
+    Rule "CompactString: from/toByteString" may never fire
+      because `unsafeFromByteString' might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma for `unsafeFromByteString'
+
+Data\CompactString.hs:919:1: warning: [-Winline-rule-shadowing]
+    Rule "CompactString: from/toByteString" may never fire
+      because `toByteString' might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma for `toByteString'
+
+Data\CompactString.hs:946:1: warning: [-Winline-rule-shadowing]
+    Rule "CompactString: recodeVIO -> validateIO" may never fire
+      because `recodeVIO' might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma for `recodeVIO'
+
+Data\CompactString\signatures.include:66:1: warning: [-Wredundant-constraints]
+    * Redundant constraint: Encoding a
+    * In the type signature for:
+           append :: Encoding a =>
+                     CompactString a -> CompactString a -> CompactString a
+
+Data\CompactString\signatures.include:69:1: warning: [-Wredundant-constraints]
+    * Redundant constraint: Encoding a
+    * In the type signature for:
+           null :: Encoding a => CompactString a -> Bool
+
+Data\CompactString\signatures.include:157:1: warning: [-Wredundant-constraints]
+    * Redundant constraint: Encoding a
+    * In the type signature for:
+           concat :: Encoding a => [CompactString a] -> CompactString a
+
+Data\CompactString\signatures.include:402:1: warning: [-Wredundant-constraints]
+    * Redundant constraint: Encoding a
+    * In the type signature for:
+           isSuffixOf :: Encoding a =>
+                         CompactString a -> CompactString a -> Bool
+
+Data\CompactString\signatures.include:559:1: warning: [-Wredundant-constraints]
+    * Redundant constraint: Encoding a
+    * In the type signature for:
+           toByteString :: Encoding a => CompactString a -> ByteString
+[6 of 8] Compiling Data.CompactString.ASCII ( Data\CompactString\ASCII.hs, .stack-work\dist\b7fec021\build\Data\CompactString\ASCII.o )
+
+Data\CompactString\specialized.include:207:1: warning: [-Wunused-imports]
+    The qualified import of `Data.CompactString.Encodings' is redundant
+      except perhaps to import instances from `Data.CompactString.Encodings'
+    To import instances alone, use: import Data.CompactString.Encodings()
+[7 of 8] Compiling Data.CompactString.UTF16 ( Data\CompactString\UTF16.hs, .stack-work\dist\b7fec021\build\Data\CompactString\UTF16.o )
+
+Data\CompactString\specialized.include:207:1: warning: [-Wunused-imports]
+    The qualified import of `Data.CompactString.Encodings' is redundant
+      except perhaps to import instances from `Data.CompactString.Encodings'
+    To import instances alone, use: import Data.CompactString.Encodings()
+[8 of 8] Compiling Data.CompactString.UTF8 ( Data\CompactString\UTF8.hs, .stack-work\dist\b7fec021\build\Data\CompactString\UTF8.o )
+
+Data\CompactString\specialized.include:207:1: warning: [-Wunused-imports]
+    The qualified import of `Data.CompactString.Encodings' is redundant
+      except perhaps to import instances from `Data.CompactString.Encodings'
+    To import instances alone, use: import Data.CompactString.Encodings()
+Installing library in
+C:\Users\happy\Documents\5thYear\NetworkApplications\codeblobs\servant\.stack-work\install\1bb99e24\lib\x86_64-windows-ghc-8.0.1\compact-string-fix-0.3.2-DndIO7hdLRnH1KEjhXPArZ
+Registering compact-string-fix-0.3.2...
