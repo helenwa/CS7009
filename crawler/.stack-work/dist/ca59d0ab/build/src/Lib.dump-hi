@@ -1,0 +1,1549 @@
+
+==================== FINAL INTERFACE ====================
+2017-03-09 09:29:40.317399 UTC
+
+interface crawler-0.1.0.0-9w4rsqBNGnwBxskp0xkRh7:Lib 8002
+  interface hash: d560c8b5d7b7fe79cd93aae898e62d93
+  ABI hash: cf625a8a15988fb191ccf477f33aeceb
+  export-list hash: 97d906a9f5ae2483008c55a85b511d72
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: a49163cda4dd15e7d110b9d7606149e2
+  sig of: Nothing
+  used TH splices: True
+  where
+exports:
+  Lib.app
+  Lib.startApp
+module dependencies:
+package dependencies: Win32-2.3.1.1@Win32-2.3.1.1
+                      aeson-1.0.2.1@aeson-1.0.2.1-9NPC6B17ifJ9yEOgZnhnOr
+                      appar-0.1.4@appar-0.1.4-DGWHHt2WRn9FI49prcwO9
+                      array-0.5.1.1@array-0.5.1.1
+                      async-2.1.1@async-2.1.1-4n6HEMPJR2eJK0JpvCfuPK
+                      attoparsec-0.13.1.0@attoparsec-0.13.1.0-HCAgpBrKCLJ5li8FbfXxE1
+                      auto-update-0.1.4@auto-update-0.1.4-EmUvNdmhEju51bHrtaEMpz
+                      base-4.9.1.0
+                      base-compat-0.9.1@base-compat-0.9.1-LCsIPF9jlXlGhbEFi39hJ1
+                      base64-bytestring-1.0.0.1@base64-bytestring-1.0.0.1-4O9TExPPz6eI82Yj7L4SIj
+                      binary-0.8.3.0@binary-0.8.3.0
+                      blaze-builder-0.4.0.2@blaze-builder-0.4.0.2-CGB8BvrFgghHy5bLy0SFOg
+                      blaze-html-0.8.1.3@blaze-html-0.8.1.3-4x5sR7CihaZBuBa398ibiy
+                      blaze-markup-0.7.1.1@blaze-markup-0.7.1.1-7tIWNv8iALFJhJ4kVxNmNT
+                      byteorder-1.0.4@byteorder-1.0.4-9NlNHkBVdo7F1prFVKrkcH
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      case-insensitive-1.2.0.8@case-insensitive-1.2.0.8-JH9TmxTHpl01TJ0h86Xqcf
+                      containers-0.5.7.1@containers-0.5.7.1
+                      cryptonite-0.21@cryptonite-0.21-LMyh7LfEdeGD0uZFvplqS
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 directory-1.3.0.0@directory-1.3.0.0
+                      dlist-0.8.0.2@dlist-0.8.0.2-6Wnps4GD7EFnRucVzXIFD
+                      file-embed-0.0.10@file-embed-0.0.10-KWMmUDaNSRP7AxWSEHlrrK
+                      filepath-1.4.1.1@filepath-1.4.1.1
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      hashable-1.2.5.0@hashable-1.2.5.0-F4MWeNuv2sjJRqBd2T5ul4
+                      http-api-data-0.3.5@http-api-data-0.3.5-2qGPrBKC4pgLHxgQdgNgEV
+                      http-date-0.0.6.1@http-date-0.0.6.1-I9CE9BHCJzIDsnojCE46i
+                      http-media-0.6.4@http-media-0.6.4-IiIO5ijbeES53rTISAjOqx
+                      http-types-0.9.1@http-types-0.9.1-5F2YjZNOfOTCho80klHZFM
+                      http2-1.6.3@http2-1.6.3-AztirFAAzjluWi6d9XlAh integer-gmp-1.0.0.1
+                      integer-logarithms-1.0.1@integer-logarithms-1.0.1-IEHCuEd5sG4JjSjlx7m5JF
+                      iproute-1.7.1@iproute-1.7.1-1VmXzmOljuk9tg4pg6dAZJ
+                      memory-0.14.1@memory-0.14.1-J8LClTQE9ts1CQQG3Fd7ul
+                      mime-types-0.1.0.7@mime-types-0.1.0.7-31dnC2ifQ9r5TApUZagLPk
+                      mmorph-1.0.9@mmorph-1.0.9-5bASEvmIkr5CpdAYXwPsn0
+                      mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
+                      network-2.6.3.1@network-2.6.3.1-AwRxOQvT8JM9e8zDFK7aCI
+                      network-uri-2.6.1.0@network-uri-2.6.1.0-EwGrJ9bdUqR1E7dAIJ4cwF
+                      parsec-3.1.11@parsec-3.1.11-113irVHGgd88sRnywByDNw
+                      pretty-1.1.3.3@pretty-1.1.3.3
+                      primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH
+                      psqueues-0.2.2.3@psqueues-0.2.2.3-GauKnoBPgvr4cpGo1pqheE
+                      random-1.1@random-1.1-9tceXaeYIMZ4JrKq20Egog
+                      scientific-0.3.4.10@scientific-0.3.4.10-HRQd1hS6vMV6hvjSlMi8B0
+                      servant-0.9.1.1@servant-0.9.1.1-H1lruO0TAg3G9UAV7nwwvZ
+                      servant-server-0.9.1.1@servant-server-0.9.1.1-2XqAn5cMX5xKqeEtpyMnA4
+                      stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      streaming-commons-0.1.17@streaming-commons-0.1.17-68TIrPMbDcW6Be9IWoxgJG
+                      string-conversions-0.4.0.1@string-conversions-0.4.0.1-5bhARACLQyXG4DLNegoSj4
+                      tagged-0.8.5@tagged-0.8.5-1mTloBSoUxv8dqUr8XBGBt
+                      template-haskell-2.11.1.0
+                      text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR
+                      th-lift-0.7.6@th-lift-0.7.6-BJcuQtn7dnPzL4YOk4wps
+                      th-lift-instances-0.1.11@th-lift-instances-0.1.11-C7WWQYsyhhMpc6laO6Bed
+                      time-1.6.0.1@time-1.6.0.1
+                      time-locale-compat-0.1.1.3@time-locale-compat-0.1.1.3-KZ1jqNx8uhlHjmuPPj6V1Y
+                      transformers-0.5.2.0@transformers-0.5.2.0
+                      unix-compat-0.4.3.1@unix-compat-0.4.3.1-4J6CourUSTG17Ll1LWtjiq
+                      unordered-containers-0.2.7.2@unordered-containers-0.2.7.2-8AmrySQXjRGF6VciYs51fM
+                      uri-bytestring-0.2.3.1@uri-bytestring-0.2.3.1-EYxS0kmkh3nDMUNpPmAUOf
+                      utf8-string-1.0.1.1@utf8-string-1.0.1.1-1DpjxLeTvGg7ttZZojxJR5
+                      uuid-types-1.0.3@uuid-types-1.0.3-7DISMfTGMIwFRGIC3QM3tK
+                      vault-0.3.0.6@vault-0.3.0.6-LaXzEmUAZNyLZeEpsXBRv2
+                      vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG
+                      wai-3.2.1.1@wai-3.2.1.1-GB3RulwwXCN9MymRcZJtxu
+                      wai-app-static-3.1.6.1@wai-app-static-3.1.6.1-KWYZfDjjaKvLj3ISYUU6GX
+                      warp-3.2.11.1@warp-3.2.11.1-GyFH0rBhfwF4UQ6knVFPXv
+                      word8-0.1.2@word8-0.1.2-9WDPGCTpW7JJnsiAQavtd1
+                      zlib-0.6.1.2@zlib-0.6.1.2-7negTfm2ujt1gW4wr40MUp
+orphans: attoparsec-0.13.1.0@attoparsec-0.13.1.0-HCAgpBrKCLJ5li8FbfXxE1:Data.Attoparsec.ByteString.Char8
+         attoparsec-0.13.1.0@attoparsec-0.13.1.0-HCAgpBrKCLJ5li8FbfXxE1:Data.Attoparsec.Text.Internal
+         base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         hashable-1.2.5.0@hashable-1.2.5.0-F4MWeNuv2sjJRqBd2T5ul4:Data.Hashable.Generic
+         network-2.6.3.1@network-2.6.3.1-AwRxOQvT8JM9e8zDFK7aCI:Network.Socket
+         stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Show
+         th-lift-0.7.6@th-lift-0.7.6-BJcuQtn7dnPzL4YOk4wps:Language.Haskell.TH.Lift
+         th-lift-instances-0.1.11@th-lift-instances-0.1.11-C7WWQYsyhhMpc6laO6Bed:Instances.TH.Lift
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Fusion.Bundle
+         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Unboxed
+family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-HCAgpBrKCLJ5li8FbfXxE1:Data.Attoparsec.Internal.Types
+                         base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Compose
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         dlist-0.8.0.2@dlist-0.8.0.2-6Wnps4GD7EFnRucVzXIFD:Data.DList
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         http-api-data-0.3.5@http-api-data-0.3.5-2qGPrBKC4pgLHxgQdgNgEV:Web.Internal.FormUrlEncoded
+                         iproute-1.7.1@iproute-1.7.1-1VmXzmOljuk9tg4pg6dAZJ:Data.IP.Addr
+                         iproute-1.7.1@iproute-1.7.1-1VmXzmOljuk9tg4pg6dAZJ:Data.IP.Range
+                         network-uri-2.6.1.0@network-uri-2.6.1.0-EwGrJ9bdUqR1E7dAIJ4cwF:Network.URI
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH:Control.Monad.Primitive
+                         servant-0.9.1.1@servant-0.9.1.1-H1lruO0TAg3G9UAV7nwwvZ:Servant.API.ContentTypes
+                         servant-0.9.1.1@servant-0.9.1.1-H1lruO0TAg3G9UAV7nwwvZ:Servant.API.IsSecure
+                         servant-0.9.1.1@servant-0.9.1.1-H1lruO0TAg3G9UAV7nwwvZ:Servant.API.Verbs
+                         servant-0.9.1.1@servant-0.9.1.1-H1lruO0TAg3G9UAV7nwwvZ:Servant.Utils.Links
+                         servant-server-0.9.1.1@servant-server-0.9.1.1-2XqAn5cMX5xKqeEtpyMnA4:Servant.Server.Internal
+                         servant-server-0.9.1.1@servant-server-0.9.1.1-2XqAn5cMX5xKqeEtpyMnA4:Servant.Server.Internal.BasicAuth
+                         tagged-0.8.5@tagged-0.8.5-1mTloBSoUxv8dqUr8XBGBt:Data.Tagged
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
+                         unordered-containers-0.2.7.2@unordered-containers-0.2.7.2-8AmrySQXjRGF6VciYs51fM:Data.HashMap.Base
+                         unordered-containers-0.2.7.2@unordered-containers-0.2.7.2-8AmrySQXjRGF6VciYs51fM:Data.HashSet
+                         uri-bytestring-0.2.3.1@uri-bytestring-0.2.3.1-EYxS0kmkh3nDMUNpPmAUOf:URI.ByteString.Types
+                         uuid-types-1.0.3@uuid-types-1.0.3-7DISMfTGMIwFRGIC3QM3tK:Data.UUID.Types.Internal
+                         uuid-types-1.0.3@uuid-types-1.0.3-7DISMfTGMIwFRGIC3QM3tK:Data.UUID.Types.Internal.Builder
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Primitive
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Storable
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Unboxed
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Unboxed.Base
+                         zlib-0.6.1.2@zlib-0.6.1.2-7negTfm2ujt1gW4wr40MUp:Codec.Compression.Zlib.Stream
+import  -/  aeson-1.0.2.1@aeson-1.0.2.1-9NPC6B17ifJ9yEOgZnhnOr:Data.Aeson 6cfe60f124a4417e608c67dfe15be1cc
+import  -/  aeson-1.0.2.1@aeson-1.0.2.1-9NPC6B17ifJ9yEOgZnhnOr:Data.Aeson.Encoding.Internal 7858d1558bdc6a0c082a546b56984a1e
+import  -/  aeson-1.0.2.1@aeson-1.0.2.1-9NPC6B17ifJ9yEOgZnhnOr:Data.Aeson.TH f7572a93aaa0f90a800911251de6e9cd
+import  -/  aeson-1.0.2.1@aeson-1.0.2.1-9NPC6B17ifJ9yEOgZnhnOr:Data.Aeson.Types.FromJSON 1316ab9121f85e92aaf36eaf294367ed
+import  -/  aeson-1.0.2.1@aeson-1.0.2.1-9NPC6B17ifJ9yEOgZnhnOr:Data.Aeson.Types.Internal f4642b9f84a4c92fb7588356405277bd
+import  -/  aeson-1.0.2.1@aeson-1.0.2.1-9NPC6B17ifJ9yEOgZnhnOr:Data.Aeson.Types.ToJSON c2651bbed32207695f964a66171d86f4
+import  -/  base-4.9.1.0:Data.Functor 682cc832c233b71cec70179490a08631
+import  -/  base-4.9.1.0:Data.OldList c9282ee91951bdcbd918d2960562c007
+import  -/  base-4.9.1.0:Data.Proxy 657d37a7ff49fc895edf1c731d0fa581
+import  -/  base-4.9.1.0:GHC.Base 4caea1123ecf4b46e27cbccd6d279377
+import  -/  base-4.9.1.0:GHC.Show eca5834daba3b6a2bbbe64ab52056707
+import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 16d48e012d23eaef9bca91ccdd572c02
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+import  -/  servant-0.9.1.1@servant-0.9.1.1-H1lruO0TAg3G9UAV7nwwvZ:Servant.API.ContentTypes 7e19c97a89876bdeae094cc7f0b1033f
+import  -/  servant-0.9.1.1@servant-0.9.1.1-H1lruO0TAg3G9UAV7nwwvZ:Servant.API.Sub 31c8c01beb3c44663fa7bfd096e6de60
+import  -/  servant-0.9.1.1@servant-0.9.1.1-H1lruO0TAg3G9UAV7nwwvZ:Servant.API.Verbs 46eb510318358735eb4d8fadc6f108f3
+import  -/  servant-server-0.9.1.1@servant-server-0.9.1.1-2XqAn5cMX5xKqeEtpyMnA4:Servant aac580ab48c749c2911ad4b0851abc8a
+import  -/  servant-server-0.9.1.1@servant-server-0.9.1.1-2XqAn5cMX5xKqeEtpyMnA4:Servant.Server eaa54aafb4fbc6eaff237ea3298554cb
+import  -/  servant-server-0.9.1.1@servant-server-0.9.1.1-2XqAn5cMX5xKqeEtpyMnA4:Servant.Server.Internal 8afa22e59e638961b99a88df85c768ce
+import  -/  text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text 35f976519564888082d42815342d42ed
+import  -/  wai-3.2.1.1@wai-3.2.1.1-GB3RulwwXCN9MymRcZJtxu:Network.Wai 026204f66bee2eaecc3f3e000a4ae67a
+import  -/  warp-3.2.11.1@warp-3.2.11.1-GyFH0rBhfwF4UQ6knVFPXv:Network.Wai.Handler.Warp dedcf9f5c55e0f5719bab97ea2b8545e
+import  -/  warp-3.2.11.1@warp-3.2.11.1-GyFH0rBhfwF4UQ6knVFPXv:Network.Wai.Handler.Warp.Run 2c9194fe3cfe5e1d26b1456f5f1e65c3
+e32fce21a7442b11e502b82244e7bc31
+  $fEqUser :: GHC.Classes.Eq Lib.User
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:. @ Lib.User Lib.$fEqUser_$c== Lib.$fEqUser_$c/= -}
+e32fce21a7442b11e502b82244e7bc31
+  $fEqUser_$c/= :: Lib.User -> Lib.User -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)LL),1*U(1*U(U),1*U,1*U)><S(S(S)LL),1*U(1*U(U),1*U,1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Lib.User) (b :: Lib.User) ->
+                 case Lib.$fEqUser_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+e32fce21a7442b11e502b82244e7bc31
+  $fEqUser_$c== :: Lib.User -> Lib.User -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)LL),1*U(1*U(U),1*U,1*U)><S(S(S)LL),1*U(1*U(U),1*U,1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Lib.User) (w1 :: Lib.User) ->
+                 case w of ww { Lib.User ww1 ww2 ww3 ->
+                 case ww1 of ww4 { GHC.Types.I# ww5 ->
+                 case w1 of ww6 { Lib.User ww7 ww8 ww9 ->
+                 case ww7 of ww10 { GHC.Types.I# ww11 ->
+                 Lib.$w$c== ww5 ww2 ww3 ww11 ww8 ww9 } } } }) -}
+e32fce21a7442b11e502b82244e7bc31
+  $fFromJSONUser :: Data.Aeson.Types.FromJSON.FromJSON Lib.User
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Lib.User
+                  Lib.$fFromJSONUser_$cparseJSON
+                  Lib.$fFromJSONUser_$cparseJSONList -}
+e32fce21a7442b11e502b82244e7bc31
+  $fFromJSONUser1 ::
+    [Data.Aeson.Types.Internal.Parser Lib.User]
+    -> forall (f :: * -> *) r.
+       Data.Aeson.Types.Internal.JSONPath
+       -> Data.Aeson.Types.Internal.Failure f r
+       -> Data.Aeson.Types.Internal.Success [Lib.User] f r
+       -> f r
+  {- Arity: 4, HasNoCafRefs, Strictness: <S,1*U><L,U><L,U><L,C(U)> -}
+08a26b2fdf01df67dc204058b62e1df2
+  $fFromJSONUser2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "[a]"#) -}
+cc1c0ce15cf65a5c0d8dcbe4b74348f7
+  $fFromJSONUser3 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "userLastName"#) -}
+e12c60c4883a1d0ed94e39f7cea53bf5
+  $fFromJSONUser4 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "userFirstName"#) -}
+e6039cda7ffdeb3ade5750ab40f25899
+  $fFromJSONUser5 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "userId"#) -}
+5c58844c0c8e609b70a5fcb41115a02a
+  $fFromJSONUser6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Object"#) -}
+66f16f1e5b42200b70264e39d00606bd
+  $fFromJSONUser7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Lib.User"#) -}
+fd1a47f5432b3dce9057cbaac46eff5a
+  $fFromJSONUser8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "User"#) -}
+e32fce21a7442b11e502b82244e7bc31
+  $fFromJSONUser_$cparseJSON ::
+    Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser Lib.User
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (value :: Data.Aeson.Types.Internal.Value) ->
+                 case value of wild {
+                   DEFAULT
+                   -> Data.Aeson.TH.parseTypeMismatch'
+                        @ Lib.User
+                        Lib.$fFromJSONUser8
+                        Lib.$fFromJSONUser7
+                        Lib.$fFromJSONUser6
+                        (case wild of wild1 {
+                           Data.Aeson.Types.Internal.Array ds1 -> Data.Aeson.TH.valueConName5
+                           Data.Aeson.Types.Internal.String ds1 -> Data.Aeson.TH.valueConName4
+                           Data.Aeson.Types.Internal.Number ds1 -> Data.Aeson.TH.valueConName3
+                           Data.Aeson.Types.Internal.Bool ds1 -> Data.Aeson.TH.valueConName2
+                           Data.Aeson.Types.Internal.Null -> Data.Aeson.TH.valueConName1 })
+                   Data.Aeson.Types.Internal.Object recObj
+                   -> let {
+                        m :: Data.Aeson.Types.Internal.Parser GHC.Types.Int
+                        = case Lib.$fFromJSONUser5 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                          Data.Aeson.TH.$w$clookupField
+                            @ GHC.Types.Int
+                            Data.Aeson.Types.FromJSON.$dmfromJSONKeyList_$cparseJSON5
+                            Lib.$fFromJSONUser7
+                            Lib.$fFromJSONUser8
+                            recObj
+                            ww1
+                            ww2
+                            ww3 }
+                      } in
+                      let {
+                        e :: Data.Aeson.Types.Internal.Parser GHC.Base.String
+                        = case Lib.$fFromJSONUser4 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                          Data.Aeson.TH.$w$clookupField
+                            @ [GHC.Types.Char]
+                            Data.Aeson.Types.FromJSON.$fFromJSONChar_$cparseJSONList
+                            Lib.$fFromJSONUser7
+                            Lib.$fFromJSONUser8
+                            recObj
+                            ww1
+                            ww2
+                            ww3 }
+                      } in
+                      let {
+                        e1 :: Data.Aeson.Types.Internal.Parser GHC.Base.String
+                        = case Lib.$fFromJSONUser3 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                          Data.Aeson.TH.$w$clookupField
+                            @ [GHC.Types.Char]
+                            Data.Aeson.Types.FromJSON.$fFromJSONChar_$cparseJSONList
+                            Lib.$fFromJSONUser7
+                            Lib.$fFromJSONUser8
+                            recObj
+                            ww1
+                            ww2
+                            ww3 }
+                      } in
+                      (\ @ (f :: * -> *)
+                         @ r
+                         (path :: Data.Aeson.Types.Internal.JSONPath)
+                         (kf :: Data.Aeson.Types.Internal.Failure f r)
+                         (ks :: Data.Aeson.Types.Internal.Success Lib.User f r) ->
+                       m `cast` (Data.Aeson.Types.Internal.N:Parser[0] <GHC.Types.Int>_R)
+                         @ f
+                         @ r
+                         path
+                         kf
+                         (\ (a1 :: GHC.Types.Int) ->
+                          e `cast`
+                          (Data.Aeson.Types.Internal.N:Parser[0] <GHC.Base.String>_R)
+                            @ f
+                            @ r
+                            path
+                            kf
+                            (\ (a2 :: GHC.Base.String) ->
+                             e1
+                               `cast`
+                             (Data.Aeson.Types.Internal.N:Parser[0] <GHC.Base.String>_R)
+                               @ f
+                               @ r
+                               path
+                               kf
+                               (\ (a4 :: GHC.Base.String) -> ks (Lib.User a1 a2 a4)))))
+                        `cast`
+                      (Sym (Data.Aeson.Types.Internal.N:Parser[0] <Lib.User>_R)) }) -}
+e32fce21a7442b11e502b82244e7bc31
+  $fFromJSONUser_$cparseJSONList ::
+    Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser [Lib.User]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: Data.Aeson.Types.Internal.Value) ->
+                 case ds of wild {
+                   DEFAULT
+                   -> Data.Aeson.Types.FromJSON.typeMismatch
+                        @ [Lib.User]
+                        Lib.$fFromJSONUser2
+                        wild
+                   Data.Aeson.Types.Internal.Array a1
+                   -> case a1 of wild1 { Data.Vector.Vector dt dt1 dt2 ->
+                      (Lib.$fFromJSONUser1
+                         (letrec {
+                            $wgo :: GHC.Prim.Int# -> [Data.Aeson.Types.Internal.Value]
+                              {- Arity: 1, Strictness: <S,U>, Inline: [0] -}
+                            = \ (ww :: GHC.Prim.Int#) ->
+                              case GHC.Prim.tagToEnum#
+                                     @ GHC.Types.Bool
+                                     (GHC.Prim.>=# ww dt1) of wild2 {
+                                GHC.Types.False
+                                -> case GHC.Prim.indexArray#
+                                          @ Data.Aeson.Types.Internal.Value
+                                          dt2
+                                          (GHC.Prim.+# dt ww) of ds2 { Unit# ipv ->
+                                   GHC.Types.:
+                                     @ Data.Aeson.Types.Internal.Value
+                                     ipv
+                                     ($wgo (GHC.Prim.+# ww 1#)) }
+                                GHC.Types.True -> GHC.Types.[] @ Data.Aeson.Types.Internal.Value }
+                          } in
+                          Lib.$fFromJSONUser_go 0# ($wgo 0#)))
+                        `cast`
+                      (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                                <[Lib.User]>_R)) } }) -}
+e32fce21a7442b11e502b82244e7bc31
+  $fFromJSONUser_go ::
+    GHC.Prim.Int#
+    -> [Data.Aeson.Types.Internal.Value]
+    -> [Data.Aeson.Types.Internal.Parser Lib.User]
+  {- Arity: 2, Strictness: <L,U><S,1*U> -}
+e32fce21a7442b11e502b82244e7bc31
+  $fShowUser :: GHC.Show.Show Lib.User
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Lib.User
+                  Lib.$fShowUser_$cshowsPrec
+                  Lib.$fShowUser_$cshow
+                  Lib.$fShowUser_$cshowList -}
+e32fce21a7442b11e502b82244e7bc31
+  $fShowUser1 :: Lib.User -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ (w :: Lib.User) (w1 :: GHC.Base.String) ->
+                 case w of ww { Lib.User ww1 ww2 ww3 ->
+                 Lib.$w$cshowsPrec 0# ww1 ww2 ww3 w1 }) -}
+7af57bd6515e33d7721b50de2f0d919a
+  $fShowUser2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "User {"#) -}
+1e4985e0e8b355182163da53de4354a2
+  $fShowUser3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "}"#) -}
+bf80ef859de77a8432494c7043bc8a0e
+  $fShowUser4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "userLastName = "#) -}
+ced8cd19f315dddb66f9793ac10a8df4
+  $fShowUser5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "userFirstName = "#) -}
+9b828e0981bc0f765e343d53649898cd
+  $fShowUser6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# ", "#) -}
+cbd94fd9ea08f0d1ad44a19c8c5a6040
+  $fShowUser7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "userId = "#) -}
+e32fce21a7442b11e502b82244e7bc31
+  $fShowUser_$cshow :: Lib.User -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U(U),1*U,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Lib.User) ->
+                 Lib.$fShowUser_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+e32fce21a7442b11e502b82244e7bc31
+  $fShowUser_$cshowList :: [Lib.User] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__ @ Lib.User Lib.$fShowUser1) -}
+e32fce21a7442b11e502b82244e7bc31
+  $fShowUser_$cshowsPrec ::
+    GHC.Types.Int -> Lib.User -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U(U),1*U,1*U)><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int) (w1 :: Lib.User) (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Lib.User ww3 ww4 ww5 ->
+                 Lib.$w$cshowsPrec ww1 ww3 ww4 ww5 w2 } }) -}
+e32fce21a7442b11e502b82244e7bc31
+  $fToJSONUser :: Data.Aeson.Types.ToJSON.ToJSON Lib.User
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Lib.User
+                  Lib.$fToJSONUser_$ctoJSON
+                  Lib.$fToJSONUser_$ctoEncoding
+                  Lib.$fToJSONUser_$ctoJSONList
+                  Lib.$fToJSONUser_$ctoEncodingList -}
+b2485df874df236aba8df4adf702e3eb
+  $fToJSONUser1 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 4#) -}
+e32fce21a7442b11e502b82244e7bc31
+  $fToJSONUser_$ctoEncoding ::
+    Lib.User -> Data.Aeson.Encoding.Internal.Encoding
+  {- Arity: 1, Strictness: <S,1*U(U(U),U,U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Lib.User) ->
+                 case w of ww { Lib.User ww1 ww2 ww3 ->
+                 Lib.$w$ctoEncoding ww1 ww2 ww3 }) -}
+e32fce21a7442b11e502b82244e7bc31
+  $fToJSONUser_$ctoEncodingList ::
+    [Lib.User] -> Data.Aeson.Encoding.Internal.Encoding
+  {- Arity: 1, Strictness: <S,1*U>, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, False)
+                (\ (eta :: [Lib.User]) ->
+                 case eta of wild {
+                   [] -> Data.Aeson.Encoding.Internal.emptyArray_
+                   : x xs
+                   -> (Data.ByteString.Builder.Internal.append
+                         (Data.Aeson.Encoding.Internal.openBracket
+                            @ Data.Aeson.Types.Internal.Value)
+                           `cast`
+                         (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                              <Data.Aeson.Types.Internal.Value>_P)
+                         (Data.ByteString.Builder.Internal.append
+                            (Lib.$fToJSONUser_$ctoEncoding x)
+                              `cast`
+                            (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                 <Data.Aeson.Types.Internal.Value>_P)
+                            (Data.ByteString.Builder.Internal.append
+                               (GHC.Base.foldr
+                                  @ Lib.User
+                                  @ (Data.Aeson.Encoding.Internal.Encoding'
+                                       Data.Aeson.Types.Internal.Value)
+                                  (\ (v :: Lib.User)
+                                     (vs :: Data.Aeson.Encoding.Internal.Encoding'
+                                              Data.Aeson.Types.Internal.Value)[OneShot] ->
+                                   Data.ByteString.Builder.Internal.append
+                                     (Data.Aeson.Encoding.Internal.comma
+                                        @ Data.Aeson.Types.Internal.Value)
+                                       `cast`
+                                     (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                          <Data.Aeson.Types.Internal.Value>_P)
+                                     (Data.ByteString.Builder.Internal.append
+                                        (Lib.$fToJSONUser_$ctoEncoding v)
+                                          `cast`
+                                        (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                             <Data.Aeson.Types.Internal.Value>_P)
+                                        vs
+                                          `cast`
+                                        (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                             <Data.Aeson.Types.Internal.Value>_P)))
+                                    `cast`
+                                  (<Lib.User>_R
+                                   ->_R <Data.Aeson.Encoding.Internal.Encoding'
+                                           Data.Aeson.Types.Internal.Value>_R
+                                   ->_R Sym (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                                 <Data.Aeson.Types.Internal.Value>_P))
+                                  (Data.Aeson.Encoding.Internal.empty
+                                     @ Data.Aeson.Types.Internal.Value)
+                                  xs)
+                                 `cast`
+                               (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                    <Data.Aeson.Types.Internal.Value>_P)
+                               (Data.Aeson.Encoding.Internal.closeBracket
+                                  @ Data.Aeson.Types.Internal.Value)
+                                 `cast`
+                               (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                    <Data.Aeson.Types.Internal.Value>_P))))
+                        `cast`
+                      (Sym (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                <Data.Aeson.Types.Internal.Value>_P)) }) -}
+e32fce21a7442b11e502b82244e7bc31
+  $fToJSONUser_$ctoJSON ::
+    Lib.User -> Data.Aeson.Types.Internal.Value
+  {- Arity: 1, Strictness: <S,1*U(1*U(U),1*U,1*U)>m1,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Lib.User) ->
+                 case w of ww { Lib.User ww1 ww2 ww3 ->
+                 case Lib.$w$ctoJSON ww1 ww2 ww3 of ww4 { Unit# ww5 ->
+                 Data.Aeson.Types.Internal.Object ww5 } }) -}
+e32fce21a7442b11e502b82244e7bc31
+  $fToJSONUser_$ctoJSONList ::
+    [Lib.User] -> Data.Aeson.Types.Internal.Value
+  {- Arity: 1, Strictness: <S,1*U>m2, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, False)
+                (\ (eta :: [Lib.User]) ->
+                 case Data.Vector.Generic.new
+                        @ Data.Vector.Vector
+                        @ Data.Aeson.Types.Internal.Value
+                        (Data.Vector.$fVectorVectora @ Data.Aeson.Types.Internal.Value)
+                        (Data.Vector.Generic.New.unstream
+                           @ Data.Vector.Vector
+                           @ Data.Aeson.Types.Internal.Value
+                           (Data.Vector.$fVectorVectora @ Data.Aeson.Types.Internal.Value)
+                           (Data.Vector.Fusion.Bundle.Monadic.unsafeFromList
+                              @ Data.Vector.Fusion.Util.Id
+                              @ Data.Aeson.Types.Internal.Value
+                              @ Data.Vector.Vector
+                              Data.Vector.Fusion.Util.$fMonadId
+                              Data.Vector.Fusion.Bundle.Size.Unknown
+                              (GHC.Base.build
+                                 @ Data.Aeson.Types.Internal.Value
+                                 (\ @ b1
+                                    (c :: Data.Aeson.Types.Internal.Value -> b1 -> b1)[OneShot]
+                                    (n :: b1)[OneShot] ->
+                                  GHC.Base.foldr
+                                    @ Lib.User
+                                    @ b1
+                                    (GHC.Base.mapFB
+                                       @ Data.Aeson.Types.Internal.Value
+                                       @ b1
+                                       @ Lib.User
+                                       c
+                                       Lib.$fToJSONUser_$ctoJSON)
+                                    n
+                                    eta)))) of dt1 { Data.Vector.Vector ipv ipv1 ipv2 ->
+                 Data.Aeson.Types.Internal.Array dt1 }) -}
+91fa8326fbceb0ab3072847312bd7877
+  $s$fAllCTRender:a ::
+    Servant.API.ContentTypes.AllCTRender
+      '[Servant.API.ContentTypes.JSON] [Lib.User]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ '[Servant.API.ContentTypes.JSON]
+                  @ [Lib.User]
+                  (Servant.API.ContentTypes.$fAllCTRender:a_$cp1AllCTRender
+                     @ Servant.API.ContentTypes.JSON
+                     @ '[]
+                     @ [Lib.User]
+                     Servant.API.ContentTypes.$fAcceptTYPEJSON_$ccontentType
+                       `cast`
+                     (Sym (Servant.API.ContentTypes.N:Accept[0]
+                               <*>_N <Servant.API.ContentTypes.JSON>_N))
+                     Servant.API.ContentTypes.$fAllMimeUnrender[]a_$callMime
+                       `cast`
+                     (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
+                     Lib.$s$fAllCTRender:a_$dAllMimeRender)
+                  (Servant.API.ContentTypes.$fAllCTRender:a_$chandleAcceptH
+                     @ Servant.API.ContentTypes.JSON
+                     @ '[]
+                     @ [Lib.User]
+                     Servant.API.ContentTypes.$fAcceptTYPEJSON_$ccontentType
+                       `cast`
+                     (Sym (Servant.API.ContentTypes.N:Accept[0]
+                               <*>_N <Servant.API.ContentTypes.JSON>_N))
+                     Servant.API.ContentTypes.$fAllMimeUnrender[]a_$callMime
+                       `cast`
+                     (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
+                     Lib.$s$fAllCTRender:a_$dAllMimeRender) -}
+1da8e15d411ee7d7f1a7b3f28829d9c1
+  $s$fAllCTRender:a_$dAllMimeRender ::
+    Servant.API.ContentTypes.AllMimeRender
+      '[Servant.API.ContentTypes.JSON] [Lib.User]
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a0 -}
+e1d443d40016c23fa484a0b0793814aa
+  $s$fAllCTRender:a_$dMimeRender ::
+    Servant.API.ContentTypes.MimeRender
+      Servant.API.ContentTypes.JSON [Lib.User]
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa -}
+4f36664bb5b407c82a13bd252dc53f04
+  $s$fAllCTRender:a_$dToJSON ::
+    Data.Aeson.Types.ToJSON.ToJSON [Lib.User]
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Lib.$s$fAllCTRender:a_$s$fToJSON[] -}
+5a57033758e9670b240713bfbf684527
+  $s$fAllCTRender:a_$s$fAllMimeRender:a0 ::
+    Servant.API.ContentTypes.AllMimeRender
+      '[Servant.API.ContentTypes.JSON] [Lib.User]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ '[Servant.API.ContentTypes.JSON]
+                  @ [Lib.User]
+                  (Servant.API.ContentTypes.$fAllMimeRender:a0_$cp1AllMimeRender
+                     @ Servant.API.ContentTypes.JSON
+                     @ [Lib.User]
+                     Lib.$s$fAllCTRender:a_$dMimeRender)
+                  Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a0_$callMimeRender -}
+019cab79e7a20bc52cb64cc6769f441b
+  $s$fAllCTRender:a_$s$fAllMimeRender:a0_$callMimeRender ::
+    Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON]
+    -> [Lib.User]
+    -> [(Network.HTTP.Media.MediaType.Internal.MediaType,
+         Data.ByteString.Lazy.Internal.ByteString)]
+  {- Arity: 2, Strictness: <L,A><L,1*U>m2,
+     Unfolding: InlineRule (2, True, False)
+                (\ (eta :: Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON])
+                   (eta1 :: [Lib.User]) ->
+                 GHC.Types.:
+                   @ (Network.HTTP.Media.MediaType.Internal.MediaType,
+                      Data.ByteString.Lazy.Internal.ByteString)
+                   ((Servant.API.ContentTypes.$fMimeRenderTYPEJSONa_$cp1MimeRender
+                       @ [Lib.User]
+                       Lib.$s$fAllCTRender:a_$dToJSON)
+                      `cast`
+                    (Servant.API.ContentTypes.N:Accept[0]
+                         <GHC.Types.*>_N <Servant.API.ContentTypes.JSON>_N)
+                      (Data.Proxy.Proxy @ GHC.Types.* @ Servant.API.ContentTypes.JSON),
+                    Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender
+                      (Data.Proxy.Proxy @ GHC.Types.* @ Servant.API.ContentTypes.JSON)
+                      eta1)
+                   (GHC.Types.[]
+                      @ (Network.HTTP.Media.MediaType.Internal.MediaType,
+                         Data.ByteString.Lazy.Internal.ByteString))) -}
+1e5b729e6b410c3551796869f543b131
+  $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa ::
+    Servant.API.ContentTypes.MimeRender
+      Servant.API.ContentTypes.JSON [Lib.User]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ *
+                  @ Servant.API.ContentTypes.JSON
+                  @ [Lib.User]
+                  (Servant.API.ContentTypes.$fMimeRenderTYPEJSONa_$cp1MimeRender
+                     @ [Lib.User]
+                     Lib.$s$fAllCTRender:a_$dToJSON)
+                  Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender -}
+a5dfa4e12cea757c18e70e21a02acc9d
+  $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender ::
+    Data.Proxy.Proxy Servant.API.ContentTypes.JSON
+    -> [Lib.User] -> Data.ByteString.Lazy.Internal.ByteString
+  {- Arity: 2, Strictness: <L,A><L,1*U>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: Data.Proxy.Proxy Servant.API.ContentTypes.JSON)
+                   (eta :: [Lib.User]) ->
+                 Data.Aeson.encode
+                   @ [Lib.User]
+                   Lib.$s$fAllCTRender:a_$dToJSON
+                   eta) -}
+58f12ce2592b7683ac4267aa65262a88
+  $s$fAllCTRender:a_$s$fToJSON[] ::
+    Data.Aeson.Types.ToJSON.ToJSON [Lib.User]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ [Lib.User]
+                  Lib.$fToJSONUser_$ctoJSONList
+                  Lib.$fToJSONUser_$ctoEncodingList
+                  (\ (eta :: [[Lib.User]]) ->
+                   case Data.Vector.Generic.new
+                          @ Data.Vector.Vector
+                          @ Data.Aeson.Types.Internal.Value
+                          (Data.Vector.$fVectorVectora @ Data.Aeson.Types.Internal.Value)
+                          (Data.Vector.Generic.New.unstream
+                             @ Data.Vector.Vector
+                             @ Data.Aeson.Types.Internal.Value
+                             (Data.Vector.$fVectorVectora @ Data.Aeson.Types.Internal.Value)
+                             (Data.Vector.Fusion.Bundle.Monadic.unsafeFromList
+                                @ Data.Vector.Fusion.Util.Id
+                                @ Data.Aeson.Types.Internal.Value
+                                @ Data.Vector.Vector
+                                Data.Vector.Fusion.Util.$fMonadId
+                                Data.Vector.Fusion.Bundle.Size.Unknown
+                                (GHC.Base.build
+                                   @ Data.Aeson.Types.Internal.Value
+                                   (\ @ b1
+                                      (c :: Data.Aeson.Types.Internal.Value -> b1 -> b1)[OneShot]
+                                      (n :: b1)[OneShot] ->
+                                    GHC.Base.foldr
+                                      @ [Lib.User]
+                                      @ b1
+                                      (GHC.Base.mapFB
+                                         @ Data.Aeson.Types.Internal.Value
+                                         @ b1
+                                         @ [Lib.User]
+                                         c
+                                         Lib.$fToJSONUser_$ctoJSONList)
+                                      n
+                                      eta)))) of dt1 { Data.Vector.Vector ipv ipv1 ipv2 ->
+                   Data.Aeson.Types.Internal.Array dt1 })
+                  (\ (eta :: [[Lib.User]]) ->
+                   case eta of wild {
+                     [] -> Data.Aeson.Encoding.Internal.emptyArray_
+                     : x xs
+                     -> (Data.ByteString.Builder.Internal.append
+                           (Data.Aeson.Encoding.Internal.openBracket
+                              @ Data.Aeson.Types.Internal.Value)
+                             `cast`
+                           (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                <Data.Aeson.Types.Internal.Value>_P)
+                           (Data.ByteString.Builder.Internal.append
+                              (case x of wild1 {
+                                 []
+                                 -> Data.Aeson.Encoding.Internal.emptyArray_
+                                      `cast`
+                                    (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                         <Data.Aeson.Types.Internal.Value>_P)
+                                 : x1 xs1
+                                 -> Data.ByteString.Builder.Internal.append
+                                      (Data.Aeson.Encoding.Internal.openBracket
+                                         @ Data.Aeson.Types.Internal.Value)
+                                        `cast`
+                                      (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                           <Data.Aeson.Types.Internal.Value>_P)
+                                      (Data.ByteString.Builder.Internal.append
+                                         (Lib.$fToJSONUser_$ctoEncoding x1)
+                                           `cast`
+                                         (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                              <Data.Aeson.Types.Internal.Value>_P)
+                                         (Data.ByteString.Builder.Internal.append
+                                            (GHC.Base.foldr
+                                               @ Lib.User
+                                               @ (Data.Aeson.Encoding.Internal.Encoding'
+                                                    Data.Aeson.Types.Internal.Value)
+                                               (\ (v :: Lib.User)
+                                                  (vs :: Data.Aeson.Encoding.Internal.Encoding'
+                                                           Data.Aeson.Types.Internal.Value)[OneShot] ->
+                                                Data.ByteString.Builder.Internal.append
+                                                  (Data.Aeson.Encoding.Internal.comma
+                                                     @ Data.Aeson.Types.Internal.Value)
+                                                    `cast`
+                                                  (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                                       <Data.Aeson.Types.Internal.Value>_P)
+                                                  (Data.ByteString.Builder.Internal.append
+                                                     (Lib.$fToJSONUser_$ctoEncoding v)
+                                                       `cast`
+                                                     (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                                          <Data.Aeson.Types.Internal.Value>_P)
+                                                     vs
+                                                       `cast`
+                                                     (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                                          <Data.Aeson.Types.Internal.Value>_P)))
+                                                 `cast`
+                                               (<Lib.User>_R
+                                                ->_R <Data.Aeson.Encoding.Internal.Encoding'
+                                                        Data.Aeson.Types.Internal.Value>_R
+                                                ->_R Sym (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                                              <Data.Aeson.Types.Internal.Value>_P))
+                                               (Data.Aeson.Encoding.Internal.empty
+                                                  @ Data.Aeson.Types.Internal.Value)
+                                               xs1)
+                                              `cast`
+                                            (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                                 <Data.Aeson.Types.Internal.Value>_P)
+                                            (Data.Aeson.Encoding.Internal.closeBracket
+                                               @ Data.Aeson.Types.Internal.Value)
+                                              `cast`
+                                            (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                                 <Data.Aeson.Types.Internal.Value>_P))) })
+                              (Data.ByteString.Builder.Internal.append
+                                 (GHC.Base.foldr
+                                    @ [Lib.User]
+                                    @ (Data.Aeson.Encoding.Internal.Encoding'
+                                         Data.Aeson.Types.Internal.Value)
+                                    (\ (v :: [Lib.User])
+                                       (vs :: Data.Aeson.Encoding.Internal.Encoding'
+                                                Data.Aeson.Types.Internal.Value)[OneShot] ->
+                                     Data.ByteString.Builder.Internal.append
+                                       (Data.Aeson.Encoding.Internal.comma
+                                          @ Data.Aeson.Types.Internal.Value)
+                                         `cast`
+                                       (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                            <Data.Aeson.Types.Internal.Value>_P)
+                                       (Data.ByteString.Builder.Internal.append
+                                          (case v of wild1 {
+                                             []
+                                             -> Data.Aeson.Encoding.Internal.emptyArray_
+                                                  `cast`
+                                                (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                                     <Data.Aeson.Types.Internal.Value>_P)
+                                             : x1 xs1
+                                             -> Data.ByteString.Builder.Internal.append
+                                                  (Data.Aeson.Encoding.Internal.openBracket
+                                                     @ Data.Aeson.Types.Internal.Value)
+                                                    `cast`
+                                                  (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                                       <Data.Aeson.Types.Internal.Value>_P)
+                                                  (Data.ByteString.Builder.Internal.append
+                                                     (Lib.$fToJSONUser_$ctoEncoding x1)
+                                                       `cast`
+                                                     (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                                          <Data.Aeson.Types.Internal.Value>_P)
+                                                     (Data.ByteString.Builder.Internal.append
+                                                        (GHC.Base.foldr
+                                                           @ Lib.User
+                                                           @ (Data.Aeson.Encoding.Internal.Encoding'
+                                                                Data.Aeson.Types.Internal.Value)
+                                                           (\ (v1 :: Lib.User)
+                                                              (vs1 :: Data.Aeson.Encoding.Internal.Encoding'
+                                                                        Data.Aeson.Types.Internal.Value)[OneShot] ->
+                                                            Data.ByteString.Builder.Internal.append
+                                                              (Data.Aeson.Encoding.Internal.comma
+                                                                 @ Data.Aeson.Types.Internal.Value)
+                                                                `cast`
+                                                              (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                                                   <Data.Aeson.Types.Internal.Value>_P)
+                                                              (Data.ByteString.Builder.Internal.append
+                                                                 (Lib.$fToJSONUser_$ctoEncoding v1)
+                                                                   `cast`
+                                                                 (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                                                      <Data.Aeson.Types.Internal.Value>_P)
+                                                                 vs1
+                                                                   `cast`
+                                                                 (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                                                      <Data.Aeson.Types.Internal.Value>_P)))
+                                                             `cast`
+                                                           (<Lib.User>_R
+                                                            ->_R <Data.Aeson.Encoding.Internal.Encoding'
+                                                                    Data.Aeson.Types.Internal.Value>_R
+                                                            ->_R Sym (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                                                          <Data.Aeson.Types.Internal.Value>_P))
+                                                           (Data.Aeson.Encoding.Internal.empty
+                                                              @ Data.Aeson.Types.Internal.Value)
+                                                           xs1)
+                                                          `cast`
+                                                        (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                                             <Data.Aeson.Types.Internal.Value>_P)
+                                                        (Data.Aeson.Encoding.Internal.closeBracket
+                                                           @ Data.Aeson.Types.Internal.Value)
+                                                          `cast`
+                                                        (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                                             <Data.Aeson.Types.Internal.Value>_P))) })
+                                          vs
+                                            `cast`
+                                          (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                               <Data.Aeson.Types.Internal.Value>_P)))
+                                      `cast`
+                                    (<[Lib.User]>_R
+                                     ->_R <Data.Aeson.Encoding.Internal.Encoding'
+                                             Data.Aeson.Types.Internal.Value>_R
+                                     ->_R Sym (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                                   <Data.Aeson.Types.Internal.Value>_P))
+                                    (Data.Aeson.Encoding.Internal.empty
+                                       @ Data.Aeson.Types.Internal.Value)
+                                    xs)
+                                   `cast`
+                                 (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                      <Data.Aeson.Types.Internal.Value>_P)
+                                 (Data.Aeson.Encoding.Internal.closeBracket
+                                    @ Data.Aeson.Types.Internal.Value)
+                                   `cast`
+                                 (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                      <Data.Aeson.Types.Internal.Value>_P))))
+                          `cast`
+                        (Sym (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                  <Data.Aeson.Types.Internal.Value>_P)) }) -}
+188b77d98e7c5a3848a83141d5ba0336
+  $sserve3 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (200) -}
+58e93ac96499ddcdd3c1d8b35b0bae41
+  $sserve4 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Servant.Server.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Servant.Server.Internal.$fHasServerTYPE:>context20
+                   Lib.$sserve5
+                   0#
+                   ipv }) -}
+37517cfcb3d95f1c3d010e215bf0b0c6
+  $sserve5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "users"#) -}
+f357369c3e4bcb9f3f85e44e3e5c0cf8
+  $tc'User :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3236658131808282018##
+                   10801029152628932683##
+                   Lib.$trModule
+                   Lib.$tc'User1) -}
+95c8312d0273fb27a1bb7069a69bd8b8
+  $tc'User1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'User"#) -}
+9381407fc40b48b7f122a0569dda607a
+  $tcUser :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17436793568933465844##
+                   16846177773630076662##
+                   Lib.$trModule
+                   Lib.$tcUser1) -}
+23e22c978d4b7d586bda04787ad8b95d
+  $tcUser1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "User"#) -}
+f1b2fcb34e88c5917a0b83ad4cdabab0
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Lib.$trModule2 Lib.$trModule1) -}
+2cdaa664cfc0ca656b38aebc499d37a6
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Lib"#) -}
+201c98ccaf2fac8e465bda3494b4242c
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "crawler-0.1.0.0-9w4rsqBNGnwBxskp0xkRh7"#) -}
+48076c77506fe5d0c608f68a77264a5d
+  $w$c== ::
+    GHC.Prim.Int#
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Prim.Int#
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Types.Bool
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <S,U><L,1*U><L,1*U><S,U><L,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: GHC.Base.String)
+                   (ww3 :: GHC.Prim.Int#)
+                   (ww4 :: GHC.Base.String)
+                   (ww5 :: GHC.Base.String) ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# ww ww3) of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case GHC.Base.eqString ww1 ww4 of wild1 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True -> GHC.Base.eqString ww2 ww5 } }) -}
+c64bc6fa5fd37cba5d2bd74cbf197c8a
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 5, Strictness: <S,U><L,1*U(U)><L,1*U><L,1*U><L,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Types.Int)
+                   (ww2 :: GHC.Base.String)
+                   (ww3 :: GHC.Base.String)
+                   (w :: GHC.Base.String) ->
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                     {- Arity: 1, Strictness: <L,1*U> -}
+                   = \ (x :: GHC.Base.String)[OneShot] ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       Lib.$fShowUser7
+                       (case ww1 of ww4 { GHC.Types.I# ww5 ->
+                        case GHC.Show.$wshowSignedInt
+                               0#
+                               ww5
+                               (GHC.Base.++
+                                  @ GHC.Types.Char
+                                  Lib.$fShowUser6
+                                  (GHC.Base.++
+                                     @ GHC.Types.Char
+                                     Lib.$fShowUser5
+                                     (GHC.Types.:
+                                        @ GHC.Types.Char
+                                        GHC.Show.shows6
+                                        (GHC.Show.showLitString
+                                           ww2
+                                           (GHC.Types.:
+                                              @ GHC.Types.Char
+                                              GHC.Show.shows6
+                                              (GHC.Base.++
+                                                 @ GHC.Types.Char
+                                                 Lib.$fShowUser6
+                                                 (GHC.Base.++
+                                                    @ GHC.Types.Char
+                                                    Lib.$fShowUser4
+                                                    (GHC.Types.:
+                                                       @ GHC.Types.Char
+                                                       GHC.Show.shows6
+                                                       (GHC.Show.showLitString
+                                                          ww3
+                                                          (GHC.Types.:
+                                                             @ GHC.Types.Char
+                                                             GHC.Show.shows6
+                                                             (GHC.Base.++
+                                                                @ GHC.Types.Char
+                                                                Lib.$fShowUser3
+                                                                x))))))))))) of ww6 { (#,#) ww7 ww8 ->
+                        GHC.Types.: @ GHC.Types.Char ww7 ww8 } })
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False
+                   -> GHC.Base.++ @ GHC.Types.Char Lib.$fShowUser2 (g w)
+                   GHC.Types.True
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows7
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           Lib.$fShowUser2
+                           (g (GHC.Types.: @ GHC.Types.Char GHC.Show.shows4 w))) }) -}
+47a49aafef889537feb49e1d5a912405
+  $w$ctoEncoding ::
+    GHC.Types.Int
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> Data.Aeson.Encoding.Internal.Encoding
+  {- Arity: 3, Strictness: <L,U(U)><L,U><L,U>, Inline: [0] -}
+7f42c7f5a2b65f39272b5982413d56f2
+  $w$ctoJSON ::
+    GHC.Types.Int
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> (# Data.Aeson.Types.Internal.Object #)
+  {- Arity: 3, Strictness: <L,1*U(U)><L,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Types.Int)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: GHC.Base.String) ->
+                 case Data.Aeson.Types.Internal.$sfromList1
+                        @ Data.Aeson.Types.Internal.Value
+                        (GHC.Types.:
+                           @ Data.Aeson.Types.Internal.Pair
+                           (Lib.$fFromJSONUser5,
+                            case ww of wild { GHC.Types.I# i ->
+                            case GHC.Integer.Type.smallInteger i of dt { DEFAULT ->
+                            Data.Aeson.Types.Internal.Number
+                              (Data.Scientific.Scientific dt 0#) } })
+                           (GHC.Types.:
+                              @ Data.Aeson.Types.Internal.Pair
+                              (Lib.$fFromJSONUser4,
+                               case GHC.Magic.runRW#
+                                      @ 'GHC.Types.PtrRepLifted
+                                      @ Data.Text.Internal.Text
+                                      (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                       case GHC.Prim.newByteArray#
+                                              @ GHC.Prim.RealWorld
+                                              8#
+                                              s1 of ds1 { (#,#) ipv ipv1 ->
+                                       Lib.$wouter1
+                                         (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                                         Lib.$fToJSONUser1
+                                         ww1
+                                         0#
+                                         ipv }) of ds1 { (#,#) ipv ipv1 ->
+                               case ipv1 of dt1 { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
+                               Data.Aeson.Types.Internal.String dt1 } })
+                              (GHC.Types.:
+                                 @ Data.Aeson.Types.Internal.Pair
+                                 (Lib.$fFromJSONUser3,
+                                  case GHC.Magic.runRW#
+                                         @ 'GHC.Types.PtrRepLifted
+                                         @ Data.Text.Internal.Text
+                                         (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                          case GHC.Prim.newByteArray#
+                                                 @ GHC.Prim.RealWorld
+                                                 8#
+                                                 s1 of ds1 { (#,#) ipv ipv1 ->
+                                          Lib.$wouter
+                                            (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                                            Lib.$fToJSONUser1
+                                            ww2
+                                            0#
+                                            ipv }) of ds1 { (#,#) ipv ipv1 ->
+                                  case ipv1 of dt1 { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
+                                  Data.Aeson.Types.Internal.String dt1 } })
+                                 (GHC.Types.[] @ Data.Aeson.Types.Internal.Pair))))
+                        (Data.HashMap.Base.Empty
+                           @ Data.Text.Internal.Text
+                           @ Data.Aeson.Types.Internal.Value) of dt { DEFAULT ->
+                 (# dt #) }) -}
+c8b71c3e7dfec0a4f8951328de6908a2
+  $wouter ::
+    Data.Text.Array.MArray GHC.Prim.RealWorld
+    -> GHC.Types.Int
+    -> [GHC.Types.Char]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
+     Inline: [0] -}
+a4e2649e5263c2352f6e8efba1be7c6b
+  $wouter1 ::
+    Data.Text.Array.MArray GHC.Prim.RealWorld
+    -> GHC.Types.Int
+    -> [GHC.Types.Char]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
+     Inline: [0] -}
+83dded34a1c1565675a8f18a14afe716
+  type API =
+    "users"
+    Servant.API.Sub.:> Servant.API.Verbs.Get
+                         '[Servant.API.ContentTypes.JSON] [Lib.User]
+e32fce21a7442b11e502b82244e7bc31
+  data User
+    = User {userId :: GHC.Types.Int,
+            userFirstName :: GHC.Base.String,
+            userLastName :: GHC.Base.String}
+ef3f907a2ee17b4c45677a985ad9c8d5
+  app :: Network.Wai.Application
+  {- Arity: 2,
+     Unfolding: (Servant.Server.Internal.RoutingApplication.toApplication
+                   Lib.app1) -}
+28d0e369295a0ff0dd94abfbeb591279
+  app1 ::
+    Network.Wai.Internal.Request
+    -> (Servant.Server.Internal.RoutingApplication.RouteResult
+          Network.Wai.Internal.Response
+        -> GHC.Types.IO Network.Wai.Internal.ResponseReceived)
+    -> GHC.Types.IO Network.Wai.Internal.ResponseReceived
+  {- Arity: 2,
+     Strictness: <L,U(U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (eta :: Network.Wai.Internal.Request)
+                   (eta1 :: Servant.Server.Internal.RoutingApplication.RouteResult
+                              Network.Wai.Internal.Response
+                            -> GHC.Types.IO Network.Wai.Internal.ResponseReceived)[OneShot] ->
+                 Servant.Server.Internal.Router.runRouterEnv
+                   @ ()
+                   Lib.app_r
+                   GHC.Tuple.()
+                   eta
+                   eta1) -}
+bf62deb7180f8767289ef632467178ad
+  app10 :: Lib.User
+  {- Unfolding: (Lib.User Lib.app13 Lib.app12 Lib.app11) -}
+f120277f9cf6f32f17579c40ca19872f
+  app11 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Einstein"#) -}
+0e56e98dbe8648ab81c756d3f58b6885
+  app12 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Albert"#) -}
+ef6ee1580bc13f1547b04d536b57a90b
+  app13 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 2#) -}
+3b6a74edd6ecabceddcd27548897602a
+  app14 :: Lib.User
+  {- Unfolding: (Lib.User Lib.app17 Lib.app16 Lib.app15) -}
+4d885be2fd6aa60f683d0167924d4186
+  app15 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Newton"#) -}
+e24634cc8615da8cbeab52f106466024
+  app16 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Isaac"#) -}
+8fed1068aaab62765b08ed2d7f69afd7
+  app17 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 1#) -}
+0f4c8b754dfea5880ee53a0c4e3e3505
+  app18 ::
+    Servant.Server.Internal.RoutingApplication.Delayed
+      ()
+      (Servant.Server.Internal.Server
+         (Servant.API.Verbs.Verb
+            'Network.HTTP.Types.Method.GET
+            200
+            '[Servant.API.ContentTypes.JSON]
+            [Lib.User]))
+    -> Servant.Server.Internal.Router.Router ()
+  {- Unfolding: (Servant.Server.Internal.$w$croute9
+                   @ Network.HTTP.Types.Method.StdMethod
+                   @ '[Servant.API.ContentTypes.JSON]
+                   @ [Lib.User]
+                   @ 'Network.HTTP.Types.Method.GET
+                   @ 200
+                   @ '[]
+                   Lib.$s$fAllCTRender:a
+                   Servant.API.Verbs.$fReflectMethodStdMethodGET_$creflectMethod
+                     `cast`
+                   (Sym (Servant.API.Verbs.N:ReflectMethod[0]
+                             <Network.HTTP.Types.Method.StdMethod>_N
+                             <'Network.HTTP.Types.Method.GET>_N))
+                   Lib.$sserve3
+                     `cast`
+                   (Trans
+                        (Sym (GHC.TypeLits.N:SNat[0] <200>_P))
+                        (Sym (GHC.TypeLits.N:KnownNat[0]) <200>_N))
+                   @ ()
+                   (Data.Proxy.Proxy
+                      @ *
+                      @ (Servant.API.Verbs.Verb
+                           'Network.HTTP.Types.Method.GET
+                           200
+                           '[Servant.API.ContentTypes.JSON]
+                           [Lib.User]))) -}
+8ab15cf95a87c7ff50f861048db8fd1b
+  app2 ::
+    Data.Map.Base.Map
+      Data.Text.Internal.Text
+      (Servant.Server.Internal.Router.Router'
+         () Servant.Server.Internal.RoutingApplication.RoutingApplication)
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ Data.Text.Internal.Text
+                        Lib.$sserve4 of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of dt { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
+                 Data.Map.Base.Bin
+                   @ Data.Text.Internal.Text
+                   @ (Servant.Server.Internal.Router.Router'
+                        () Servant.Server.Internal.RoutingApplication.RoutingApplication)
+                   1#
+                   dt
+                   Lib.app3
+                   (Data.Map.Base.Tip
+                      @ Data.Text.Internal.Text
+                      @ (Servant.Server.Internal.Router.Router'
+                           () Servant.Server.Internal.RoutingApplication.RoutingApplication))
+                   (Data.Map.Base.Tip
+                      @ Data.Text.Internal.Text
+                      @ (Servant.Server.Internal.Router.Router'
+                           ()
+                           Servant.Server.Internal.RoutingApplication.RoutingApplication)) } }) -}
+bc6862d33ec4901045491a6a3540a21e
+  app3 :: Servant.Server.Internal.Router.Router ()
+  {- Unfolding: (Lib.app18
+                   Lib.app4
+                     `cast`
+                   (Servant.Server.Internal.RoutingApplication.Delayed
+                      <()>_R
+                      (Sub (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
+                                <*>_N
+                                <Servant.API.Verbs.Verb
+                                   'Network.HTTP.Types.Method.GET
+                                   200
+                                   '[Servant.API.ContentTypes.JSON]
+                                   [Lib.User]>_N
+                                <"users">_N
+                                <Control.Monad.Trans.Except.ExceptT
+                                   Servant.Server.Internal.ServantErr.ServantErr
+                                   GHC.Types.IO>_N)))_R) -}
+ec1209feb053a760b56bfb60890f6212
+  app4 ::
+    Servant.Server.Internal.RoutingApplication.Delayed
+      () (Servant.Server.Internal.Server Lib.API)
+  {- Unfolding: (Servant.Server.Internal.RoutingApplication.Delayed
+                   @ ()
+                   @ (Servant.Server.Internal.Server Lib.API)
+                   @ ()
+                   @ ()
+                   @ ()
+                   (Servant.Server.Internal.RoutingApplication.emptyDelayed2 @ ())
+                     `cast`
+                   (<()>_R
+                    ->_R Trans
+                             (<Network.Wai.Internal.Request>_R
+                              ->_R Sym (GHC.Types.N:IO[0]
+                                            <Servant.Server.Internal.RoutingApplication.RouteResult
+                                               ()>_R))
+                             (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
+                                       <()>_R)))
+                   Servant.Server.Internal.RoutingApplication.emptyDelayed1
+                     `cast`
+                   (Trans
+                        (<Network.Wai.Internal.Request>_R
+                         ->_R Sym (GHC.Types.N:IO[0]
+                                       <Servant.Server.Internal.RoutingApplication.RouteResult
+                                          ()>_R))
+                        (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
+                                  <()>_R)))
+                   Servant.Server.Internal.RoutingApplication.emptyDelayed1
+                     `cast`
+                   (Trans
+                        (<Network.Wai.Internal.Request>_R
+                         ->_R Sym (GHC.Types.N:IO[0]
+                                       <Servant.Server.Internal.RoutingApplication.RouteResult
+                                          ()>_R))
+                        (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
+                                  <()>_R)))
+                   Servant.Server.Internal.RoutingApplication.emptyDelayed1
+                     `cast`
+                   (Trans
+                        (<Network.Wai.Internal.Request>_R
+                         ->_R Sym (GHC.Types.N:IO[0]
+                                       <Servant.Server.Internal.RoutingApplication.RouteResult
+                                          ()>_R))
+                        (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
+                                  <()>_R)))
+                   Lib.app5) -}
+48cefa3da8da0c61e430b58ebfc44a6b
+  app5 ::
+    ()
+    -> ()
+    -> ()
+    -> Network.Wai.Internal.Request
+    -> Servant.Server.Internal.RoutingApplication.RouteResult
+         (Servant.Server.Internal.Server Lib.API)
+  {- Arity: 4,
+     Unfolding: (\ (ds :: ())
+                   (ds1 :: ())
+                   (ds2 :: ())
+                   (ds3 :: Network.Wai.Internal.Request) ->
+                 Lib.app_result) -}
+3adcd78f66392b8cbc316c4abbe8c443
+  app6 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Either.Either
+            Servant.Server.Internal.ServantErr.ServantErr [Lib.User] #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (# s, Lib.app7 #)) -}
+1a97871dbdf6c33e0dc4784fb9ad3bc7
+  app7 ::
+    Data.Either.Either
+      Servant.Server.Internal.ServantErr.ServantErr [Lib.User]
+  {- Unfolding: (Data.Either.Right
+                   @ Servant.Server.Internal.ServantErr.ServantErr
+                   @ [Lib.User]
+                   Lib.app8) -}
+241fd127c81813efc38cf613373cd34d
+  app8 :: [Lib.User]
+  {- Unfolding: (GHC.Types.: @ Lib.User Lib.app14 Lib.app9) -}
+5d6b2ca994757eb6e902e83bf7b243c0
+  app9 :: [Lib.User]
+  {- Unfolding: (GHC.Types.:
+                   @ Lib.User
+                   Lib.app10
+                   (GHC.Types.[] @ Lib.User)) -}
+5b372724f73f3160c9702cca4f0b3032
+  app_r :: Servant.Server.Internal.Router.Router ()
+  {- Strictness: m1,
+     Unfolding: (Servant.Server.Internal.Router.StaticRouter
+                   @ ()
+                   @ Servant.Server.Internal.RoutingApplication.RoutingApplication
+                   Lib.app2
+                   (GHC.Types.[]
+                      @ (()
+                         -> Servant.Server.Internal.RoutingApplication.RoutingApplication))) -}
+ca02bebe5e553696c2a1d23fdae314c5
+  app_result ::
+    Servant.Server.Internal.RoutingApplication.RouteResult
+      (Servant.Server.Internal.Server Lib.API)
+  {- Unfolding: (Servant.Server.Internal.RoutingApplication.Route
+                   @ (Servant.Server.Internal.Server Lib.API)
+                   Lib.app6
+                     `cast`
+                   (Trans
+                        (Sym (GHC.Types.N:IO[0]
+                                  <Data.Either.Either
+                                     Servant.Server.Internal.ServantErr.ServantErr [Lib.User]>_R))
+                        (Trans
+                             (Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                       <Servant.Server.Internal.ServantErr.ServantErr>_N
+                                       <GHC.Types.IO>_R
+                                       <[Lib.User]>_N))
+                             (Trans
+                                  (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPEVerbm0[0]
+                                                 <Network.HTTP.Types.Method.StdMethod>_N
+                                                 <[Lib.User]>_N
+                                                 <'[Servant.API.ContentTypes.JSON]>_N
+                                                 <200>_N
+                                                 <'Network.HTTP.Types.Method.GET>_N
+                                                 <Control.Monad.Trans.Except.ExceptT
+                                                    Servant.Server.Internal.ServantErr.ServantErr
+                                                    GHC.Types.IO>_N)))
+                                  (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
+                                                 <*>_N
+                                                 <Servant.API.Verbs.Verb
+                                                    'Network.HTTP.Types.Method.GET
+                                                    200
+                                                    '[Servant.API.ContentTypes.JSON]
+                                                    [Lib.User]>_N
+                                                 <"users">_N
+                                                 <Control.Monad.Trans.Except.ExceptT
+                                                    Servant.Server.Internal.ServantErr.ServantErr
+                                                    GHC.Types.IO>_N))))))) -}
+ecd2b5ea526f5b011bdb2cfe4c4bca16
+  startApp :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Lib.startApp1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+20531cd89575b8cd497874566fdbb5bc
+  startApp1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (eta1 :: GHC.Prim.State#
+                              GHC.Prim.RealWorld)[OneShot] ->
+                 Network.Wai.Handler.Warp.Run.$wrunSettings
+                   Lib.startApp2
+                   Network.Wai.Handler.Warp.Settings.defaultSettings16
+                   Network.Wai.Handler.Warp.Settings.defaultOnException1
+                     `cast`
+                   (<GHC.Base.Maybe Network.Wai.Internal.Request>_R
+                    ->_R <GHC.Exception.SomeException>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   Network.Wai.Handler.Warp.Settings.defaultOnExceptionResponse
+                   Network.Wai.Handler.Warp.Settings.defaultSettings14
+                     `cast`
+                   (<Network.Socket.Types.SockAddr>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R))
+                   Network.Wai.Handler.Warp.Settings.defaultSettings13
+                     `cast`
+                   (<Network.Socket.Types.SockAddr>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   Network.Wai.Handler.Warp.Settings.defaultSettings12
+                   (GHC.Base.Nothing @ Network.Wai.Handler.Warp.Timeout.Manager)
+                   Network.Wai.Handler.Warp.Settings.defaultSettings11
+                   Network.Wai.Handler.Warp.Settings.defaultSettings11
+                   Network.Wai.Handler.Warp.Settings.defaultSettings9
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0] <()>_R))
+                   Network.Wai.Handler.Warp.Settings.defaultSettings10
+                     `cast`
+                   (<(forall a. GHC.Types.IO a -> GHC.Types.IO a)
+                     -> GHC.Types.IO ()>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   GHC.Types.False
+                   Network.Wai.Handler.Warp.Settings.defaultSettings8
+                     `cast`
+                   (<GHC.Types.IO ()>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   Network.Wai.Handler.Warp.Settings.defaultSettings6
+                   Network.Wai.Handler.Warp.Settings.defaultSettings4
+                   Network.Wai.Handler.Warp.Settings.ProxyProtocolNone
+                   Network.Wai.Handler.Warp.Settings.defaultSettings3
+                   GHC.Types.True
+                   Network.Wai.Handler.Warp.Settings.defaultSettings2
+                     `cast`
+                   (<Network.Wai.Internal.Request>_R
+                    ->_R <Network.HTTP.Types.Status.Status>_R
+                    ->_R <GHC.Base.Maybe GHC.Integer.Type.Integer>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   Network.Wai.Handler.Warp.Settings.defaultSettings1
+                     `cast`
+                   (<Network.Wai.Internal.Request>_R
+                    ->_R <Data.ByteString.Internal.ByteString>_R
+                    ->_R <GHC.Integer.Type.Integer>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   Lib.app
+                   eta1) -}
+6955f353c0b34438cffc00acb04482ab
+  startApp2 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 8080#) -}
+2ee5def05a98d8768aebd7a830b15951
+  userFirstName :: Lib.User -> GHC.Base.String
+  RecSel Left Lib.User
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Lib.User) ->
+                 case ds of wild { Lib.User ds1 ds2 ds3 -> ds2 }) -}
+d464d103450273b2474ae9cdcd9c9e4b
+  userId :: Lib.User -> GHC.Types.Int
+  RecSel Left Lib.User
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U(U),A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Lib.User) ->
+                 case ds of wild { Lib.User ds1 ds2 ds3 -> ds1 }) -}
+616e9f6c371fa31305889d153a5e932e
+  userLastName :: Lib.User -> GHC.Base.String
+  RecSel Left Lib.User
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Lib.User) ->
+                 case ds of wild { Lib.User ds1 ds2 ds3 -> ds3 }) -}
+instance GHC.Classes.Eq [Lib.User] = Lib.$fEqUser
+instance Data.Aeson.Types.FromJSON.FromJSON [Lib.User]
+  = Lib.$fFromJSONUser
+instance GHC.Show.Show [Lib.User] = Lib.$fShowUser
+instance Data.Aeson.Types.ToJSON.ToJSON [Lib.User]
+  = Lib.$fToJSONUser
+"SPEC/Lib $fAllCTRender:a @ JSON @ '[] @ [User]" [ALWAYS] forall ($dAllMimeRender :: Servant.API.ContentTypes.AllMimeRender
+                                                                                       '[Servant.API.ContentTypes.JSON]
+                                                                                       [Lib.User])
+                                                                 ($dAllMime :: Servant.API.ContentTypes.AllMime
+                                                                                 '[])
+                                                                 ($dAccept :: Servant.API.ContentTypes.Accept
+                                                                                Servant.API.ContentTypes.JSON)
+  Servant.API.ContentTypes.$fAllCTRender:a @ Servant.API.ContentTypes.JSON
+                                           @ '[]
+                                           @ [Lib.User]
+                                           $dAccept
+                                           $dAllMime
+                                           $dAllMimeRender
+  = Lib.$s$fAllCTRender:a
+"SPEC/Lib $fAllMimeRender:a0 @ JSON @ [User]" [ALWAYS] forall ($dMimeRender :: Servant.API.ContentTypes.MimeRender
+                                                                                 Servant.API.ContentTypes.JSON
+                                                                                 [Lib.User])
+  Servant.API.ContentTypes.$fAllMimeRender:a0 @ Servant.API.ContentTypes.JSON
+                                              @ [Lib.User]
+                                              $dMimeRender
+  = Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a0
+"SPEC/Lib $fAllMimeRender:a0_$callMimeRender @ JSON @ [User]" [ALWAYS] forall ($dMimeRender :: Servant.API.ContentTypes.MimeRender
+                                                                                                 Servant.API.ContentTypes.JSON
+                                                                                                 [Lib.User])
+  Servant.API.ContentTypes.$fAllMimeRender:a0_$callMimeRender @ Servant.API.ContentTypes.JSON
+                                                              @ [Lib.User]
+                                                              $dMimeRender
+  = Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a0_$callMimeRender
+"SPEC/Lib $fMimeRenderTYPEJSONa @ [User]" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.ToJSON.ToJSON
+                                                                         [Lib.User])
+  Servant.API.ContentTypes.$fMimeRenderTYPEJSONa @ [Lib.User]
+                                                 $dToJSON
+  = Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa
+"SPEC/Lib $fMimeRenderTYPEJSONa_$cmimeRender @ [User]" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.ToJSON.ToJSON
+                                                                                      [Lib.User])
+  Servant.API.ContentTypes.$fMimeRenderTYPEJSONa_$cmimeRender @ [Lib.User]
+                                                              $dToJSON
+  = Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender
+"SPEC/Lib $fToJSON[] @ User" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.ToJSON.ToJSON
+                                                            Lib.User)
+  Data.Aeson.Types.ToJSON.$fToJSON[] @ Lib.User $dToJSON
+  = Lib.$s$fAllCTRender:a_$s$fToJSON[]
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

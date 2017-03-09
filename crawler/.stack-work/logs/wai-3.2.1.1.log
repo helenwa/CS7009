@@ -1,0 +1,16 @@
+Configuring wai-3.2.1.1...
+Building wai-3.2.1.1...
+Preprocessing library wai-3.2.1.1...
+[1 of 2] Compiling Network.Wai.Internal ( Network\Wai\Internal.hs, .stack-work\dist\ca59d0ab\build\Network\Wai\Internal.o )
+[2 of 2] Compiling Network.Wai      ( Network\Wai.hs, .stack-work\dist\ca59d0ab\build\Network\Wai.o )
+Installing library in
+C:\sr\snapshots\523bd341\lib\x86_64-windows-ghc-8.0.2\wai-3.2.1.1-GB3RulwwXCN9MymRcZJtxu
+Registering wai-3.2.1.1...
+Cabal-simple_Z6RU0evB_1.24.2.0_ghc-8.0.2.exe:
+'C:\Users\happy\AppData\Local\Programs\stack\x86_64-windows\ghc-8.0.2\bin\ghc-pkg.EXE'
+exited with an error:
+wai-3.2.1.1: Warning: haddock-interfaces:
+C:\sr\snapshots\523bd341\doc\wai-3.2.1.1\wai.haddock doesn't exist or isn't a
+file
+ghc-pkg.EXE: C:\sr\snapshots\523bd341\pkgdb\package.cache: you don't have
+permission to modify this file
