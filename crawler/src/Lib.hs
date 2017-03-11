@@ -17,10 +17,17 @@ data User = User
   , userFirstName :: String
   , userLastName  :: String
   } deriving (Eq, Show)
+  
+data Position = Position
+  { xCoord :: Int
+  , yCoord :: Int
+  } deriving (Eq, Show)
+$(deriveJSON defaultOptions ''Position)
 
 $(deriveJSON defaultOptions ''User)
 
-type API = "users" :> Get '[JSON] [User]
+type API = "userList" :> Get '[JSON] [User]
+        :<|> "fdg" :> Capture "x" Int :> Capture "y" Int :> Get '[JSON] Position
 
 startApp :: IO ()
 startApp = run 8080 app
@@ -32,12 +39,16 @@ api :: Proxy API
 api = Proxy
 
 server :: Server API
-server = return users
+server = userList
+    :<|> fdg
+    
+    where 
+        userList = return users
+        fdg :: Int -> Int -> Handler Position
+        fdg x y = return (Position x y)
 
 users :: [User]
 users = [ User 1 "Isaac" "Newton"
         , User 2 "Albert" "Einstein"
         ]
-
-type API = "graph" :> Get '[JSON] [User]
 
