@@ -1,0 +1,30 @@
+Configuring binary-orphans-0.1.6.0...
+Building binary-orphans-0.1.6.0...
+Preprocessing library binary-orphans-0.1.6.0...
+[1 of 1] Compiling Data.Binary.Orphans ( src\Data\Binary\Orphans.hs, .stack-work\dist\ca59d0ab\build\Data\Binary\Orphans.o )
+
+src\Data\Binary\Orphans.hs:36:1: warning: [-Wunused-imports]
+    The import of `liftM' from module `Control.Monad' is redundant
+
+src\Data\Binary\Orphans.hs:38:1: warning: [-Wunused-imports]
+    The import of `Data.Bits' is redundant
+      except perhaps to import instances from `Data.Bits'
+    To import instances alone, use: import Data.Bits()
+
+src\Data\Binary\Orphans.hs:45:1: warning: [-Wunused-imports]
+    The import of `Data.List' is redundant
+      except perhaps to import instances from `Data.List'
+    To import instances alone, use: import Data.List()
+
+src\Data\Binary\Orphans.hs:52:1: warning: [-Wunused-imports]
+    The qualified import of `Data.Void' is redundant
+      except perhaps to import instances from `Data.Void'
+    To import instances alone, use: import Data.Void()
+
+src\Data\Binary\Orphans.hs:53:1: warning: [-Wunused-imports]
+    The import of `Numeric.Natural' is redundant
+      except perhaps to import instances from `Numeric.Natural'
+    To import instances alone, use: import Numeric.Natural()
+Installing library in
+C:\sr\snapshots\523bd341\lib\x86_64-windows-ghc-8.0.2\binary-orphans-0.1.6.0-AEGrLkiQ40GALQmMnUjvXa
+Registering binary-orphans-0.1.6.0...

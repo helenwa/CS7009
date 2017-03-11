@@ -1,0 +1,49 @@
+Configuring x509-system-1.6.4...
+Building x509-system-1.6.4...
+Preprocessing library x509-system-1.6.4...
+[1 of 4] Compiling System.X509.Win32 ( System\X509\Win32.hs, .stack-work\dist\ca59d0ab\build\System\X509\Win32.o )
+
+System\X509\Win32.hs:13:1: warning: [-Wunused-imports]
+    The import of `Control.Applicative' is redundant
+      except perhaps to import instances from `Control.Applicative'
+    To import instances alone, use: import Control.Applicative()
+
+System\X509\Win32.hs:27:1: warning: [-Wunsupported-calling-conventions]
+    * the 'stdcall' calling convention is unsupported on this platform,
+      treating as ccall
+    * When checking declaration:
+        foreign import stdcall unsafe "static CertOpenSystemStoreW" c_CertOpenSystemStore
+          :: Ptr Word8 -> LPCTSTR -> IO HCertStore
+
+System\X509\Win32.hs:29:1: warning: [-Wunsupported-calling-conventions]
+    * the 'stdcall' calling convention is unsupported on this platform,
+      treating as ccall
+    * When checking declaration:
+        foreign import stdcall unsafe "static CertCloseStore" c_CertCloseStore
+          :: HCertStore -> DWORD -> IO ()
+
+System\X509\Win32.hs:32:1: warning: [-Wunsupported-calling-conventions]
+    * the 'stdcall' calling convention is unsupported on this platform,
+      treating as ccall
+    * When checking declaration:
+        foreign import stdcall unsafe "static CertEnumCertificatesInStore" c_CertEnumCertificatesInStore
+          :: HCertStore -> PCCERT_Context -> IO PCCERT_Context
+[2 of 4] Compiling System.X509.Unix ( System\X509\Unix.hs, .stack-work\dist\ca59d0ab\build\System\X509\Unix.o )
+[3 of 4] Compiling System.X509.MacOS ( System\X509\MacOS.hs, .stack-work\dist\ca59d0ab\build\System\X509\MacOS.o )
+
+System\X509\MacOS.hs:2:1: warning: [-Wtabs]
+    Tab character found here, and in one further location.
+    Please use spaces instead.
+
+System\X509\MacOS.hs:8:1: warning: [-Wunused-imports]
+    The import of `Control.Applicative' is redundant
+      except perhaps to import instances from `Control.Applicative'
+    To import instances alone, use: import Control.Applicative()
+[4 of 4] Compiling System.X509      ( System\X509.hs, .stack-work\dist\ca59d0ab\build\System\X509.o )
+
+System\X509.hs:10:1: warning: [-Wtabs]
+    Tab character found here, and in one further location.
+    Please use spaces instead.
+Installing library in
+C:\sr\snapshots\523bd341\lib\x86_64-windows-ghc-8.0.2\x509-system-1.6.4-LeLpo7kxYCTEQilF4yr1rL
+Registering x509-system-1.6.4...

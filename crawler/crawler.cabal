@@ -21,6 +21,9 @@ library
                      , servant-server
                      , wai
                      , warp
+                     , github
+                     , text
+                     , vector
   default-language:    Haskell2010
 
 executable crawler-exe

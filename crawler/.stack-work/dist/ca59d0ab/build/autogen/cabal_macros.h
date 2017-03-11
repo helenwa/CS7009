@@ -21,12 +21,33 @@
   (major1) == 4 && (major2) <  9 || \
   (major1) == 4 && (major2) == 9 && (minor) <= 1)
 
+/* package github-0.15.0 */
+#define VERSION_github "0.15.0"
+#define MIN_VERSION_github(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  15 || \
+  (major1) == 0 && (major2) == 15 && (minor) <= 0)
+
 /* package servant-server-0.9.1.1 */
 #define VERSION_servant_server "0.9.1.1"
 #define MIN_VERSION_servant_server(major1,major2,minor) (\
   (major1) <  0 || \
   (major1) == 0 && (major2) <  9 || \
   (major1) == 0 && (major2) == 9 && (minor) <= 1)
+
+/* package text-1.2.2.1 */
+#define VERSION_text "1.2.2.1"
+#define MIN_VERSION_text(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  2 || \
+  (major1) == 1 && (major2) == 2 && (minor) <= 2)
+
+/* package vector-0.11.0.0 */
+#define VERSION_vector "0.11.0.0"
+#define MIN_VERSION_vector(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  11 || \
+  (major1) == 0 && (major2) == 11 && (minor) <= 0)
 
 /* package wai-3.2.1.1 */
 #define VERSION_wai "3.2.1.1"
@@ -91,7 +112,7 @@
   (major1) == 2 && (major2) <  25 || \
   (major1) == 2 && (major2) == 25 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "crawler-0.1.0.0-9w4rsqBNGnwBxskp0xkRh7"
+#define CURRENT_COMPONENT_ID "crawler-0.1.0.0-KIqSXb1zpGuGSAKw76lDnA"
 
-#define CURRENT_PACKAGE_KEY "crawler-0.1.0.0-9w4rsqBNGnwBxskp0xkRh7"
+#define CURRENT_PACKAGE_KEY "crawler-0.1.0.0-KIqSXb1zpGuGSAKw76lDnA"
 
