@@ -1,0 +1,23 @@
+[1 of 2] Compiling Main             ( C:\Users\happy\AppData\Local\Temp\stack2144\http-api-data-0.3.2\Setup.lhs, C:\Users\happy\AppData\Local\Temp\stack2144\http-api-data-0.3.2\.stack-work\dist\ca59d0ab\setup\Main.o )
+
+C:\Users\happy\AppData\Local\Temp\stack2144\http-api-data-0.3.2\Setup.lhs:44:69: warning: [-Wdeprecations]
+    In the use of type constructor or class `InstalledPackageId'
+    (imported from Distribution.Package):
+    Deprecated: "Use UnitId instead"
+[2 of 2] Compiling StackSetupShim   ( C:\sr\setup-exe-src\setup-shim-Z6RU0evB.hs, C:\Users\happy\AppData\Local\Temp\stack2144\http-api-data-0.3.2\.stack-work\dist\ca59d0ab\setup\StackSetupShim.o )
+Linking C:\Users\happy\AppData\Local\Temp\stack2144\http-api-data-0.3.2\.stack-work\dist\ca59d0ab\setup\setup.exe ...
+Configuring http-api-data-0.3.2...
+Building http-api-data-0.3.2...
+Preprocessing library http-api-data-0.3.2...
+[1 of 4] Compiling Web.Internal.HttpApiData ( src\Web\Internal\HttpApiData.hs, .stack-work\dist\ca59d0ab\build\Web\Internal\HttpApiData.o )
+
+src\Web\Internal\HttpApiData.hs:534:30: warning: [-Wdeprecations]
+    In the use of `parseTime'
+    (imported from Data.Time, but defined in time-1.6.0.1:Data.Time.Format.Parse):
+    Deprecated: "use "parseTimeM True" instead"
+[2 of 4] Compiling Web.Internal.FormUrlEncoded ( src\Web\Internal\FormUrlEncoded.hs, .stack-work\dist\ca59d0ab\build\Web\Internal\FormUrlEncoded.o )
+[3 of 4] Compiling Web.HttpApiData  ( src\Web\HttpApiData.hs, .stack-work\dist\ca59d0ab\build\Web\HttpApiData.o )
+[4 of 4] Compiling Web.FormUrlEncoded ( src\Web\FormUrlEncoded.hs, .stack-work\dist\ca59d0ab\build\Web\FormUrlEncoded.o )
+Installing library in
+C:\Users\happy\Documents\5thYear\NetworkApplications\codeblobs\crawler\.stack-work\install\60f100ec\lib\x86_64-windows-ghc-8.0.2\http-api-data-0.3.2-16DyXHDYZKr5nXleD1Ymgt
+Registering http-api-data-0.3.2...

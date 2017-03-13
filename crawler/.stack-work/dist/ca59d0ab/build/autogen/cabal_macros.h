@@ -42,6 +42,13 @@
   (major1) == 1 && (major2) <  2 || \
   (major1) == 1 && (major2) == 2 && (minor) <= 2)
 
+/* package transformers-0.5.2.0 */
+#define VERSION_transformers "0.5.2.0"
+#define MIN_VERSION_transformers(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  5 || \
+  (major1) == 0 && (major2) == 5 && (minor) <= 2)
+
 /* package vector-0.11.0.0 */
 #define VERSION_vector "0.11.0.0"
 #define MIN_VERSION_vector(major1,major2,minor) (\
@@ -112,7 +119,7 @@
   (major1) == 2 && (major2) <  25 || \
   (major1) == 2 && (major2) == 25 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "crawler-0.1.0.0-KIqSXb1zpGuGSAKw76lDnA"
+#define CURRENT_COMPONENT_ID "crawler-0.1.0.0-GgzHapiUHxY2LWVcn2JyLM"
 
-#define CURRENT_PACKAGE_KEY "crawler-0.1.0.0-KIqSXb1zpGuGSAKw76lDnA"
+#define CURRENT_PACKAGE_KEY "crawler-0.1.0.0-GgzHapiUHxY2LWVcn2JyLM"
 

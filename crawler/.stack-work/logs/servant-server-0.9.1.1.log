@@ -15,6 +15,7 @@ Preprocessing executable 'greet' for servant-server-0.9.1.1...
 [1 of 1] Compiling Main             ( example\greet.hs, .stack-work\dist\ca59d0ab\build\greet\greet-tmp\Main.o )
 Linking .stack-work\dist\ca59d0ab\build\greet\greet.exe ...
 Installing library in
-C:\sr\snapshots\523bd341\lib\x86_64-windows-ghc-8.0.2\servant-server-0.9.1.1-2XqAn5cMX5xKqeEtpyMnA4
-Installing executable(s) in C:\sr\snapshots\523bd341\bin
+C:\Users\happy\Documents\5thYear\NetworkApplications\codeblobs\crawler\.stack-work\install\60f100ec\lib\x86_64-windows-ghc-8.0.2\servant-server-0.9.1.1-DAUG6ts2hb199ijR581ugS
+Installing executable(s) in
+C:\Users\happy\Documents\5thYear\NetworkApplications\codeblobs\crawler\.stack-work\install\60f100ec\bin
 Registering servant-server-0.9.1.1...

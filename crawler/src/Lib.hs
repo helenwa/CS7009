@@ -3,6 +3,9 @@
 {-# LANGUAGE TypeOperators   #-}
 {-# LANGUAGE DeriveAnyClass  #-}
 {-# LANGUAGE DeriveGeneric   #-}
+{-# LANGUAGE FlexibleContexts     #-}
+{-# LANGUAGE FlexibleInstances    #-}
+
 module Lib
     ( startApp
     , app
@@ -23,6 +26,10 @@ import Data.Maybe
 import GitHub
 import GitHub.Data.Repos
 import GitHub.Endpoints.Repos
+
+import Control.Monad.Trans.Except
+
+type ApiHandler = ExceptT ServantErr IO
 
 data UserL = UserL
   { userId        :: Int
@@ -46,7 +53,8 @@ data RepoInfo = RepoInfo{
 $(deriveJSON defaultOptions ''RepoInfo)
 
 type API = "userList" :> Get '[JSON] [UserL]
-        :<|> "fdg" :> Capture "x" String :> Capture "y" Int :> Get '[JSON] Position
+        :<|> "user" :> Capture "x" String :> Capture "y" Int :> Get '[JSON] Position
+        -- :<|> "startC" :> ReqBody '[JSON] UserL :> Post '[JSON] Position
 
 startApp :: IO ()
 startApp = run 8080 app
@@ -59,23 +67,31 @@ api = Proxy
 
 server :: Server API
 server = userList
-    :<|> fdg
+    :<|> user
+   -- :<|> startC
     
     where 
         userList = return users
-        fdg :: String -> Int -> Handler Position
-        fdg userName ttl = return (crawl userName ttl)
+        user userName ttl = return (Position userName ttl)
+
+--startC :: UserL -> ApiHandler Position
+-- startC (UserL userId userN text) =  liftIO $ do 
+    -- putStrLn "Output"
+    -- let repositorys = repos $ pack userN 
+    -- let repNo = 8--Data.List.length repositorys
+    -- let p = (Position userN repNo)
+    -- return p
 
 users :: [UserL]
 users = [ UserL 1 "Isaac" "Newton"
         , UserL 2 "Albert" "Einstein"
         ]
-crawl :: String -> Int -> Position
-crawl name ttl = do 
-    let repositorys = repos $ pack name 
-        repNo = Data.List.length repositorys
-        p = (Position name repNo)
-    return liftIO p
+-- crawl :: String -> Int -> Position
+-- crawl name ttl = do 
+    -- let repositorys = repos $ pack name 
+        -- repNo = Data.List.length repositorys
+        -- p = (Position name repNo)
+    -- return  p
    
 --Get users repositorys   
 repos :: Text -> IO[RepoInfo]
