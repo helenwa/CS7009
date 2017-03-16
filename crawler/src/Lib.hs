@@ -26,6 +26,7 @@ import Data.Maybe
 import GitHub
 import GitHub.Data.Repos
 import GitHub.Endpoints.Repos
+import Control.Monad.IO.Class (liftIO)
 
 import DBHelper
 
@@ -56,7 +57,7 @@ $(deriveJSON defaultOptions ''RepoInfo)
 
 type API = "userList" :> Get '[JSON] [UserL]
         :<|> "user" :> Capture "x" String :> Capture "y" Int :> Get '[JSON] Position
-        -- :<|> "startC" :> ReqBody '[JSON] UserL :> Post '[JSON] Position
+        :<|> "startC" :> ReqBody '[JSON] UserL :> Post '[JSON] Position
 
 startApp :: IO ()
 startApp = run 8080 app
@@ -70,19 +71,19 @@ api = Proxy
 server :: Server API
 server = userList
     :<|> user
-    -- :<|> startC
+    :<|> startC
     
     where 
         userList = return users
         user userName ttl = return (Position userName ttl)
 
--- startC :: UserL -> ApiHandler Position
--- startC (UserL userId userN text) =  liftIO $ do 
-    -- putStrLn "Output"
-    -- let repositorys = repos $ pack userN 
-    -- let repNo = 8--Data.List.length repositorys
-    -- let p = (Position userN repNo)
-    -- return p
+startC :: UserL -> ApiHandler Position
+startC (UserL userId userN text) =  liftIO $ do 
+    putStrLn "Output"
+    let repositorys = repos $ pack userN 
+    let repNo = 8--Data.List.length repositorys
+    let p = (Position userN repNo)
+    return p
 
 users :: [UserL]
 users = [ UserL 1 "Isaac" "Newton"

@@ -1,13 +1,13 @@
 
 ==================== FINAL INTERFACE ====================
-2017-03-16 16:29:49.0827582 UTC
+2017-03-16 18:15:29.6903784 UTC
 
-interface crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ:DBHelper 8002
-  interface hash: f49ccc46d4607692a1975eb6f98e7295
-  ABI hash: 789e687e93ca97730b872a4620f0c9d0
-  export-list hash: d2438b4f53d66ae032299d9100892b95
-  orphan hash: abbca801ec720291e7c3bf1735b83e71
-  flag hash: f4631f933cdf77197b801961ddb54cdb
+interface crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ:DBHelper [family instance module] 8002
+  interface hash: 36f5d0034a741dede2b8c684ed1cb308
+  ABI hash: 6f7720f34580c4c619707635f6ab9040
+  export-list hash: 6a8e728e96cb384d5e62d9f151849c6c
+  orphan hash: 9f7e546dc748fe62e6defd4bafa486af
+  flag hash: b40c1800ca63765d1285c272fed17bef
   sig of: Nothing
   used TH splices: False
   where
@@ -15,8 +15,14 @@ exports:
   DBHelper.testFunction
   DBHelper.testFunction'
   DBHelper.testFunction''
+  DBHelper.UserDB{DBHelper.UserDB hops userId}
 module dependencies:
-package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+package dependencies: Win32-2.3.1.1@Win32-2.3.1.1
+                      aeson-1.0.2.1@aeson-1.0.2.1-9NPC6B17ifJ9yEOgZnhnOr
+                      array-0.5.1.1@array-0.5.1.1
+                      attoparsec-0.13.1.0@attoparsec-0.13.1.0-HCAgpBrKCLJ5li8FbfXxE1
+                      base-4.9.1.0
+                      base-compat-0.9.1@base-compat-0.9.1-LCsIPF9jlXlGhbEFi39hJ1
                       binary-0.8.3.0@binary-0.8.3.0
                       bytestring-0.10.8.1@bytestring-0.10.8.1
                       containers-0.5.7.1@containers-0.5.7.1
@@ -31,15 +37,27 @@ package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
                       exceptions-0.8.3@exceptions-0.8.3-ADEDRATtUrMK1JW4zMQ9U
                       ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
                       hasbolt-0.1.1.1@hasbolt-0.1.1.1-KvGT2iOIRLp44tD9hkaloa
-                      integer-gmp-1.0.0.1 mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
+                      hashable-1.2.5.0@hashable-1.2.5.0-F4MWeNuv2sjJRqBd2T5ul4
+                      integer-gmp-1.0.0.1
+                      integer-logarithms-1.0.1@integer-logarithms-1.0.1-IEHCuEd5sG4JjSjlx7m5JF
+                      mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
                       network-2.6.3.1@network-2.6.3.1-AwRxOQvT8JM9e8zDFK7aCI
                       network-simple-0.4.0.5@network-simple-0.4.0.5-lpFi9TIFmuDEctWkWAYkx
                       old-locale-1.0.0.7@old-locale-1.0.0.7-KGBP1BSKxH5GCm0LnZP04j
+                      primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH
+                      scientific-0.3.4.10@scientific-0.3.4.10-HRQd1hS6vMV6hvjSlMi8B0
                       stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      tagged-0.8.5@tagged-0.8.5-1mTloBSoUxv8dqUr8XBGBt
                       template-haskell-2.11.1.0
                       text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR
+                      time-1.6.0.1@time-1.6.0.1
+                      time-locale-compat-0.1.1.3@time-locale-compat-0.1.1.3-KZ1jqNx8uhlHjmuPPj6V1Y
                       transformers-0.5.2.0@transformers-0.5.2.0
-orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+                      unordered-containers-0.2.7.2@unordered-containers-0.2.7.2-8AmrySQXjRGF6VciYs51fM
+                      vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG
+orphans: attoparsec-0.13.1.0@attoparsec-0.13.1.0-HCAgpBrKCLJ5li8FbfXxE1:Data.Attoparsec.ByteString.Char8
+         attoparsec-0.13.1.0@attoparsec-0.13.1.0-HCAgpBrKCLJ5li8FbfXxE1:Data.Attoparsec.Text.Internal
+         base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
          binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
          bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
          data-default-instances-containers-0.0.1@data-default-instances-containers-0.0.1-bob6IQGdJq92c061H46zK:Data.Default.Instances.Containers
@@ -48,14 +66,23 @@ orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
          hasbolt-0.1.1.1@hasbolt-0.1.1.1-KvGT2iOIRLp44tD9hkaloa:Database.Bolt.Connection.Instances
          hasbolt-0.1.1.1@hasbolt-0.1.1.1-KvGT2iOIRLp44tD9hkaloa:Database.Bolt.Value.Instances
          hasbolt-0.1.1.1@hasbolt-0.1.1.1-KvGT2iOIRLp44tD9hkaloa:Database.Bolt.Value.Structure
+         hashable-1.2.5.0@hashable-1.2.5.0-F4MWeNuv2sjJRqBd2T5ul4:Data.Hashable.Generic
          network-2.6.3.1@network-2.6.3.1-AwRxOQvT8JM9e8zDFK7aCI:Network.Socket
          stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Show
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
          transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
-family instance modules: base-4.9.1.0:Control.Applicative
-                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Fusion.Bundle
+         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Unboxed
+family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-HCAgpBrKCLJ5li8FbfXxE1:Data.Attoparsec.Internal.Types
+                         base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Compose
                          base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
                          base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
                          base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
                          base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
@@ -68,15 +95,30 @@ family instance modules: base-4.9.1.0:Control.Applicative
                          containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
                          dlist-0.8.0.2@dlist-0.8.0.2-6Wnps4GD7EFnRucVzXIFD:Data.DList
                          ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH:Control.Monad.Primitive
+                         tagged-0.8.5@tagged-0.8.5-1mTloBSoUxv8dqUr8XBGBt:Data.Tagged
                          template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
                          text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
+                         unordered-containers-0.2.7.2@unordered-containers-0.2.7.2-8AmrySQXjRGF6VciYs51fM:Data.HashMap.Base
+                         unordered-containers-0.2.7.2@unordered-containers-0.2.7.2-8AmrySQXjRGF6VciYs51fM:Data.HashSet
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Primitive
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Storable
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Unboxed
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Unboxed.Base
+import  -/  aeson-1.0.2.1@aeson-1.0.2.1-9NPC6B17ifJ9yEOgZnhnOr:Data.Aeson 6cfe60f124a4417e608c67dfe15be1cc
+import  -/  aeson-1.0.2.1@aeson-1.0.2.1-9NPC6B17ifJ9yEOgZnhnOr:Data.Aeson.Types.FromJSON 1316ab9121f85e92aaf36eaf294367ed
+import  -/  aeson-1.0.2.1@aeson-1.0.2.1-9NPC6B17ifJ9yEOgZnhnOr:Data.Aeson.Types.ToJSON c2651bbed32207695f964a66171d86f4
 import  -/  base-4.9.1.0:GHC.Base 4caea1123ecf4b46e27cbccd6d279377
+import  -/  base-4.9.1.0:GHC.Generics 87e8d511f978e043d53db008cc403901
 import  -/  base-4.9.1.0:GHC.Show eca5834daba3b6a2bbbe64ab52056707
 import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
 import  -/  base-4.9.1.0:System.IO 5daf3f384209c11d9566e3409af8ec5d
 import  -/  containers-0.5.7.1@containers-0.5.7.1:Data.Map 6c2364c30285a1caa610caab304974c4
 import  -/  containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base dfcca0a6b3fe956067f7db6df4d400c2
 import  -/  data-default-class-0.1.2.0@data-default-class-0.1.2.0-GsXqKN6o1X9jr0fF5qCVD:Data.Default.Class eb34a89c3c97cabf779918371724abfb
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 16d48e012d23eaef9bca91ccdd572c02
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
 import  -/  hasbolt-0.1.1.1@hasbolt-0.1.1.1-KvGT2iOIRLp44tD9hkaloa:Database.Bolt bcfb1f0ed6fc3ef8a9ea59bd14776df9
 import  -/  hasbolt-0.1.1.1@hasbolt-0.1.1.1-KvGT2iOIRLp44tD9hkaloa:Database.Bolt.Connection 167a8d898814db0ab338a35b0f05a7cc
@@ -86,6 +128,1434 @@ import  -/  hasbolt-0.1.1.1@hasbolt-0.1.1.1-KvGT2iOIRLp44tD9hkaloa:Database.Bolt
 import  -/  text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text 35f976519564888082d42815342d42ed
 import  -/  text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Internal 43a9166170aaf8c9b180c2d3ce2cfa3c
 import  -/  text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Show 638a81be9b7b5c261b714430eaada4e0
+ad729f66363296048ad0fd2e22774186
+  $fEqUserDB :: GHC.Classes.Eq DBHelper.UserDB
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ DBHelper.UserDB
+                  DBHelper.$fEqUserDB_$c==
+                  DBHelper.$fEqUserDB_$c/= -}
+ad729f66363296048ad0fd2e22774186
+  $fEqUserDB_$c/= ::
+    DBHelper.UserDB -> DBHelper.UserDB -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)L),1*U(1*U(U),1*U)><S(S(S)L),1*U(1*U(U),1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: DBHelper.UserDB) (w1 :: DBHelper.UserDB) ->
+                 case w of ww { DBHelper.UserDB ww1 ww2 ->
+                 case ww1 of ww3 { GHC.Types.I# ww4 ->
+                 case w1 of ww5 { DBHelper.UserDB ww6 ww7 ->
+                 case ww6 of ww8 { GHC.Types.I# ww9 ->
+                 DBHelper.$w$c/= ww4 ww2 ww9 ww7 } } } }) -}
+ad729f66363296048ad0fd2e22774186
+  $fEqUserDB_$c== ::
+    DBHelper.UserDB -> DBHelper.UserDB -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)L),1*U(1*U(U),1*U)><S(S(S)L),1*U(1*U(U),1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: DBHelper.UserDB) (w1 :: DBHelper.UserDB) ->
+                 case w of ww { DBHelper.UserDB ww1 ww2 ->
+                 case ww1 of ww3 { GHC.Types.I# ww4 ->
+                 case w1 of ww5 { DBHelper.UserDB ww6 ww7 ->
+                 case ww6 of ww8 { GHC.Types.I# ww9 ->
+                 DBHelper.$w$c== ww4 ww2 ww9 ww7 } } } }) -}
+ad729f66363296048ad0fd2e22774186
+  $fFromJSONUserDB ::
+    Data.Aeson.Types.FromJSON.FromJSON DBHelper.UserDB
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ DBHelper.UserDB
+                  DBHelper.$fFromJSONUserDB_$cparseJSON
+                  DBHelper.$fFromJSONUserDB_$cparseJSONList -}
+ad729f66363296048ad0fd2e22774186
+  $fFromJSONUserDB1 ::
+    [Data.Aeson.Types.Internal.Parser DBHelper.UserDB]
+    -> forall (f :: * -> *) r.
+       Data.Aeson.Types.Internal.JSONPath
+       -> Data.Aeson.Types.Internal.Failure f r
+       -> Data.Aeson.Types.Internal.Success [DBHelper.UserDB] f r
+       -> f r
+  {- Arity: 4, HasNoCafRefs, Strictness: <S,1*U><L,U><L,U><L,C(U)> -}
+da55efbf1e2e7a00db574748fb4875f1
+  $fFromJSONUserDB10 :: GHC.Generics.SingI ('GHC.Base.Just "hops")
+  {- Unfolding: InlineRule (0, True, True)
+                DBHelper.$fFromJSONUserDB11
+                  `cast`
+                (Trans
+                     (Sym (GHC.Generics.D:R:SingMaybeb0[0] <GHC.Types.Symbol>_N))
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Base.Maybe
+                                                       GHC.Types.Symbol>_N) <'GHC.Base.Just
+                                                                               "hops">_N) -}
+d133afdb68748aab744f99f34897871f
+  $fFromJSONUserDB11 ::
+    GHC.Generics.R:SingMaybeb GHC.Types.Symbol ('GHC.Base.Just "hops")
+  {- Unfolding: (GHC.Generics.SJust
+                   @ GHC.Types.Symbol
+                   @ ('GHC.Base.Just "hops")
+                   @ "hops"
+                   @~ <'GHC.Base.Just "hops">_N
+                   DBHelper.$fFromJSONUserDB12
+                     `cast`
+                   (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"hops">_N)) -}
+90fe5a99a2edf9976effb572d4feca49
+  $fFromJSONUserDB12 :: GHC.Generics.R:SingSymbols "hops"
+  {- Strictness: m,
+     Unfolding: (GHC.Generics.SSym
+                   @ "hops"
+                   DBHelper.$fFromJSONUserDB13
+                     `cast`
+                   (Trans
+                        (Sym (GHC.TypeLits.N:SSymbol[0] <"hops">_P))
+                        (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"hops">_N))) -}
+373e70c61baacd6d0abcce92f1a26bba
+  $fFromJSONUserDB13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "hops"#) -}
+7f94a8efa2a734cfffdf14e51093be4e
+  $fFromJSONUserDB2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "[a]"#) -}
+f7f2e99b73c30bd4498647a43577736b
+  $fFromJSONUserDB3 ::
+    Data.Aeson.Types.Internal.Options
+    -> Data.Aeson.Types.FromJSON.FromArgs
+         Data.Aeson.Types.Generic.Zero a1
+    -> Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser
+         (GHC.Generics.M1
+            GHC.Generics.D
+            ('GHC.Generics.MetaData
+               "UserDB"
+               "DBHelper"
+               "crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"
+               'GHC.Types.False)
+            (GHC.Generics.M1
+               GHC.Generics.C
+               ('GHC.Generics.MetaCons
+                  "UserDB" 'GHC.Generics.PrefixI 'GHC.Types.True)
+               (GHC.Generics.S1
+                  ('GHC.Generics.MetaSel
+                     ('GHC.Base.Just "hops")
+                     'GHC.Generics.NoSourceUnpackedness
+                     'GHC.Generics.NoSourceStrictness
+                     'GHC.Generics.DecidedLazy)
+                  (GHC.Generics.Rec0 GHC.Types.Int)
+                GHC.Generics.:*: GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "userId")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 GHC.Base.String)))
+            a1)
+  {- Arity: 3, Strictness: <L,1*U(U,U,U,U,U,U)><L,U><L,1*U>,
+     Unfolding: (\ @ a1
+                   (opts :: Data.Aeson.Types.Internal.Options)
+                   (fargs :: Data.Aeson.Types.FromJSON.FromArgs
+                               Data.Aeson.Types.Generic.Zero a1)
+                   (x :: Data.Aeson.Types.Internal.Value) ->
+                 let {
+                   m :: Data.Aeson.Types.Internal.Parser
+                          ((GHC.Generics.:*:)
+                             (GHC.Generics.S1
+                                ('GHC.Generics.MetaSel
+                                   ('GHC.Base.Just "hops")
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                                (GHC.Generics.Rec0 GHC.Types.Int))
+                             (GHC.Generics.S1
+                                ('GHC.Generics.MetaSel
+                                   ('GHC.Base.Just "userId")
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                                (GHC.Generics.Rec0 GHC.Base.String))
+                             a1)
+                   = case opts of wild { Data.Aeson.Types.Internal.Options ds1 ds2 ds3 ds4 ds5 ds6 ->
+                     case ds6 of wild1 { DEFAULT ->
+                     case x of wild2 {
+                       DEFAULT
+                       -> Data.Aeson.Types.FromJSON.typeMismatch
+                            @ ((GHC.Generics.:*:)
+                                 (GHC.Generics.S1
+                                    ('GHC.Generics.MetaSel
+                                       ('GHC.Base.Just "hops")
+                                       'GHC.Generics.NoSourceUnpackedness
+                                       'GHC.Generics.NoSourceStrictness
+                                       'GHC.Generics.DecidedLazy)
+                                    (GHC.Generics.Rec0 GHC.Types.Int))
+                                 (GHC.Generics.S1
+                                    ('GHC.Generics.MetaSel
+                                       ('GHC.Base.Just "userId")
+                                       'GHC.Generics.NoSourceUnpackedness
+                                       'GHC.Generics.NoSourceStrictness
+                                       'GHC.Generics.DecidedLazy)
+                                    (GHC.Generics.Rec0 GHC.Base.String))
+                                 a1)
+                            Data.Aeson.Types.FromJSON.$fConsFromJSON'TYPEarityfTrue1
+                            wild2
+                       Data.Aeson.Types.Internal.Object obj
+                       -> let {
+                            m1 :: Data.Aeson.Types.Internal.Parser
+                                    (GHC.Generics.M1
+                                       GHC.Generics.S
+                                       ('GHC.Generics.MetaSel
+                                          ('GHC.Base.Just "hops")
+                                          'GHC.Generics.NoSourceUnpackedness
+                                          'GHC.Generics.NoSourceStrictness
+                                          'GHC.Generics.DecidedLazy)
+                                       (GHC.Generics.Rec0 GHC.Types.Int)
+                                       a1)
+                            = Data.Aeson.Types.FromJSON.$fFromRecordarityM10_$cparseRecord
+                                @ ('GHC.Generics.MetaSel
+                                     ('GHC.Base.Just "hops")
+                                     'GHC.Generics.NoSourceUnpackedness
+                                     'GHC.Generics.NoSourceStrictness
+                                     'GHC.Generics.DecidedLazy)
+                                @ Data.Aeson.Types.Generic.Zero
+                                @ (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int)
+                                DBHelper.$fFromJSONUserDB_$s$fSelectorMetaMetaSel1
+                                DBHelper.$fFromJSONUserDB9
+                                  `cast`
+                                (Sym (Data.Aeson.Types.FromJSON.N:GFromJSON[0]
+                                          <Data.Aeson.Types.Generic.Zero>_N
+                                          <GHC.Generics.K1 GHC.Generics.R GHC.Types.Int>_N))
+                                @ a1
+                                wild
+                                fargs
+                                (GHC.Base.Nothing @ Data.Text.Internal.Text)
+                                obj
+                          } in
+                          let {
+                            e :: Data.Aeson.Types.Internal.Parser
+                                   (GHC.Generics.M1
+                                      GHC.Generics.S
+                                      ('GHC.Generics.MetaSel
+                                         ('GHC.Base.Just "userId")
+                                         'GHC.Generics.NoSourceUnpackedness
+                                         'GHC.Generics.NoSourceStrictness
+                                         'GHC.Generics.DecidedLazy)
+                                      (GHC.Generics.Rec0 GHC.Base.String)
+                                      a1)
+                            = Data.Aeson.Types.FromJSON.$fFromRecordarityM10_$cparseRecord
+                                @ ('GHC.Generics.MetaSel
+                                     ('GHC.Base.Just "userId")
+                                     'GHC.Generics.NoSourceUnpackedness
+                                     'GHC.Generics.NoSourceStrictness
+                                     'GHC.Generics.DecidedLazy)
+                                @ Data.Aeson.Types.Generic.Zero
+                                @ (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
+                                DBHelper.$fFromJSONUserDB_$s$fSelectorMetaMetaSel
+                                DBHelper.$fFromJSONUserDB4
+                                  `cast`
+                                (Sym (Data.Aeson.Types.FromJSON.N:GFromJSON[0]
+                                          <Data.Aeson.Types.Generic.Zero>_N
+                                          <GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char]>_N))
+                                @ a1
+                                wild
+                                fargs
+                                (GHC.Base.Nothing @ Data.Text.Internal.Text)
+                                obj
+                          } in
+                          (\ @ (f :: * -> *)
+                             @ r
+                             (path :: Data.Aeson.Types.Internal.JSONPath)
+                             (kf :: Data.Aeson.Types.Internal.Failure f r)
+                             (ks :: Data.Aeson.Types.Internal.Success
+                                      ((GHC.Generics.:*:)
+                                         (GHC.Generics.M1
+                                            GHC.Generics.S
+                                            ('GHC.Generics.MetaSel
+                                               ('GHC.Base.Just "hops")
+                                               'GHC.Generics.NoSourceUnpackedness
+                                               'GHC.Generics.NoSourceStrictness
+                                               'GHC.Generics.DecidedLazy)
+                                            (GHC.Generics.Rec0 GHC.Types.Int))
+                                         (GHC.Generics.M1
+                                            GHC.Generics.S
+                                            ('GHC.Generics.MetaSel
+                                               ('GHC.Base.Just "userId")
+                                               'GHC.Generics.NoSourceUnpackedness
+                                               'GHC.Generics.NoSourceStrictness
+                                               'GHC.Generics.DecidedLazy)
+                                            (GHC.Generics.Rec0 GHC.Base.String))
+                                         a1)
+                                      f
+                                      r) ->
+                           m1
+                             `cast`
+                           (Data.Aeson.Types.Internal.N:Parser[0]
+                                <GHC.Generics.M1
+                                   GHC.Generics.S
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "hops")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 GHC.Types.Int)
+                                   a1>_R)
+                             @ f
+                             @ r
+                             path
+                             kf
+                             (\ (a2 :: GHC.Generics.M1
+                                         GHC.Generics.S
+                                         ('GHC.Generics.MetaSel
+                                            ('GHC.Base.Just "hops")
+                                            'GHC.Generics.NoSourceUnpackedness
+                                            'GHC.Generics.NoSourceStrictness
+                                            'GHC.Generics.DecidedLazy)
+                                         (GHC.Generics.Rec0 GHC.Types.Int)
+                                         a1) ->
+                              e `cast`
+                              (Data.Aeson.Types.Internal.N:Parser[0]
+                                   <GHC.Generics.M1
+                                      GHC.Generics.S
+                                      ('GHC.Generics.MetaSel
+                                         ('GHC.Base.Just "userId")
+                                         'GHC.Generics.NoSourceUnpackedness
+                                         'GHC.Generics.NoSourceStrictness
+                                         'GHC.Generics.DecidedLazy)
+                                      (GHC.Generics.Rec0 GHC.Base.String)
+                                      a1>_R)
+                                @ f
+                                @ r
+                                path
+                                kf
+                                (\ (a3 :: GHC.Generics.M1
+                                            GHC.Generics.S
+                                            ('GHC.Generics.MetaSel
+                                               ('GHC.Base.Just "userId")
+                                               'GHC.Generics.NoSourceUnpackedness
+                                               'GHC.Generics.NoSourceStrictness
+                                               'GHC.Generics.DecidedLazy)
+                                            (GHC.Generics.Rec0 GHC.Base.String)
+                                            a1) ->
+                                 ks
+                                   (GHC.Generics.:*:
+                                      @ (GHC.Generics.M1
+                                           GHC.Generics.S
+                                           ('GHC.Generics.MetaSel
+                                              ('GHC.Base.Just "hops")
+                                              'GHC.Generics.NoSourceUnpackedness
+                                              'GHC.Generics.NoSourceStrictness
+                                              'GHC.Generics.DecidedLazy)
+                                           (GHC.Generics.Rec0 GHC.Types.Int))
+                                      @ (GHC.Generics.M1
+                                           GHC.Generics.S
+                                           ('GHC.Generics.MetaSel
+                                              ('GHC.Base.Just "userId")
+                                              'GHC.Generics.NoSourceUnpackedness
+                                              'GHC.Generics.NoSourceStrictness
+                                              'GHC.Generics.DecidedLazy)
+                                           (GHC.Generics.Rec0 GHC.Base.String))
+                                      @ a1
+                                      a2
+                                      a3))))
+                            `cast`
+                          (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                                    <(GHC.Generics.:*:)
+                                       (GHC.Generics.M1
+                                          GHC.Generics.S
+                                          ('GHC.Generics.MetaSel
+                                             ('GHC.Base.Just "hops")
+                                             'GHC.Generics.NoSourceUnpackedness
+                                             'GHC.Generics.NoSourceStrictness
+                                             'GHC.Generics.DecidedLazy)
+                                          (GHC.Generics.Rec0 GHC.Types.Int))
+                                       (GHC.Generics.M1
+                                          GHC.Generics.S
+                                          ('GHC.Generics.MetaSel
+                                             ('GHC.Base.Just "userId")
+                                             'GHC.Generics.NoSourceUnpackedness
+                                             'GHC.Generics.NoSourceStrictness
+                                             'GHC.Generics.DecidedLazy)
+                                          (GHC.Generics.Rec0 GHC.Base.String))
+                                       a1>_R)) } } }
+                 } in
+                 (\ @ (f4 :: * -> *)
+                    @ r
+                    (path :: Data.Aeson.Types.Internal.JSONPath)
+                    (kf :: Data.Aeson.Types.Internal.Failure f4 r)
+                    (ks :: Data.Aeson.Types.Internal.Success
+                             (GHC.Generics.M1
+                                GHC.Generics.D
+                                ('GHC.Generics.MetaData
+                                   "UserDB"
+                                   "DBHelper"
+                                   "crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"
+                                   'GHC.Types.False)
+                                (GHC.Generics.M1
+                                   GHC.Generics.C
+                                   ('GHC.Generics.MetaCons
+                                      "UserDB" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                   (GHC.Generics.S1
+                                      ('GHC.Generics.MetaSel
+                                         ('GHC.Base.Just "hops")
+                                         'GHC.Generics.NoSourceUnpackedness
+                                         'GHC.Generics.NoSourceStrictness
+                                         'GHC.Generics.DecidedLazy)
+                                      (GHC.Generics.Rec0 GHC.Types.Int)
+                                    GHC.Generics.:*: GHC.Generics.S1
+                                                       ('GHC.Generics.MetaSel
+                                                          ('GHC.Base.Just "userId")
+                                                          'GHC.Generics.NoSourceUnpackedness
+                                                          'GHC.Generics.NoSourceStrictness
+                                                          'GHC.Generics.DecidedLazy)
+                                                       (GHC.Generics.Rec0 GHC.Base.String)))
+                                a1)
+                             f4
+                             r) ->
+                  m `cast`
+                  (Data.Aeson.Types.Internal.N:Parser[0]
+                       <(GHC.Generics.:*:)
+                          (GHC.Generics.S1
+                             ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "hops")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy)
+                             (GHC.Generics.Rec0 GHC.Types.Int))
+                          (GHC.Generics.S1
+                             ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "userId")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy)
+                             (GHC.Generics.Rec0 GHC.Base.String))
+                          a1>_R)
+                    @ f4
+                    @ r
+                    path
+                    kf
+                    (\ (a2 :: (GHC.Generics.:*:)
+                                (GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "hops")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 GHC.Types.Int))
+                                (GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "userId")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 GHC.Base.String))
+                                a1) ->
+                     ks
+                       a2
+                         `cast`
+                       (Trans
+                            (Sym (GHC.Generics.N:M1[0]
+                                      <GHC.Generics.C>_P
+                                      <'GHC.Generics.MetaCons
+                                         "UserDB" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                                      <GHC.Generics.S1
+                                         ('GHC.Generics.MetaSel
+                                            ('GHC.Base.Just "hops")
+                                            'GHC.Generics.NoSourceUnpackedness
+                                            'GHC.Generics.NoSourceStrictness
+                                            'GHC.Generics.DecidedLazy)
+                                         (GHC.Generics.Rec0 GHC.Types.Int)
+                                       GHC.Generics.:*: GHC.Generics.S1
+                                                          ('GHC.Generics.MetaSel
+                                                             ('GHC.Base.Just "userId")
+                                                             'GHC.Generics.NoSourceUnpackedness
+                                                             'GHC.Generics.NoSourceStrictness
+                                                             'GHC.Generics.DecidedLazy)
+                                                          (GHC.Generics.Rec0 GHC.Base.String)>_R))
+                            (Sym (GHC.Generics.N:M1[0]
+                                      <GHC.Generics.D>_P
+                                      <'GHC.Generics.MetaData
+                                         "UserDB"
+                                         "DBHelper"
+                                         "crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"
+                                         'GHC.Types.False>_P
+                                      <GHC.Generics.M1
+                                         GHC.Generics.C
+                                         ('GHC.Generics.MetaCons
+                                            "UserDB" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                         (GHC.Generics.S1
+                                            ('GHC.Generics.MetaSel
+                                               ('GHC.Base.Just "hops")
+                                               'GHC.Generics.NoSourceUnpackedness
+                                               'GHC.Generics.NoSourceStrictness
+                                               'GHC.Generics.DecidedLazy)
+                                            (GHC.Generics.Rec0 GHC.Types.Int)
+                                          GHC.Generics.:*: GHC.Generics.S1
+                                                             ('GHC.Generics.MetaSel
+                                                                ('GHC.Base.Just "userId")
+                                                                'GHC.Generics.NoSourceUnpackedness
+                                                                'GHC.Generics.NoSourceStrictness
+                                                                'GHC.Generics.DecidedLazy)
+                                                             (GHC.Generics.Rec0
+                                                                GHC.Base.String))>_R)) <a1>_N)))
+                   `cast`
+                 (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                           <GHC.Generics.M1
+                              GHC.Generics.D
+                              ('GHC.Generics.MetaData
+                                 "UserDB"
+                                 "DBHelper"
+                                 "crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"
+                                 'GHC.Types.False)
+                              (GHC.Generics.M1
+                                 GHC.Generics.C
+                                 ('GHC.Generics.MetaCons
+                                    "UserDB" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                 (GHC.Generics.S1
+                                    ('GHC.Generics.MetaSel
+                                       ('GHC.Base.Just "hops")
+                                       'GHC.Generics.NoSourceUnpackedness
+                                       'GHC.Generics.NoSourceStrictness
+                                       'GHC.Generics.DecidedLazy)
+                                    (GHC.Generics.Rec0 GHC.Types.Int)
+                                  GHC.Generics.:*: GHC.Generics.S1
+                                                     ('GHC.Generics.MetaSel
+                                                        ('GHC.Base.Just "userId")
+                                                        'GHC.Generics.NoSourceUnpackedness
+                                                        'GHC.Generics.NoSourceStrictness
+                                                        'GHC.Generics.DecidedLazy)
+                                                     (GHC.Generics.Rec0 GHC.Base.String)))
+                              a1>_R))) -}
+5a04ea5eba69064852fc1dca1fca7733
+  $fFromJSONUserDB4 ::
+    Data.Aeson.Types.Internal.Options
+    -> Data.Aeson.Types.FromJSON.FromArgs
+         Data.Aeson.Types.Generic.Zero a1
+    -> Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser
+         (GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1)
+  {- Arity: 3, Strictness: <L,A><L,A><L,U>,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ a1
+                   (w1 :: Data.Aeson.Types.Internal.Options)
+                   (w2 :: Data.Aeson.Types.FromJSON.FromArgs
+                            Data.Aeson.Types.Generic.Zero a1)
+                   (w3 :: Data.Aeson.Types.Internal.Value) ->
+                 Data.Aeson.Types.FromJSON.$w$cgParseJSON2
+                   @ [GHC.Types.Char]
+                   @ Data.Aeson.Types.Generic.Zero
+                   @ GHC.Generics.R
+                   DBHelper.$fFromJSONUserDB_$s$fFromJSON[]
+                   @ a1
+                   w3) -}
+43d9eaf27af1753f7b5622fe53e2f43d
+  $fFromJSONUserDB5 :: GHC.Generics.SingI ('GHC.Base.Just "userId")
+  {- Unfolding: InlineRule (0, True, True)
+                DBHelper.$fFromJSONUserDB6
+                  `cast`
+                (Trans
+                     (Sym (GHC.Generics.D:R:SingMaybeb0[0] <GHC.Types.Symbol>_N))
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Base.Maybe
+                                                       GHC.Types.Symbol>_N) <'GHC.Base.Just
+                                                                               "userId">_N) -}
+d37bc45fc71242ffe5588530e89a5b78
+  $fFromJSONUserDB6 ::
+    GHC.Generics.R:SingMaybeb
+      GHC.Types.Symbol ('GHC.Base.Just "userId")
+  {- Unfolding: (GHC.Generics.SJust
+                   @ GHC.Types.Symbol
+                   @ ('GHC.Base.Just "userId")
+                   @ "userId"
+                   @~ <'GHC.Base.Just "userId">_N
+                   DBHelper.$fFromJSONUserDB7
+                     `cast`
+                   (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"userId">_N)) -}
+bd9fe72fb802c4c8f6e090a9dcd399c1
+  $fFromJSONUserDB7 :: GHC.Generics.R:SingSymbols "userId"
+  {- Strictness: m,
+     Unfolding: (GHC.Generics.SSym
+                   @ "userId"
+                   DBHelper.$fFromJSONUserDB8
+                     `cast`
+                   (Trans
+                        (Sym (GHC.TypeLits.N:SSymbol[0] <"userId">_P))
+                        (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"userId">_N))) -}
+5f56ef8b4344ae1de13c39cb2a2a3166
+  $fFromJSONUserDB8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "userId"#) -}
+f3158e3dbb620f5ee6159774c8be2c55
+  $fFromJSONUserDB9 ::
+    Data.Aeson.Types.Internal.Options
+    -> Data.Aeson.Types.FromJSON.FromArgs
+         Data.Aeson.Types.Generic.Zero a1
+    -> Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser
+         (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int a1)
+  {- Arity: 3, Strictness: <L,A><L,A><L,U>,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ a1
+                   (w1 :: Data.Aeson.Types.Internal.Options)
+                   (w2 :: Data.Aeson.Types.FromJSON.FromArgs
+                            Data.Aeson.Types.Generic.Zero a1)
+                   (w3 :: Data.Aeson.Types.Internal.Value) ->
+                 Data.Aeson.Types.FromJSON.$w$cgParseJSON2
+                   @ GHC.Types.Int
+                   @ Data.Aeson.Types.Generic.Zero
+                   @ GHC.Generics.R
+                   Data.Aeson.Types.FromJSON.$fFromJSONInt
+                   @ a1
+                   w3) -}
+ad729f66363296048ad0fd2e22774186
+  $fFromJSONUserDB_$cparseJSON ::
+    Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser DBHelper.UserDB
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ (x :: Data.Aeson.Types.Internal.Value) ->
+                 let {
+                   m :: Data.Aeson.Types.Internal.Parser
+                          (GHC.Generics.M1
+                             GHC.Generics.D
+                             ('GHC.Generics.MetaData
+                                "UserDB"
+                                "DBHelper"
+                                "crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"
+                                'GHC.Types.False)
+                             (GHC.Generics.M1
+                                GHC.Generics.C
+                                ('GHC.Generics.MetaCons
+                                   "UserDB" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                (GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "hops")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 GHC.Types.Int)
+                                 GHC.Generics.:*: GHC.Generics.S1
+                                                    ('GHC.Generics.MetaSel
+                                                       ('GHC.Base.Just "userId")
+                                                       'GHC.Generics.NoSourceUnpackedness
+                                                       'GHC.Generics.NoSourceStrictness
+                                                       'GHC.Generics.DecidedLazy)
+                                                    (GHC.Generics.Rec0 GHC.Base.String)))
+                             GHC.Prim.Any)
+                   = DBHelper.$fFromJSONUserDB3
+                       @ GHC.Prim.Any
+                       Data.Aeson.Types.Internal.defaultOptions
+                       (Data.Aeson.Types.FromJSON.$WNoFromArgs @ GHC.Prim.Any)
+                       x
+                 } in
+                 (\ @ (f4 :: * -> *)
+                    @ r
+                    (path :: Data.Aeson.Types.Internal.JSONPath)
+                    (kf :: Data.Aeson.Types.Internal.Failure f4 r)
+                    (ks :: Data.Aeson.Types.Internal.Success DBHelper.UserDB f4 r) ->
+                  m `cast`
+                  (Data.Aeson.Types.Internal.N:Parser[0]
+                       (Sub (Sym (DBHelper.Rep_UserDB[0])) <GHC.Prim.Any>_N))
+                    @ f4
+                    @ r
+                    path
+                    kf
+                    (\ (a1 :: GHC.Generics.Rep DBHelper.UserDB GHC.Prim.Any) ->
+                     ks
+                       (case a1
+                               `cast`
+                             (Trans
+                                  (Sub (DBHelper.Rep_UserDB[0]))
+                                  (Trans
+                                       (GHC.Generics.N:M1[0]
+                                            <GHC.Generics.D>_P
+                                            <'GHC.Generics.MetaData
+                                               "UserDB"
+                                               "DBHelper"
+                                               "crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"
+                                               'GHC.Types.False>_P
+                                            <GHC.Generics.M1
+                                               GHC.Generics.C
+                                               ('GHC.Generics.MetaCons
+                                                  "UserDB" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                               (GHC.Generics.M1
+                                                  GHC.Generics.S
+                                                  ('GHC.Generics.MetaSel
+                                                     ('GHC.Base.Just "hops")
+                                                     'GHC.Generics.NoSourceUnpackedness
+                                                     'GHC.Generics.NoSourceStrictness
+                                                     'GHC.Generics.DecidedLazy)
+                                                  (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int)
+                                                GHC.Generics.:*: GHC.Generics.M1
+                                                                   GHC.Generics.S
+                                                                   ('GHC.Generics.MetaSel
+                                                                      ('GHC.Base.Just "userId")
+                                                                      'GHC.Generics.NoSourceUnpackedness
+                                                                      'GHC.Generics.NoSourceStrictness
+                                                                      'GHC.Generics.DecidedLazy)
+                                                                   (GHC.Generics.K1
+                                                                      GHC.Generics.R
+                                                                      GHC.Base.String))>_R)
+                                       (GHC.Generics.N:M1[0]
+                                            <GHC.Generics.C>_P
+                                            <'GHC.Generics.MetaCons
+                                               "UserDB" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                                            <GHC.Generics.M1
+                                               GHC.Generics.S
+                                               ('GHC.Generics.MetaSel
+                                                  ('GHC.Base.Just "hops")
+                                                  'GHC.Generics.NoSourceUnpackedness
+                                                  'GHC.Generics.NoSourceStrictness
+                                                  'GHC.Generics.DecidedLazy)
+                                               (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int)
+                                             GHC.Generics.:*: GHC.Generics.M1
+                                                                GHC.Generics.S
+                                                                ('GHC.Generics.MetaSel
+                                                                   ('GHC.Base.Just "userId")
+                                                                   'GHC.Generics.NoSourceUnpackedness
+                                                                   'GHC.Generics.NoSourceStrictness
+                                                                   'GHC.Generics.DecidedLazy)
+                                                                (GHC.Generics.K1
+                                                                   GHC.Generics.R
+                                                                   GHC.Base.String)>_R)) <GHC.Prim.Any>_N) of wild { GHC.Generics.:*: ds ds1 ->
+                        DBHelper.UserDB
+                          ds
+                            `cast`
+                          (Trans
+                               (GHC.Generics.N:M1[0]
+                                    <GHC.Generics.S>_P
+                                    <'GHC.Generics.MetaSel
+                                       ('GHC.Base.Just "hops")
+                                       'GHC.Generics.NoSourceUnpackedness
+                                       'GHC.Generics.NoSourceStrictness
+                                       'GHC.Generics.DecidedLazy>_P
+                                    <GHC.Generics.K1
+                                       GHC.Generics.R GHC.Types.Int>_R <GHC.Prim.Any>_N)
+                               (GHC.Generics.N:K1[0]
+                                    <GHC.Generics.R>_P <GHC.Types.Int>_R <GHC.Prim.Any>_P))
+                          ds1
+                            `cast`
+                          (Trans
+                               (GHC.Generics.N:M1[0]
+                                    <GHC.Generics.S>_P
+                                    <'GHC.Generics.MetaSel
+                                       ('GHC.Base.Just "userId")
+                                       'GHC.Generics.NoSourceUnpackedness
+                                       'GHC.Generics.NoSourceStrictness
+                                       'GHC.Generics.DecidedLazy>_P
+                                    <GHC.Generics.K1
+                                       GHC.Generics.R GHC.Base.String>_R <GHC.Prim.Any>_N)
+                               (GHC.Generics.N:K1[0]
+                                    <GHC.Generics.R>_P <GHC.Base.String>_R <GHC.Prim.Any>_P)) })))
+                   `cast`
+                 (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                           <DBHelper.UserDB>_R))) -}
+ad729f66363296048ad0fd2e22774186
+  $fFromJSONUserDB_$cparseJSONList ::
+    Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser [DBHelper.UserDB]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: Data.Aeson.Types.Internal.Value) ->
+                 case ds of wild {
+                   DEFAULT
+                   -> Data.Aeson.Types.FromJSON.typeMismatch
+                        @ [DBHelper.UserDB]
+                        DBHelper.$fFromJSONUserDB2
+                        wild
+                   Data.Aeson.Types.Internal.Array a1
+                   -> case a1 of wild1 { Data.Vector.Vector dt dt1 dt2 ->
+                      (DBHelper.$fFromJSONUserDB1
+                         (letrec {
+                            $wgo :: GHC.Prim.Int# -> [Data.Aeson.Types.Internal.Value]
+                              {- Arity: 1, Strictness: <S,U>, Inline: [0] -}
+                            = \ (ww :: GHC.Prim.Int#) ->
+                              case GHC.Prim.tagToEnum#
+                                     @ GHC.Types.Bool
+                                     (GHC.Prim.>=# ww dt1) of wild2 {
+                                GHC.Types.False
+                                -> case GHC.Prim.indexArray#
+                                          @ Data.Aeson.Types.Internal.Value
+                                          dt2
+                                          (GHC.Prim.+# dt ww) of ds2 { Unit# ipv ->
+                                   GHC.Types.:
+                                     @ Data.Aeson.Types.Internal.Value
+                                     ipv
+                                     ($wgo (GHC.Prim.+# ww 1#)) }
+                                GHC.Types.True -> GHC.Types.[] @ Data.Aeson.Types.Internal.Value }
+                          } in
+                          DBHelper.$fFromJSONUserDB_go 0# ($wgo 0#)))
+                        `cast`
+                      (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                                <[DBHelper.UserDB]>_R)) } }) -}
+cad21a11c38cba3282c15425cb013688
+  $fFromJSONUserDB_$s$fFromJSON[] ::
+    Data.Aeson.Types.FromJSON.FromJSON [GHC.Types.Char]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ [GHC.Types.Char]
+                  (Data.Aeson.Types.FromJSON.$dmfromJSONKeyList_$cparseJSON
+                     @ GHC.Types.Char
+                     Data.Aeson.Types.FromJSON.$fFromJSONChar)
+                  (Data.Aeson.Types.FromJSON.$fFromJSONKey[]_$cparseJSONList
+                     @ GHC.Types.Char
+                     Data.Aeson.Types.FromJSON.$fFromJSONChar) -}
+3263627ce4246d5840451c7cac262f0c
+  $fFromJSONUserDB_$s$fSelectorMetaMetaSel ::
+    GHC.Generics.Selector
+      ('GHC.Generics.MetaSel
+         ('GHC.Base.Just "userId")
+         'GHC.Generics.NoSourceUnpackedness
+         'GHC.Generics.NoSourceStrictness
+         'GHC.Generics.DecidedLazy)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ GHC.Generics.Meta
+                  @ ('GHC.Generics.MetaSel
+                       ('GHC.Base.Just "userId")
+                       'GHC.Generics.NoSourceUnpackedness
+                       'GHC.Generics.NoSourceStrictness
+                       'GHC.Generics.DecidedLazy)
+                  DBHelper.$fFromJSONUserDB_$s$fSelectorMetaMetaSel_$cselName
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceUnpackedness
+                     @ ('GHC.Base.Just "userId")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     DBHelper.$fFromJSONUserDB5
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceStrictness
+                     @ ('GHC.Base.Just "userId")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     DBHelper.$fFromJSONUserDB5
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselDecidedStrictness
+                     @ ('GHC.Base.Just "userId")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     DBHelper.$fFromJSONUserDB5
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N)) -}
+c88e8f21688bb8167cc6af774a0a61bc
+  $fFromJSONUserDB_$s$fSelectorMetaMetaSel1 ::
+    GHC.Generics.Selector
+      ('GHC.Generics.MetaSel
+         ('GHC.Base.Just "hops")
+         'GHC.Generics.NoSourceUnpackedness
+         'GHC.Generics.NoSourceStrictness
+         'GHC.Generics.DecidedLazy)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ GHC.Generics.Meta
+                  @ ('GHC.Generics.MetaSel
+                       ('GHC.Base.Just "hops")
+                       'GHC.Generics.NoSourceUnpackedness
+                       'GHC.Generics.NoSourceStrictness
+                       'GHC.Generics.DecidedLazy)
+                  DBHelper.$fFromJSONUserDB_$s$fSelectorMetaMetaSel_$cselName1
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceUnpackedness
+                     @ ('GHC.Base.Just "hops")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     DBHelper.$fFromJSONUserDB10
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceStrictness
+                     @ ('GHC.Base.Just "hops")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     DBHelper.$fFromJSONUserDB10
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselDecidedStrictness
+                     @ ('GHC.Base.Just "hops")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     DBHelper.$fFromJSONUserDB10
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N)) -}
+1dbf902fa06342a21ca8dc27262f8087
+  $fFromJSONUserDB_$s$fSelectorMetaMetaSel_$cselName ::
+    forall k (t :: GHC.Generics.Meta
+                   -> (GHC.Types.* -> GHC.Types.*) -> k -> *) (f :: GHC.Types.*
+                                                                    -> GHC.Types.*) (a :: k).
+    t ('GHC.Generics.MetaSel
+         ('GHC.Base.Just "userId")
+         'GHC.Generics.NoSourceUnpackedness
+         'GHC.Generics.NoSourceStrictness
+         'GHC.Generics.DecidedLazy) f a
+    -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ k
+                   @ (t :: GHC.Generics.Meta
+                           -> (GHC.Types.* -> GHC.Types.*) -> k -> *)
+                   @ (f :: GHC.Types.* -> GHC.Types.*)
+                   @ (a :: k)
+                   (ds1 :: t ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "userId")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy) f a) ->
+                 DBHelper.$fFromJSONUserDB8) -}
+c3eacba93e9a8b564ccf38686c265c8c
+  $fFromJSONUserDB_$s$fSelectorMetaMetaSel_$cselName1 ::
+    forall k (t :: GHC.Generics.Meta
+                   -> (GHC.Types.* -> GHC.Types.*) -> k -> *) (f :: GHC.Types.*
+                                                                    -> GHC.Types.*) (a :: k).
+    t ('GHC.Generics.MetaSel
+         ('GHC.Base.Just "hops")
+         'GHC.Generics.NoSourceUnpackedness
+         'GHC.Generics.NoSourceStrictness
+         'GHC.Generics.DecidedLazy) f a
+    -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ k
+                   @ (t :: GHC.Generics.Meta
+                           -> (GHC.Types.* -> GHC.Types.*) -> k -> *)
+                   @ (f :: GHC.Types.* -> GHC.Types.*)
+                   @ (a :: k)
+                   (ds1 :: t ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "hops")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy) f a) ->
+                 DBHelper.$fFromJSONUserDB13) -}
+ad729f66363296048ad0fd2e22774186
+  $fFromJSONUserDB_go ::
+    GHC.Prim.Int#
+    -> [Data.Aeson.Types.Internal.Value]
+    -> [Data.Aeson.Types.Internal.Parser DBHelper.UserDB]
+  {- Arity: 2, Strictness: <L,U><S,1*U> -}
+ad729f66363296048ad0fd2e22774186
+  $fGenericUserDB :: GHC.Generics.Generic DBHelper.UserDB
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ DBHelper.UserDB
+                  DBHelper.$fGenericUserDB_$cfrom
+                  DBHelper.$fGenericUserDB_$cto -}
+ad729f66363296048ad0fd2e22774186
+  $fGenericUserDB1 ::
+    DBHelper.UserDB
+    -> GHC.Generics.M1
+         GHC.Generics.C
+         ('GHC.Generics.MetaCons
+            "UserDB" 'GHC.Generics.PrefixI 'GHC.Types.True)
+         (GHC.Generics.M1
+            GHC.Generics.S
+            ('GHC.Generics.MetaSel
+               ('GHC.Base.Just "hops")
+               'GHC.Generics.NoSourceUnpackedness
+               'GHC.Generics.NoSourceStrictness
+               'GHC.Generics.DecidedLazy)
+            (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int)
+          GHC.Generics.:*: GHC.Generics.M1
+                             GHC.Generics.S
+                             ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "userId")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy)
+                             (GHC.Generics.K1 GHC.Generics.R GHC.Base.String))
+         x
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ x (x1 :: DBHelper.UserDB) ->
+                 case x1 of wild { DBHelper.UserDB g1 g2 ->
+                 (GHC.Generics.:*:
+                    @ (GHC.Generics.M1
+                         GHC.Generics.S
+                         ('GHC.Generics.MetaSel
+                            ('GHC.Base.Just "hops")
+                            'GHC.Generics.NoSourceUnpackedness
+                            'GHC.Generics.NoSourceStrictness
+                            'GHC.Generics.DecidedLazy)
+                         (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int))
+                    @ (GHC.Generics.M1
+                         GHC.Generics.S
+                         ('GHC.Generics.MetaSel
+                            ('GHC.Base.Just "userId")
+                            'GHC.Generics.NoSourceUnpackedness
+                            'GHC.Generics.NoSourceStrictness
+                            'GHC.Generics.DecidedLazy)
+                         (GHC.Generics.K1 GHC.Generics.R GHC.Base.String))
+                    @ x
+                    g1
+                      `cast`
+                    (Trans
+                         (Sym (GHC.Generics.N:K1[0]
+                                   <GHC.Generics.R>_P <GHC.Types.Int>_R <x>_P))
+                         (Sym (GHC.Generics.N:M1[0]
+                                   <GHC.Generics.S>_P
+                                   <'GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "hops")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy>_P
+                                   <GHC.Generics.K1 GHC.Generics.R GHC.Types.Int>_R) <x>_N))
+                    g2
+                      `cast`
+                    (Trans
+                         (Sym (GHC.Generics.N:K1[0]
+                                   <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P))
+                         (Sym (GHC.Generics.N:M1[0]
+                                   <GHC.Generics.S>_P
+                                   <'GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "userId")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy>_P
+                                   <GHC.Generics.K1 GHC.Generics.R GHC.Base.String>_R) <x>_N)))
+                   `cast`
+                 (Sym (GHC.Generics.N:M1[0]
+                           <GHC.Generics.C>_P
+                           <'GHC.Generics.MetaCons
+                              "UserDB" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                           <GHC.Generics.M1
+                              GHC.Generics.S
+                              ('GHC.Generics.MetaSel
+                                 ('GHC.Base.Just "hops")
+                                 'GHC.Generics.NoSourceUnpackedness
+                                 'GHC.Generics.NoSourceStrictness
+                                 'GHC.Generics.DecidedLazy)
+                              (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int)
+                            GHC.Generics.:*: GHC.Generics.M1
+                                               GHC.Generics.S
+                                               ('GHC.Generics.MetaSel
+                                                  ('GHC.Base.Just "userId")
+                                                  'GHC.Generics.NoSourceUnpackedness
+                                                  'GHC.Generics.NoSourceStrictness
+                                                  'GHC.Generics.DecidedLazy)
+                                               (GHC.Generics.K1
+                                                  GHC.Generics.R GHC.Base.String)>_R) <x>_N) }) -}
+ad729f66363296048ad0fd2e22774186
+  $fGenericUserDB_$cfrom ::
+    DBHelper.UserDB -> GHC.Generics.Rep DBHelper.UserDB x
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
+     Unfolding: InlineRule (0, True, True)
+                DBHelper.$fGenericUserDB1
+                  `cast`
+                (forall (x :: <GHC.Types.*>_N).
+                 <DBHelper.UserDB>_R
+                 ->_R Trans
+                          (Sym (GHC.Generics.N:M1[0]
+                                    <GHC.Generics.D>_P
+                                    <'GHC.Generics.MetaData
+                                       "UserDB"
+                                       "DBHelper"
+                                       "crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"
+                                       'GHC.Types.False>_P
+                                    <GHC.Generics.M1
+                                       GHC.Generics.C
+                                       ('GHC.Generics.MetaCons
+                                          "UserDB" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                       (GHC.Generics.M1
+                                          GHC.Generics.S
+                                          ('GHC.Generics.MetaSel
+                                             ('GHC.Base.Just "hops")
+                                             'GHC.Generics.NoSourceUnpackedness
+                                             'GHC.Generics.NoSourceStrictness
+                                             'GHC.Generics.DecidedLazy)
+                                          (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int)
+                                        GHC.Generics.:*: GHC.Generics.M1
+                                                           GHC.Generics.S
+                                                           ('GHC.Generics.MetaSel
+                                                              ('GHC.Base.Just "userId")
+                                                              'GHC.Generics.NoSourceUnpackedness
+                                                              'GHC.Generics.NoSourceStrictness
+                                                              'GHC.Generics.DecidedLazy)
+                                                           (GHC.Generics.K1
+                                                              GHC.Generics.R GHC.Base.String))>_R))
+                          (Sub (Sym (DBHelper.Rep_UserDB[0]))) <x>_N) -}
+ad729f66363296048ad0fd2e22774186
+  $fGenericUserDB_$cto ::
+    GHC.Generics.Rep DBHelper.UserDB x -> DBHelper.UserDB
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ x (ds :: GHC.Generics.Rep DBHelper.UserDB x) ->
+                 case ds
+                        `cast`
+                      (Trans
+                           (Sub (DBHelper.Rep_UserDB[0]))
+                           (Trans
+                                (GHC.Generics.N:M1[0]
+                                     <GHC.Generics.D>_P
+                                     <'GHC.Generics.MetaData
+                                        "UserDB"
+                                        "DBHelper"
+                                        "crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"
+                                        'GHC.Types.False>_P
+                                     <GHC.Generics.M1
+                                        GHC.Generics.C
+                                        ('GHC.Generics.MetaCons
+                                           "UserDB" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                        (GHC.Generics.M1
+                                           GHC.Generics.S
+                                           ('GHC.Generics.MetaSel
+                                              ('GHC.Base.Just "hops")
+                                              'GHC.Generics.NoSourceUnpackedness
+                                              'GHC.Generics.NoSourceStrictness
+                                              'GHC.Generics.DecidedLazy)
+                                           (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int)
+                                         GHC.Generics.:*: GHC.Generics.M1
+                                                            GHC.Generics.S
+                                                            ('GHC.Generics.MetaSel
+                                                               ('GHC.Base.Just "userId")
+                                                               'GHC.Generics.NoSourceUnpackedness
+                                                               'GHC.Generics.NoSourceStrictness
+                                                               'GHC.Generics.DecidedLazy)
+                                                            (GHC.Generics.K1
+                                                               GHC.Generics.R GHC.Base.String))>_R)
+                                (GHC.Generics.N:M1[0]
+                                     <GHC.Generics.C>_P
+                                     <'GHC.Generics.MetaCons
+                                        "UserDB" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                                     <GHC.Generics.M1
+                                        GHC.Generics.S
+                                        ('GHC.Generics.MetaSel
+                                           ('GHC.Base.Just "hops")
+                                           'GHC.Generics.NoSourceUnpackedness
+                                           'GHC.Generics.NoSourceStrictness
+                                           'GHC.Generics.DecidedLazy)
+                                        (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int)
+                                      GHC.Generics.:*: GHC.Generics.M1
+                                                         GHC.Generics.S
+                                                         ('GHC.Generics.MetaSel
+                                                            ('GHC.Base.Just "userId")
+                                                            'GHC.Generics.NoSourceUnpackedness
+                                                            'GHC.Generics.NoSourceStrictness
+                                                            'GHC.Generics.DecidedLazy)
+                                                         (GHC.Generics.K1
+                                                            GHC.Generics.R
+                                                            GHC.Base.String)>_R)) <x>_N) of wild { GHC.Generics.:*: ds1 ds2 ->
+                 DBHelper.UserDB
+                   ds1
+                     `cast`
+                   (Trans
+                        (GHC.Generics.N:M1[0]
+                             <GHC.Generics.S>_P
+                             <'GHC.Generics.MetaSel
+                                ('GHC.Base.Just "hops")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy>_P
+                             <GHC.Generics.K1 GHC.Generics.R GHC.Types.Int>_R <x>_N)
+                        (GHC.Generics.N:K1[0] <GHC.Generics.R>_P <GHC.Types.Int>_R <x>_P))
+                   ds2
+                     `cast`
+                   (Trans
+                        (GHC.Generics.N:M1[0]
+                             <GHC.Generics.S>_P
+                             <'GHC.Generics.MetaSel
+                                ('GHC.Base.Just "userId")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy>_P
+                             <GHC.Generics.K1 GHC.Generics.R GHC.Base.String>_R <x>_N)
+                        (GHC.Generics.N:K1[0]
+                             <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P)) }) -}
+ad729f66363296048ad0fd2e22774186
+  $fShowUserDB :: GHC.Show.Show DBHelper.UserDB
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ DBHelper.UserDB
+                  DBHelper.$fShowUserDB_$cshowsPrec
+                  DBHelper.$fShowUserDB_$cshow
+                  DBHelper.$fShowUserDB_$cshowList -}
+ad729f66363296048ad0fd2e22774186
+  $fShowUserDB1 :: DBHelper.UserDB -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ (w :: DBHelper.UserDB) (w1 :: GHC.Base.String) ->
+                 case w of ww { DBHelper.UserDB ww1 ww2 ->
+                 DBHelper.$w$cshowsPrec 0# ww1 ww2 w1 }) -}
+d22a974d1bd0825f1c95389628802da9
+  $fShowUserDB2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "UserDB {"#) -}
+225b2e8cb8d9bcbff4ebf098a05ae32c
+  $fShowUserDB3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "}"#) -}
+585f62b7e18e6330ae4bd75f592d8f79
+  $fShowUserDB4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "userId = "#) -}
+6ba6f1e9c9428c80dfac1a7ac6df3a9b
+  $fShowUserDB5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# ", "#) -}
+7a518ee8e3cb7c8a06276f30d3338859
+  $fShowUserDB6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "hops = "#) -}
+ad729f66363296048ad0fd2e22774186
+  $fShowUserDB_$cshow :: DBHelper.UserDB -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U(U),1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: DBHelper.UserDB) ->
+                 DBHelper.$fShowUserDB_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+ad729f66363296048ad0fd2e22774186
+  $fShowUserDB_$cshowList :: [DBHelper.UserDB] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ DBHelper.UserDB
+                   DBHelper.$fShowUserDB1) -}
+ad729f66363296048ad0fd2e22774186
+  $fShowUserDB_$cshowsPrec ::
+    GHC.Types.Int -> DBHelper.UserDB -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U(U),1*U)><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: DBHelper.UserDB)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { DBHelper.UserDB ww3 ww4 ->
+                 DBHelper.$w$cshowsPrec ww1 ww3 ww4 w2 } }) -}
+ad729f66363296048ad0fd2e22774186
+  $fToJSONUserDB :: Data.Aeson.Types.ToJSON.ToJSON DBHelper.UserDB
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ DBHelper.UserDB
+                  DBHelper.$fToJSONUserDB_$ctoJSON
+                  DBHelper.$fToJSONUserDB_$ctoEncoding
+                  DBHelper.$fToJSONUserDB_$ctoJSONList
+                  DBHelper.$fToJSONUserDB_$ctoEncodingList -}
+ad729f66363296048ad0fd2e22774186
+  $fToJSONUserDB1 ::
+    DBHelper.UserDB
+    -> Data.Tagged.Tagged
+         Data.Aeson.Types.Generic.True Data.Aeson.Types.Internal.Value
+  {- Arity: 1, Strictness: <S,1*U(U,U)>m1, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: DBHelper.UserDB) ->
+                 case w of ww { DBHelper.UserDB ww1 ww2 ->
+                 case DBHelper.$w$ctoJSON ww1 ww2 of ww3 { Unit# ww4 ->
+                 (Data.Aeson.Types.Internal.Object ww4)
+                   `cast`
+                 (Sym (Data.Tagged.N:Tagged[0]
+                           <*>_N
+                           <Data.Aeson.Types.Generic.True>_P
+                           <Data.Aeson.Types.Internal.Value>_R)) } }) -}
+d27c4ae0501d977d36c9d2ad9db84859
+  $fToJSONUserDB2 ::
+    Data.Aeson.Types.Internal.Options
+    -> Data.Aeson.Types.ToJSON.ToArgs
+         Data.Aeson.Types.Internal.Value Data.Aeson.Types.Generic.Zero a1
+    -> GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1
+    -> Data.Aeson.Types.Internal.Value
+  {- Arity: 3, Strictness: <L,A><L,A><S,1*U>m3, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a1
+                   (w :: Data.Aeson.Types.Internal.Options)
+                   (w1 :: Data.Aeson.Types.ToJSON.ToArgs
+                            Data.Aeson.Types.Internal.Value Data.Aeson.Types.Generic.Zero a1)
+                   (w2 :: GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1) ->
+                 case DBHelper.$w$dGToJSON @ a1 w2 of ww { Unit# ww1 ->
+                 Data.Aeson.Types.Internal.String ww1 }) -}
+e8bea9a9c64aae33732cd257ef749ba7
+  $fToJSONUserDB3 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 4#) -}
+d3743767c4a135e373ffdf458badb316
+  $fToJSONUserDB4 ::
+    Data.Aeson.Types.Internal.Options
+    -> Data.Aeson.Types.ToJSON.ToArgs
+         Data.Aeson.Types.Internal.Value Data.Aeson.Types.Generic.Zero a1
+    -> GHC.Generics.K1 GHC.Generics.R GHC.Types.Int a1
+    -> Data.Aeson.Types.Internal.Value
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,A><L,A><S(S),1*U(U)>m4,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a1
+                   (_opts :: Data.Aeson.Types.Internal.Options)
+                   (ds :: Data.Aeson.Types.ToJSON.ToArgs
+                            Data.Aeson.Types.Internal.Value Data.Aeson.Types.Generic.Zero a1)
+                   (eta :: GHC.Generics.K1 GHC.Generics.R GHC.Types.Int a1) ->
+                 case eta
+                        `cast`
+                      (GHC.Generics.N:K1[0]
+                           <GHC.Generics.R>_P
+                           <GHC.Types.Int>_R
+                           <a1>_P) of wild { GHC.Types.I# i ->
+                 case GHC.Integer.Type.smallInteger i of dt { DEFAULT ->
+                 Data.Aeson.Types.Internal.Number
+                   (Data.Scientific.Scientific dt 0#) } }) -}
+ad729f66363296048ad0fd2e22774186
+  $fToJSONUserDB_$ctoEncoding ::
+    DBHelper.UserDB -> Data.Aeson.Encoding.Internal.Encoding
+  {- Arity: 1, Strictness: <S,1*U(U,U)>, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, False)
+                (\ (eta :: DBHelper.UserDB) ->
+                 Data.Aeson.Encoding.Internal.value
+                   (DBHelper.$fToJSONUserDB_$ctoJSON eta)) -}
+ad729f66363296048ad0fd2e22774186
+  $fToJSONUserDB_$ctoEncodingList ::
+    [DBHelper.UserDB] -> Data.Aeson.Encoding.Internal.Encoding
+  {- Arity: 1, Strictness: <S,1*U>, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, False)
+                (\ (eta :: [DBHelper.UserDB]) ->
+                 case eta of wild {
+                   [] -> Data.Aeson.Encoding.Internal.emptyArray_
+                   : x xs
+                   -> (Data.ByteString.Builder.Internal.append
+                         (Data.Aeson.Encoding.Internal.openBracket
+                            @ Data.Aeson.Types.Internal.Value)
+                           `cast`
+                         (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                              <Data.Aeson.Types.Internal.Value>_P)
+                         (Data.ByteString.Builder.Internal.append
+                            (Data.Aeson.Encoding.Internal.value
+                               (DBHelper.$fToJSONUserDB_$ctoJSON x))
+                              `cast`
+                            (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                 <Data.Aeson.Types.Internal.Value>_P)
+                            (Data.ByteString.Builder.Internal.append
+                               (GHC.Base.foldr
+                                  @ DBHelper.UserDB
+                                  @ (Data.Aeson.Encoding.Internal.Encoding'
+                                       Data.Aeson.Types.Internal.Value)
+                                  (\ (v :: DBHelper.UserDB)
+                                     (vs :: Data.Aeson.Encoding.Internal.Encoding'
+                                              Data.Aeson.Types.Internal.Value)[OneShot] ->
+                                   Data.ByteString.Builder.Internal.append
+                                     (Data.Aeson.Encoding.Internal.comma
+                                        @ Data.Aeson.Types.Internal.Value)
+                                       `cast`
+                                     (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                          <Data.Aeson.Types.Internal.Value>_P)
+                                     (Data.ByteString.Builder.Internal.append
+                                        (Data.Aeson.Encoding.Internal.value
+                                           (DBHelper.$fToJSONUserDB_$ctoJSON v))
+                                          `cast`
+                                        (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                             <Data.Aeson.Types.Internal.Value>_P)
+                                        vs
+                                          `cast`
+                                        (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                             <Data.Aeson.Types.Internal.Value>_P)))
+                                    `cast`
+                                  (<DBHelper.UserDB>_R
+                                   ->_R <Data.Aeson.Encoding.Internal.Encoding'
+                                           Data.Aeson.Types.Internal.Value>_R
+                                   ->_R Sym (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                                 <Data.Aeson.Types.Internal.Value>_P))
+                                  (Data.Aeson.Encoding.Internal.empty
+                                     @ Data.Aeson.Types.Internal.Value)
+                                  xs)
+                                 `cast`
+                               (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                    <Data.Aeson.Types.Internal.Value>_P)
+                               (Data.Aeson.Encoding.Internal.closeBracket
+                                  @ Data.Aeson.Types.Internal.Value)
+                                 `cast`
+                               (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                    <Data.Aeson.Types.Internal.Value>_P))))
+                        `cast`
+                      (Sym (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                <Data.Aeson.Types.Internal.Value>_P)) }) -}
+ad729f66363296048ad0fd2e22774186
+  $fToJSONUserDB_$ctoJSON ::
+    DBHelper.UserDB -> Data.Aeson.Types.Internal.Value
+  {- Arity: 1, Strictness: <S,1*U(U,U)>m1,
+     Unfolding: InlineRule (0, True, True)
+                DBHelper.$fToJSONUserDB1
+                  `cast`
+                (<DBHelper.UserDB>_R
+                 ->_R Data.Tagged.N:Tagged[0]
+                          <*>_N
+                          <Data.Aeson.Types.Generic.True>_P
+                          <Data.Aeson.Types.Internal.Value>_R) -}
+ad729f66363296048ad0fd2e22774186
+  $fToJSONUserDB_$ctoJSONList ::
+    [DBHelper.UserDB] -> Data.Aeson.Types.Internal.Value
+  {- Arity: 1, Strictness: <S,1*U>m2, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, False)
+                (\ (eta :: [DBHelper.UserDB]) ->
+                 case Data.Vector.Generic.new
+                        @ Data.Vector.Vector
+                        @ Data.Aeson.Types.Internal.Value
+                        (Data.Vector.$fVectorVectora @ Data.Aeson.Types.Internal.Value)
+                        (Data.Vector.Generic.New.unstream
+                           @ Data.Vector.Vector
+                           @ Data.Aeson.Types.Internal.Value
+                           (Data.Vector.$fVectorVectora @ Data.Aeson.Types.Internal.Value)
+                           (Data.Vector.Fusion.Bundle.Monadic.unsafeFromList
+                              @ Data.Vector.Fusion.Util.Id
+                              @ Data.Aeson.Types.Internal.Value
+                              @ Data.Vector.Vector
+                              Data.Vector.Fusion.Util.$fMonadId
+                              Data.Vector.Fusion.Bundle.Size.Unknown
+                              (GHC.Base.build
+                                 @ Data.Aeson.Types.Internal.Value
+                                 (\ @ b1
+                                    (c :: Data.Aeson.Types.Internal.Value -> b1 -> b1)[OneShot]
+                                    (n :: b1)[OneShot] ->
+                                  GHC.Base.foldr
+                                    @ DBHelper.UserDB
+                                    @ b1
+                                    (GHC.Base.mapFB
+                                       @ Data.Aeson.Types.Internal.Value
+                                       @ b1
+                                       @ DBHelper.UserDB
+                                       c
+                                       DBHelper.$fToJSONUserDB_$ctoJSON)
+                                    n
+                                    eta)))) of dt1 { Data.Vector.Vector ipv ipv1 ipv2 ->
+                 Data.Aeson.Types.Internal.Array dt1 }) -}
+3915aa3c4613a28f4cba12782ca12cdd
+  $fToJSONUserDB_w2 :: Data.Aeson.Types.Internal.Options
+  {- Strictness: m,
+     Unfolding: (Data.Aeson.Types.Internal.Options
+                   (GHC.Base.id @ GHC.Base.String)
+                   (GHC.Base.id @ GHC.Base.String)
+                   GHC.Types.True
+                   GHC.Types.False
+                   Data.Aeson.Types.Internal.defaultTaggedObject
+                   GHC.Types.False) -}
 275a342e93ccdad1bbd60a10ac6ed996
   $sfromList ::
     [(Data.Text.Internal.Text, a)]
@@ -143,6 +1613,30 @@ import  -/  text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Show 638a
     -> [(Data.Text.Internal.Text, a1)]
     -> Data.Map.Base.Map Data.Text.Internal.Text a1
   {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+2ee907acb56c171243acccd645b6f5c2
+  $tc'UserDB :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11375624236554016690##
+                   3706446949122323539##
+                   DBHelper.$trModule
+                   DBHelper.$tc'UserDB1) -}
+f1172b32e1754be88349ec2b5862849c
+  $tc'UserDB1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'UserDB"#) -}
+d7a0b13adb2ee3f4f7325a7b7a5dc9b7
+  $tcUserDB :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10415495066223392651##
+                   13195176413369731141##
+                   DBHelper.$trModule
+                   DBHelper.$tcUserDB1) -}
+6d9751f5c7d0e325bf6c48922baff39c
+  $tcUserDB1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "UserDB"#) -}
 a544e5e393a611d83fbdcd4bc4191a3d
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
@@ -158,6 +1652,208 @@ db8ac5ee91ba88b39810e837cb2c05f2
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"#) -}
+47c761ecfc84d6a9ed97a1ec4ffc8a45
+  $w$c/= ::
+    GHC.Prim.Int#
+    -> GHC.Base.String
+    -> GHC.Prim.Int#
+    -> GHC.Base.String
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs, Strictness: <S,U><L,1*U><S,U><L,1*U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: GHC.Prim.Int#)
+                   (ww3 :: GHC.Base.String) ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# ww ww2) of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True
+                   -> case GHC.Base.eqString ww1 ww3 of wild1 {
+                        GHC.Types.False -> GHC.Types.True
+                        GHC.Types.True -> GHC.Types.False } }) -}
+1051f8268fbbd27b2e056a5ae537d982
+  $w$c== ::
+    GHC.Prim.Int#
+    -> GHC.Base.String
+    -> GHC.Prim.Int#
+    -> GHC.Base.String
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs, Strictness: <S,U><L,1*U><S,U><L,1*U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: GHC.Prim.Int#)
+                   (ww3 :: GHC.Base.String) ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# ww ww2) of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True -> GHC.Base.eqString ww1 ww3 }) -}
+d3c06bbef0e04f25cea8096814a10bc7
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 4, Strictness: <S,U><L,1*U(U)><L,1*U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Types.Int)
+                   (ww2 :: GHC.Base.String)
+                   (w :: GHC.Base.String) ->
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                     {- Arity: 1, Strictness: <L,1*U> -}
+                   = \ (x :: GHC.Base.String)[OneShot] ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       DBHelper.$fShowUserDB6
+                       (case ww1 of ww3 { GHC.Types.I# ww4 ->
+                        case GHC.Show.$wshowSignedInt
+                               0#
+                               ww4
+                               (GHC.Base.++
+                                  @ GHC.Types.Char
+                                  DBHelper.$fShowUserDB5
+                                  (GHC.Base.++
+                                     @ GHC.Types.Char
+                                     DBHelper.$fShowUserDB4
+                                     (GHC.Types.:
+                                        @ GHC.Types.Char
+                                        GHC.Show.shows6
+                                        (GHC.Show.showLitString
+                                           ww2
+                                           (GHC.Types.:
+                                              @ GHC.Types.Char
+                                              GHC.Show.shows6
+                                              (GHC.Base.++
+                                                 @ GHC.Types.Char
+                                                 DBHelper.$fShowUserDB3
+                                                 x)))))) of ww5 { (#,#) ww6 ww7 ->
+                        GHC.Types.: @ GHC.Types.Char ww6 ww7 } })
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False
+                   -> GHC.Base.++ @ GHC.Types.Char DBHelper.$fShowUserDB2 (g w)
+                   GHC.Types.True
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows7
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           DBHelper.$fShowUserDB2
+                           (g (GHC.Types.: @ GHC.Types.Char GHC.Show.shows4 w))) }) -}
+62a32f10460c09ae018ab03833d0bd50
+  $w$ctoJSON ::
+    GHC.Types.Int
+    -> GHC.Base.String -> (# Data.Aeson.Types.Internal.Object #)
+  {- Arity: 2, Strictness: <L,U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Types.Int) (ww1 :: GHC.Base.String) ->
+                 case Data.Aeson.Types.Internal.$sfromList1
+                        @ Data.Aeson.Types.Internal.Value
+                        (Data.Aeson.Types.ToJSON.$fRecordToPairsarityM2
+                           @ ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "hops")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy)
+                           @ Data.Aeson.Types.Generic.Zero
+                           @ (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int)
+                           DBHelper.$fFromJSONUserDB_$s$fSelectorMetaMetaSel1
+                           DBHelper.$fToJSONUserDB4
+                             `cast`
+                           (Sym (Data.Aeson.Types.ToJSON.N:GToJSON[0]
+                                     <Data.Aeson.Types.Generic.Zero>_N
+                                     <GHC.Generics.K1 GHC.Generics.R GHC.Types.Int>_N))
+                           @ GHC.Prim.Any
+                           DBHelper.$fToJSONUserDB_w2
+                           (Data.Aeson.Types.ToJSON.$WNoToArgs
+                              @ Data.Aeson.Types.Internal.Value
+                              @ GHC.Prim.Any)
+                           ww
+                             `cast`
+                           (Trans
+                                (Sym (GHC.Generics.N:K1[0]
+                                          <GHC.Generics.R>_P <GHC.Types.Int>_R <GHC.Prim.Any>_P))
+                                (Sym (GHC.Generics.N:M1[0]
+                                          <GHC.Generics.S>_P
+                                          <'GHC.Generics.MetaSel
+                                             ('GHC.Base.Just "hops")
+                                             'GHC.Generics.NoSourceUnpackedness
+                                             'GHC.Generics.NoSourceStrictness
+                                             'GHC.Generics.DecidedLazy>_P
+                                          <GHC.Generics.K1
+                                             GHC.Generics.R GHC.Types.Int>_R) <GHC.Prim.Any>_N))
+                           (Data.Aeson.Types.ToJSON.$fRecordToPairsarityM2
+                              @ ('GHC.Generics.MetaSel
+                                   ('GHC.Base.Just "userId")
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                              @ Data.Aeson.Types.Generic.Zero
+                              @ (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
+                              DBHelper.$fFromJSONUserDB_$s$fSelectorMetaMetaSel
+                              DBHelper.$fToJSONUserDB2
+                                `cast`
+                              (Sym (Data.Aeson.Types.ToJSON.N:GToJSON[0]
+                                        <Data.Aeson.Types.Generic.Zero>_N
+                                        <GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char]>_N))
+                              @ GHC.Prim.Any
+                              DBHelper.$fToJSONUserDB_w2
+                              (Data.Aeson.Types.ToJSON.$WNoToArgs
+                                 @ Data.Aeson.Types.Internal.Value
+                                 @ GHC.Prim.Any)
+                              ww1
+                                `cast`
+                              (Trans
+                                   (Sym (GHC.Generics.N:K1[0]
+                                             <GHC.Generics.R>_P
+                                             <GHC.Base.String>_R
+                                             <GHC.Prim.Any>_P))
+                                   (Sym (GHC.Generics.N:M1[0]
+                                             <GHC.Generics.S>_P
+                                             <'GHC.Generics.MetaSel
+                                                ('GHC.Base.Just "userId")
+                                                'GHC.Generics.NoSourceUnpackedness
+                                                'GHC.Generics.NoSourceStrictness
+                                                'GHC.Generics.DecidedLazy>_P
+                                             <GHC.Generics.K1
+                                                GHC.Generics.R
+                                                GHC.Base.String>_R) <GHC.Prim.Any>_N))
+                              (GHC.Types.[] @ Data.Aeson.Types.Internal.Pair)))
+                        (Data.HashMap.Base.Empty
+                           @ Data.Text.Internal.Text
+                           @ Data.Aeson.Types.Internal.Value) of dt1 { DEFAULT ->
+                 (# dt1 #) }) -}
+2451c0621988b12b353f9ee2800f19ab
+  $w$dGToJSON ::
+    GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1
+    -> (# Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,1*U>, Inline: [0],
+     Unfolding: (\ @ a1
+                   (w :: GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1) ->
+                 case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ Data.Text.Internal.Text
+                        (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                         case GHC.Prim.newByteArray#
+                                @ GHC.Prim.RealWorld
+                                8#
+                                s1 of ds1 { (#,#) ipv ipv1 ->
+                         DBHelper.$wouter
+                           (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                           DBHelper.$fToJSONUserDB3
+                           w `cast`
+                           (GHC.Generics.N:K1[0]
+                                <GHC.Generics.R>_P <[GHC.Types.Char]>_R <a1>_P)
+                           0#
+                           ipv }) of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of dt1 { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
+                 (# dt1 #) } }) -}
 5aa925c823e43ae0d1f5b43e92462276
   $w$sgo10 ::
     GHC.Prim.ByteArray#
@@ -168,6 +1864,17 @@ db8ac5ee91ba88b39810e837cb2c05f2
     -> Data.Map.Base.Map Data.Text.Internal.Text a1
   {- Arity: 5, Strictness: <L,U><L,U><L,U><L,U><S,1*U>,
      Inline: [0] -}
+a4d85f9c735a8910dbcdfdf509679917
+  $wouter ::
+    Data.Text.Array.MArray GHC.Prim.RealWorld
+    -> GHC.Types.Int
+    -> [GHC.Types.Char]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
+     Inline: [0] -}
 dd26f66983b01db262f4abaf9cdc288d
   $wpoly_go10 ::
     GHC.Prim.Int#
@@ -175,7 +1882,43 @@ dd26f66983b01db262f4abaf9cdc288d
     -> [(Data.Text.Internal.Text, a)]
     -> Data.Map.Base.Map Data.Text.Internal.Text a
   {- Arity: 3, Strictness: <L,U><S,1*U><S,1*U>, Inline: [0] -}
-08fbb25a7b36962ec4f71e7f218d2857
+ad729f66363296048ad0fd2e22774186
+  axiom Rep_UserDB::
+      GHC.Generics.Rep DBHelper.UserDB
+        = GHC.Generics.D1
+            ('GHC.Generics.MetaData
+               "UserDB"
+               "DBHelper"
+               "crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"
+               'GHC.Types.False)
+            (GHC.Generics.C1
+               ('GHC.Generics.MetaCons
+                  "UserDB" 'GHC.Generics.PrefixI 'GHC.Types.True)
+               (GHC.Generics.S1
+                  ('GHC.Generics.MetaSel
+                     ('GHC.Base.Just "hops")
+                     'GHC.Generics.NoSourceUnpackedness
+                     'GHC.Generics.NoSourceStrictness
+                     'GHC.Generics.DecidedLazy)
+                  (GHC.Generics.Rec0 GHC.Types.Int)
+                GHC.Generics.:*: GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "userId")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 GHC.Base.String)))
+ad729f66363296048ad0fd2e22774186
+  data UserDB
+    = UserDB {hops :: GHC.Types.Int, userId :: GHC.Base.String}
+5a207e23812b1871dc28f22ff003d065
+  hops :: DBHelper.UserDB -> GHC.Types.Int
+  RecSel Left DBHelper.UserDB
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U(U),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: DBHelper.UserDB) ->
+                 case ds of wild { DBHelper.UserDB ds1 ds2 -> ds1 }) -}
+b61df6cefa15b1531574d7ea0d5599e6
   testFunction :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -188,7 +1931,7 @@ d2c3b7dd872b28622b96b293b0a348ea
                   `cast`
                 (<Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-4fe036d2b7b8573502a35bb67c14c22e
+4771f29d9209f3a2e8160029ff28a6d3
   testFunction'' :: Data.Text.Internal.Text -> GHC.Types.IO ()
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -196,7 +1939,7 @@ d2c3b7dd872b28622b96b293b0a348ea
                   `cast`
                 (<Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-92fcde64fef3a89da2d584742f070695
+5ce59f0638b098681fd054c5f595d3ba
   testFunction''1 ::
     Data.Text.Internal.Text
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -246,7 +1989,7 @@ ca4b154628acdcd931774cc13850d0cf
   testFunction''3 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "MATCH (n:User) WHERE n.name CONTAINS {name} RETURN n"#) -}
-b470de42d23e55c7c068e7223509f2c3
+312f00deaf8a3d9971f72968c8d69b4d
   testFunction''4 :: GHC.Types.IO Database.Bolt.Connection.Type.Pipe
   {- Unfolding: (Database.Bolt.Connection.Pipe.connect
                    @ GHC.Types.IO
@@ -258,7 +2001,7 @@ d4b897843e8b49b3ea9bba8874a0d997
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 2, Strictness: <L,1*U(U,U,U)><S,U> -}
-8195d50ad7797b456f6c332205504ebf
+4873447b893f21e89edd0231a7ec6d4a
   testFunction1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -324,7 +2067,7 @@ d4b897843e8b49b3ea9bba8874a0d997
   testFunction3 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "MATCH (n:User) WHERE n.name CONTAINS \"Bob\" RETURN n"#) -}
-18428749ab4c746f2561344fe0c68667
+c941210f06189fc8706bcdf10eea1396
   testFunction4 :: Database.Bolt.Connection.Type.BoltCfg
   {- Unfolding: (Database.Bolt.Connection.Type.BoltCfg
                    Database.Bolt.Connection.Type.$fDefaultBoltCfg7
@@ -334,11 +2077,113 @@ d4b897843e8b49b3ea9bba8874a0d997
                    Database.Bolt.Connection.Type.$fDefaultBoltCfg3
                    Database.Bolt.Connection.Type.$fDefaultBoltCfg2
                    Database.Bolt.Connection.Type.$fDefaultBoltCfg1
-                   DBHelper.testFunction5
+                   DBHelper.testFunction6
                    DBHelper.testFunction5) -}
-ef80f80a0f10705bf4a6cdfc41dda4a2
+5a53319c5dd51d1e82f2c7f094ac8154
   testFunction5 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "neo4J"#) -}
+bfe4ef25a2897746dab5da0a20506ce7
+  testFunction6 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "neo4j"#) -}
+8dcbd06ec2e57f1b7ef23acf9ca2726d
+  userId :: DBHelper.UserDB -> GHC.Base.String
+  RecSel Left DBHelper.UserDB
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: DBHelper.UserDB) ->
+                 case ds of wild { DBHelper.UserDB ds1 ds2 -> ds2 }) -}
+instance GHC.Classes.Eq [DBHelper.UserDB] = DBHelper.$fEqUserDB
+instance Data.Aeson.Types.FromJSON.FromJSON [DBHelper.UserDB]
+  = DBHelper.$fFromJSONUserDB
+instance GHC.Generics.Generic [DBHelper.UserDB]
+  = DBHelper.$fGenericUserDB
+instance GHC.Show.Show [DBHelper.UserDB] = DBHelper.$fShowUserDB
+instance Data.Aeson.Types.ToJSON.ToJSON [DBHelper.UserDB]
+  = DBHelper.$fToJSONUserDB
+family instance GHC.Generics.Rep [DBHelper.UserDB]
+  = DBHelper.Rep_UserDB
+"SPEC/DBHelper $fFromJSON[] @ Char" [ALWAYS] forall ($dFromJSON :: Data.Aeson.Types.FromJSON.FromJSON
+                                                                     GHC.Types.Char)
+  Data.Aeson.Types.FromJSON.$fFromJSON[] @ GHC.Types.Char $dFromJSON
+  = DBHelper.$fFromJSONUserDB_$s$fFromJSON[]
+"SPEC/DBHelper $fSelectorMetaMetaSel @ ('Just
+                                         "hops") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI3 :: GHC.Generics.SingI
+                                                                                                                                                                                            'GHC.Generics.DecidedLazy)
+                                                                                                                                                                             ($dSingI2 :: GHC.Generics.SingI
+                                                                                                                                                                                            'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                             ($dSingI1 :: GHC.Generics.SingI
+                                                                                                                                                                                            'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                             ($dSingI :: GHC.Generics.SingI
+                                                                                                                                                                                           ('GHC.Base.Just
+                                                                                                                                                                                              "hops"))
+  GHC.Generics.$fSelectorMetaMetaSel @ ('GHC.Base.Just "hops")
+                                     @ 'GHC.Generics.NoSourceUnpackedness
+                                     @ 'GHC.Generics.NoSourceStrictness
+                                     @ 'GHC.Generics.DecidedLazy
+                                     $dSingI
+                                     $dSingI1
+                                     $dSingI2
+                                     $dSingI3
+  = DBHelper.$fFromJSONUserDB_$s$fSelectorMetaMetaSel1
+"SPEC/DBHelper $fSelectorMetaMetaSel @ ('Just
+                                         "userId") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI3 :: GHC.Generics.SingI
+                                                                                                                                                                                              'GHC.Generics.DecidedLazy)
+                                                                                                                                                                               ($dSingI2 :: GHC.Generics.SingI
+                                                                                                                                                                                              'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                               ($dSingI1 :: GHC.Generics.SingI
+                                                                                                                                                                                              'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                               ($dSingI :: GHC.Generics.SingI
+                                                                                                                                                                                             ('GHC.Base.Just
+                                                                                                                                                                                                "userId"))
+  GHC.Generics.$fSelectorMetaMetaSel @ ('GHC.Base.Just "userId")
+                                     @ 'GHC.Generics.NoSourceUnpackedness
+                                     @ 'GHC.Generics.NoSourceStrictness
+                                     @ 'GHC.Generics.DecidedLazy
+                                     $dSingI
+                                     $dSingI1
+                                     $dSingI2
+                                     $dSingI3
+  = DBHelper.$fFromJSONUserDB_$s$fSelectorMetaMetaSel
+"SPEC/DBHelper $fSelectorMetaMetaSel_$cselName @ ('Just
+                                                   "hops") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI3 :: GHC.Generics.SingI
+                                                                                                                                                                                                                'GHC.Generics.DecidedLazy)
+                                                                                                                                                                                                 ($dSingI2 :: GHC.Generics.SingI
+                                                                                                                                                                                                                'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                                                 ($dSingI1 :: GHC.Generics.SingI
+                                                                                                                                                                                                                'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                                                 ($dSingI :: GHC.Generics.SingI
+                                                                                                                                                                                                               ('GHC.Base.Just
+                                                                                                                                                                                                                  "hops"))
+  GHC.Generics.$fSelectorMetaMetaSel_$cselName @ ('GHC.Base.Just
+                                                    "hops")
+                                               @ 'GHC.Generics.NoSourceUnpackedness
+                                               @ 'GHC.Generics.NoSourceStrictness
+                                               @ 'GHC.Generics.DecidedLazy
+                                               $dSingI
+                                               $dSingI1
+                                               $dSingI2
+                                               $dSingI3
+  = DBHelper.$fFromJSONUserDB_$s$fSelectorMetaMetaSel_$cselName1
+"SPEC/DBHelper $fSelectorMetaMetaSel_$cselName @ ('Just
+                                                   "userId") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI3 :: GHC.Generics.SingI
+                                                                                                                                                                                                                  'GHC.Generics.DecidedLazy)
+                                                                                                                                                                                                   ($dSingI2 :: GHC.Generics.SingI
+                                                                                                                                                                                                                  'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                                                   ($dSingI1 :: GHC.Generics.SingI
+                                                                                                                                                                                                                  'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                                                   ($dSingI :: GHC.Generics.SingI
+                                                                                                                                                                                                                 ('GHC.Base.Just
+                                                                                                                                                                                                                    "userId"))
+  GHC.Generics.$fSelectorMetaMetaSel_$cselName @ ('GHC.Base.Just
+                                                    "userId")
+                                               @ 'GHC.Generics.NoSourceUnpackedness
+                                               @ 'GHC.Generics.NoSourceStrictness
+                                               @ 'GHC.Generics.DecidedLazy
+                                               $dSingI
+                                               $dSingI1
+                                               $dSingI2
+                                               $dSingI3
+  = DBHelper.$fFromJSONUserDB_$s$fSelectorMetaMetaSel_$cselName
 "SPEC/DBHelper fromList @ Text _" [ALWAYS] forall @ a
                                                   ($dOrd :: GHC.Classes.Ord Data.Text.Internal.Text)
   Data.Map.Base.fromList @ Data.Text.Internal.Text @ a $dOrd
