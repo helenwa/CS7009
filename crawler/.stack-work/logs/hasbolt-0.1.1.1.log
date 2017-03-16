@@ -1,0 +1,16 @@
+Configuring hasbolt-0.1.1.1...
+Building hasbolt-0.1.1.1...
+Preprocessing library hasbolt-0.1.1.1...
+[ 1 of 10] Compiling Database.Bolt.Value.Type ( src\Database\Bolt\Value\Type.hs, .stack-work\dist\ca59d0ab\build\Database\Bolt\Value\Type.o )
+[ 2 of 10] Compiling Database.Bolt.Value.Helpers ( src\Database\Bolt\Value\Helpers.hs, .stack-work\dist\ca59d0ab\build\Database\Bolt\Value\Helpers.o )
+[ 3 of 10] Compiling Database.Bolt.Value.Instances ( src\Database\Bolt\Value\Instances.hs, .stack-work\dist\ca59d0ab\build\Database\Bolt\Value\Instances.o )
+[ 4 of 10] Compiling Database.Bolt.Value.Structure ( src\Database\Bolt\Value\Structure.hs, .stack-work\dist\ca59d0ab\build\Database\Bolt\Value\Structure.o )
+[ 5 of 10] Compiling Database.Bolt.Connection.Type ( src\Database\Bolt\Connection\Type.hs, .stack-work\dist\ca59d0ab\build\Database\Bolt\Connection\Type.o )
+[ 6 of 10] Compiling Database.Bolt.Connection.Instances ( src\Database\Bolt\Connection\Instances.hs, .stack-work\dist\ca59d0ab\build\Database\Bolt\Connection\Instances.o )
+[ 7 of 10] Compiling Database.Bolt.Connection.Pipe ( src\Database\Bolt\Connection\Pipe.hs, .stack-work\dist\ca59d0ab\build\Database\Bolt\Connection\Pipe.o )
+[ 8 of 10] Compiling Database.Bolt.Record ( src\Database\Bolt\Record.hs, .stack-work\dist\ca59d0ab\build\Database\Bolt\Record.o )
+[ 9 of 10] Compiling Database.Bolt.Connection ( src\Database\Bolt\Connection.hs, .stack-work\dist\ca59d0ab\build\Database\Bolt\Connection.o )
+[10 of 10] Compiling Database.Bolt    ( src\Database\Bolt.hs, .stack-work\dist\ca59d0ab\build\Database\Bolt.o )
+Installing library in
+C:\sr\snapshots\523bd341\lib\x86_64-windows-ghc-8.0.2\hasbolt-0.1.1.1-KvGT2iOIRLp44tD9hkaloa
+Registering hasbolt-0.1.1.1...

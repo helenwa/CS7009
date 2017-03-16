@@ -27,6 +27,8 @@ import GitHub
 import GitHub.Data.Repos
 import GitHub.Endpoints.Repos
 
+import DBHelper
+
 import Control.Monad.Trans.Except
 
 type ApiHandler = ExceptT ServantErr IO
@@ -68,13 +70,13 @@ api = Proxy
 server :: Server API
 server = userList
     :<|> user
-   -- :<|> startC
+    -- :<|> startC
     
     where 
         userList = return users
         user userName ttl = return (Position userName ttl)
 
---startC :: UserL -> ApiHandler Position
+-- startC :: UserL -> ApiHandler Position
 -- startC (UserL userId userN text) =  liftIO $ do 
     -- putStrLn "Output"
     -- let repositorys = repos $ pack userN 

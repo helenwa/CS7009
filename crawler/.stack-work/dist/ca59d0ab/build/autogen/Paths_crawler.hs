@@ -30,7 +30,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "C:\\Users\\happy\\Documents\\5thYear\\NetworkApplications\\codeblobs\\crawler\\.stack-work\\install\\60f100ec\\bin"
-libdir     = "C:\\Users\\happy\\Documents\\5thYear\\NetworkApplications\\codeblobs\\crawler\\.stack-work\\install\\60f100ec\\lib\\x86_64-windows-ghc-8.0.2\\crawler-0.1.0.0-GgzHapiUHxY2LWVcn2JyLM"
+libdir     = "C:\\Users\\happy\\Documents\\5thYear\\NetworkApplications\\codeblobs\\crawler\\.stack-work\\install\\60f100ec\\lib\\x86_64-windows-ghc-8.0.2\\crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"
 dynlibdir  = "C:\\Users\\happy\\Documents\\5thYear\\NetworkApplications\\codeblobs\\crawler\\.stack-work\\install\\60f100ec\\lib\\x86_64-windows-ghc-8.0.2"
 datadir    = "C:\\Users\\happy\\Documents\\5thYear\\NetworkApplications\\codeblobs\\crawler\\.stack-work\\install\\60f100ec\\share\\x86_64-windows-ghc-8.0.2\\crawler-0.1.0.0"
 libexecdir = "C:\\Users\\happy\\Documents\\5thYear\\NetworkApplications\\codeblobs\\crawler\\.stack-work\\install\\60f100ec\\libexec"

@@ -2,16 +2,35 @@
 {-# LANGUAGE StandaloneDeriving   #-}
 {-# LANGUAGE RecursiveDo #-}
 
+
+
+{-# LANGUAGE DataKinds            #-}
+{-# LANGUAGE DeriveAnyClass       #-}
+{-# LANGUAGE DeriveGeneric        #-}
+{-# LANGUAGE FlexibleContexts     #-}
+{-# LANGUAGE FlexibleInstances    #-}
+{-# LANGUAGE OverloadedStrings    #-}
+{-# LANGUAGE StandaloneDeriving   #-}
+{-# LANGUAGE TemplateHaskell      #-}
+{-# LANGUAGE TypeOperators        #-}
+{-# LANGUAGE TypeSynonymInstances #-}
+
+
+
+import           Control.Monad                (when)
+import           Control.Monad.IO.Class
+import           Control.Monad.Trans.Resource
+import           Data.Text                    (pack, unpack)
+import           Data.Time.Clock              (UTCTime, getCurrentTime)
+import           Data.Time.Format             (defaultTimeLocale, formatTime)
+import           Database.MongoDB
+import           System.Environment           (getArgs, getProgName, lookupEnv)
+import           System.Log.Logger
+import           Prelude        Data.Bson.Generic
+
 module Lib
     ( someFunc
     ) where
-
-import qualified Data.List      as DL
-import           Database.MongoDB
-import           GHC.Generics
-import           Data.Bson.Generic
-
-
 
 someFunc :: IO ()
 someFunc = putStrLn "someFunc"

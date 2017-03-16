@@ -21,12 +21,26 @@
   (major1) == 4 && (major2) <  9 || \
   (major1) == 4 && (major2) == 9 && (minor) <= 1)
 
+/* package containers-0.5.7.1 */
+#define VERSION_containers "0.5.7.1"
+#define MIN_VERSION_containers(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  5 || \
+  (major1) == 0 && (major2) == 5 && (minor) <= 7)
+
 /* package github-0.15.0 */
 #define VERSION_github "0.15.0"
 #define MIN_VERSION_github(major1,major2,minor) (\
   (major1) <  0 || \
   (major1) == 0 && (major2) <  15 || \
   (major1) == 0 && (major2) == 15 && (minor) <= 0)
+
+/* package hasbolt-0.1.1.1 */
+#define VERSION_hasbolt "0.1.1.1"
+#define MIN_VERSION_hasbolt(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  1 || \
+  (major1) == 0 && (major2) == 1 && (minor) <= 1)
 
 /* package servant-server-0.9.1.1 */
 #define VERSION_servant_server "0.9.1.1"
@@ -119,7 +133,7 @@
   (major1) == 2 && (major2) <  25 || \
   (major1) == 2 && (major2) == 25 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "crawler-0.1.0.0-GgzHapiUHxY2LWVcn2JyLM"
+#define CURRENT_COMPONENT_ID "crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"
 
-#define CURRENT_PACKAGE_KEY "crawler-0.1.0.0-GgzHapiUHxY2LWVcn2JyLM"
+#define CURRENT_PACKAGE_KEY "crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"
 
