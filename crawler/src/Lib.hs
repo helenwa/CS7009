@@ -56,11 +56,12 @@ data RepoInfo = RepoInfo{
 $(deriveJSON defaultOptions ''RepoInfo)
 
 type API = "userList" :> Get '[JSON] [UserL]
-        :<|> "user" :> Capture "x" String :> Capture "y" Int :> Get '[JSON] Position
+        :<|> "user" :> Capture "id" String :> Capture "hops" Int :> Get '[JSON] Position
         :<|> "startC" :> ReqBody '[JSON] UserL :> Post '[JSON] Position
 
 startApp :: IO ()
 startApp = run 8080 app
+
 
 app :: Application
 app = serve api server
@@ -72,10 +73,16 @@ server :: Server API
 server = userList
     :<|> user
     :<|> startC
-    
-    where 
-        userList = return users
-        user userName ttl = return (Position userName ttl)
+    where
+    userList = return users
+
+
+user :: String -> Int -> ApiHandler Position
+user userName ttl =  liftIO $ do
+    putStrLn "Output"
+    let newU = UserDB ttl userName 
+    b <- addUser newU
+    return (Position userName ttl)
 
 startC :: UserL -> ApiHandler Position
 startC (UserL userId userN text) =  liftIO $ do 
@@ -110,9 +117,9 @@ repos userName = do
          
 formatRepo :: GitHub.Repo -> IO(RepoInfo)
 formatRepo repo = do
-	let name = untagName (GitHub.Data.Repos.repoName repo)
-	size <-  formatNumber (GitHub.Data.Repos.repoSize repo)
-	return (RepoInfo name size)
+    let name = untagName (GitHub.Data.Repos.repoName repo)
+    size <-  formatNumber (GitHub.Data.Repos.repoSize repo)
+    return (RepoInfo name size)
             
 formatNumber :: Maybe Int -> IO(Integer)
 formatNumber n =
