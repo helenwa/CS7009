@@ -28,7 +28,15 @@ data LinkDB = LinkDB
   { linkType      :: Int
   , source        :: String
   , destination   :: String
+  , linkName      :: String
   } deriving (ToJSON, FromJSON, Generic, Eq, Show)
+  
+userRepo :: Int
+userRepo = 1
+userUser :: Int
+userUser = 2
+repoUser :: Int
+repoUser = 3
 
 n4password = "neo4J"
 n4user = "neo4j"
@@ -56,16 +64,51 @@ testFunction'' username = do
                                (fromList [("name", T username)])
    close pipe
    putStrLn $ show result
-   
+--Empty
+clearDB :: IO String
+clearDB = do
+   pipe <- connect $ def { user = "neo4j", password = "neo4J" }
+   result <- run pipe $ query "MATCH (n) OPTIONAL MATCH (n)-[r]-() DELETE n,r"
+   close pipe
+   putStrLn $ show result
+   let r = show result
+   return r
    
 --Add
 
 addUser :: UserDB -> IO String
 addUser newUser = do
-   pipe <- connect $ def { user = "neo4j", password = "neo4J" }
-   result <- run pipe $ queryP "CREATE (n:User {userId: {id}, hops: 7}) RETURN n" 
-                               (fromList [("id", T (fromString (userId newUser)))])
+   pipe <- connect $ def { user = n4user, password = n4password }
+   result <- run pipe $ queryP "CREATE (n:User {userId: {id}, hops: {h}}) RETURN n" 
+                               (fromList [("id", T (fromString (userId newUser))), ("h", I (hops newUser))])
    close pipe
    putStrLn $ show result
    let r = show result
    return r
+   
+addRepo :: RepoDB -> IO String
+addRepo newRepo = do
+   pipe <- connect $ def { user = n4user, password = n4password }
+   result <- run pipe $ queryP "CREATE (n:Repo {repoId: {id}, repolabel: {label}) RETURN n" 
+                               (fromList [("id", T (fromString (repoId newRepo))), ("id", T (fromString (repolabel newRepo)))])
+   close pipe
+   putStrLn $ show result
+   let r = show result
+   return r
+   
+addLink :: LinkDB -> IO String
+addLink newLink = do
+   pipe <- connect $ def { user = n4user, password = n4password }
+   result <- run pipe $ query $ Data.Text.pack $ linkRequest newLink
+   close pipe
+   putStrLn $ show result
+   let r = show result
+   return r
+      
+linkRequest :: LinkDB -> String  
+linkRequest newLink
+   | (lt == userRepo) = "MATCH  (s:User {userId: " ++ (source newLink) ++ "}) MATCH  (d:Repo {repoId: "++ (destination newLink) ++ ") CREATE (s)-[o:" ++ (linkName newLink) ++ "]->(d) RETURN o"
+   | (lt == userUser) = "MATCH  (s:User {userId: " ++ (source newLink) ++ "}) MATCH  (d:User {userId: "++ (destination newLink)  ++ ") CREATE (s)-[o:" ++ (linkName newLink) ++ "]->(d) RETURN o"
+   | otherwise        = "MATCH  (d:User {userId: " ++ (source newLink) ++ "}) MATCH  (s:Repo {repoId: "++ (destination newLink)  ++ ") CREATE (s)-[o:" ++ (linkName newLink) ++ "]->(d) RETURN o"
+   where lt = linkType newLink
+   

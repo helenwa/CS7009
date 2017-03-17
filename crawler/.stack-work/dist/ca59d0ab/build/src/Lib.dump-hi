@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-03-16 20:14:57.5799972 UTC
+2017-03-17 17:51:41.2640597 UTC
 
 interface crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ:Lib 8002
-  interface hash: ed2c0b1ce632d779f286ceafaef13d7e
-  ABI hash: 4b870662cdbfda5d2252e47f3716bb51
+  interface hash: ac23edfda42193925b7d16adda925ab8
+  ABI hash: 90bc033a07f96c9a333f6ea1d367cfa3
   export-list hash: 209e2f49244eb65d47bf878be1b59ae0
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 87429319835d9ad69dd00078f5c09000
@@ -266,10 +266,10 @@ import  -/  base-4.9.1.0:GHC.Enum 3beb5abd88e2173130728ffba8194381
 import  -/  base-4.9.1.0:GHC.Show eca5834daba3b6a2bbbe64ab52056707
 import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
 import  -/  base-4.9.1.0:System.IO 5daf3f384209c11d9566e3409af8ec5d
-import  -/  DBHelper e8d31ec523e1a316313b9ed387c7f895
-  exports: bc7db54b232af91be6babcbdb5e87e51
-  UserDB 3548c61d1dff9f05e45723826425ff72
-  addUser 4dc4856377069652a1f1b9e9cd74fffb
+import  -/  DBHelper 76bd511a82104a3130917a60f69884ac
+  exports: 380f23100588ff79ec25c7c342cc911e
+  UserDB 62bdae63fd023ab7a2378e85c2dac7af
+  addUser b4a12d2bd69c2103d0f04dd8ab175ace
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 16d48e012d23eaef9bca91ccdd572c02
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
 import  -/  github-0.15.0@github-0.15.0-4xrLmRvOvcILQ4PSubpbiB:GitHub 44602a47955be288246df9ee89f6243f
@@ -2681,12 +2681,12 @@ d28e16821136109fe1fa41ca7aadad67
     = UserL {userId :: GHC.Types.Int,
              userFirstName :: GHC.Base.String,
              userLastName :: GHC.Base.String}
-9711b8bc9e7754ed8bb44c80b2f8de9b
+528492573863acf3b488950e807998de
   app :: Network.Wai.Application
   {- Arity: 2,
      Unfolding: (Servant.Server.Internal.RoutingApplication.toApplication
                    Lib.app1) -}
-b0122a79ff42fd3aa09c47e8dee7b84f
+c8bfc30e94adb86f31be212440af18b7
   app1 ::
     Network.Wai.Internal.Request
     -> (Servant.Server.Internal.RoutingApplication.RouteResult
@@ -2807,7 +2807,7 @@ a2b0553c8e5d8f552f77c411eaa81aed
 97cf6afb178d252ba396943a64c7505a
   app16 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "startC"#) -}
-d983920b5ebb52ee2f7f4658a7eaef8c
+772a75c392131d4edd7ba8aa279d7b06
   app17 ::
     Servant.Server.Internal.Router.Router'
       () Servant.Server.Internal.RoutingApplication.RoutingApplication
@@ -2818,7 +2818,7 @@ d983920b5ebb52ee2f7f4658a7eaef8c
                    (GHC.Types.[]
                       @ (()
                          -> Servant.Server.Internal.RoutingApplication.RoutingApplication))) -}
-42ab8653ea12b0cb7e523234a8d5a917
+9ed8e5fd632477ea6444ed77c73afa9b
   app18 ::
     Data.Map.Base.Map
       Data.Text.Internal.Text
@@ -2845,7 +2845,7 @@ d983920b5ebb52ee2f7f4658a7eaef8c
                       @ (Servant.Server.Internal.Router.Router'
                            ()
                            Servant.Server.Internal.RoutingApplication.RoutingApplication)) } }) -}
-1fb06ad91b119cca20a34e300f579225
+565b2255652d5209386df78f29310ba6
   app19 ::
     Servant.Server.Internal.Router.Router'
       () Servant.Server.Internal.RoutingApplication.RoutingApplication
@@ -2853,7 +2853,7 @@ d983920b5ebb52ee2f7f4658a7eaef8c
                    @ ()
                    @ Servant.Server.Internal.RoutingApplication.RoutingApplication
                    Lib.app20) -}
-8ce368354b24ac7f61e1335992851c91
+c8a6db7d1db4c47c89e12f73d0a1e2fe
   app2 ::
     Servant.Server.Internal.Router.Router'
       () Servant.Server.Internal.RoutingApplication.RoutingApplication
@@ -2862,7 +2862,7 @@ d983920b5ebb52ee2f7f4658a7eaef8c
                    @ Servant.Server.Internal.RoutingApplication.RoutingApplication
                    Lib.app17
                    Lib.app3) -}
-516dab9c63d14af7f9475c81c93e4984
+f11aa4f212b8f70cb6622e2c13594329
   app20 ::
     Servant.Server.Internal.Router.Router'
       (Data.Text.Internal.Text, ())
@@ -2871,12 +2871,12 @@ d983920b5ebb52ee2f7f4658a7eaef8c
                    @ (Data.Text.Internal.Text, ())
                    @ Servant.Server.Internal.RoutingApplication.RoutingApplication
                    Lib.app21) -}
-70803ccaddc17d4fec15461e1fba57f2
+78c378cf08eaf8d2520ad0cf24e9d6c4
   app21 ::
     Servant.Server.Internal.Router.Router
       (Data.Text.Internal.Text, (Data.Text.Internal.Text, ()))
   {- Unfolding: (Lib.app30 Lib.app22) -}
-c010e61bbfc42fb69103f2683bd0e134
+2efcfb1a1f97c868cddeb3be3a56683e
   app22 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       (Data.Text.Internal.Text, (Data.Text.Internal.Text, ()))
@@ -2946,7 +2946,7 @@ c010e61bbfc42fb69103f2683bd0e134
                                              GHC.Types.Int>_R))
                            (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
                                      <GHC.Types.Int>_R))) }) -}
-291d4a73f2517985933f9595cd1c42ff
+7d6f620a169f1d084895a9d4e62a031e
   app24 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       (Data.Text.Internal.Text, ())
@@ -3011,7 +3011,7 @@ c010e61bbfc42fb69103f2683bd0e134
                                         [GHC.Types.Char]>_R))
                       (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
                                 <[GHC.Types.Char]>_R))) }) -}
-2066e47729122d3e25612a46e55546ac
+94d6d5c7e4600eb5137a2c8b976e4987
   app26 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       ()
@@ -3076,7 +3076,7 @@ c010e61bbfc42fb69103f2683bd0e134
                         (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
                                   <()>_R)))
                    Lib.app27) -}
-c8cdaf848f01d6a6c5aafa06a5bb02bc
+162458c6a0b926175d98f06191a47544
   app27 ::
     ()
     -> ()
@@ -3098,7 +3098,7 @@ c8cdaf848f01d6a6c5aafa06a5bb02bc
                    (b1 :: ())
                    (req :: Network.Wai.Internal.Request) ->
                  Lib.app28) -}
-36663500583feb4cf6737050b52bbb32
+888b101ac8e9258ad5a6265f154acf2f
   app28 ::
     Servant.Server.Internal.RoutingApplication.RouteResult
       (Servant.Server.Internal.Server
@@ -3181,7 +3181,7 @@ c8cdaf848f01d6a6c5aafa06a5bb02bc
                                             <Control.Monad.Trans.Except.ExceptT
                                                Servant.Server.Internal.ServantErr.ServantErr
                                                GHC.Types.IO>_N)))))) -}
-5e576d80dc48f0b044d5846c890eb82e
+5cd4736f25865cc3927a0214315e6861
   app29 ::
     GHC.Base.String
     -> GHC.Types.Int
@@ -3801,7 +3801,7 @@ bf7338f36a147a5eae81b349dd67d5aa
                       @ Servant.Server.Internal.ServantErr.ServantErr
                       @ Lib.Position
                       (Lib.Position userN Lib.app10) #) } }) -}
-22ea943d6e3ec5f2f6076ace350a5194
+d0671621a0bc0e7c5920b5a4e41851e0
   app_r :: Servant.Server.Internal.Router.Router ()
   {- Unfolding: (Servant.Server.Internal.Router.choice
                    @ ()
@@ -3822,12 +3822,12 @@ bf7338f36a147a5eae81b349dd67d5aa
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Lib.RepoInfo) ->
                  case ds of wild { Lib.RepoInfo ds1 ds2 -> ds2 }) -}
-0dac47f75e0eafc2aaeefe614610e7ff
+46865b066a9666e985704d1e8d6572f0
   startApp :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Lib.startApp1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-fab68e21de4b1bd82411896af406b92e
+84c5c5089ca942b6c0bd13f400e22d40
   startApp1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
