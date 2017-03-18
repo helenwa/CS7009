@@ -12,6 +12,11 @@ import Data.Aeson
 import GHC.Generics
 import Data.String
 
+data Log = Log
+  { word :: String
+  , number :: Int
+  } deriving (ToJSON, FromJSON, Generic, Eq, Show)
+
 --Types saved in dB
 
 data UserDB = UserDB
@@ -64,10 +69,11 @@ testFunction'' username = do
                                (fromList [("name", T username)])
    close pipe
    putStrLn $ show result
+   
 --Empty
 clearDB :: IO String
 clearDB = do
-   pipe <- connect $ def { user = "neo4j", password = "neo4J" }
+   pipe <- connect $ def { user = n4user, password = n4password }
    result <- run pipe $ query "MATCH (n) OPTIONAL MATCH (n)-[r]-() DELETE n,r"
    close pipe
    putStrLn $ show result

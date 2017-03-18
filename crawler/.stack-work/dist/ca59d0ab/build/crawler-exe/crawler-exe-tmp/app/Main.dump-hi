@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-03-17 17:51:42.2430008 UTC
+2017-03-18 12:31:11.7961069 UTC
 
 interface main@main:Main 8002
-  interface hash: 28b85cf52b578e996643e7ef47e56396
-  ABI hash: 99e87e9e931e45f8c34d2961503f6665
+  interface hash: 9d462766af67ca9bb9f1407adb69154a
+  ABI hash: c5ac370200af5a4b46c052134030257a
   export-list hash: 231c0e1f335c85145517c043898dd999
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 4493c704baffaff57b1441aab17e8ee5
@@ -192,6 +192,7 @@ family instance modules: adjunctions-4.3@adjunctions-4.3-5CqTSM7liCdC9cb4N2IolK:
                          containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
                          containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
                          crawler-0.1.0.0@crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ:DBHelper
+                         crawler-0.1.0.0@crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ:GithubHelper
                          dlist-0.8.0.2@dlist-0.8.0.2-6Wnps4GD7EFnRucVzXIFD:Data.DList
                          ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
                          github-0.15.0@github-0.15.0-4xrLmRvOvcILQ4PSubpbiB:GitHub.Auth
@@ -248,7 +249,7 @@ family instance modules: adjunctions-4.3@adjunctions-4.3-5CqTSM7liCdC9cb4N2IolK:
                          vector-instances-3.4@vector-instances-3.4-CGg1XDXpv1C6JpP4BUHsFM:Data.Vector.Instances
                          zlib-0.6.1.2@zlib-0.6.1.2-7negTfm2ujt1gW4wr40MUp:Codec.Compression.Zlib.Stream
 import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
-import  -/  crawler-0.1.0.0@crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ:Lib 90bc033a07f96c9a333f6ea1d367cfa3
+import  -/  crawler-0.1.0.0@crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ:Lib bb3872eb68046dacbffed2952eda4c8c
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
 d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule :: GHC.Types.Module
@@ -262,12 +263,12 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-ce490b8b305d3c71c08000adea9acf96
+e6131298810f153ae56f798baa727c57
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Lib.startApp1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-584a03489d041b4795f2cc5a31a42778
+3a9de0893a3a0e7c842ab27a3d961b8e
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
