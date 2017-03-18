@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-03-18 12:31:09.101338 UTC
+2017-03-18 13:11:14.0933343 UTC
 
 interface crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ:DBHelper [family instance module] 8002
-  interface hash: 8d0fa9ec237ab62b6934271314c6f2b6
-  ABI hash: c644644233d7244626eff1410e062f56
+  interface hash: ab80fe209feba53e52e9be7d3d107b17
+  ABI hash: 8c730045b489e50315da5cdcfd9168a3
   export-list hash: 52b2141cd3715dee07a451a4057bc54f
   orphan hash: 0e91deafa232e5277e1e55003e826595
   flag hash: b40c1800ca63765d1285c272fed17bef
@@ -7691,7 +7691,7 @@ a3527fd426d4cf4715c6cd85272ac92f
                    Database.Bolt.Connection.Type.$fDefaultBoltCfg1
                    DBHelper.n4user
                    DBHelper.n4password) -}
-af1a15a52b42a6fc2c3f116fb4b00320
+1e286d51df4a671041609a94a8d8cda6
   addRepo :: DBHelper.RepoDB -> GHC.Types.IO GHC.Base.String
   {- Arity: 2, Strictness: <L,U(1*U,1*U)><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -7699,7 +7699,7 @@ af1a15a52b42a6fc2c3f116fb4b00320
                   `cast`
                 (<DBHelper.RepoDB>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R)) -}
-6dad0f93abb1569332c7ed362f822f97
+9a73299f063e1b596c29779e1241a74b
   addRepo1 ::
     DBHelper.RepoDB
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -7798,11 +7798,11 @@ af1a15a52b42a6fc2c3f116fb4b00320
 69aefb5bd35694678750a7a3c69ee2c8
   addRepo2 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "id"#) -}
-5fb359995d032c213f1cad3c47b7987f
+95d764daa99f3ae0c1a45f4e371a6782
   addRepo3 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
-                   "CREATE (n:Repo {repoId: {id}, repolabel: {label}) RETURN n"#) -}
-e09d6b9a619ad4bc9617a22d46f4a7a3
+                   "MERGE (n:Repo {repoId: {id}}) ON MATCH SET n.repolabel = {label} ON CREATE SET n.repolabel = {label} RETURN n"#) -}
+d67b04c1c63799e7ac775caacd7aef0b
   addUser :: DBHelper.UserDB -> GHC.Types.IO GHC.Base.String
   {- Arity: 2, Strictness: <L,U(1*U,1*U)><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -7810,7 +7810,7 @@ e09d6b9a619ad4bc9617a22d46f4a7a3
                   `cast`
                 (<DBHelper.UserDB>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R)) -}
-e0ab63db3ee4cdba42ccbbf74493a08f
+49f5870e4ecabd4603b2383e437d9f8e
   addUser1 ::
     DBHelper.UserDB
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -7893,10 +7893,10 @@ e0ab63db3ee4cdba42ccbbf74493a08f
 d34e2d22556556425d559b0d20860396
   addUser2 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "h"#) -}
-9f794e5de1c52be9638b24ecccaac3b4
+5b0fe5156ba336b7bb829abad4745ee7
   addUser3 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
-                   "CREATE (n:User {userId: {id}, hops: {h}}) RETURN n"#) -}
+                   "MERGE (n:User {userId: {id}}) ON MATCH SET n.hops = {h} ON CREATE SET n.hops = {h} RETURN n"#) -}
 13cbf19421f2ccb952fc12c9475078fe
   clearDB :: GHC.Types.IO GHC.Base.String
   {- Arity: 1, Strictness: <S,U>,
