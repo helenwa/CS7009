@@ -12,6 +12,7 @@ import Data.Vector hiding(map, mapM)
 import Data.Aeson
 import GHC.Generics
 import Data.Maybe
+import DBHelper
 
 data RepoInfo = RepoInfo{
     name::Text,
@@ -24,10 +25,10 @@ repos userName = do
   possibleRepos <- GitHub.Endpoints.Repos.userRepos (mkOwnerName userName) GitHub.Data.Repos.RepoPublicityAll
   case possibleRepos of
        (Left error)  -> do 
-            return $ ([RepoInfo (pack "Error")0])
+            return $ ([])
             
        (Right repos) -> do 
-            x <- mapM formatRepo repos
+            x <- mapM formatRepoDB repos
             return $ Data.Vector.toList x 
          
 formatRepo :: GitHub.Repo -> IO(RepoInfo)
@@ -35,20 +36,29 @@ formatRepo repo = do
     let name = untagName (GitHub.Data.Repos.repoName repo)
     size <-  formatNumber (GitHub.Data.Repos.repoSize repo)
     return (RepoInfo name size)
+    
+formatRepoDB :: String -> GitHub.Repo -> IO(RepoDB)
+formatRepo userName repo = do
+    let name = untagName (GitHub.Data.Repos.repoName repo)
+    let id = userName + name
+    --size <-  formatNumber (GitHub.Data.Repos.repoSize repo)
+    return (RepoDB id name)
             
 formatNumber :: Maybe Int -> IO(Integer)
 formatNumber n =
     let r = toEnum $ fromMaybe 0 n
     in return r
     
--- crawl :: String -> Int -> Position
--- crawl name ttl = do 
-    -- let repositorys = repos $ pack name 
-        -- repNo = Data.List.length repositorys
-        -- p = (Position name repNo)
-    -- return  p
+crawlUser :: userDB -> Int -> IO
+crawlUser user ttl = do 
+    let repositorys = repos $ userId user
+    x <- mapM addRepo repositorys
+    --do links
+    if (ttl>0)
+        mapM crawlRepo repositorys $ ttl - 1
+            
     
--- numOf :: IO[RepoInfo] -> Int
--- numOf repos
-    -- | repos == IO[] = 0
-    -- | otherwise   = Data.List.length repos
+crawlRepo :: repoDB -> Int -> IO
+crawlRepo repo ttl = do 
+    let users = usersOf $ repoId repo
+    

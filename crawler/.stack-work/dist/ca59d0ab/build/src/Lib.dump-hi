@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2017-03-20 11:52:19.1059972 UTC
+2017-03-20 13:42:24.3332175 UTC
 
 interface crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ:Lib 8002
-  interface hash: 7c995b42478fe6f9ac8013cb151b1981
+  interface hash: 0f4df732259140b7de9dd12057c330c5
   ABI hash: 7ec45186032f1f9debbbe304a85aa7b3
   export-list hash: e252753ac0258fb56e30cef80eb6ea9e
   orphan hash: eba0b31c08afa7d1eb91be53bf3ada6a
@@ -253,8 +253,8 @@ import  -/  base-4.9.1.0:Data.Proxy 657d37a7ff49fc895edf1c731d0fa581
 import  -/  base-4.9.1.0:GHC.Base 4caea1123ecf4b46e27cbccd6d279377
 import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
 import  -/  base-4.9.1.0:System.IO 5daf3f384209c11d9566e3409af8ec5d
-import  -/  DBHelper 65ce476d3dad6cf0d82a9495d1d064e1
-  exports: ecc68d968fca6e4a8fd8dfe89dc1a3c6
+import  -/  DBHelper 0484a234fe7581996ded3fd909e58ee7
+  exports: 69096228988f0ea612fd3e03c4ce9f9a
   Log 73d1c73e5c363df327dd0c807ecf1a27
   Log fe8debaf4de15edb27a79a8e822a3e3e
   UserDB 90c0455dd0b42d5770a34ff6e92392fd
