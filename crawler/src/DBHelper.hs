@@ -5,12 +5,13 @@
 
 module DBHelper where
 
-import Database.Bolt
+import Database.Bolt hiding(unpack)
 import Data.Text
 import Data.Map
 import Data.Aeson
 import GHC.Generics
 import Data.String
+import Data.Vector (toList)
 
 data Log = Log
   { word :: String
@@ -48,12 +49,38 @@ n4user = "neo4j"
   
 --Queries
 --Searches
-testFunction :: IO ()
-testFunction = do
+allUsers :: IO[UserDB]
+allUsers = do
    pipe <- connect $ def { user = n4user, password = n4password }
-   result <- run pipe $ query "MATCH (n:User) WHERE n.name CONTAINS \"Bob\" RETURN n"
+   result <- run pipe $ query "MATCH (n:User)  RETURN n"
    close pipe
    putStrLn $ show result
+   x <- mapM toUser result
+   return x
+   
+toUser :: Record-> IO UserDB
+toUser record = do
+    T name <- record `at` "name"
+    I h <- record `at` "hops"
+    putStrLn $ show record
+    return $ UserDB h $ unpack name
+   
+-- allRepo :: IO [RepoDB]
+-- allRepo = do
+   -- pipe <- connect $ def { user = n4user, password = n4password }
+   -- result <- run pipe $ query "MATCH (n:Repo)  RETURN n"
+   -- close pipe
+   -- putStrLn $ show result
+   -- return result
+   
+-- allLinks :: IO [RepoDB]
+-- allLinks = do
+   -- pipe <- connect $ def { user = n4user, password = n4password }
+   -- --not quite ideal yet
+   -- result <- run pipe $ query "MATCH (s) OPTIONAL MATCH (n)-[r]-(d) RETURN s,r,d"
+   -- close pipe
+   -- putStrLn $ show result
+   -- return result
    
 testFunction' :: Text -> IO () 
 testFunction' name = do
