@@ -51,11 +51,11 @@ user userName ttl =  liftIO $ do
     return (Log userName ttl)
 
 startC :: UserDB -> ApiHandler Log
-startC (UserDB userN) =  liftIO $ do 
+startC user =  liftIO $ do 
     putStrLn "Output"
-    --let repositorys = repos $ pack userN 
+    crawlUser 2 user
     let repNo = 8
-    let p = (Log userN repNo)
+    let p = (Log (userId user) repNo)
     return p
 
 

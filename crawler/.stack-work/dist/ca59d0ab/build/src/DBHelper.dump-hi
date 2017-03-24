@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-03-24 12:25:07.0152566 UTC
+2017-03-24 16:51:49.5927705 UTC
 
 interface crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ:DBHelper [family instance module] 8002
-  interface hash: a84b7575808fa74ba5b9ce99a0a9536d
-  ABI hash: 916d816b4011e479fcce610a7e00b235
-  export-list hash: ff7c6882806d3f54db4e9e24277005dc
+  interface hash: 21b71527658f7aec9cd837d4df897c23
+  ABI hash: 60fb34284c2d4075ab5db59ba510fe42
+  export-list hash: fc0b6dde1b7f33963a68e8593be4e5e2
   orphan hash: f739308f6ce888d2a6592619a5eb87e9
   flag hash: b40c1800ca63765d1285c272fed17bef
   sig of: Nothing
@@ -20,6 +20,8 @@ exports:
   DBHelper.clearDB
   DBHelper.contributesTo
   DBHelper.linkRequest
+  DBHelper.makeLink
+  DBHelper.makeLink2
   DBHelper.n4password
   DBHelper.n4user
   DBHelper.owns
@@ -7521,19 +7523,18 @@ a3527fd426d4cf4715c6cd85272ac92f
                    Database.Bolt.Connection.Type.$fDefaultBoltCfg1
                    DBHelper.n4user
                    DBHelper.n4password) -}
-3b2316bd8fa26cb675a46690b876e0cc
-  addRepo :: DBHelper.RepoDB -> GHC.Types.IO GHC.Base.String
+1f96ef3d1ebedca66d7ddd4297ea894d
+  addRepo :: DBHelper.RepoDB -> GHC.Types.IO ()
   {- Arity: 2, Strictness: <L,U(1*U,1*U,1*U)><S,U>,
      Unfolding: InlineRule (0, True, True)
                 DBHelper.addRepo1
                   `cast`
-                (<DBHelper.RepoDB>_R
-                 ->_R Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R)) -}
-92bb04aaa3d97b7a5c8ef1be8b794533
+                (<DBHelper.RepoDB>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+0ea54e13a320e1ae5a5a5e80e132f225
   addRepo1 ::
     DBHelper.RepoDB
     -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Base.String #)
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 2, Strictness: <L,U(1*U,1*U,1*U)><S,U>,
      Unfolding: (\ (newRepo :: DBHelper.RepoDB)
                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
@@ -7614,23 +7615,16 @@ a3527fd426d4cf4715c6cd85272ac92f
                         ww1
                         ww7
                         ipv2 of ds5 { (#,#) ipv4 ipv5 ->
-                 case GHC.IO.Handle.Text.hPutStr2
-                        GHC.IO.Handle.FD.stdout
-                        (GHC.Show.showList__
-                           @ (Data.Map.Base.Map
-                                Data.Text.Internal.Text Database.Bolt.Value.Type.Value)
-                           DBHelper.addLink2
-                           ipv3
-                           (GHC.Types.[] @ GHC.Types.Char))
-                        GHC.Types.True
-                        ipv4 of ds6 { (#,#) ipv6 ipv7 ->
-                 (# ipv6,
-                    GHC.Show.showList__
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   (GHC.Show.showList__
                       @ (Data.Map.Base.Map
                            Data.Text.Internal.Text Database.Bolt.Value.Type.Value)
                       DBHelper.addLink2
                       ipv3
-                      (GHC.Types.[] @ GHC.Types.Char) #) } } } } } } }) -}
+                      (GHC.Types.[] @ GHC.Types.Char))
+                   GHC.Types.True
+                   ipv4 } } } } } }) -}
 a3ccaaade952713f9a13d7e05e7b6bff
   addRepo2 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "size"#) -}
@@ -7962,6 +7956,99 @@ d4be51d9c3a8204c41b052d85930ab35
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: DBHelper.LinkDB) ->
                  case ds of wild { DBHelper.LinkDB ds1 ds2 ds3 ds4 -> ds1 }) -}
+c1ce12d59582c3de284b48f9409c3880
+  makeLink ::
+    GHC.Types.Int
+    -> GHC.Base.String
+    -> DBHelper.UserDB
+    -> DBHelper.RepoDB
+    -> GHC.Types.IO DBHelper.LinkDB
+  {- Arity: 5,
+     Strictness: <L,U><L,U><L,1*U(1*U)><L,1*U(1*U,A,A)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                DBHelper.makeLink1
+                  `cast`
+                (<GHC.Types.Int>_R
+                 ->_R <GHC.Base.String>_R
+                 ->_R <DBHelper.UserDB>_R
+                 ->_R <DBHelper.RepoDB>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <DBHelper.LinkDB>_R)) -}
+bbf543af4bb829e7771d712159b24964
+  makeLink1 ::
+    GHC.Types.Int
+    -> GHC.Base.String
+    -> DBHelper.UserDB
+    -> DBHelper.RepoDB
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, DBHelper.LinkDB #)
+  {- Arity: 5,
+     Strictness: <L,U><L,U><L,1*U(1*U)><L,1*U(1*U,A,A)><S,U>,
+     Unfolding: InlineRule (5, True, False)
+                (\ (linkType1 :: GHC.Types.Int)
+                   (linkName1 :: GHC.Base.String)
+                   (user :: DBHelper.UserDB)
+                   (repository :: DBHelper.RepoDB)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        DBHelper.makeLink3
+                        GHC.Types.True
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 (# ipv,
+                    DBHelper.LinkDB
+                      linkType1
+                      linkName1
+                      (case user of wild { DBHelper.UserDB ds -> ds })
+                      (case repository of wild { DBHelper.RepoDB ds ds2 ds3 ->
+                       ds }) #) }) -}
+fa87b50f00458f498aa72b6408a55eb8
+  makeLink2 ::
+    GHC.Types.Int
+    -> GHC.Base.String
+    -> DBHelper.RepoDB
+    -> DBHelper.UserDB
+    -> GHC.Types.IO DBHelper.LinkDB
+  {- Arity: 5,
+     Strictness: <L,U><L,U><L,1*U(1*U,A,A)><L,1*U(1*U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                DBHelper.makeLink4
+                  `cast`
+                (<GHC.Types.Int>_R
+                 ->_R <GHC.Base.String>_R
+                 ->_R <DBHelper.RepoDB>_R
+                 ->_R <DBHelper.UserDB>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <DBHelper.LinkDB>_R)) -}
+4b50551c232a9238e9f32f1e86fcc1d2
+  makeLink3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "madelink"#) -}
+1938a2e292253d74dd0abf46bde41c93
+  makeLink4 ::
+    GHC.Types.Int
+    -> GHC.Base.String
+    -> DBHelper.RepoDB
+    -> DBHelper.UserDB
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, DBHelper.LinkDB #)
+  {- Arity: 5,
+     Strictness: <L,U><L,U><L,1*U(1*U,A,A)><L,1*U(1*U)><S,U>,
+     Unfolding: InlineRule (5, True, False)
+                (\ (linkType1 :: GHC.Types.Int)
+                   (linkName1 :: GHC.Base.String)
+                   (repository :: DBHelper.RepoDB)
+                   (user :: DBHelper.UserDB)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        DBHelper.makeLink3
+                        GHC.Types.True
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 (# ipv,
+                    DBHelper.LinkDB
+                      linkType1
+                      linkName1
+                      (case user of wild { DBHelper.UserDB ds -> ds })
+                      (case repository of wild { DBHelper.RepoDB ds ds2 ds3 ->
+                       ds }) #) }) -}
 f1086674e355162403c8e4cb53490ca8
   n4password :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "neo4J"#) -}

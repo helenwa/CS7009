@@ -1,21 +1,23 @@
 
 ==================== FINAL INTERFACE ====================
-2017-03-24 12:40:21.0463931 UTC
+2017-03-24 16:54:25.6703587 UTC
 
 interface crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ:GithubHelper 8002
-  interface hash: 4d0265ca21d7e38215894310e068ab24
-  ABI hash: c66d6a22495bdb30e418bc081f32aa53
-  export-list hash: 234e98a64dba604d0169c4864bf5c5fa
+  interface hash: bb0a8d7bd1339e907ecdebbed1f58bf4
+  ABI hash: 332f9f3cbc75811b2d5ff90a04fb50c4
+  export-list hash: c1df01f4c6457a2161839542773a12b1
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: b40c1800ca63765d1285c272fed17bef
   sig of: Nothing
   used TH splices: False
   where
 exports:
+  GithubHelper.crawlRepo
+  GithubHelper.crawlUser
   GithubHelper.formatNumber
   GithubHelper.formatRepoDB
   GithubHelper.formatUserDB
-  GithubHelper.repos
+  GithubHelper.reposOf
   GithubHelper.usersOf
 module dependencies: DBHelper
 package dependencies: StateVar-1.1.0.4@StateVar-1.1.0.4-5dJbnTVECtEAhfJXPZKdbO
@@ -208,20 +210,32 @@ family instance modules: adjunctions-4.3@adjunctions-4.3-5CqTSM7liCdC9cb4N2IolK:
 import  -/  aeson-1.0.2.1@aeson-1.0.2.1-9NPC6B17ifJ9yEOgZnhnOr:Data.Aeson 6cfe60f124a4417e608c67dfe15be1cc
 import  -/  base-4.9.1.0:Control.Monad.IO.Class 3f1875e753ac8c44dae64dc062ea742e
 import  -/  base-4.9.1.0:Data.Either 186ef9adf6b47e24f39efe9b2e18e352
+import  -/  base-4.9.1.0:Data.Foldable 254e836c2d813d34e47feb29bb8d40ed
 import  -/  base-4.9.1.0:Data.Maybe ecf0c6f81372d9b58b142d5e758ea51b
 import  -/  base-4.9.1.0:Data.Traversable 078621b399ac9374b02f3f2ce55a08e9
 import  -/  base-4.9.1.0:GHC.Base 4caea1123ecf4b46e27cbccd6d279377
 import  -/  base-4.9.1.0:GHC.Enum 3beb5abd88e2173130728ffba8194381
 import  -/  base-4.9.1.0:GHC.Generics 87e8d511f978e043d53db008cc403901
+import  -/  base-4.9.1.0:GHC.Num 38b8aac8807c096c7f3ca3c1eff02939
 import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
-import  -/  DBHelper 916d816b4011e479fcce610a7e00b235
-  exports: ff7c6882806d3f54db4e9e24277005dc
+import  -/  base-4.9.1.0:System.IO 5daf3f384209c11d9566e3409af8ec5d
+import  -/  DBHelper 60fb34284c2d4075ab5db59ba510fe42
+  exports: fc0b6dde1b7f33963a68e8593be4e5e2
   RepoDB 709b3efd77115c872161e047c4d80911
   RepoDB 5af6e885f83dc1967a7e652f303a88cc
   UserDB 386981303603a659f62d81cfe8723f78
   UserDB bd48518c6a4bcc02746fdc1333deeff1
+  addRepo 1f96ef3d1ebedca66d7ddd4297ea894d
+  addUser 9b492c74f4d0feef460e8f76eb061556
+  contributesTo e9d33ed1f7db1d1fb54be90878f7d168
+  makeLink c1ce12d59582c3de284b48f9409c3880
+  makeLink2 fa87b50f00458f498aa72b6408a55eb8
+  owns 21c2499de6bf0b022399048f7c48f4d1
   repoName 1adb80a69cc8013b4dd576a7a9122b5c
   repoOwner c600031a3e6dbdd3880dbcb4cd6114cf
+  userId b6142d0773317bae81fe903ca15125e3
+  userRepo a0c18eeb86c7b917d65b643cba41dde3
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 16d48e012d23eaef9bca91ccdd572c02
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
 import  -/  github-0.15.0@github-0.15.0-4xrLmRvOvcILQ4PSubpbiB:GitHub 44602a47955be288246df9ee89f6243f
 import  -/  github-0.15.0@github-0.15.0-4xrLmRvOvcILQ4PSubpbiB:GitHub.Data deb9a4eed5844d3e567ea39d6310cdd7
@@ -249,6 +263,123 @@ ad0b5801126c8af2c77d08c99e86bf73
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"#) -}
+db3d6c14c8747a6edcdeef4cd4062e81
+  crawlRepo :: GHC.Types.Int -> DBHelper.RepoDB -> GHC.Types.IO ()
+  {- Arity: 3, Strictness: <L,1*U(U)><L,U(U,U,A)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                GithubHelper.crawlRepo1
+                  `cast`
+                (<GHC.Types.Int>_R
+                 ->_R <DBHelper.RepoDB>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+d4f9510d99717d49ea2c646066235401
+  crawlRepo1 ::
+    GHC.Types.Int
+    -> DBHelper.RepoDB
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <L,1*U(U)><L,U(U,U,A)><S,U>,
+     Unfolding: (\ (ttl :: GHC.Types.Int)
+                   (repo :: DBHelper.RepoDB)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GithubHelper.crawlRepo5 repo s of ds1 { (#,#) ipv ipv1 ->
+                 case GithubHelper.crawlRepo4 ipv1 ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 let {
+                   lvl4 :: GHC.Base.String
+                   = case repo of wild { DBHelper.RepoDB ds ds3 ds4 -> ds }
+                 } in
+                 letrec {
+                   go1 :: [DBHelper.UserDB]
+                          -> GHC.Prim.State# GHC.Prim.RealWorld
+                          -> (# GHC.Prim.State# GHC.Prim.RealWorld, [DBHelper.LinkDB] #)
+                     {- Arity: 2, Strictness: <S,1*U><S,U> -}
+                   = \ (ds :: [DBHelper.UserDB])
+                       (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                     case ds of wild {
+                       [] -> (# eta, GHC.Types.[] @ DBHelper.LinkDB #)
+                       : y ys
+                       -> case GHC.IO.Handle.Text.hPutStr2
+                                 GHC.IO.Handle.FD.stdout
+                                 DBHelper.makeLink3
+                                 GHC.Types.True
+                                 eta of ds3 { (#,#) ipv4 ipv5 ->
+                          case go1 ys ipv4 of ds4 { (#,#) ipv6 ipv7 ->
+                          (# ipv6,
+                             GHC.Types.:
+                               @ DBHelper.LinkDB
+                               (DBHelper.LinkDB
+                                  DBHelper.userRepo
+                                  DBHelper.contributesTo
+                                  (case y of wild1 { DBHelper.UserDB ds5 -> ds5 })
+                                  lvl4)
+                               ipv7 #) } } }
+                 } in
+                 case go1 ipv1 ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                 case ttl of wild { GHC.Types.I# x ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.># x 0#) of wild1 {
+                   GHC.Types.False
+                   -> GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        GithubHelper.crawlRepo3
+                        GHC.Types.True
+                        ipv4
+                   GHC.Types.True
+                   -> let {
+                        f :: GHC.Prim.Int# = GHC.Prim.-# x 1#
+                      } in
+                      let {
+                        f1 :: GHC.Types.Int {- Strictness: m -} = GHC.Types.I# f
+                      } in
+                      letrec {
+                        go2 :: [DBHelper.UserDB]
+                               -> GHC.Prim.State# GHC.Prim.RealWorld
+                               -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                          {- Arity: 2, Strictness: <S,1*U><S,U> -}
+                        = \ (ds :: [DBHelper.UserDB])
+                            (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                          case ds of wild2 {
+                            [] -> (# eta, GHC.Tuple.() #)
+                            : y ys
+                            -> case GithubHelper.crawlRepo2
+                                      f1
+                                      y
+                                      eta of ds4 { (#,#) ipv6 ipv7 ->
+                               go2 ys ipv6 } }
+                      } in
+                      go2 ipv1 ipv4 } } } } }) -}
+5272d2199d1e361f55358632e6a182ee
+  crawlRepo2 ::
+    GHC.Types.Int
+    -> DBHelper.UserDB
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <L,1*U(U)><L,U(U)><S,U> -}
+556b6ca8b21832a07bf3e72d64e08c76
+  crawlRepo3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "ended on "#) -}
+78e1e50715573dfe882ce96187da180b
+  crawlRepo4 ::
+    [DBHelper.UserDB]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Base.String] #)
+  {- Arity: 2, Strictness: <S,1*U><S,U> -}
+ba4cc45831778c3feef2be6cba2f945e
+  crawlRepo5 ::
+    DBHelper.RepoDB
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [DBHelper.UserDB] #)
+  {- Arity: 2, Strictness: <L,U(1*U,1*U,A)><S,U> -}
+9350572d65555bf8e1555fe43d0b340e
+  crawlUser :: GHC.Types.Int -> DBHelper.UserDB -> GHC.Types.IO ()
+  {- Arity: 3, Strictness: <L,1*U(U)><L,U(U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                GithubHelper.crawlRepo2
+                  `cast`
+                (<GHC.Types.Int>_R
+                 ->_R <DBHelper.UserDB>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
 2cd72e67ab4b8a2b1a5ac9404be29d2d
   formatNumber ::
     GHC.Base.Maybe GHC.Types.Int -> GHC.Types.IO GHC.Types.Int
@@ -492,21 +623,23 @@ ffe27b9f98e8c0774a43b871e323fec3
                              GHC.Types.True -> GHC.Types.[] @ GHC.Types.Char }
                        } in
                        $wunfold dt2 } }) #)) -}
-b3a8119184cb52719309fc6ebc592e3d
-  repos :: Data.Text.Internal.Text -> GHC.Types.IO [DBHelper.RepoDB]
+9beadc834c92d14fedfc6bbeaf535a86
+  reposOf ::
+    Data.Text.Internal.Text -> GHC.Types.IO [DBHelper.RepoDB]
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
-                GithubHelper.repos1
+                GithubHelper.reposOf1
                   `cast`
                 (<Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Types.N:IO[0] <[DBHelper.RepoDB]>_R)) -}
-bbff605632413438de62ff7c1df129ca
-  repos1 ::
+99571ca0396b684d44fe71c1a1281577
+  reposOf1 ::
     Data.Text.Internal.Text
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [DBHelper.RepoDB] #)
   {- Arity: 2, Strictness: <L,U><S,U>,
-     Unfolding: (\ (userName :: Data.Text.Internal.Text)
+     Unfolding: InlineRule (2, True, False)
+                (\ (userName :: Data.Text.Internal.Text)
                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  case GitHub.Request.executeRequest'1
                         @ (Data.Vector.Vector GitHub.Data.Repos.Repo)
@@ -529,19 +662,32 @@ bbff605632413438de62ff7c1df129ca
                               GitHub.Endpoints.Repos.currentUserRepos22
                               GitHub.Data.Request.FetchAll))
                         s of ds1 { (#,#) ipv ipv1 ->
-                 case ipv1 of wild {
-                   Data.Either.Left error -> (# ipv, GHC.Types.[] @ DBHelper.RepoDB #)
-                   Data.Either.Right repos2
-                   -> case repos2 of v2 { Data.Vector.Vector ipv2 ipv3 ipv4 ->
+                 GithubHelper.reposOf2 ipv1 ipv }) -}
+1e0b71e96d88ed045e6500a6f67781e6
+  reposOf2 ::
+    Data.Either.Either
+      GitHub.Data.Definitions.Error
+      (Data.Vector.Vector GitHub.Data.Repos.Repo)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [DBHelper.RepoDB] #)
+  {- Arity: 2, Strictness: <S,1*U><S,U>,
+     Unfolding: (\ (possibleRepos :: Data.Either.Either
+                                       GitHub.Data.Definitions.Error
+                                       (Data.Vector.Vector GitHub.Data.Repos.Repo))
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case possibleRepos of wild {
+                   Data.Either.Left error -> (# eta, GHC.Types.[] @ DBHelper.RepoDB #)
+                   Data.Either.Right repos
+                   -> case repos of v2 { Data.Vector.Vector ipv ipv1 ipv2 ->
                       case GHC.Prim.newArray#
                              @ DBHelper.RepoDB
                              @ (Control.Monad.Primitive.PrimState GHC.Types.IO)
-                             ipv3
+                             ipv1
                              (Data.Vector.Mutable.uninitialised @ DBHelper.RepoDB)
-                             ipv
+                             eta
                                `cast`
                              (GHC.Prim.State#
-                                (Sym (Control.Monad.Primitive.D:R:PrimStateIO[0])))_R of ds2 { (#,#) ipv5 ipv6 ->
+                                (Sym (Control.Monad.Primitive.D:R:PrimStateIO[0])))_R of ds1 { (#,#) ipv3 ipv4 ->
                       letrec {
                         $wfoldlM'_loop :: GHC.Types.SPEC
                                           -> GHC.Prim.Int#
@@ -556,20 +702,20 @@ bbff605632413438de62ff7c1df129ca
                           case w of ds5 { DEFAULT ->
                           case GHC.Prim.tagToEnum#
                                  @ GHC.Types.Bool
-                                 (GHC.Prim.>=# ww1 ipv3) of wild1 {
+                                 (GHC.Prim.>=# ww1 ipv1) of wild1 {
                             GHC.Types.False
                             -> case GHC.Prim.indexArray#
                                       @ GitHub.Data.Repos.Repo
-                                      ipv4
-                                      (GHC.Prim.+# ipv2 ww1) of ds3 { Unit# ipv7 ->
-                               case GithubHelper.formatRepoDB1 ipv7 w1 of ds4 { (#,#) ipv8 ipv9 ->
+                                      ipv2
+                                      (GHC.Prim.+# ipv ww1) of ds2 { Unit# ipv5 ->
+                               case GithubHelper.formatRepoDB1 ipv5 w1 of ds4 { (#,#) ipv6 ipv7 ->
                                case GHC.Prim.writeArray#
                                       @ (Control.Monad.Primitive.PrimState GHC.Types.IO)
                                       @ DBHelper.RepoDB
-                                      ipv6
+                                      ipv4
                                       ww
-                                      ipv9
-                                      ipv8
+                                      ipv7
+                                      ipv6
                                         `cast`
                                       (GHC.Prim.State#
                                          (Sym (Control.Monad.Primitive.D:R:PrimStateIO[0])))_R of s'# { DEFAULT ->
@@ -587,20 +733,20 @@ bbff605632413438de62ff7c1df129ca
                              GHC.Types.SPEC
                              0#
                              0#
-                             ipv5
+                             ipv3
                                `cast`
                              (GHC.Prim.State#
-                                (Control.Monad.Primitive.D:R:PrimStateIO[0]))_R of ds3 { (#,#) ipv7 ipv8 ->
-                      case ipv8 of dt5 { GHC.Types.I# dt6 ->
+                                (Control.Monad.Primitive.D:R:PrimStateIO[0]))_R of ds2 { (#,#) ipv5 ipv6 ->
+                      case ipv6 of dt5 { GHC.Types.I# dt6 ->
                       case GHC.Prim.unsafeFreezeArray#
                              @ (Control.Monad.Primitive.PrimState GHC.Types.IO)
                              @ DBHelper.RepoDB
-                             ipv6
-                             ipv7
+                             ipv4
+                             ipv5
                                `cast`
                              (GHC.Prim.State#
-                                (Sym (Control.Monad.Primitive.D:R:PrimStateIO[0])))_R of ds4 { (#,#) ipv9 ipv10 ->
-                      (# ipv9
+                                (Sym (Control.Monad.Primitive.D:R:PrimStateIO[0])))_R of ds3 { (#,#) ipv7 ipv8 ->
+                      (# ipv7
                            `cast`
                          (GHC.Prim.State# (Control.Monad.Primitive.D:R:PrimStateIO[0]))_R,
                          letrec {
@@ -613,26 +759,20 @@ bbff605632413438de62ff7c1df129ca
                                GHC.Types.False
                                -> case GHC.Prim.indexArray#
                                          @ DBHelper.RepoDB
-                                         ipv10
-                                         ww of ds5 { Unit# ipv11 ->
-                                  GHC.Types.: @ DBHelper.RepoDB ipv11 ($wgo (GHC.Prim.+# ww 1#)) }
+                                         ipv8
+                                         ww of ds4 { Unit# ipv9 ->
+                                  GHC.Types.: @ DBHelper.RepoDB ipv9 ($wgo (GHC.Prim.+# ww 1#)) }
                                GHC.Types.True -> GHC.Types.[] @ DBHelper.RepoDB }
                          } in
-                         $wgo 0# #) } } } } } } }) -}
-d0d9ff9f30f1dbb3e59eea6cf449cd55
+                         $wgo 0# #) } } } } } }) -}
+62bad327fb8e297829c38d848f3bdea1
   usersOf :: DBHelper.RepoDB -> GHC.Types.IO [DBHelper.UserDB]
   {- Arity: 2, Strictness: <L,U(1*U,1*U,A)><S,U>,
      Unfolding: InlineRule (0, True, True)
-                GithubHelper.usersOf1
+                GithubHelper.crawlRepo5
                   `cast`
                 (<DBHelper.RepoDB>_R
                  ->_R Sym (GHC.Types.N:IO[0] <[DBHelper.UserDB]>_R)) -}
-273ce30b37f08eb8bc42a86f5307213c
-  usersOf1 ::
-    DBHelper.RepoDB
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [DBHelper.UserDB] #)
-  {- Arity: 2, Strictness: <L,U(1*U,1*U,A)><S,U> -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

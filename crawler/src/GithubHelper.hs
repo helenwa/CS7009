@@ -14,15 +14,15 @@ import GitHub.Data.Definitions
 import Control.Monad.IO.Class (liftIO)
 
 import Data.Text hiding(intercalate, map, lookup)
-import Data.Vector hiding(map, mapM)
+import Data.Vector hiding(map, mapM, mapM_)
 import Data.Aeson
 import GHC.Generics
 import Data.Maybe
 import DBHelper
 
 --Get users repositorys   
-repos :: Text -> IO[RepoDB]
-repos userName = do
+reposOf :: Text -> IO[RepoDB]
+reposOf userName = do
   possibleRepos <- GitHub.Endpoints.Repos.userRepos (mkOwnerName userName) GitHub.Data.Repos.RepoPublicityAll
   case possibleRepos of
        (Left error)  -> do 
@@ -58,18 +58,21 @@ formatUserDB user = do
     let name = untagName $ GitHub.Data.Definitions.simpleUserLogin user
     return (UserDB (unpack name) )
     
--- crawlUser :: UserDB -> Int -> IO()
--- crawlUser user ttl = do 
-    -- let repositorys = repos $ DBHelper.userId user
-    -- x <- mapM addRepo repositorys
-    -- --do links
-    -- if (ttl>0)
-        -- then mapM crawlRepo repositorys $ ttl - 1
-        -- else putStrLn $ "ended on " + (DBHelper.userId user)
-            
+crawlUser :: Int -> UserDB -> IO()
+crawlUser ttl user  = do 
+    repositorys <- reposOf $ pack $ DBHelper.userId user
+    x <- mapM addRepo repositorys
+    links <- mapM (makeLink userRepo owns user) repositorys
+    if (ttl>0)
+        then mapM_ (crawlRepo (ttl - 1)) repositorys
+        else putStrLn "ended on "
     
--- crawlRepo :: RepoDB -> Int -> IO()
--- crawlRepo repo ttl = do 
-    -- let users = usersOf $ DBHelper.repoId repo
-    -- putStrLn "repo"
+crawlRepo :: Int -> RepoDB ->  IO()
+crawlRepo ttl repo  = do 
+    ppl <- usersOf repo
+    x <- mapM addUser ppl
+    links <- mapM (makeLink2 userRepo contributesTo repo) ppl
+    if (ttl>0)
+        then mapM_ (crawlUser (ttl - 1)) ppl
+        else putStrLn "ended on "
     

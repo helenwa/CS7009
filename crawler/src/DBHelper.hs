@@ -103,6 +103,17 @@ toRepo record = do
     -- lt <- digitToInt x[0]
     -- putStrLn $ show record
     -- return $ LinkDB (lt) (unpack sId) $ unpack dId
+makeLink :: Int -> String -> UserDB -> RepoDB -> IO LinkDB
+makeLink linkType linkName user repository =  do
+    putStrLn "madelink"
+    let link = LinkDB linkType linkName (userId user) (repoName repository)
+    return link
+    
+makeLink2 :: Int -> String -> RepoDB -> UserDB -> IO LinkDB
+makeLink2 linkType linkName repository user=  do
+    putStrLn "madelink"
+    let link = LinkDB linkType linkName (userId user) (repoName repository)
+    return link
       
 --Empty
 clearDB :: IO String
@@ -126,15 +137,13 @@ addUser newUser = do
    let r = show result
    return r
    
-addRepo :: RepoDB -> IO String
+addRepo :: RepoDB -> IO()
 addRepo newRepo = do
    pipe <- connect $ def { user = n4user, password = n4password }
    result <- run pipe $ queryP "MERGE (n:Repo {repoName: {name}, repoOwner: {owner} }) ON MATCH SET n.repoSize = {size} ON CREATE SET n.repoSize = {size} RETURN n" 
                                (fromList [("name", T (fromString (repoName newRepo))), ("owner", T (fromString (repoOwner newRepo))), ("size", I (repoSize newRepo))])
    close pipe
    putStrLn $ show result
-   let r = show result
-   return r
 
    
 addLink :: LinkDB -> IO String
