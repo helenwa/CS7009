@@ -1,22 +1,23 @@
 
 ==================== FINAL INTERFACE ====================
-2017-03-18 12:17:25.6738861 UTC
+2017-03-24 12:40:21.0463931 UTC
 
-interface crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ:GithubHelper [family instance module] 8002
-  interface hash: bc6f2f52030412025af9309179c56f39
-  ABI hash: 38ceed7c345be9e10365665a79892d53
-  export-list hash: fbc8257e0668470c3e58f69932e826eb
-  orphan hash: 8988d9d22405c155d7d30a0e05c7b6e1
-  flag hash: 7c77c877a725f5543bb8fe79a054425f
+interface crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ:GithubHelper 8002
+  interface hash: 4d0265ca21d7e38215894310e068ab24
+  ABI hash: c66d6a22495bdb30e418bc081f32aa53
+  export-list hash: 234e98a64dba604d0169c4864bf5c5fa
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: b40c1800ca63765d1285c272fed17bef
   sig of: Nothing
   used TH splices: False
   where
 exports:
   GithubHelper.formatNumber
-  GithubHelper.formatRepo
+  GithubHelper.formatRepoDB
+  GithubHelper.formatUserDB
   GithubHelper.repos
-  GithubHelper.RepoInfo{GithubHelper.RepoInfo name size}
-module dependencies:
+  GithubHelper.usersOf
+module dependencies: DBHelper
 package dependencies: StateVar-1.1.0.4@StateVar-1.1.0.4-5dJbnTVECtEAhfJXPZKdbO
                       Win32-2.3.1.1@Win32-2.3.1.1
                       adjunctions-4.3@adjunctions-4.3-5CqTSM7liCdC9cb4N2IolK
@@ -46,7 +47,12 @@ package dependencies: StateVar-1.1.0.4@StateVar-1.1.0.4-5dJbnTVECtEAhfJXPZKdbO
                       contravariant-1.4@contravariant-1.4-ETyVlWBlFwj93UDOdH22No
                       cookie-0.4.2.1@cookie-0.4.2.1-K68NuFIZ07nEstxwB6c3aL
                       cryptonite-0.21@cryptonite-0.21-LMyh7LfEdeGD0uZFvplqS
+                      data-binary-ieee754-0.4.4@data-binary-ieee754-0.4.4-7iiF2mP1jcB6tVSPgIyBOi
+                      data-default-0.7.1.1@data-default-0.7.1.1-7EGYJX2YWqWJRbPFUHNoCr
                       data-default-class-0.1.2.0@data-default-class-0.1.2.0-GsXqKN6o1X9jr0fF5qCVD
+                      data-default-instances-containers-0.0.1@data-default-instances-containers-0.0.1-bob6IQGdJq92c061H46zK
+                      data-default-instances-dlist-0.0.1@data-default-instances-dlist-0.0.1-FKnZBeovJMk4M89wQxDhjl
+                      data-default-instances-old-locale-0.0.1@data-default-instances-old-locale-0.0.1-9zaGDEmgOixKkmLylWdN5l
                       deepseq-1.4.2.0@deepseq-1.4.2.0
                       deepseq-generics-0.2.0.0@deepseq-generics-0.2.0.0-IjS8Jfo7YCzLKpV8N96gbz
                       directory-1.3.0.0@directory-1.3.0.0
@@ -58,6 +64,7 @@ package dependencies: StateVar-1.1.0.4@StateVar-1.1.0.4-5dJbnTVECtEAhfJXPZKdbO
                       free-4.12.4@free-4.12.4-Ab5EFvlPq2CHsY4aRoQQaZ
                       ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
                       github-0.15.0@github-0.15.0-4xrLmRvOvcILQ4PSubpbiB
+                      hasbolt-0.1.1.1@hasbolt-0.1.1.1-KvGT2iOIRLp44tD9hkaloa
                       hashable-1.2.5.0@hashable-1.2.5.0-F4MWeNuv2sjJRqBd2T5ul4
                       hourglass-0.2.10@hourglass-0.2.10-ILGOyD7m7Ux4hWsSIqCzOU
                       http-client-0.5.6.1@http-client-0.5.6.1-ItY4pSsSiSGELsEHL2lKAl
@@ -72,7 +79,9 @@ package dependencies: StateVar-1.1.0.4@StateVar-1.1.0.4-5dJbnTVECtEAhfJXPZKdbO
                       memory-0.14.1@memory-0.14.1-J8LClTQE9ts1CQQG3Fd7ul
                       mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
                       network-2.6.3.1@network-2.6.3.1-AwRxOQvT8JM9e8zDFK7aCI
+                      network-simple-0.4.0.5@network-simple-0.4.0.5-lpFi9TIFmuDEctWkWAYkx
                       network-uri-2.6.1.0@network-uri-2.6.1.0-EwGrJ9bdUqR1E7dAIJ4cwF
+                      old-locale-1.0.0.7@old-locale-1.0.0.7-KGBP1BSKxH5GCm0LnZP04j
                       parsec-3.1.11@parsec-3.1.11-113irVHGgd88sRnywByDNw
                       pem-0.2.2@pem-0.2.2-CkEwei5500yF2642aAaOAi
                       pointed-5@pointed-5-7tuUwQiquxA1yGUSpwspSC
@@ -108,6 +117,12 @@ orphans: attoparsec-0.13.1.0@attoparsec-0.13.1.0-HCAgpBrKCLJ5li8FbfXxE1:Data.Att
          binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
          binary-orphans-0.1.6.0@binary-orphans-0.1.6.0-AEGrLkiQ40GALQmMnUjvXa:Data.Binary.Orphans
          bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         data-default-instances-containers-0.0.1@data-default-instances-containers-0.0.1-bob6IQGdJq92c061H46zK:Data.Default.Instances.Containers
+         data-default-instances-dlist-0.0.1@data-default-instances-dlist-0.0.1-FKnZBeovJMk4M89wQxDhjl:Data.Default.Instances.DList
+         data-default-instances-old-locale-0.0.1@data-default-instances-old-locale-0.0.1-9zaGDEmgOixKkmLylWdN5l:Data.Default.Instances.OldLocale
+         hasbolt-0.1.1.1@hasbolt-0.1.1.1-KvGT2iOIRLp44tD9hkaloa:Database.Bolt.Connection.Instances
+         hasbolt-0.1.1.1@hasbolt-0.1.1.1-KvGT2iOIRLp44tD9hkaloa:Database.Bolt.Value.Instances
+         hasbolt-0.1.1.1@hasbolt-0.1.1.1-KvGT2iOIRLp44tD9hkaloa:Database.Bolt.Value.Structure
          hashable-1.2.5.0@hashable-1.2.5.0-F4MWeNuv2sjJRqBd2T5ul4:Data.Hashable.Generic
          http-client-0.5.6.1@http-client-0.5.6.1-ItY4pSsSiSGELsEHL2lKAl:Network.HTTP.Client.Request
          network-2.6.3.1@network-2.6.3.1-AwRxOQvT8JM9e8zDFK7aCI:Network.Socket
@@ -148,6 +163,7 @@ family instance modules: adjunctions-4.3@adjunctions-4.3-5CqTSM7liCdC9cb4N2IolK:
                          containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
                          containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
                          containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ:DBHelper
                          dlist-0.8.0.2@dlist-0.8.0.2-6Wnps4GD7EFnRucVzXIFD:Data.DList
                          ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
                          github-0.15.0@github-0.15.0-4xrLmRvOvcILQ4PSubpbiB:GitHub.Auth
@@ -190,1484 +206,34 @@ family instance modules: adjunctions-4.3@adjunctions-4.3-5CqTSM7liCdC9cb4N2IolK:
                          vector-instances-3.4@vector-instances-3.4-CGg1XDXpv1C6JpP4BUHsFM:Data.Vector.Instances
                          zlib-0.6.1.2@zlib-0.6.1.2-7negTfm2ujt1gW4wr40MUp:Codec.Compression.Zlib.Stream
 import  -/  aeson-1.0.2.1@aeson-1.0.2.1-9NPC6B17ifJ9yEOgZnhnOr:Data.Aeson 6cfe60f124a4417e608c67dfe15be1cc
-import  -/  aeson-1.0.2.1@aeson-1.0.2.1-9NPC6B17ifJ9yEOgZnhnOr:Data.Aeson.Types.FromJSON 1316ab9121f85e92aaf36eaf294367ed
-import  -/  aeson-1.0.2.1@aeson-1.0.2.1-9NPC6B17ifJ9yEOgZnhnOr:Data.Aeson.Types.ToJSON c2651bbed32207695f964a66171d86f4
+import  -/  base-4.9.1.0:Control.Monad.IO.Class 3f1875e753ac8c44dae64dc062ea742e
 import  -/  base-4.9.1.0:Data.Either 186ef9adf6b47e24f39efe9b2e18e352
 import  -/  base-4.9.1.0:Data.Maybe ecf0c6f81372d9b58b142d5e758ea51b
 import  -/  base-4.9.1.0:Data.Traversable 078621b399ac9374b02f3f2ce55a08e9
 import  -/  base-4.9.1.0:GHC.Base 4caea1123ecf4b46e27cbccd6d279377
 import  -/  base-4.9.1.0:GHC.Enum 3beb5abd88e2173130728ffba8194381
 import  -/  base-4.9.1.0:GHC.Generics 87e8d511f978e043d53db008cc403901
-import  -/  base-4.9.1.0:GHC.Show eca5834daba3b6a2bbbe64ab52056707
 import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
-import  -/  ghc-prim-0.5.0.0:GHC.Classes 16d48e012d23eaef9bca91ccdd572c02
+import  -/  DBHelper 916d816b4011e479fcce610a7e00b235
+  exports: ff7c6882806d3f54db4e9e24277005dc
+  RepoDB 709b3efd77115c872161e047c4d80911
+  RepoDB 5af6e885f83dc1967a7e652f303a88cc
+  UserDB 386981303603a659f62d81cfe8723f78
+  UserDB bd48518c6a4bcc02746fdc1333deeff1
+  repoName 1adb80a69cc8013b4dd576a7a9122b5c
+  repoOwner c600031a3e6dbdd3880dbcb4cd6114cf
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
 import  -/  github-0.15.0@github-0.15.0-4xrLmRvOvcILQ4PSubpbiB:GitHub 44602a47955be288246df9ee89f6243f
 import  -/  github-0.15.0@github-0.15.0-4xrLmRvOvcILQ4PSubpbiB:GitHub.Data deb9a4eed5844d3e567ea39d6310cdd7
+import  -/  github-0.15.0@github-0.15.0-4xrLmRvOvcILQ4PSubpbiB:GitHub.Data.Definitions 1c999f1b69149346490f31d5a81e7e17
 import  -/  github-0.15.0@github-0.15.0-4xrLmRvOvcILQ4PSubpbiB:GitHub.Data.Name 235c068508900c5756aec519e62b8380
 import  -/  github-0.15.0@github-0.15.0-4xrLmRvOvcILQ4PSubpbiB:GitHub.Data.Repos e4684fcc67872517437feef773d1595c
 import  -/  github-0.15.0@github-0.15.0-4xrLmRvOvcILQ4PSubpbiB:GitHub.Endpoints.Repos 938a109a2f5b18828aa95a9fdb8413e2
-import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 5e60b761569ee353529e98a36b72df11
+import  -/  github-0.15.0@github-0.15.0-4xrLmRvOvcILQ4PSubpbiB:GitHub.Endpoints.Repos.Collaborators f638e80a08dd412fcf0b54abb8fc8559
 import  -/  text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text 35f976519564888082d42815342d42ed
 import  -/  text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Internal 43a9166170aaf8c9b180c2d3ce2cfa3c
+import  -/  text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Show 638a81be9b7b5c261b714430eaada4e0
 import  -/  vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector 41057de5dda7a4fc866a712aa88b5c4e
-2fa857fd2bc154bb92831bce4b080083
-  $fEqRepoInfo :: GHC.Classes.Eq GithubHelper.RepoInfo
-  DFunId
-  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ GithubHelper.RepoInfo
-                  GithubHelper.$fEqRepoInfo_$c==
-                  GithubHelper.$fEqRepoInfo_$c/= -}
-2fa857fd2bc154bb92831bce4b080083
-  $fEqRepoInfo_$c/= ::
-    GithubHelper.RepoInfo -> GithubHelper.RepoInfo -> GHC.Types.Bool
-  {- Arity: 2, HasNoCafRefs,
-     Strictness: <S(S(LLS)L),1*U(1*U(U,U,U),1*U)><S(S(LLS)L),1*U(1*U(U,U,U),1*U)>,
-     Unfolding: InlineRule (2, True, False)
-                (\ (a :: GithubHelper.RepoInfo) (b :: GithubHelper.RepoInfo) ->
-                 case GithubHelper.$fEqRepoInfo_$c== a b of wild {
-                   GHC.Types.False -> GHC.Types.True
-                   GHC.Types.True -> GHC.Types.False }) -}
-2fa857fd2bc154bb92831bce4b080083
-  $fEqRepoInfo_$c== ::
-    GithubHelper.RepoInfo -> GithubHelper.RepoInfo -> GHC.Types.Bool
-  {- Arity: 2, HasNoCafRefs,
-     Strictness: <S(S(LLS)L),1*U(1*U(U,U,U),1*U)><S(S(LLS)L),1*U(1*U(U,U,U),1*U)>,
-     Inline: INLINE[0],
-     Unfolding: InlineRule (2, True, False)
-                (\ (w :: GithubHelper.RepoInfo) (w1 :: GithubHelper.RepoInfo) ->
-                 case w of ww { GithubHelper.RepoInfo ww1 ww2 ->
-                 case ww1 of ww3 { Data.Text.Internal.Text ww4 ww5 ww6 ->
-                 case w1 of ww7 { GithubHelper.RepoInfo ww8 ww9 ->
-                 case ww8 of ww10 { Data.Text.Internal.Text ww11 ww12 ww13 ->
-                 GithubHelper.$w$c== ww4 ww5 ww6 ww2 ww11 ww12 ww13 ww9 } } } }) -}
-2fa857fd2bc154bb92831bce4b080083
-  $fFromJSONRepoInfo ::
-    Data.Aeson.Types.FromJSON.FromJSON GithubHelper.RepoInfo
-  DFunId
-  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ GithubHelper.RepoInfo
-                  GithubHelper.$fFromJSONRepoInfo_$cparseJSON
-                  GithubHelper.$fFromJSONRepoInfo_$cparseJSONList -}
-2fa857fd2bc154bb92831bce4b080083
-  $fFromJSONRepoInfo1 ::
-    [Data.Aeson.Types.Internal.Parser GithubHelper.RepoInfo]
-    -> forall (f :: * -> *) r.
-       Data.Aeson.Types.Internal.JSONPath
-       -> Data.Aeson.Types.Internal.Failure f r
-       -> Data.Aeson.Types.Internal.Success [GithubHelper.RepoInfo] f r
-       -> f r
-  {- Arity: 4, HasNoCafRefs, Strictness: <S,1*U><L,U><L,U><L,C(U)> -}
-033c2d9e0c8e8b3d52b3976e7c87f011
-  $fFromJSONRepoInfo10 :: GHC.Generics.SingI ('GHC.Base.Just "name")
-  {- Unfolding: InlineRule (0, True, True)
-                GithubHelper.$fFromJSONRepoInfo11
-                  `cast`
-                (Trans
-                     (Sym (GHC.Generics.D:R:SingMaybeb0[0] <GHC.Types.Symbol>_N))
-                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Base.Maybe
-                                                       GHC.Types.Symbol>_N) <'GHC.Base.Just
-                                                                               "name">_N) -}
-9376d5be157825e99c417b99029cf71b
-  $fFromJSONRepoInfo11 ::
-    GHC.Generics.R:SingMaybeb GHC.Types.Symbol ('GHC.Base.Just "name")
-  {- Unfolding: (GHC.Generics.SJust
-                   @ GHC.Types.Symbol
-                   @ ('GHC.Base.Just "name")
-                   @ "name"
-                   @~ <'GHC.Base.Just "name">_N
-                   GithubHelper.$fFromJSONRepoInfo12
-                     `cast`
-                   (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"name">_N)) -}
-5a279340dee35895b22331d1736a6a25
-  $fFromJSONRepoInfo12 :: GHC.Generics.R:SingSymbols "name"
-  {- Strictness: m,
-     Unfolding: (GHC.Generics.SSym
-                   @ "name"
-                   GithubHelper.$fFromJSONRepoInfo13
-                     `cast`
-                   (Trans
-                        (Sym (GHC.TypeLits.N:SSymbol[0] <"name">_P))
-                        (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"name">_N))) -}
-370c4b2c485cffbe86bc3e8d3151bcfa
-  $fFromJSONRepoInfo13 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "name"#) -}
-0e16d962067f8ffe2865585bc2db0f33
-  $fFromJSONRepoInfo2 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "[a]"#) -}
-b3edcfdc85bbedd1a2d2d75b2daf7a35
-  $fFromJSONRepoInfo3 ::
-    Data.Aeson.Types.Internal.Options
-    -> Data.Aeson.Types.FromJSON.FromArgs
-         Data.Aeson.Types.Generic.Zero a1
-    -> Data.Aeson.Types.Internal.Value
-    -> Data.Aeson.Types.Internal.Parser
-         (GHC.Generics.M1
-            GHC.Generics.D
-            ('GHC.Generics.MetaData
-               "RepoInfo"
-               "GithubHelper"
-               "crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"
-               'GHC.Types.False)
-            (GHC.Generics.M1
-               GHC.Generics.C
-               ('GHC.Generics.MetaCons
-                  "RepoInfo" 'GHC.Generics.PrefixI 'GHC.Types.True)
-               (GHC.Generics.S1
-                  ('GHC.Generics.MetaSel
-                     ('GHC.Base.Just "name")
-                     'GHC.Generics.NoSourceUnpackedness
-                     'GHC.Generics.NoSourceStrictness
-                     'GHC.Generics.DecidedLazy)
-                  (GHC.Generics.Rec0 Data.Text.Internal.Text)
-                GHC.Generics.:*: GHC.Generics.S1
-                                   ('GHC.Generics.MetaSel
-                                      ('GHC.Base.Just "size")
-                                      'GHC.Generics.NoSourceUnpackedness
-                                      'GHC.Generics.NoSourceStrictness
-                                      'GHC.Generics.DecidedLazy)
-                                   (GHC.Generics.Rec0 GHC.Integer.Type.Integer)))
-            a1)
-  {- Arity: 3, Strictness: <L,1*U(U,U,U,U,U,U)><L,U><L,1*U>,
-     Unfolding: (\ @ a1
-                   (opts :: Data.Aeson.Types.Internal.Options)
-                   (fargs :: Data.Aeson.Types.FromJSON.FromArgs
-                               Data.Aeson.Types.Generic.Zero a1)
-                   (x :: Data.Aeson.Types.Internal.Value) ->
-                 let {
-                   m :: Data.Aeson.Types.Internal.Parser
-                          ((GHC.Generics.:*:)
-                             (GHC.Generics.S1
-                                ('GHC.Generics.MetaSel
-                                   ('GHC.Base.Just "name")
-                                   'GHC.Generics.NoSourceUnpackedness
-                                   'GHC.Generics.NoSourceStrictness
-                                   'GHC.Generics.DecidedLazy)
-                                (GHC.Generics.Rec0 Data.Text.Internal.Text))
-                             (GHC.Generics.S1
-                                ('GHC.Generics.MetaSel
-                                   ('GHC.Base.Just "size")
-                                   'GHC.Generics.NoSourceUnpackedness
-                                   'GHC.Generics.NoSourceStrictness
-                                   'GHC.Generics.DecidedLazy)
-                                (GHC.Generics.Rec0 GHC.Integer.Type.Integer))
-                             a1)
-                   = case opts of wild { Data.Aeson.Types.Internal.Options ds1 ds2 ds3 ds4 ds5 ds6 ->
-                     case ds6 of wild1 { DEFAULT ->
-                     case x of wild2 {
-                       DEFAULT
-                       -> Data.Aeson.Types.FromJSON.typeMismatch
-                            @ ((GHC.Generics.:*:)
-                                 (GHC.Generics.S1
-                                    ('GHC.Generics.MetaSel
-                                       ('GHC.Base.Just "name")
-                                       'GHC.Generics.NoSourceUnpackedness
-                                       'GHC.Generics.NoSourceStrictness
-                                       'GHC.Generics.DecidedLazy)
-                                    (GHC.Generics.Rec0 Data.Text.Internal.Text))
-                                 (GHC.Generics.S1
-                                    ('GHC.Generics.MetaSel
-                                       ('GHC.Base.Just "size")
-                                       'GHC.Generics.NoSourceUnpackedness
-                                       'GHC.Generics.NoSourceStrictness
-                                       'GHC.Generics.DecidedLazy)
-                                    (GHC.Generics.Rec0 GHC.Integer.Type.Integer))
-                                 a1)
-                            Data.Aeson.Types.FromJSON.$fConsFromJSON'TYPEarityfTrue1
-                            wild2
-                       Data.Aeson.Types.Internal.Object obj
-                       -> let {
-                            m1 :: Data.Aeson.Types.Internal.Parser
-                                    (GHC.Generics.M1
-                                       GHC.Generics.S
-                                       ('GHC.Generics.MetaSel
-                                          ('GHC.Base.Just "name")
-                                          'GHC.Generics.NoSourceUnpackedness
-                                          'GHC.Generics.NoSourceStrictness
-                                          'GHC.Generics.DecidedLazy)
-                                       (GHC.Generics.Rec0 Data.Text.Internal.Text)
-                                       a1)
-                            = Data.Aeson.Types.FromJSON.$fFromRecordarityM10_$cparseRecord
-                                @ ('GHC.Generics.MetaSel
-                                     ('GHC.Base.Just "name")
-                                     'GHC.Generics.NoSourceUnpackedness
-                                     'GHC.Generics.NoSourceStrictness
-                                     'GHC.Generics.DecidedLazy)
-                                @ Data.Aeson.Types.Generic.Zero
-                                @ (GHC.Generics.K1 GHC.Generics.R Data.Text.Internal.Text)
-                                GithubHelper.$fFromJSONRepoInfo_$s$fSelectorMetaMetaSel1
-                                GithubHelper.$fFromJSONRepoInfo9
-                                  `cast`
-                                (Sym (Data.Aeson.Types.FromJSON.N:GFromJSON[0]
-                                          <Data.Aeson.Types.Generic.Zero>_N
-                                          <GHC.Generics.K1
-                                             GHC.Generics.R Data.Text.Internal.Text>_N))
-                                @ a1
-                                wild
-                                fargs
-                                (GHC.Base.Nothing @ Data.Text.Internal.Text)
-                                obj
-                          } in
-                          let {
-                            e :: Data.Aeson.Types.Internal.Parser
-                                   (GHC.Generics.M1
-                                      GHC.Generics.S
-                                      ('GHC.Generics.MetaSel
-                                         ('GHC.Base.Just "size")
-                                         'GHC.Generics.NoSourceUnpackedness
-                                         'GHC.Generics.NoSourceStrictness
-                                         'GHC.Generics.DecidedLazy)
-                                      (GHC.Generics.Rec0 GHC.Integer.Type.Integer)
-                                      a1)
-                            = Data.Aeson.Types.FromJSON.$fFromRecordarityM10_$cparseRecord
-                                @ ('GHC.Generics.MetaSel
-                                     ('GHC.Base.Just "size")
-                                     'GHC.Generics.NoSourceUnpackedness
-                                     'GHC.Generics.NoSourceStrictness
-                                     'GHC.Generics.DecidedLazy)
-                                @ Data.Aeson.Types.Generic.Zero
-                                @ (GHC.Generics.K1 GHC.Generics.R GHC.Integer.Type.Integer)
-                                GithubHelper.$fFromJSONRepoInfo_$s$fSelectorMetaMetaSel
-                                GithubHelper.$fFromJSONRepoInfo4
-                                  `cast`
-                                (Sym (Data.Aeson.Types.FromJSON.N:GFromJSON[0]
-                                          <Data.Aeson.Types.Generic.Zero>_N
-                                          <GHC.Generics.K1
-                                             GHC.Generics.R GHC.Integer.Type.Integer>_N))
-                                @ a1
-                                wild
-                                fargs
-                                (GHC.Base.Nothing @ Data.Text.Internal.Text)
-                                obj
-                          } in
-                          (\ @ (f :: * -> *)
-                             @ r
-                             (path :: Data.Aeson.Types.Internal.JSONPath)
-                             (kf :: Data.Aeson.Types.Internal.Failure f r)
-                             (ks :: Data.Aeson.Types.Internal.Success
-                                      ((GHC.Generics.:*:)
-                                         (GHC.Generics.M1
-                                            GHC.Generics.S
-                                            ('GHC.Generics.MetaSel
-                                               ('GHC.Base.Just "name")
-                                               'GHC.Generics.NoSourceUnpackedness
-                                               'GHC.Generics.NoSourceStrictness
-                                               'GHC.Generics.DecidedLazy)
-                                            (GHC.Generics.Rec0 Data.Text.Internal.Text))
-                                         (GHC.Generics.M1
-                                            GHC.Generics.S
-                                            ('GHC.Generics.MetaSel
-                                               ('GHC.Base.Just "size")
-                                               'GHC.Generics.NoSourceUnpackedness
-                                               'GHC.Generics.NoSourceStrictness
-                                               'GHC.Generics.DecidedLazy)
-                                            (GHC.Generics.Rec0 GHC.Integer.Type.Integer))
-                                         a1)
-                                      f
-                                      r) ->
-                           m1
-                             `cast`
-                           (Data.Aeson.Types.Internal.N:Parser[0]
-                                <GHC.Generics.M1
-                                   GHC.Generics.S
-                                   ('GHC.Generics.MetaSel
-                                      ('GHC.Base.Just "name")
-                                      'GHC.Generics.NoSourceUnpackedness
-                                      'GHC.Generics.NoSourceStrictness
-                                      'GHC.Generics.DecidedLazy)
-                                   (GHC.Generics.Rec0 Data.Text.Internal.Text)
-                                   a1>_R)
-                             @ f
-                             @ r
-                             path
-                             kf
-                             (\ (a2 :: GHC.Generics.M1
-                                         GHC.Generics.S
-                                         ('GHC.Generics.MetaSel
-                                            ('GHC.Base.Just "name")
-                                            'GHC.Generics.NoSourceUnpackedness
-                                            'GHC.Generics.NoSourceStrictness
-                                            'GHC.Generics.DecidedLazy)
-                                         (GHC.Generics.Rec0 Data.Text.Internal.Text)
-                                         a1) ->
-                              e `cast`
-                              (Data.Aeson.Types.Internal.N:Parser[0]
-                                   <GHC.Generics.M1
-                                      GHC.Generics.S
-                                      ('GHC.Generics.MetaSel
-                                         ('GHC.Base.Just "size")
-                                         'GHC.Generics.NoSourceUnpackedness
-                                         'GHC.Generics.NoSourceStrictness
-                                         'GHC.Generics.DecidedLazy)
-                                      (GHC.Generics.Rec0 GHC.Integer.Type.Integer)
-                                      a1>_R)
-                                @ f
-                                @ r
-                                path
-                                kf
-                                (\ (a3 :: GHC.Generics.M1
-                                            GHC.Generics.S
-                                            ('GHC.Generics.MetaSel
-                                               ('GHC.Base.Just "size")
-                                               'GHC.Generics.NoSourceUnpackedness
-                                               'GHC.Generics.NoSourceStrictness
-                                               'GHC.Generics.DecidedLazy)
-                                            (GHC.Generics.Rec0 GHC.Integer.Type.Integer)
-                                            a1) ->
-                                 ks
-                                   (GHC.Generics.:*:
-                                      @ (GHC.Generics.M1
-                                           GHC.Generics.S
-                                           ('GHC.Generics.MetaSel
-                                              ('GHC.Base.Just "name")
-                                              'GHC.Generics.NoSourceUnpackedness
-                                              'GHC.Generics.NoSourceStrictness
-                                              'GHC.Generics.DecidedLazy)
-                                           (GHC.Generics.Rec0 Data.Text.Internal.Text))
-                                      @ (GHC.Generics.M1
-                                           GHC.Generics.S
-                                           ('GHC.Generics.MetaSel
-                                              ('GHC.Base.Just "size")
-                                              'GHC.Generics.NoSourceUnpackedness
-                                              'GHC.Generics.NoSourceStrictness
-                                              'GHC.Generics.DecidedLazy)
-                                           (GHC.Generics.Rec0 GHC.Integer.Type.Integer))
-                                      @ a1
-                                      a2
-                                      a3))))
-                            `cast`
-                          (Sym (Data.Aeson.Types.Internal.N:Parser[0]
-                                    <(GHC.Generics.:*:)
-                                       (GHC.Generics.M1
-                                          GHC.Generics.S
-                                          ('GHC.Generics.MetaSel
-                                             ('GHC.Base.Just "name")
-                                             'GHC.Generics.NoSourceUnpackedness
-                                             'GHC.Generics.NoSourceStrictness
-                                             'GHC.Generics.DecidedLazy)
-                                          (GHC.Generics.Rec0 Data.Text.Internal.Text))
-                                       (GHC.Generics.M1
-                                          GHC.Generics.S
-                                          ('GHC.Generics.MetaSel
-                                             ('GHC.Base.Just "size")
-                                             'GHC.Generics.NoSourceUnpackedness
-                                             'GHC.Generics.NoSourceStrictness
-                                             'GHC.Generics.DecidedLazy)
-                                          (GHC.Generics.Rec0 GHC.Integer.Type.Integer))
-                                       a1>_R)) } } }
-                 } in
-                 (\ @ (f4 :: * -> *)
-                    @ r
-                    (path :: Data.Aeson.Types.Internal.JSONPath)
-                    (kf :: Data.Aeson.Types.Internal.Failure f4 r)
-                    (ks :: Data.Aeson.Types.Internal.Success
-                             (GHC.Generics.M1
-                                GHC.Generics.D
-                                ('GHC.Generics.MetaData
-                                   "RepoInfo"
-                                   "GithubHelper"
-                                   "crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"
-                                   'GHC.Types.False)
-                                (GHC.Generics.M1
-                                   GHC.Generics.C
-                                   ('GHC.Generics.MetaCons
-                                      "RepoInfo" 'GHC.Generics.PrefixI 'GHC.Types.True)
-                                   (GHC.Generics.S1
-                                      ('GHC.Generics.MetaSel
-                                         ('GHC.Base.Just "name")
-                                         'GHC.Generics.NoSourceUnpackedness
-                                         'GHC.Generics.NoSourceStrictness
-                                         'GHC.Generics.DecidedLazy)
-                                      (GHC.Generics.Rec0 Data.Text.Internal.Text)
-                                    GHC.Generics.:*: GHC.Generics.S1
-                                                       ('GHC.Generics.MetaSel
-                                                          ('GHC.Base.Just "size")
-                                                          'GHC.Generics.NoSourceUnpackedness
-                                                          'GHC.Generics.NoSourceStrictness
-                                                          'GHC.Generics.DecidedLazy)
-                                                       (GHC.Generics.Rec0
-                                                          GHC.Integer.Type.Integer)))
-                                a1)
-                             f4
-                             r) ->
-                  m `cast`
-                  (Data.Aeson.Types.Internal.N:Parser[0]
-                       <(GHC.Generics.:*:)
-                          (GHC.Generics.S1
-                             ('GHC.Generics.MetaSel
-                                ('GHC.Base.Just "name")
-                                'GHC.Generics.NoSourceUnpackedness
-                                'GHC.Generics.NoSourceStrictness
-                                'GHC.Generics.DecidedLazy)
-                             (GHC.Generics.Rec0 Data.Text.Internal.Text))
-                          (GHC.Generics.S1
-                             ('GHC.Generics.MetaSel
-                                ('GHC.Base.Just "size")
-                                'GHC.Generics.NoSourceUnpackedness
-                                'GHC.Generics.NoSourceStrictness
-                                'GHC.Generics.DecidedLazy)
-                             (GHC.Generics.Rec0 GHC.Integer.Type.Integer))
-                          a1>_R)
-                    @ f4
-                    @ r
-                    path
-                    kf
-                    (\ (a2 :: (GHC.Generics.:*:)
-                                (GHC.Generics.S1
-                                   ('GHC.Generics.MetaSel
-                                      ('GHC.Base.Just "name")
-                                      'GHC.Generics.NoSourceUnpackedness
-                                      'GHC.Generics.NoSourceStrictness
-                                      'GHC.Generics.DecidedLazy)
-                                   (GHC.Generics.Rec0 Data.Text.Internal.Text))
-                                (GHC.Generics.S1
-                                   ('GHC.Generics.MetaSel
-                                      ('GHC.Base.Just "size")
-                                      'GHC.Generics.NoSourceUnpackedness
-                                      'GHC.Generics.NoSourceStrictness
-                                      'GHC.Generics.DecidedLazy)
-                                   (GHC.Generics.Rec0 GHC.Integer.Type.Integer))
-                                a1) ->
-                     ks
-                       a2
-                         `cast`
-                       (Trans
-                            (Sym (GHC.Generics.N:M1[0]
-                                      <GHC.Generics.C>_P
-                                      <'GHC.Generics.MetaCons
-                                         "RepoInfo" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
-                                      <GHC.Generics.S1
-                                         ('GHC.Generics.MetaSel
-                                            ('GHC.Base.Just "name")
-                                            'GHC.Generics.NoSourceUnpackedness
-                                            'GHC.Generics.NoSourceStrictness
-                                            'GHC.Generics.DecidedLazy)
-                                         (GHC.Generics.Rec0 Data.Text.Internal.Text)
-                                       GHC.Generics.:*: GHC.Generics.S1
-                                                          ('GHC.Generics.MetaSel
-                                                             ('GHC.Base.Just "size")
-                                                             'GHC.Generics.NoSourceUnpackedness
-                                                             'GHC.Generics.NoSourceStrictness
-                                                             'GHC.Generics.DecidedLazy)
-                                                          (GHC.Generics.Rec0
-                                                             GHC.Integer.Type.Integer)>_R))
-                            (Sym (GHC.Generics.N:M1[0]
-                                      <GHC.Generics.D>_P
-                                      <'GHC.Generics.MetaData
-                                         "RepoInfo"
-                                         "GithubHelper"
-                                         "crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"
-                                         'GHC.Types.False>_P
-                                      <GHC.Generics.M1
-                                         GHC.Generics.C
-                                         ('GHC.Generics.MetaCons
-                                            "RepoInfo" 'GHC.Generics.PrefixI 'GHC.Types.True)
-                                         (GHC.Generics.S1
-                                            ('GHC.Generics.MetaSel
-                                               ('GHC.Base.Just "name")
-                                               'GHC.Generics.NoSourceUnpackedness
-                                               'GHC.Generics.NoSourceStrictness
-                                               'GHC.Generics.DecidedLazy)
-                                            (GHC.Generics.Rec0 Data.Text.Internal.Text)
-                                          GHC.Generics.:*: GHC.Generics.S1
-                                                             ('GHC.Generics.MetaSel
-                                                                ('GHC.Base.Just "size")
-                                                                'GHC.Generics.NoSourceUnpackedness
-                                                                'GHC.Generics.NoSourceStrictness
-                                                                'GHC.Generics.DecidedLazy)
-                                                             (GHC.Generics.Rec0
-                                                                GHC.Integer.Type.Integer))>_R)) <a1>_N)))
-                   `cast`
-                 (Sym (Data.Aeson.Types.Internal.N:Parser[0]
-                           <GHC.Generics.M1
-                              GHC.Generics.D
-                              ('GHC.Generics.MetaData
-                                 "RepoInfo"
-                                 "GithubHelper"
-                                 "crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"
-                                 'GHC.Types.False)
-                              (GHC.Generics.M1
-                                 GHC.Generics.C
-                                 ('GHC.Generics.MetaCons
-                                    "RepoInfo" 'GHC.Generics.PrefixI 'GHC.Types.True)
-                                 (GHC.Generics.S1
-                                    ('GHC.Generics.MetaSel
-                                       ('GHC.Base.Just "name")
-                                       'GHC.Generics.NoSourceUnpackedness
-                                       'GHC.Generics.NoSourceStrictness
-                                       'GHC.Generics.DecidedLazy)
-                                    (GHC.Generics.Rec0 Data.Text.Internal.Text)
-                                  GHC.Generics.:*: GHC.Generics.S1
-                                                     ('GHC.Generics.MetaSel
-                                                        ('GHC.Base.Just "size")
-                                                        'GHC.Generics.NoSourceUnpackedness
-                                                        'GHC.Generics.NoSourceStrictness
-                                                        'GHC.Generics.DecidedLazy)
-                                                     (GHC.Generics.Rec0 GHC.Integer.Type.Integer)))
-                              a1>_R))) -}
-9f3c8660aa11b25fb63444431babf98a
-  $fFromJSONRepoInfo4 ::
-    Data.Aeson.Types.Internal.Options
-    -> Data.Aeson.Types.FromJSON.FromArgs
-         Data.Aeson.Types.Generic.Zero a1
-    -> Data.Aeson.Types.Internal.Value
-    -> Data.Aeson.Types.Internal.Parser
-         (GHC.Generics.K1 GHC.Generics.R GHC.Integer.Type.Integer a1)
-  {- Arity: 3, Strictness: <L,A><L,A><L,U>,
-     Unfolding: InlineRule (3, True, True)
-                (\ @ a1
-                   (w1 :: Data.Aeson.Types.Internal.Options)
-                   (w2 :: Data.Aeson.Types.FromJSON.FromArgs
-                            Data.Aeson.Types.Generic.Zero a1)
-                   (w3 :: Data.Aeson.Types.Internal.Value) ->
-                 Data.Aeson.Types.FromJSON.$w$cgParseJSON2
-                   @ GHC.Integer.Type.Integer
-                   @ Data.Aeson.Types.Generic.Zero
-                   @ GHC.Generics.R
-                   Data.Aeson.Types.FromJSON.$fFromJSONInteger
-                   @ a1
-                   w3) -}
-5a9646f41e30bf0c7f42e02bdb99cc26
-  $fFromJSONRepoInfo5 :: GHC.Generics.SingI ('GHC.Base.Just "size")
-  {- Unfolding: InlineRule (0, True, True)
-                GithubHelper.$fFromJSONRepoInfo6
-                  `cast`
-                (Trans
-                     (Sym (GHC.Generics.D:R:SingMaybeb0[0] <GHC.Types.Symbol>_N))
-                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Base.Maybe
-                                                       GHC.Types.Symbol>_N) <'GHC.Base.Just
-                                                                               "size">_N) -}
-be3cad777ddb2f7abb220e0befbb1b2d
-  $fFromJSONRepoInfo6 ::
-    GHC.Generics.R:SingMaybeb GHC.Types.Symbol ('GHC.Base.Just "size")
-  {- Unfolding: (GHC.Generics.SJust
-                   @ GHC.Types.Symbol
-                   @ ('GHC.Base.Just "size")
-                   @ "size"
-                   @~ <'GHC.Base.Just "size">_N
-                   GithubHelper.$fFromJSONRepoInfo7
-                     `cast`
-                   (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"size">_N)) -}
-6f24b88be9830e43e41aa66b8f92373b
-  $fFromJSONRepoInfo7 :: GHC.Generics.R:SingSymbols "size"
-  {- Strictness: m,
-     Unfolding: (GHC.Generics.SSym
-                   @ "size"
-                   GithubHelper.$fFromJSONRepoInfo8
-                     `cast`
-                   (Trans
-                        (Sym (GHC.TypeLits.N:SSymbol[0] <"size">_P))
-                        (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"size">_N))) -}
-610b0c015e312c2f39ad5c246ba76e6f
-  $fFromJSONRepoInfo8 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "size"#) -}
-5aac90e5a03fa560500057d56ca5a7c3
-  $fFromJSONRepoInfo9 ::
-    Data.Aeson.Types.Internal.Options
-    -> Data.Aeson.Types.FromJSON.FromArgs
-         Data.Aeson.Types.Generic.Zero a1
-    -> Data.Aeson.Types.Internal.Value
-    -> Data.Aeson.Types.Internal.Parser
-         (GHC.Generics.K1 GHC.Generics.R Data.Text.Internal.Text a1)
-  {- Arity: 3, Strictness: <L,A><L,A><L,U>,
-     Unfolding: InlineRule (3, True, True)
-                (\ @ a1
-                   (w1 :: Data.Aeson.Types.Internal.Options)
-                   (w2 :: Data.Aeson.Types.FromJSON.FromArgs
-                            Data.Aeson.Types.Generic.Zero a1)
-                   (w3 :: Data.Aeson.Types.Internal.Value) ->
-                 Data.Aeson.Types.FromJSON.$w$cgParseJSON2
-                   @ Data.Text.Internal.Text
-                   @ Data.Aeson.Types.Generic.Zero
-                   @ GHC.Generics.R
-                   Data.Aeson.Types.FromJSON.$fFromJSONText0
-                   @ a1
-                   w3) -}
-2fa857fd2bc154bb92831bce4b080083
-  $fFromJSONRepoInfo_$cparseJSON ::
-    Data.Aeson.Types.Internal.Value
-    -> Data.Aeson.Types.Internal.Parser GithubHelper.RepoInfo
-  {- Arity: 1, Strictness: <L,1*U>,
-     Unfolding: (\ (x :: Data.Aeson.Types.Internal.Value) ->
-                 let {
-                   m :: Data.Aeson.Types.Internal.Parser
-                          (GHC.Generics.M1
-                             GHC.Generics.D
-                             ('GHC.Generics.MetaData
-                                "RepoInfo"
-                                "GithubHelper"
-                                "crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"
-                                'GHC.Types.False)
-                             (GHC.Generics.M1
-                                GHC.Generics.C
-                                ('GHC.Generics.MetaCons
-                                   "RepoInfo" 'GHC.Generics.PrefixI 'GHC.Types.True)
-                                (GHC.Generics.S1
-                                   ('GHC.Generics.MetaSel
-                                      ('GHC.Base.Just "name")
-                                      'GHC.Generics.NoSourceUnpackedness
-                                      'GHC.Generics.NoSourceStrictness
-                                      'GHC.Generics.DecidedLazy)
-                                   (GHC.Generics.Rec0 Data.Text.Internal.Text)
-                                 GHC.Generics.:*: GHC.Generics.S1
-                                                    ('GHC.Generics.MetaSel
-                                                       ('GHC.Base.Just "size")
-                                                       'GHC.Generics.NoSourceUnpackedness
-                                                       'GHC.Generics.NoSourceStrictness
-                                                       'GHC.Generics.DecidedLazy)
-                                                    (GHC.Generics.Rec0 GHC.Integer.Type.Integer)))
-                             GHC.Prim.Any)
-                   = GithubHelper.$fFromJSONRepoInfo3
-                       @ GHC.Prim.Any
-                       Data.Aeson.Types.Internal.defaultOptions
-                       (Data.Aeson.Types.FromJSON.$WNoFromArgs @ GHC.Prim.Any)
-                       x
-                 } in
-                 (\ @ (f4 :: * -> *)
-                    @ r
-                    (path :: Data.Aeson.Types.Internal.JSONPath)
-                    (kf :: Data.Aeson.Types.Internal.Failure f4 r)
-                    (ks :: Data.Aeson.Types.Internal.Success
-                             GithubHelper.RepoInfo f4 r) ->
-                  m `cast`
-                  (Data.Aeson.Types.Internal.N:Parser[0]
-                       (Sub (Sym (GithubHelper.Rep_RepoInfo[0])) <GHC.Prim.Any>_N))
-                    @ f4
-                    @ r
-                    path
-                    kf
-                    (\ (a1 :: GHC.Generics.Rep GithubHelper.RepoInfo GHC.Prim.Any) ->
-                     ks
-                       (case a1
-                               `cast`
-                             (Trans
-                                  (Sub (GithubHelper.Rep_RepoInfo[0]))
-                                  (Trans
-                                       (GHC.Generics.N:M1[0]
-                                            <GHC.Generics.D>_P
-                                            <'GHC.Generics.MetaData
-                                               "RepoInfo"
-                                               "GithubHelper"
-                                               "crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"
-                                               'GHC.Types.False>_P
-                                            <GHC.Generics.M1
-                                               GHC.Generics.C
-                                               ('GHC.Generics.MetaCons
-                                                  "RepoInfo" 'GHC.Generics.PrefixI 'GHC.Types.True)
-                                               (GHC.Generics.M1
-                                                  GHC.Generics.S
-                                                  ('GHC.Generics.MetaSel
-                                                     ('GHC.Base.Just "name")
-                                                     'GHC.Generics.NoSourceUnpackedness
-                                                     'GHC.Generics.NoSourceStrictness
-                                                     'GHC.Generics.DecidedLazy)
-                                                  (GHC.Generics.K1
-                                                     GHC.Generics.R Data.Text.Internal.Text)
-                                                GHC.Generics.:*: GHC.Generics.M1
-                                                                   GHC.Generics.S
-                                                                   ('GHC.Generics.MetaSel
-                                                                      ('GHC.Base.Just "size")
-                                                                      'GHC.Generics.NoSourceUnpackedness
-                                                                      'GHC.Generics.NoSourceStrictness
-                                                                      'GHC.Generics.DecidedLazy)
-                                                                   (GHC.Generics.K1
-                                                                      GHC.Generics.R
-                                                                      GHC.Integer.Type.Integer))>_R)
-                                       (GHC.Generics.N:M1[0]
-                                            <GHC.Generics.C>_P
-                                            <'GHC.Generics.MetaCons
-                                               "RepoInfo" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
-                                            <GHC.Generics.M1
-                                               GHC.Generics.S
-                                               ('GHC.Generics.MetaSel
-                                                  ('GHC.Base.Just "name")
-                                                  'GHC.Generics.NoSourceUnpackedness
-                                                  'GHC.Generics.NoSourceStrictness
-                                                  'GHC.Generics.DecidedLazy)
-                                               (GHC.Generics.K1
-                                                  GHC.Generics.R Data.Text.Internal.Text)
-                                             GHC.Generics.:*: GHC.Generics.M1
-                                                                GHC.Generics.S
-                                                                ('GHC.Generics.MetaSel
-                                                                   ('GHC.Base.Just "size")
-                                                                   'GHC.Generics.NoSourceUnpackedness
-                                                                   'GHC.Generics.NoSourceStrictness
-                                                                   'GHC.Generics.DecidedLazy)
-                                                                (GHC.Generics.K1
-                                                                   GHC.Generics.R
-                                                                   GHC.Integer.Type.Integer)>_R)) <GHC.Prim.Any>_N) of wild { GHC.Generics.:*: ds ds1 ->
-                        GithubHelper.RepoInfo
-                          ds
-                            `cast`
-                          (Trans
-                               (GHC.Generics.N:M1[0]
-                                    <GHC.Generics.S>_P
-                                    <'GHC.Generics.MetaSel
-                                       ('GHC.Base.Just "name")
-                                       'GHC.Generics.NoSourceUnpackedness
-                                       'GHC.Generics.NoSourceStrictness
-                                       'GHC.Generics.DecidedLazy>_P
-                                    <GHC.Generics.K1
-                                       GHC.Generics.R Data.Text.Internal.Text>_R <GHC.Prim.Any>_N)
-                               (GHC.Generics.N:K1[0]
-                                    <GHC.Generics.R>_P
-                                    <Data.Text.Internal.Text>_R
-                                    <GHC.Prim.Any>_P))
-                          ds1
-                            `cast`
-                          (Trans
-                               (GHC.Generics.N:M1[0]
-                                    <GHC.Generics.S>_P
-                                    <'GHC.Generics.MetaSel
-                                       ('GHC.Base.Just "size")
-                                       'GHC.Generics.NoSourceUnpackedness
-                                       'GHC.Generics.NoSourceStrictness
-                                       'GHC.Generics.DecidedLazy>_P
-                                    <GHC.Generics.K1
-                                       GHC.Generics.R GHC.Integer.Type.Integer>_R <GHC.Prim.Any>_N)
-                               (GHC.Generics.N:K1[0]
-                                    <GHC.Generics.R>_P
-                                    <GHC.Integer.Type.Integer>_R
-                                    <GHC.Prim.Any>_P)) })))
-                   `cast`
-                 (Sym (Data.Aeson.Types.Internal.N:Parser[0]
-                           <GithubHelper.RepoInfo>_R))) -}
-2fa857fd2bc154bb92831bce4b080083
-  $fFromJSONRepoInfo_$cparseJSONList ::
-    Data.Aeson.Types.Internal.Value
-    -> Data.Aeson.Types.Internal.Parser [GithubHelper.RepoInfo]
-  {- Arity: 1, Strictness: <S,1*U>,
-     Unfolding: (\ (ds :: Data.Aeson.Types.Internal.Value) ->
-                 case ds of wild {
-                   DEFAULT
-                   -> Data.Aeson.Types.FromJSON.typeMismatch
-                        @ [GithubHelper.RepoInfo]
-                        GithubHelper.$fFromJSONRepoInfo2
-                        wild
-                   Data.Aeson.Types.Internal.Array a1
-                   -> case a1 of wild1 { Data.Vector.Vector dt dt1 dt2 ->
-                      (GithubHelper.$fFromJSONRepoInfo1
-                         (letrec {
-                            $wgo :: GHC.Prim.Int# -> [Data.Aeson.Types.Internal.Value]
-                              {- Arity: 1, Strictness: <S,U>, Inline: [0] -}
-                            = \ (ww :: GHC.Prim.Int#) ->
-                              case GHC.Prim.tagToEnum#
-                                     @ GHC.Types.Bool
-                                     (GHC.Prim.>=# ww dt1) of wild2 {
-                                GHC.Types.False
-                                -> case GHC.Prim.indexArray#
-                                          @ Data.Aeson.Types.Internal.Value
-                                          dt2
-                                          (GHC.Prim.+# dt ww) of ds2 { Unit# ipv ->
-                                   GHC.Types.:
-                                     @ Data.Aeson.Types.Internal.Value
-                                     ipv
-                                     ($wgo (GHC.Prim.+# ww 1#)) }
-                                GHC.Types.True -> GHC.Types.[] @ Data.Aeson.Types.Internal.Value }
-                          } in
-                          GithubHelper.$fFromJSONRepoInfo_go 0# ($wgo 0#)))
-                        `cast`
-                      (Sym (Data.Aeson.Types.Internal.N:Parser[0]
-                                <[GithubHelper.RepoInfo]>_R)) } }) -}
-de402093e2955a458000d9c46802e0dd
-  $fFromJSONRepoInfo_$s$fSelectorMetaMetaSel ::
-    GHC.Generics.Selector
-      ('GHC.Generics.MetaSel
-         ('GHC.Base.Just "size")
-         'GHC.Generics.NoSourceUnpackedness
-         'GHC.Generics.NoSourceStrictness
-         'GHC.Generics.DecidedLazy)
-  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ GHC.Generics.Meta
-                  @ ('GHC.Generics.MetaSel
-                       ('GHC.Base.Just "size")
-                       'GHC.Generics.NoSourceUnpackedness
-                       'GHC.Generics.NoSourceStrictness
-                       'GHC.Generics.DecidedLazy)
-                  GithubHelper.$fFromJSONRepoInfo_$s$fSelectorMetaMetaSel_$cselName
-                  (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceUnpackedness
-                     @ ('GHC.Base.Just "size")
-                     @ 'GHC.Generics.NoSourceUnpackedness
-                     @ 'GHC.Generics.NoSourceStrictness
-                     @ 'GHC.Generics.DecidedLazy
-                     GithubHelper.$fFromJSONRepoInfo5
-                     GHC.Generics.$WSNoSourceUnpackedness
-                       `cast`
-                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
-                     GHC.Generics.$WSNoSourceStrictness
-                       `cast`
-                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
-                     GHC.Generics.$WSDecidedLazy
-                       `cast`
-                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
-                  (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceStrictness
-                     @ ('GHC.Base.Just "size")
-                     @ 'GHC.Generics.NoSourceUnpackedness
-                     @ 'GHC.Generics.NoSourceStrictness
-                     @ 'GHC.Generics.DecidedLazy
-                     GithubHelper.$fFromJSONRepoInfo5
-                     GHC.Generics.$WSNoSourceUnpackedness
-                       `cast`
-                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
-                     GHC.Generics.$WSNoSourceStrictness
-                       `cast`
-                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
-                     GHC.Generics.$WSDecidedLazy
-                       `cast`
-                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
-                  (GHC.Generics.$fSelectorMetaMetaSel_$cselDecidedStrictness
-                     @ ('GHC.Base.Just "size")
-                     @ 'GHC.Generics.NoSourceUnpackedness
-                     @ 'GHC.Generics.NoSourceStrictness
-                     @ 'GHC.Generics.DecidedLazy
-                     GithubHelper.$fFromJSONRepoInfo5
-                     GHC.Generics.$WSNoSourceUnpackedness
-                       `cast`
-                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
-                     GHC.Generics.$WSNoSourceStrictness
-                       `cast`
-                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
-                     GHC.Generics.$WSDecidedLazy
-                       `cast`
-                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N)) -}
-d81eb678628cb189a6ebc685dac5225f
-  $fFromJSONRepoInfo_$s$fSelectorMetaMetaSel1 ::
-    GHC.Generics.Selector
-      ('GHC.Generics.MetaSel
-         ('GHC.Base.Just "name")
-         'GHC.Generics.NoSourceUnpackedness
-         'GHC.Generics.NoSourceStrictness
-         'GHC.Generics.DecidedLazy)
-  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ GHC.Generics.Meta
-                  @ ('GHC.Generics.MetaSel
-                       ('GHC.Base.Just "name")
-                       'GHC.Generics.NoSourceUnpackedness
-                       'GHC.Generics.NoSourceStrictness
-                       'GHC.Generics.DecidedLazy)
-                  GithubHelper.$fFromJSONRepoInfo_$s$fSelectorMetaMetaSel_$cselName1
-                  (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceUnpackedness
-                     @ ('GHC.Base.Just "name")
-                     @ 'GHC.Generics.NoSourceUnpackedness
-                     @ 'GHC.Generics.NoSourceStrictness
-                     @ 'GHC.Generics.DecidedLazy
-                     GithubHelper.$fFromJSONRepoInfo10
-                     GHC.Generics.$WSNoSourceUnpackedness
-                       `cast`
-                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
-                     GHC.Generics.$WSNoSourceStrictness
-                       `cast`
-                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
-                     GHC.Generics.$WSDecidedLazy
-                       `cast`
-                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
-                  (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceStrictness
-                     @ ('GHC.Base.Just "name")
-                     @ 'GHC.Generics.NoSourceUnpackedness
-                     @ 'GHC.Generics.NoSourceStrictness
-                     @ 'GHC.Generics.DecidedLazy
-                     GithubHelper.$fFromJSONRepoInfo10
-                     GHC.Generics.$WSNoSourceUnpackedness
-                       `cast`
-                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
-                     GHC.Generics.$WSNoSourceStrictness
-                       `cast`
-                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
-                     GHC.Generics.$WSDecidedLazy
-                       `cast`
-                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
-                  (GHC.Generics.$fSelectorMetaMetaSel_$cselDecidedStrictness
-                     @ ('GHC.Base.Just "name")
-                     @ 'GHC.Generics.NoSourceUnpackedness
-                     @ 'GHC.Generics.NoSourceStrictness
-                     @ 'GHC.Generics.DecidedLazy
-                     GithubHelper.$fFromJSONRepoInfo10
-                     GHC.Generics.$WSNoSourceUnpackedness
-                       `cast`
-                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
-                     GHC.Generics.$WSNoSourceStrictness
-                       `cast`
-                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
-                     GHC.Generics.$WSDecidedLazy
-                       `cast`
-                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N)) -}
-c10fab10581912ec65098cd941cd10fe
-  $fFromJSONRepoInfo_$s$fSelectorMetaMetaSel_$cselName ::
-    forall k (t :: GHC.Generics.Meta
-                   -> (GHC.Types.* -> GHC.Types.*) -> k -> *) (f :: GHC.Types.*
-                                                                    -> GHC.Types.*) (a :: k).
-    t ('GHC.Generics.MetaSel
-         ('GHC.Base.Just "size")
-         'GHC.Generics.NoSourceUnpackedness
-         'GHC.Generics.NoSourceStrictness
-         'GHC.Generics.DecidedLazy) f a
-    -> [GHC.Types.Char]
-  {- Arity: 1, Strictness: <L,A>,
-     Unfolding: InlineRule (1, True, True)
-                (\ @ k
-                   @ (t :: GHC.Generics.Meta
-                           -> (GHC.Types.* -> GHC.Types.*) -> k -> *)
-                   @ (f :: GHC.Types.* -> GHC.Types.*)
-                   @ (a :: k)
-                   (ds1 :: t ('GHC.Generics.MetaSel
-                                ('GHC.Base.Just "size")
-                                'GHC.Generics.NoSourceUnpackedness
-                                'GHC.Generics.NoSourceStrictness
-                                'GHC.Generics.DecidedLazy) f a) ->
-                 GithubHelper.$fFromJSONRepoInfo8) -}
-d9a07b7462e56374748dd2718482dd97
-  $fFromJSONRepoInfo_$s$fSelectorMetaMetaSel_$cselName1 ::
-    forall k (t :: GHC.Generics.Meta
-                   -> (GHC.Types.* -> GHC.Types.*) -> k -> *) (f :: GHC.Types.*
-                                                                    -> GHC.Types.*) (a :: k).
-    t ('GHC.Generics.MetaSel
-         ('GHC.Base.Just "name")
-         'GHC.Generics.NoSourceUnpackedness
-         'GHC.Generics.NoSourceStrictness
-         'GHC.Generics.DecidedLazy) f a
-    -> [GHC.Types.Char]
-  {- Arity: 1, Strictness: <L,A>,
-     Unfolding: InlineRule (1, True, True)
-                (\ @ k
-                   @ (t :: GHC.Generics.Meta
-                           -> (GHC.Types.* -> GHC.Types.*) -> k -> *)
-                   @ (f :: GHC.Types.* -> GHC.Types.*)
-                   @ (a :: k)
-                   (ds1 :: t ('GHC.Generics.MetaSel
-                                ('GHC.Base.Just "name")
-                                'GHC.Generics.NoSourceUnpackedness
-                                'GHC.Generics.NoSourceStrictness
-                                'GHC.Generics.DecidedLazy) f a) ->
-                 GithubHelper.$fFromJSONRepoInfo13) -}
-2fa857fd2bc154bb92831bce4b080083
-  $fFromJSONRepoInfo_go ::
-    GHC.Prim.Int#
-    -> [Data.Aeson.Types.Internal.Value]
-    -> [Data.Aeson.Types.Internal.Parser GithubHelper.RepoInfo]
-  {- Arity: 2, Strictness: <L,U><S,1*U> -}
-2fa857fd2bc154bb92831bce4b080083
-  $fGenericRepoInfo :: GHC.Generics.Generic GithubHelper.RepoInfo
-  DFunId
-  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ GithubHelper.RepoInfo
-                  GithubHelper.$fGenericRepoInfo_$cfrom
-                  GithubHelper.$fGenericRepoInfo_$cto -}
-2fa857fd2bc154bb92831bce4b080083
-  $fGenericRepoInfo1 ::
-    GithubHelper.RepoInfo
-    -> GHC.Generics.M1
-         GHC.Generics.C
-         ('GHC.Generics.MetaCons
-            "RepoInfo" 'GHC.Generics.PrefixI 'GHC.Types.True)
-         (GHC.Generics.M1
-            GHC.Generics.S
-            ('GHC.Generics.MetaSel
-               ('GHC.Base.Just "name")
-               'GHC.Generics.NoSourceUnpackedness
-               'GHC.Generics.NoSourceStrictness
-               'GHC.Generics.DecidedLazy)
-            (GHC.Generics.K1 GHC.Generics.R Data.Text.Internal.Text)
-          GHC.Generics.:*: GHC.Generics.M1
-                             GHC.Generics.S
-                             ('GHC.Generics.MetaSel
-                                ('GHC.Base.Just "size")
-                                'GHC.Generics.NoSourceUnpackedness
-                                'GHC.Generics.NoSourceStrictness
-                                'GHC.Generics.DecidedLazy)
-                             (GHC.Generics.K1 GHC.Generics.R GHC.Integer.Type.Integer))
-         x
-  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
-     Unfolding: InlineRule (1, True, False)
-                (\ @ x (x1 :: GithubHelper.RepoInfo) ->
-                 case x1 of wild { GithubHelper.RepoInfo g1 g2 ->
-                 (GHC.Generics.:*:
-                    @ (GHC.Generics.M1
-                         GHC.Generics.S
-                         ('GHC.Generics.MetaSel
-                            ('GHC.Base.Just "name")
-                            'GHC.Generics.NoSourceUnpackedness
-                            'GHC.Generics.NoSourceStrictness
-                            'GHC.Generics.DecidedLazy)
-                         (GHC.Generics.K1 GHC.Generics.R Data.Text.Internal.Text))
-                    @ (GHC.Generics.M1
-                         GHC.Generics.S
-                         ('GHC.Generics.MetaSel
-                            ('GHC.Base.Just "size")
-                            'GHC.Generics.NoSourceUnpackedness
-                            'GHC.Generics.NoSourceStrictness
-                            'GHC.Generics.DecidedLazy)
-                         (GHC.Generics.K1 GHC.Generics.R GHC.Integer.Type.Integer))
-                    @ x
-                    g1
-                      `cast`
-                    (Trans
-                         (Sym (GHC.Generics.N:K1[0]
-                                   <GHC.Generics.R>_P <Data.Text.Internal.Text>_R <x>_P))
-                         (Sym (GHC.Generics.N:M1[0]
-                                   <GHC.Generics.S>_P
-                                   <'GHC.Generics.MetaSel
-                                      ('GHC.Base.Just "name")
-                                      'GHC.Generics.NoSourceUnpackedness
-                                      'GHC.Generics.NoSourceStrictness
-                                      'GHC.Generics.DecidedLazy>_P
-                                   <GHC.Generics.K1
-                                      GHC.Generics.R Data.Text.Internal.Text>_R) <x>_N))
-                    g2
-                      `cast`
-                    (Trans
-                         (Sym (GHC.Generics.N:K1[0]
-                                   <GHC.Generics.R>_P <GHC.Integer.Type.Integer>_R <x>_P))
-                         (Sym (GHC.Generics.N:M1[0]
-                                   <GHC.Generics.S>_P
-                                   <'GHC.Generics.MetaSel
-                                      ('GHC.Base.Just "size")
-                                      'GHC.Generics.NoSourceUnpackedness
-                                      'GHC.Generics.NoSourceStrictness
-                                      'GHC.Generics.DecidedLazy>_P
-                                   <GHC.Generics.K1
-                                      GHC.Generics.R GHC.Integer.Type.Integer>_R) <x>_N)))
-                   `cast`
-                 (Sym (GHC.Generics.N:M1[0]
-                           <GHC.Generics.C>_P
-                           <'GHC.Generics.MetaCons
-                              "RepoInfo" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
-                           <GHC.Generics.M1
-                              GHC.Generics.S
-                              ('GHC.Generics.MetaSel
-                                 ('GHC.Base.Just "name")
-                                 'GHC.Generics.NoSourceUnpackedness
-                                 'GHC.Generics.NoSourceStrictness
-                                 'GHC.Generics.DecidedLazy)
-                              (GHC.Generics.K1 GHC.Generics.R Data.Text.Internal.Text)
-                            GHC.Generics.:*: GHC.Generics.M1
-                                               GHC.Generics.S
-                                               ('GHC.Generics.MetaSel
-                                                  ('GHC.Base.Just "size")
-                                                  'GHC.Generics.NoSourceUnpackedness
-                                                  'GHC.Generics.NoSourceStrictness
-                                                  'GHC.Generics.DecidedLazy)
-                                               (GHC.Generics.K1
-                                                  GHC.Generics.R
-                                                  GHC.Integer.Type.Integer)>_R) <x>_N) }) -}
-2fa857fd2bc154bb92831bce4b080083
-  $fGenericRepoInfo_$cfrom ::
-    GithubHelper.RepoInfo -> GHC.Generics.Rep GithubHelper.RepoInfo x
-  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
-     Unfolding: InlineRule (0, True, True)
-                GithubHelper.$fGenericRepoInfo1
-                  `cast`
-                (forall (x :: <GHC.Types.*>_N).
-                 <GithubHelper.RepoInfo>_R
-                 ->_R Trans
-                          (Sym (GHC.Generics.N:M1[0]
-                                    <GHC.Generics.D>_P
-                                    <'GHC.Generics.MetaData
-                                       "RepoInfo"
-                                       "GithubHelper"
-                                       "crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"
-                                       'GHC.Types.False>_P
-                                    <GHC.Generics.M1
-                                       GHC.Generics.C
-                                       ('GHC.Generics.MetaCons
-                                          "RepoInfo" 'GHC.Generics.PrefixI 'GHC.Types.True)
-                                       (GHC.Generics.M1
-                                          GHC.Generics.S
-                                          ('GHC.Generics.MetaSel
-                                             ('GHC.Base.Just "name")
-                                             'GHC.Generics.NoSourceUnpackedness
-                                             'GHC.Generics.NoSourceStrictness
-                                             'GHC.Generics.DecidedLazy)
-                                          (GHC.Generics.K1 GHC.Generics.R Data.Text.Internal.Text)
-                                        GHC.Generics.:*: GHC.Generics.M1
-                                                           GHC.Generics.S
-                                                           ('GHC.Generics.MetaSel
-                                                              ('GHC.Base.Just "size")
-                                                              'GHC.Generics.NoSourceUnpackedness
-                                                              'GHC.Generics.NoSourceStrictness
-                                                              'GHC.Generics.DecidedLazy)
-                                                           (GHC.Generics.K1
-                                                              GHC.Generics.R
-                                                              GHC.Integer.Type.Integer))>_R))
-                          (Sub (Sym (GithubHelper.Rep_RepoInfo[0]))) <x>_N) -}
-2fa857fd2bc154bb92831bce4b080083
-  $fGenericRepoInfo_$cto ::
-    GHC.Generics.Rep GithubHelper.RepoInfo x -> GithubHelper.RepoInfo
-  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
-     Unfolding: InlineRule (1, True, False)
-                (\ @ x (ds :: GHC.Generics.Rep GithubHelper.RepoInfo x) ->
-                 case ds
-                        `cast`
-                      (Trans
-                           (Sub (GithubHelper.Rep_RepoInfo[0]))
-                           (Trans
-                                (GHC.Generics.N:M1[0]
-                                     <GHC.Generics.D>_P
-                                     <'GHC.Generics.MetaData
-                                        "RepoInfo"
-                                        "GithubHelper"
-                                        "crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"
-                                        'GHC.Types.False>_P
-                                     <GHC.Generics.M1
-                                        GHC.Generics.C
-                                        ('GHC.Generics.MetaCons
-                                           "RepoInfo" 'GHC.Generics.PrefixI 'GHC.Types.True)
-                                        (GHC.Generics.M1
-                                           GHC.Generics.S
-                                           ('GHC.Generics.MetaSel
-                                              ('GHC.Base.Just "name")
-                                              'GHC.Generics.NoSourceUnpackedness
-                                              'GHC.Generics.NoSourceStrictness
-                                              'GHC.Generics.DecidedLazy)
-                                           (GHC.Generics.K1 GHC.Generics.R Data.Text.Internal.Text)
-                                         GHC.Generics.:*: GHC.Generics.M1
-                                                            GHC.Generics.S
-                                                            ('GHC.Generics.MetaSel
-                                                               ('GHC.Base.Just "size")
-                                                               'GHC.Generics.NoSourceUnpackedness
-                                                               'GHC.Generics.NoSourceStrictness
-                                                               'GHC.Generics.DecidedLazy)
-                                                            (GHC.Generics.K1
-                                                               GHC.Generics.R
-                                                               GHC.Integer.Type.Integer))>_R)
-                                (GHC.Generics.N:M1[0]
-                                     <GHC.Generics.C>_P
-                                     <'GHC.Generics.MetaCons
-                                        "RepoInfo" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
-                                     <GHC.Generics.M1
-                                        GHC.Generics.S
-                                        ('GHC.Generics.MetaSel
-                                           ('GHC.Base.Just "name")
-                                           'GHC.Generics.NoSourceUnpackedness
-                                           'GHC.Generics.NoSourceStrictness
-                                           'GHC.Generics.DecidedLazy)
-                                        (GHC.Generics.K1 GHC.Generics.R Data.Text.Internal.Text)
-                                      GHC.Generics.:*: GHC.Generics.M1
-                                                         GHC.Generics.S
-                                                         ('GHC.Generics.MetaSel
-                                                            ('GHC.Base.Just "size")
-                                                            'GHC.Generics.NoSourceUnpackedness
-                                                            'GHC.Generics.NoSourceStrictness
-                                                            'GHC.Generics.DecidedLazy)
-                                                         (GHC.Generics.K1
-                                                            GHC.Generics.R
-                                                            GHC.Integer.Type.Integer)>_R)) <x>_N) of wild { GHC.Generics.:*: ds1 ds2 ->
-                 GithubHelper.RepoInfo
-                   ds1
-                     `cast`
-                   (Trans
-                        (GHC.Generics.N:M1[0]
-                             <GHC.Generics.S>_P
-                             <'GHC.Generics.MetaSel
-                                ('GHC.Base.Just "name")
-                                'GHC.Generics.NoSourceUnpackedness
-                                'GHC.Generics.NoSourceStrictness
-                                'GHC.Generics.DecidedLazy>_P
-                             <GHC.Generics.K1 GHC.Generics.R Data.Text.Internal.Text>_R <x>_N)
-                        (GHC.Generics.N:K1[0]
-                             <GHC.Generics.R>_P <Data.Text.Internal.Text>_R <x>_P))
-                   ds2
-                     `cast`
-                   (Trans
-                        (GHC.Generics.N:M1[0]
-                             <GHC.Generics.S>_P
-                             <'GHC.Generics.MetaSel
-                                ('GHC.Base.Just "size")
-                                'GHC.Generics.NoSourceUnpackedness
-                                'GHC.Generics.NoSourceStrictness
-                                'GHC.Generics.DecidedLazy>_P
-                             <GHC.Generics.K1 GHC.Generics.R GHC.Integer.Type.Integer>_R <x>_N)
-                        (GHC.Generics.N:K1[0]
-                             <GHC.Generics.R>_P <GHC.Integer.Type.Integer>_R <x>_P)) }) -}
-2fa857fd2bc154bb92831bce4b080083
-  $fShowRepoInfo :: GHC.Show.Show GithubHelper.RepoInfo
-  DFunId
-  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ GithubHelper.RepoInfo
-                  GithubHelper.$fShowRepoInfo_$cshowsPrec
-                  GithubHelper.$fShowRepoInfo_$cshow
-                  GithubHelper.$fShowRepoInfo_$cshowList -}
-2fa857fd2bc154bb92831bce4b080083
-  $fShowRepoInfo1 :: GithubHelper.RepoInfo -> GHC.Show.ShowS
-  {- Arity: 2,
-     Unfolding: (\ (w :: GithubHelper.RepoInfo)
-                   (w1 :: GHC.Base.String) ->
-                 case w of ww { GithubHelper.RepoInfo ww1 ww2 ->
-                 GithubHelper.$w$cshowsPrec 0# ww1 ww2 w1 }) -}
-246da827bdc9c8871e99fef87fe572ed
-  $fShowRepoInfo2 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "RepoInfo {"#) -}
-48b0ae592ee686c70292c5528dc1ec2e
-  $fShowRepoInfo3 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "}"#) -}
-284459786452d2ace63862072befa244
-  $fShowRepoInfo4 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "size = "#) -}
-af4821e136696bfdb0c9cfaf12ff87a9
-  $fShowRepoInfo5 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# ", "#) -}
-2e41a717638405723a0c4033d5dc2939
-  $fShowRepoInfo6 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "name = "#) -}
-2fa857fd2bc154bb92831bce4b080083
-  $fShowRepoInfo_$cshow :: GithubHelper.RepoInfo -> GHC.Base.String
-  {- Arity: 1, Strictness: <S,1*U(1*U(U,U,U),U)>,
-     Unfolding: InlineRule (1, True, False)
-                (\ (x :: GithubHelper.RepoInfo) ->
-                 GithubHelper.$fShowRepoInfo_$cshowsPrec
-                   GHC.Show.shows22
-                   x
-                   (GHC.Types.[] @ GHC.Types.Char)) -}
-2fa857fd2bc154bb92831bce4b080083
-  $fShowRepoInfo_$cshowList ::
-    [GithubHelper.RepoInfo] -> GHC.Show.ShowS
-  {- Arity: 2,
-     Unfolding: (GHC.Show.showList__
-                   @ GithubHelper.RepoInfo
-                   GithubHelper.$fShowRepoInfo1) -}
-2fa857fd2bc154bb92831bce4b080083
-  $fShowRepoInfo_$cshowsPrec ::
-    GHC.Types.Int -> GithubHelper.RepoInfo -> GHC.Show.ShowS
-  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U(U,U,U),U)><L,U>,
-     Inline: INLINE[0],
-     Unfolding: InlineRule (3, True, False)
-                (\ (w :: GHC.Types.Int)
-                   (w1 :: GithubHelper.RepoInfo)
-                   (w2 :: GHC.Base.String) ->
-                 case w of ww { GHC.Types.I# ww1 ->
-                 case w1 of ww2 { GithubHelper.RepoInfo ww3 ww4 ->
-                 GithubHelper.$w$cshowsPrec ww1 ww3 ww4 w2 } }) -}
-2fa857fd2bc154bb92831bce4b080083
-  $fToJSONRepoInfo ::
-    Data.Aeson.Types.ToJSON.ToJSON GithubHelper.RepoInfo
-  DFunId
-  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ GithubHelper.RepoInfo
-                  GithubHelper.$fToJSONRepoInfo_$ctoJSON
-                  GithubHelper.$fToJSONRepoInfo_$ctoEncoding
-                  GithubHelper.$fToJSONRepoInfo_$ctoJSONList
-                  GithubHelper.$fToJSONRepoInfo_$ctoEncodingList -}
-2fa857fd2bc154bb92831bce4b080083
-  $fToJSONRepoInfo1 ::
-    GithubHelper.RepoInfo
-    -> Data.Tagged.Tagged
-         Data.Aeson.Types.Generic.True Data.Aeson.Types.Internal.Value
-  {- Arity: 1, Strictness: <S,1*U(U,U)>m1, Inline: INLINE[0],
-     Unfolding: InlineRule (1, True, False)
-                (\ (w :: GithubHelper.RepoInfo) ->
-                 case w of ww { GithubHelper.RepoInfo ww1 ww2 ->
-                 case GithubHelper.$w$ctoJSON ww1 ww2 of ww3 { Unit# ww4 ->
-                 (Data.Aeson.Types.Internal.Object ww4)
-                   `cast`
-                 (Sym (Data.Tagged.N:Tagged[0]
-                           <*>_N
-                           <Data.Aeson.Types.Generic.True>_P
-                           <Data.Aeson.Types.Internal.Value>_R)) } }) -}
-30af6123d4e5596eee1fd0caf778e851
-  $fToJSONRepoInfo2 ::
-    Data.Aeson.Types.Internal.Options
-    -> Data.Aeson.Types.ToJSON.ToArgs
-         Data.Aeson.Types.Internal.Value Data.Aeson.Types.Generic.Zero a1
-    -> GHC.Generics.K1 GHC.Generics.R GHC.Integer.Type.Integer a1
-    -> Data.Aeson.Types.Internal.Value
-  {- Arity: 3, HasNoCafRefs, Strictness: <L,A><L,A><S,1*U>m4,
-     Unfolding: InlineRule (3, True, False)
-                (\ @ a1
-                   (_opts :: Data.Aeson.Types.Internal.Options)
-                   (ds :: Data.Aeson.Types.ToJSON.ToArgs
-                            Data.Aeson.Types.Internal.Value Data.Aeson.Types.Generic.Zero a1)
-                   (eta :: GHC.Generics.K1
-                             GHC.Generics.R GHC.Integer.Type.Integer a1) ->
-                 case eta
-                        `cast`
-                      (GHC.Generics.N:K1[0]
-                           <GHC.Generics.R>_P
-                           <GHC.Integer.Type.Integer>_R
-                           <a1>_P) of dt1 { DEFAULT ->
-                 Data.Aeson.Types.Internal.Number
-                   (Data.Scientific.Scientific dt1 0#) }) -}
-19ab4e289b81eb1b3c3315c4cba2643a
-  $fToJSONRepoInfo3 ::
-    Data.Aeson.Types.Internal.Options
-    -> Data.Aeson.Types.ToJSON.ToArgs
-         Data.Aeson.Types.Internal.Value Data.Aeson.Types.Generic.Zero a1
-    -> GHC.Generics.K1 GHC.Generics.R Data.Text.Internal.Text a1
-    -> Data.Aeson.Types.Internal.Value
-  {- Arity: 3, HasNoCafRefs, Strictness: <L,A><L,A><S,U>m3,
-     Unfolding: InlineRule (3, True, True)
-                (\ @ a1
-                   (_opts :: Data.Aeson.Types.Internal.Options)
-                   (ds :: Data.Aeson.Types.ToJSON.ToArgs
-                            Data.Aeson.Types.Internal.Value Data.Aeson.Types.Generic.Zero a1)
-                   (eta :: GHC.Generics.K1
-                             GHC.Generics.R Data.Text.Internal.Text a1) ->
-                 Data.Aeson.Types.Internal.$WString
-                   eta
-                     `cast`
-                   (GHC.Generics.N:K1[0]
-                        <GHC.Generics.R>_P <Data.Text.Internal.Text>_R <a1>_P)) -}
-2fa857fd2bc154bb92831bce4b080083
-  $fToJSONRepoInfo_$ctoEncoding ::
-    GithubHelper.RepoInfo -> Data.Aeson.Encoding.Internal.Encoding
-  {- Arity: 1, Strictness: <S,1*U(U,U)>, Inline: INLINE (sat-args=0),
-     Unfolding: InlineRule (0, False, False)
-                (\ (eta :: GithubHelper.RepoInfo) ->
-                 Data.Aeson.Encoding.Internal.value
-                   (GithubHelper.$fToJSONRepoInfo_$ctoJSON eta)) -}
-2fa857fd2bc154bb92831bce4b080083
-  $fToJSONRepoInfo_$ctoEncodingList ::
-    [GithubHelper.RepoInfo] -> Data.Aeson.Encoding.Internal.Encoding
-  {- Arity: 1, Strictness: <S,1*U>, Inline: INLINE (sat-args=0),
-     Unfolding: InlineRule (0, False, False)
-                (\ (eta :: [GithubHelper.RepoInfo]) ->
-                 case eta of wild {
-                   [] -> Data.Aeson.Encoding.Internal.emptyArray_
-                   : x xs
-                   -> (Data.ByteString.Builder.Internal.append
-                         (Data.Aeson.Encoding.Internal.openBracket
-                            @ Data.Aeson.Types.Internal.Value)
-                           `cast`
-                         (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                              <Data.Aeson.Types.Internal.Value>_P)
-                         (Data.ByteString.Builder.Internal.append
-                            (Data.Aeson.Encoding.Internal.value
-                               (GithubHelper.$fToJSONRepoInfo_$ctoJSON x))
-                              `cast`
-                            (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                 <Data.Aeson.Types.Internal.Value>_P)
-                            (Data.ByteString.Builder.Internal.append
-                               (GHC.Base.foldr
-                                  @ GithubHelper.RepoInfo
-                                  @ (Data.Aeson.Encoding.Internal.Encoding'
-                                       Data.Aeson.Types.Internal.Value)
-                                  (\ (v :: GithubHelper.RepoInfo)
-                                     (vs :: Data.Aeson.Encoding.Internal.Encoding'
-                                              Data.Aeson.Types.Internal.Value)[OneShot] ->
-                                   Data.ByteString.Builder.Internal.append
-                                     (Data.Aeson.Encoding.Internal.comma
-                                        @ Data.Aeson.Types.Internal.Value)
-                                       `cast`
-                                     (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                          <Data.Aeson.Types.Internal.Value>_P)
-                                     (Data.ByteString.Builder.Internal.append
-                                        (Data.Aeson.Encoding.Internal.value
-                                           (GithubHelper.$fToJSONRepoInfo_$ctoJSON v))
-                                          `cast`
-                                        (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                             <Data.Aeson.Types.Internal.Value>_P)
-                                        vs
-                                          `cast`
-                                        (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                             <Data.Aeson.Types.Internal.Value>_P)))
-                                    `cast`
-                                  (<GithubHelper.RepoInfo>_R
-                                   ->_R <Data.Aeson.Encoding.Internal.Encoding'
-                                           Data.Aeson.Types.Internal.Value>_R
-                                   ->_R Sym (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                                 <Data.Aeson.Types.Internal.Value>_P))
-                                  (Data.Aeson.Encoding.Internal.empty
-                                     @ Data.Aeson.Types.Internal.Value)
-                                  xs)
-                                 `cast`
-                               (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                    <Data.Aeson.Types.Internal.Value>_P)
-                               (Data.Aeson.Encoding.Internal.closeBracket
-                                  @ Data.Aeson.Types.Internal.Value)
-                                 `cast`
-                               (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                    <Data.Aeson.Types.Internal.Value>_P))))
-                        `cast`
-                      (Sym (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                <Data.Aeson.Types.Internal.Value>_P)) }) -}
-2fa857fd2bc154bb92831bce4b080083
-  $fToJSONRepoInfo_$ctoJSON ::
-    GithubHelper.RepoInfo -> Data.Aeson.Types.Internal.Value
-  {- Arity: 1, Strictness: <S,1*U(U,U)>m1,
-     Unfolding: InlineRule (0, True, True)
-                GithubHelper.$fToJSONRepoInfo1
-                  `cast`
-                (<GithubHelper.RepoInfo>_R
-                 ->_R Data.Tagged.N:Tagged[0]
-                          <*>_N
-                          <Data.Aeson.Types.Generic.True>_P
-                          <Data.Aeson.Types.Internal.Value>_R) -}
-2fa857fd2bc154bb92831bce4b080083
-  $fToJSONRepoInfo_$ctoJSONList ::
-    [GithubHelper.RepoInfo] -> Data.Aeson.Types.Internal.Value
-  {- Arity: 1, Strictness: <S,1*U>m2, Inline: INLINE (sat-args=0),
-     Unfolding: InlineRule (0, False, False)
-                (\ (eta :: [GithubHelper.RepoInfo]) ->
-                 case Data.Vector.Generic.new
-                        @ Data.Vector.Vector
-                        @ Data.Aeson.Types.Internal.Value
-                        (Data.Vector.$fVectorVectora @ Data.Aeson.Types.Internal.Value)
-                        (Data.Vector.Generic.New.unstream
-                           @ Data.Vector.Vector
-                           @ Data.Aeson.Types.Internal.Value
-                           (Data.Vector.$fVectorVectora @ Data.Aeson.Types.Internal.Value)
-                           (Data.Vector.Fusion.Bundle.Monadic.unsafeFromList
-                              @ Data.Vector.Fusion.Util.Id
-                              @ Data.Aeson.Types.Internal.Value
-                              @ Data.Vector.Vector
-                              Data.Vector.Fusion.Util.$fMonadId
-                              Data.Vector.Fusion.Bundle.Size.Unknown
-                              (GHC.Base.build
-                                 @ Data.Aeson.Types.Internal.Value
-                                 (\ @ b1
-                                    (c :: Data.Aeson.Types.Internal.Value -> b1 -> b1)[OneShot]
-                                    (n :: b1)[OneShot] ->
-                                  GHC.Base.foldr
-                                    @ GithubHelper.RepoInfo
-                                    @ b1
-                                    (GHC.Base.mapFB
-                                       @ Data.Aeson.Types.Internal.Value
-                                       @ b1
-                                       @ GithubHelper.RepoInfo
-                                       c
-                                       GithubHelper.$fToJSONRepoInfo_$ctoJSON)
-                                    n
-                                    eta)))) of dt1 { Data.Vector.Vector ipv ipv1 ipv2 ->
-                 Data.Aeson.Types.Internal.Array dt1 }) -}
-f85d0df97e81bd1b17c5d1010b7dc64f
-  $fToJSONRepoInfo_w2 :: Data.Aeson.Types.Internal.Options
-  {- Strictness: m,
-     Unfolding: (Data.Aeson.Types.Internal.Options
-                   (GHC.Base.id @ GHC.Base.String)
-                   (GHC.Base.id @ GHC.Base.String)
-                   GHC.Types.True
-                   GHC.Types.False
-                   Data.Aeson.Types.Internal.defaultTaggedObject
-                   GHC.Types.False) -}
-b3444631949db488ed737a89e71f058f
-  $tc'RepoInfo :: GHC.Types.TyCon
-  {- HasNoCafRefs, Strictness: m,
-     Unfolding: (GHC.Types.TyCon
-                   3613508244413516006##
-                   4874656372277771113##
-                   GithubHelper.$trModule
-                   GithubHelper.$tc'RepoInfo1) -}
-45f747b16c995517133f4976c45dde40
-  $tc'RepoInfo1 :: GHC.Types.TrName
-  {- HasNoCafRefs, Strictness: m1,
-     Unfolding: (GHC.Types.TrNameS "'RepoInfo"#) -}
-5cbb8d163941cc4fb818028444964bd5
-  $tcRepoInfo :: GHC.Types.TyCon
-  {- HasNoCafRefs, Strictness: m,
-     Unfolding: (GHC.Types.TyCon
-                   14251255793854780486##
-                   15743023149125851197##
-                   GithubHelper.$trModule
-                   GithubHelper.$tcRepoInfo1) -}
-aac2d333c612ca7544221b7de9df2b55
-  $tcRepoInfo1 :: GHC.Types.TrName
-  {- HasNoCafRefs, Strictness: m1,
-     Unfolding: (GHC.Types.TrNameS "RepoInfo"#) -}
 812739ba1fe9d88dabdd7eea4f29b4b6
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
@@ -1683,305 +249,262 @@ ad0b5801126c8af2c77d08c99e86bf73
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"#) -}
-185a1979f955e121daf5b0af0e72d9d4
-  $w$c== ::
-    GHC.Prim.ByteArray#
-    -> GHC.Prim.Int#
-    -> GHC.Prim.Int#
-    -> GHC.Integer.Type.Integer
-    -> GHC.Prim.ByteArray#
-    -> GHC.Prim.Int#
-    -> GHC.Prim.Int#
-    -> GHC.Integer.Type.Integer
-    -> GHC.Types.Bool
-  {- Arity: 8, HasNoCafRefs,
-     Strictness: <L,U><L,U><S,U><L,1*U><L,U><L,U><S,U><L,1*U>,
-     Inline: [0],
-     Unfolding: (\ (ww :: GHC.Prim.ByteArray#)
-                   (ww1 :: GHC.Prim.Int#)
-                   (ww2 :: GHC.Prim.Int#)
-                   (ww3 :: GHC.Integer.Type.Integer)
-                   (ww4 :: GHC.Prim.ByteArray#)
-                   (ww5 :: GHC.Prim.Int#)
-                   (ww6 :: GHC.Prim.Int#)
-                   (ww7 :: GHC.Integer.Type.Integer) ->
-                 case GHC.Prim.tagToEnum#
-                        @ GHC.Types.Bool
-                        (GHC.Prim.==# ww2 ww6) of wild2 {
-                   GHC.Types.False -> GHC.Types.False
-                   GHC.Types.True
-                   -> case {__pkg_ccall text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR _hs_text_memcmp GHC.Prim.ByteArray#
-                                                                                                         -> GHC.Prim.Word#
-                                                                                                         -> GHC.Prim.ByteArray#
-                                                                                                         -> GHC.Prim.Word#
-                                                                                                         -> GHC.Prim.Word#
-                                                                                                         -> GHC.Prim.State#
-                                                                                                              GHC.Prim.RealWorld
-                                                                                                         -> (# GHC.Prim.State#
-                                                                                                                 GHC.Prim.RealWorld,
-                                                                                                               GHC.Prim.Int# #)}
-                             ww
-                             (GHC.Prim.int2Word# ww1)
-                             ww4
-                             (GHC.Prim.int2Word# ww5)
-                             (GHC.Prim.int2Word# ww2)
-                             GHC.Prim.realWorld# of wild { (#,#) ds11 ds12 ->
-                      case GHC.Prim.narrow32Int# ds12 of wild1 {
-                        DEFAULT -> GHC.Types.False
-                        0# -> GHC.Integer.Type.eqInteger ww3 ww7 } } }) -}
-7e7ce02463c5b8bf8607c2cc81b3ba67
-  $w$cshowsPrec ::
-    GHC.Prim.Int#
-    -> Data.Text.Internal.Text
-    -> GHC.Integer.Type.Integer
-    -> GHC.Base.String
-    -> GHC.Base.String
-  {- Arity: 4, Strictness: <S,U><L,1*U(U,U,U)><L,U><L,U>,
-     Inline: [0],
-     Unfolding: (\ (ww :: GHC.Prim.Int#)
-                   (ww1 :: Data.Text.Internal.Text)
-                   (ww2 :: GHC.Integer.Type.Integer)
-                   (w :: GHC.Base.String) ->
-                 let {
-                   g :: GHC.Base.String -> GHC.Base.String
-                     {- Arity: 1, Strictness: <L,1*U> -}
-                   = \ (x :: GHC.Base.String)[OneShot] ->
-                     GHC.Base.++
-                       @ GHC.Types.Char
-                       GithubHelper.$fShowRepoInfo6
-                       (case Data.Text.Show.$w$cshowsPrec
-                               ww1
-                               (GHC.Base.++
-                                  @ GHC.Types.Char
-                                  GithubHelper.$fShowRepoInfo5
-                                  (GHC.Base.++
-                                     @ GHC.Types.Char
-                                     GithubHelper.$fShowRepoInfo4
-                                     (case GHC.Show.$w$cshowsPrec1
-                                             0#
-                                             ww2
-                                             (GHC.Base.++
-                                                @ GHC.Types.Char
-                                                GithubHelper.$fShowRepoInfo3
-                                                x) of ww3 { (#,#) ww4 ww5 ->
-                                      GHC.Types.:
-                                        @ GHC.Types.Char
-                                        ww4
-                                        ww5 }))) of ww3 { (#,#) ww4 ww5 ->
-                        GHC.Types.: @ GHC.Types.Char ww4 ww5 })
-                 } in
-                 case GHC.Prim.tagToEnum#
-                        @ GHC.Types.Bool
-                        (GHC.Prim.>=# ww 11#) of wild {
-                   GHC.Types.False
-                   -> GHC.Base.++ @ GHC.Types.Char GithubHelper.$fShowRepoInfo2 (g w)
-                   GHC.Types.True
-                   -> GHC.Types.:
-                        @ GHC.Types.Char
-                        GHC.Show.shows7
-                        (GHC.Base.++
-                           @ GHC.Types.Char
-                           GithubHelper.$fShowRepoInfo2
-                           (g (GHC.Types.: @ GHC.Types.Char GHC.Show.shows4 w))) }) -}
-bbe8f296a0b0adbbf3489ebe670534dc
-  $w$ctoJSON ::
-    Data.Text.Internal.Text
-    -> GHC.Integer.Type.Integer
-    -> (# Data.Aeson.Types.Internal.Object #)
-  {- Arity: 2, Strictness: <L,U><L,U>, Inline: [0],
-     Unfolding: (\ (ww :: Data.Text.Internal.Text)
-                   (ww1 :: GHC.Integer.Type.Integer) ->
-                 case Data.Aeson.Types.Internal.$sfromList1
-                        @ Data.Aeson.Types.Internal.Value
-                        (Data.Aeson.Types.ToJSON.$fRecordToPairsarityM2
-                           @ ('GHC.Generics.MetaSel
-                                ('GHC.Base.Just "name")
-                                'GHC.Generics.NoSourceUnpackedness
-                                'GHC.Generics.NoSourceStrictness
-                                'GHC.Generics.DecidedLazy)
-                           @ Data.Aeson.Types.Generic.Zero
-                           @ (GHC.Generics.K1 GHC.Generics.R Data.Text.Internal.Text)
-                           GithubHelper.$fFromJSONRepoInfo_$s$fSelectorMetaMetaSel1
-                           GithubHelper.$fToJSONRepoInfo3
-                             `cast`
-                           (Sym (Data.Aeson.Types.ToJSON.N:GToJSON[0]
-                                     <Data.Aeson.Types.Generic.Zero>_N
-                                     <GHC.Generics.K1 GHC.Generics.R Data.Text.Internal.Text>_N))
-                           @ GHC.Prim.Any
-                           GithubHelper.$fToJSONRepoInfo_w2
-                           (Data.Aeson.Types.ToJSON.$WNoToArgs
-                              @ Data.Aeson.Types.Internal.Value
-                              @ GHC.Prim.Any)
-                           ww
-                             `cast`
-                           (Trans
-                                (Sym (GHC.Generics.N:K1[0]
-                                          <GHC.Generics.R>_P
-                                          <Data.Text.Internal.Text>_R
-                                          <GHC.Prim.Any>_P))
-                                (Sym (GHC.Generics.N:M1[0]
-                                          <GHC.Generics.S>_P
-                                          <'GHC.Generics.MetaSel
-                                             ('GHC.Base.Just "name")
-                                             'GHC.Generics.NoSourceUnpackedness
-                                             'GHC.Generics.NoSourceStrictness
-                                             'GHC.Generics.DecidedLazy>_P
-                                          <GHC.Generics.K1
-                                             GHC.Generics.R
-                                             Data.Text.Internal.Text>_R) <GHC.Prim.Any>_N))
-                           (Data.Aeson.Types.ToJSON.$fRecordToPairsarityM2
-                              @ ('GHC.Generics.MetaSel
-                                   ('GHC.Base.Just "size")
-                                   'GHC.Generics.NoSourceUnpackedness
-                                   'GHC.Generics.NoSourceStrictness
-                                   'GHC.Generics.DecidedLazy)
-                              @ Data.Aeson.Types.Generic.Zero
-                              @ (GHC.Generics.K1 GHC.Generics.R GHC.Integer.Type.Integer)
-                              GithubHelper.$fFromJSONRepoInfo_$s$fSelectorMetaMetaSel
-                              GithubHelper.$fToJSONRepoInfo2
-                                `cast`
-                              (Sym (Data.Aeson.Types.ToJSON.N:GToJSON[0]
-                                        <Data.Aeson.Types.Generic.Zero>_N
-                                        <GHC.Generics.K1
-                                           GHC.Generics.R GHC.Integer.Type.Integer>_N))
-                              @ GHC.Prim.Any
-                              GithubHelper.$fToJSONRepoInfo_w2
-                              (Data.Aeson.Types.ToJSON.$WNoToArgs
-                                 @ Data.Aeson.Types.Internal.Value
-                                 @ GHC.Prim.Any)
-                              ww1
-                                `cast`
-                              (Trans
-                                   (Sym (GHC.Generics.N:K1[0]
-                                             <GHC.Generics.R>_P
-                                             <GHC.Integer.Type.Integer>_R
-                                             <GHC.Prim.Any>_P))
-                                   (Sym (GHC.Generics.N:M1[0]
-                                             <GHC.Generics.S>_P
-                                             <'GHC.Generics.MetaSel
-                                                ('GHC.Base.Just "size")
-                                                'GHC.Generics.NoSourceUnpackedness
-                                                'GHC.Generics.NoSourceStrictness
-                                                'GHC.Generics.DecidedLazy>_P
-                                             <GHC.Generics.K1
-                                                GHC.Generics.R
-                                                GHC.Integer.Type.Integer>_R) <GHC.Prim.Any>_N))
-                              (GHC.Types.[] @ Data.Aeson.Types.Internal.Pair)))
-                        (Data.HashMap.Base.Empty
-                           @ Data.Text.Internal.Text
-                           @ Data.Aeson.Types.Internal.Value) of dt1 { DEFAULT ->
-                 (# dt1 #) }) -}
-2fa857fd2bc154bb92831bce4b080083
-  axiom Rep_RepoInfo::
-      GHC.Generics.Rep GithubHelper.RepoInfo
-        = GHC.Generics.D1
-            ('GHC.Generics.MetaData
-               "RepoInfo"
-               "GithubHelper"
-               "crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"
-               'GHC.Types.False)
-            (GHC.Generics.C1
-               ('GHC.Generics.MetaCons
-                  "RepoInfo" 'GHC.Generics.PrefixI 'GHC.Types.True)
-               (GHC.Generics.S1
-                  ('GHC.Generics.MetaSel
-                     ('GHC.Base.Just "name")
-                     'GHC.Generics.NoSourceUnpackedness
-                     'GHC.Generics.NoSourceStrictness
-                     'GHC.Generics.DecidedLazy)
-                  (GHC.Generics.Rec0 Data.Text.Internal.Text)
-                GHC.Generics.:*: GHC.Generics.S1
-                                   ('GHC.Generics.MetaSel
-                                      ('GHC.Base.Just "size")
-                                      'GHC.Generics.NoSourceUnpackedness
-                                      'GHC.Generics.NoSourceStrictness
-                                      'GHC.Generics.DecidedLazy)
-                                   (GHC.Generics.Rec0 GHC.Integer.Type.Integer)))
-2fa857fd2bc154bb92831bce4b080083
-  data RepoInfo
-    = RepoInfo {name :: Data.Text.Internal.Text,
-                size :: GHC.Integer.Type.Integer}
-3ef409ca3893c48f13ad0ca12306c6c0
+2cd72e67ab4b8a2b1a5ac9404be29d2d
   formatNumber ::
-    GHC.Base.Maybe GHC.Types.Int
-    -> GHC.Types.IO GHC.Integer.Type.Integer
+    GHC.Base.Maybe GHC.Types.Int -> GHC.Types.IO GHC.Types.Int
   {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U><S,U>,
      Unfolding: InlineRule (0, True, True)
                 GithubHelper.formatNumber1
                   `cast`
                 (<GHC.Base.Maybe GHC.Types.Int>_R
-                 ->_R Sym (GHC.Types.N:IO[0] <GHC.Integer.Type.Integer>_R)) -}
-3a6145b90e00954e04059e975bd3d646
+                 ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Int>_R)) -}
+a81226f55acd6bc4b323352efc5fc7bf
   formatNumber1 ::
     GHC.Base.Maybe GHC.Types.Int
     -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          GHC.Integer.Type.Integer #)
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Int #)
   {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U><S,U>,
-     Unfolding: (\ (n :: GHC.Base.Maybe GHC.Types.Int)
-                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 (# eta,
+     Unfolding: InlineRule (2, True, False)
+                (\ (n :: GHC.Base.Maybe GHC.Types.Int)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (# s,
                     case n of wild {
                       GHC.Base.Nothing -> GithubHelper.formatNumber2
-                      GHC.Base.Just v
-                      -> case v of wild1 { GHC.Types.I# n1 ->
-                         GHC.Integer.Type.smallInteger n1 } } #)) -}
-0a0d3016b42b95f01d66c0c5d0c75122
-  formatNumber2 :: GHC.Integer.Type.Integer
-  {- HasNoCafRefs, Unfolding: (0) -}
-965ecda7787a198fb4ac06150084175a
-  formatRepo ::
-    GitHub.Data.Repos.Repo -> GHC.Types.IO GithubHelper.RepoInfo
+                      GHC.Base.Just v -> v } #)) -}
+0bce8e6b46d3e0febaf1cb25fb504f57
+  formatNumber2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+ffe27b9f98e8c0774a43b871e323fec3
+  formatRepoDB ::
+    GitHub.Data.Repos.Repo -> GHC.Types.IO DBHelper.RepoDB
   {- Arity: 2, HasNoCafRefs,
-     Strictness: <L,U(A,A,A,A,A,A,A,A,A,A,A,U,A,A,A,U,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,U>,
+     Strictness: <L,U(A,A,A,A,A,A,A,A,A,A,A,U,A,A,U(A,U(U,U,U),A,A,A),U(U,U,U),A,A,A,A,A,A,A,A,A,A,A,A,A)><S,U>,
      Unfolding: InlineRule (0, True, True)
-                GithubHelper.formatRepo1
+                GithubHelper.formatRepoDB1
                   `cast`
                 (<GitHub.Data.Repos.Repo>_R
-                 ->_R Sym (GHC.Types.N:IO[0] <GithubHelper.RepoInfo>_R)) -}
-d7799f5cdbbf22b1657127dbd85e6aed
-  formatRepo1 ::
+                 ->_R Sym (GHC.Types.N:IO[0] <DBHelper.RepoDB>_R)) -}
+362d1764fabbbca368951e89390a15a5
+  formatRepoDB1 ::
     GitHub.Data.Repos.Repo
     -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GithubHelper.RepoInfo #)
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, DBHelper.RepoDB #)
   {- Arity: 2, HasNoCafRefs,
-     Strictness: <L,U(A,A,A,A,A,A,A,A,A,A,A,U,A,A,A,U,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,U>,
+     Strictness: <L,U(A,A,A,A,A,A,A,A,A,A,A,U,A,A,U(A,U(U,U,U),A,A,A),U(U,U,U),A,A,A,A,A,A,A,A,A,A,A,A,A)><S,U>,
      Unfolding: (\ (repo :: GitHub.Data.Repos.Repo)
                    (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  (# eta,
-                    GithubHelper.RepoInfo
+                    DBHelper.RepoDB
                       (case repo of wild { GitHub.Data.Repos.Repo ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 dt ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 dt1 ->
-                       ds16
-                         `cast`
-                       (GitHub.Data.Name.N:Name[0] <GitHub.Data.Repos.Repo>_P) })
+                       case ds16
+                              `cast`
+                            (GitHub.Data.Name.N:Name[0]
+                                 <GitHub.Data.Repos.Repo>_P) of wild1 { Data.Text.Internal.Text dt2 dt3 dt4 ->
+                       let {
+                         end :: GHC.Prim.Int# = GHC.Prim.+# dt3 dt4
+                       } in
+                       letrec {
+                         $wunfold :: GHC.Prim.Int# -> [GHC.Types.Char]
+                           {- Arity: 1, Strictness: <S,U>, Inline: [0] -}
+                         = \ (ww :: GHC.Prim.Int#) ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.>=# ww end) of wild2 {
+                             GHC.Types.False
+                             -> case GHC.Prim.indexWord16Array# dt2 ww of r# { DEFAULT ->
+                                case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.geWord# r# 55296##) of wild3 {
+                                  GHC.Types.False
+                                  -> GHC.Types.:
+                                       @ GHC.Types.Char
+                                       (GHC.Types.C# (GHC.Prim.chr# (GHC.Prim.word2Int# r#)))
+                                       ($wunfold (GHC.Prim.+# ww 1#))
+                                  GHC.Types.True
+                                  -> case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.leWord# r# 56319##) of wild4 {
+                                       GHC.Types.False
+                                       -> GHC.Types.:
+                                            @ GHC.Types.Char
+                                            (GHC.Types.C# (GHC.Prim.chr# (GHC.Prim.word2Int# r#)))
+                                            ($wunfold (GHC.Prim.+# ww 1#))
+                                       GHC.Types.True
+                                       -> case GHC.Prim.indexWord16Array#
+                                                 dt2
+                                                 (GHC.Prim.+# ww 1#) of r#1 { DEFAULT ->
+                                          GHC.Types.:
+                                            @ GHC.Types.Char
+                                            (GHC.Types.C#
+                                               (GHC.Prim.chr#
+                                                  (GHC.Prim.+#
+                                                     (GHC.Prim.+#
+                                                        (GHC.Prim.uncheckedIShiftL#
+                                                           (GHC.Prim.-#
+                                                              (GHC.Prim.word2Int# r#)
+                                                              55296#)
+                                                           10#)
+                                                        (GHC.Prim.-#
+                                                           (GHC.Prim.word2Int# r#1)
+                                                           56320#))
+                                                     65536#)))
+                                            ($wunfold (GHC.Prim.+# ww 2#)) } } } }
+                             GHC.Types.True -> GHC.Types.[] @ GHC.Types.Char }
+                       } in
+                       $wunfold dt3 } })
+                      (case repo of wild { GitHub.Data.Repos.Repo ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 dt ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 dt1 ->
+                       case ds15 of wild1 { GitHub.Data.Definitions.SimpleOwner dt2 ds29 ds30 ds31 ds32 ->
+                       case ds29
+                              `cast`
+                            (GitHub.Data.Name.N:Name[0]
+                                 <GitHub.Data.Definitions.Owner>_P) of wild2 { Data.Text.Internal.Text dt3 dt4 dt5 ->
+                       let {
+                         end :: GHC.Prim.Int# = GHC.Prim.+# dt4 dt5
+                       } in
+                       letrec {
+                         $wunfold :: GHC.Prim.Int# -> [GHC.Types.Char]
+                           {- Arity: 1, Strictness: <S,U>, Inline: [0] -}
+                         = \ (ww :: GHC.Prim.Int#) ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.>=# ww end) of wild3 {
+                             GHC.Types.False
+                             -> case GHC.Prim.indexWord16Array# dt3 ww of r# { DEFAULT ->
+                                case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.geWord# r# 55296##) of wild4 {
+                                  GHC.Types.False
+                                  -> GHC.Types.:
+                                       @ GHC.Types.Char
+                                       (GHC.Types.C# (GHC.Prim.chr# (GHC.Prim.word2Int# r#)))
+                                       ($wunfold (GHC.Prim.+# ww 1#))
+                                  GHC.Types.True
+                                  -> case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.leWord# r# 56319##) of wild5 {
+                                       GHC.Types.False
+                                       -> GHC.Types.:
+                                            @ GHC.Types.Char
+                                            (GHC.Types.C# (GHC.Prim.chr# (GHC.Prim.word2Int# r#)))
+                                            ($wunfold (GHC.Prim.+# ww 1#))
+                                       GHC.Types.True
+                                       -> case GHC.Prim.indexWord16Array#
+                                                 dt3
+                                                 (GHC.Prim.+# ww 1#) of r#1 { DEFAULT ->
+                                          GHC.Types.:
+                                            @ GHC.Types.Char
+                                            (GHC.Types.C#
+                                               (GHC.Prim.chr#
+                                                  (GHC.Prim.+#
+                                                     (GHC.Prim.+#
+                                                        (GHC.Prim.uncheckedIShiftL#
+                                                           (GHC.Prim.-#
+                                                              (GHC.Prim.word2Int# r#)
+                                                              55296#)
+                                                           10#)
+                                                        (GHC.Prim.-#
+                                                           (GHC.Prim.word2Int# r#1)
+                                                           56320#))
+                                                     65536#)))
+                                            ($wunfold (GHC.Prim.+# ww 2#)) } } } }
+                             GHC.Types.True -> GHC.Types.[] @ GHC.Types.Char }
+                       } in
+                       $wunfold dt4 } } })
                       (case repo of wild { GitHub.Data.Repos.Repo ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 dt ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 dt1 ->
                        case ds12 of wild1 {
                          GHC.Base.Nothing -> GithubHelper.formatNumber2
-                         GHC.Base.Just v
-                         -> case v of wild2 { GHC.Types.I# n ->
-                            GHC.Integer.Type.smallInteger n } } }) #)) -}
-2502a32d9466f70cc6012642f5f1f7f7
-  name :: GithubHelper.RepoInfo -> Data.Text.Internal.Text
-  RecSel Left GithubHelper.RepoInfo
-  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U(U,U,U),A)>m,
-     Unfolding: InlineRule (1, True, False)
-                (\ (ds :: GithubHelper.RepoInfo) ->
-                 case ds of wild { GithubHelper.RepoInfo ds1 ds2 -> ds1 }) -}
-fc83f3d750aae33ea0e638001ea1f9b2
-  repos ::
-    Data.Text.Internal.Text -> GHC.Types.IO [GithubHelper.RepoInfo]
+                         GHC.Base.Just v -> v } }) #)) -}
+76afa7538ac396e9683f737735a32a51
+  formatUserDB ::
+    GitHub.Data.Definitions.SimpleUser -> GHC.Types.IO DBHelper.UserDB
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,1*U(A,U(U,U,U),A,A)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                GithubHelper.formatUserDB1
+                  `cast`
+                (<GitHub.Data.Definitions.SimpleUser>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <DBHelper.UserDB>_R)) -}
+11742227e640db291ebf6ad68931bdf7
+  formatUserDB1 ::
+    GitHub.Data.Definitions.SimpleUser
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, DBHelper.UserDB #)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,1*U(A,U(U,U,U),A,A)><S,U>,
+     Unfolding: (\ (user :: GitHub.Data.Definitions.SimpleUser)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (# eta,
+                    DBHelper.UserDB
+                      (case user of wild { GitHub.Data.Definitions.SimpleUser dt ds1 ds2 ds3 ->
+                       case ds1
+                              `cast`
+                            (GitHub.Data.Name.N:Name[0]
+                                 <GitHub.Data.Definitions.User>_P) of wild1 { Data.Text.Internal.Text dt1 dt2 dt3 ->
+                       let {
+                         end :: GHC.Prim.Int# = GHC.Prim.+# dt2 dt3
+                       } in
+                       letrec {
+                         $wunfold :: GHC.Prim.Int# -> [GHC.Types.Char]
+                           {- Arity: 1, Strictness: <S,U>, Inline: [0] -}
+                         = \ (ww :: GHC.Prim.Int#) ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.>=# ww end) of wild2 {
+                             GHC.Types.False
+                             -> case GHC.Prim.indexWord16Array# dt1 ww of r# { DEFAULT ->
+                                case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.geWord# r# 55296##) of wild3 {
+                                  GHC.Types.False
+                                  -> GHC.Types.:
+                                       @ GHC.Types.Char
+                                       (GHC.Types.C# (GHC.Prim.chr# (GHC.Prim.word2Int# r#)))
+                                       ($wunfold (GHC.Prim.+# ww 1#))
+                                  GHC.Types.True
+                                  -> case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.leWord# r# 56319##) of wild4 {
+                                       GHC.Types.False
+                                       -> GHC.Types.:
+                                            @ GHC.Types.Char
+                                            (GHC.Types.C# (GHC.Prim.chr# (GHC.Prim.word2Int# r#)))
+                                            ($wunfold (GHC.Prim.+# ww 1#))
+                                       GHC.Types.True
+                                       -> case GHC.Prim.indexWord16Array#
+                                                 dt1
+                                                 (GHC.Prim.+# ww 1#) of r#1 { DEFAULT ->
+                                          GHC.Types.:
+                                            @ GHC.Types.Char
+                                            (GHC.Types.C#
+                                               (GHC.Prim.chr#
+                                                  (GHC.Prim.+#
+                                                     (GHC.Prim.+#
+                                                        (GHC.Prim.uncheckedIShiftL#
+                                                           (GHC.Prim.-#
+                                                              (GHC.Prim.word2Int# r#)
+                                                              55296#)
+                                                           10#)
+                                                        (GHC.Prim.-#
+                                                           (GHC.Prim.word2Int# r#1)
+                                                           56320#))
+                                                     65536#)))
+                                            ($wunfold (GHC.Prim.+# ww 2#)) } } } }
+                             GHC.Types.True -> GHC.Types.[] @ GHC.Types.Char }
+                       } in
+                       $wunfold dt2 } }) #)) -}
+b3a8119184cb52719309fc6ebc592e3d
+  repos :: Data.Text.Internal.Text -> GHC.Types.IO [DBHelper.RepoDB]
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
                 GithubHelper.repos1
                   `cast`
                 (<Data.Text.Internal.Text>_R
-                 ->_R Sym (GHC.Types.N:IO[0] <[GithubHelper.RepoInfo]>_R)) -}
-a3169a7a3148c8291f47f0a8b2da7428
+                 ->_R Sym (GHC.Types.N:IO[0] <[DBHelper.RepoDB]>_R)) -}
+bbff605632413438de62ff7c1df129ca
   repos1 ::
     Data.Text.Internal.Text
     -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          [GithubHelper.RepoInfo] #)
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [DBHelper.RepoDB] #)
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: (\ (userName :: Data.Text.Internal.Text)
                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
@@ -2007,14 +530,14 @@ a3169a7a3148c8291f47f0a8b2da7428
                               GitHub.Data.Request.FetchAll))
                         s of ds1 { (#,#) ipv ipv1 ->
                  case ipv1 of wild {
-                   Data.Either.Left error -> (# ipv, GithubHelper.repos2 #)
-                   Data.Either.Right repos5
-                   -> case repos5 of v2 { Data.Vector.Vector ipv2 ipv3 ipv4 ->
+                   Data.Either.Left error -> (# ipv, GHC.Types.[] @ DBHelper.RepoDB #)
+                   Data.Either.Right repos2
+                   -> case repos2 of v2 { Data.Vector.Vector ipv2 ipv3 ipv4 ->
                       case GHC.Prim.newArray#
-                             @ GithubHelper.RepoInfo
+                             @ DBHelper.RepoDB
                              @ (Control.Monad.Primitive.PrimState GHC.Types.IO)
                              ipv3
-                             (Data.Vector.Mutable.uninitialised @ GithubHelper.RepoInfo)
+                             (Data.Vector.Mutable.uninitialised @ DBHelper.RepoDB)
                              ipv
                                `cast`
                              (GHC.Prim.State#
@@ -2039,23 +562,14 @@ a3169a7a3148c8291f47f0a8b2da7428
                                       @ GitHub.Data.Repos.Repo
                                       ipv4
                                       (GHC.Prim.+# ipv2 ww1) of ds3 { Unit# ipv7 ->
+                               case GithubHelper.formatRepoDB1 ipv7 w1 of ds4 { (#,#) ipv8 ipv9 ->
                                case GHC.Prim.writeArray#
                                       @ (Control.Monad.Primitive.PrimState GHC.Types.IO)
-                                      @ GithubHelper.RepoInfo
+                                      @ DBHelper.RepoDB
                                       ipv6
                                       ww
-                                      (GithubHelper.RepoInfo
-                                         (case ipv7 of wild2 { GitHub.Data.Repos.Repo ds4 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 dt ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 dt1 ->
-                                          ds20
-                                            `cast`
-                                          (GitHub.Data.Name.N:Name[0] <GitHub.Data.Repos.Repo>_P) })
-                                         (case ipv7 of wild2 { GitHub.Data.Repos.Repo ds4 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 dt ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 dt1 ->
-                                          case ds16 of wild3 {
-                                            GHC.Base.Nothing -> GithubHelper.formatNumber2
-                                            GHC.Base.Just v
-                                            -> case v of wild4 { GHC.Types.I# n ->
-                                               GHC.Integer.Type.smallInteger n } } }))
-                                      w1
+                                      ipv9
+                                      ipv8
                                         `cast`
                                       (GHC.Prim.State#
                                          (Sym (Control.Monad.Primitive.D:R:PrimStateIO[0])))_R of s'# { DEFAULT ->
@@ -2066,7 +580,7 @@ a3169a7a3148c8291f47f0a8b2da7428
                                  s'#
                                    `cast`
                                  (GHC.Prim.State#
-                                    (Control.Monad.Primitive.D:R:PrimStateIO[0]))_R } }
+                                    (Control.Monad.Primitive.D:R:PrimStateIO[0]))_R } } }
                             GHC.Types.True -> (# w1, GHC.Types.I# ww #) } }
                       } in
                       case $wfoldlM'_loop
@@ -2080,7 +594,7 @@ a3169a7a3148c8291f47f0a8b2da7428
                       case ipv8 of dt5 { GHC.Types.I# dt6 ->
                       case GHC.Prim.unsafeFreezeArray#
                              @ (Control.Monad.Primitive.PrimState GHC.Types.IO)
-                             @ GithubHelper.RepoInfo
+                             @ DBHelper.RepoDB
                              ipv6
                              ipv7
                                `cast`
@@ -2090,7 +604,7 @@ a3169a7a3148c8291f47f0a8b2da7428
                            `cast`
                          (GHC.Prim.State# (Control.Monad.Primitive.D:R:PrimStateIO[0]))_R,
                          letrec {
-                           $wgo :: GHC.Prim.Int# -> [GithubHelper.RepoInfo]
+                           $wgo :: GHC.Prim.Int# -> [DBHelper.RepoDB]
                              {- Arity: 1, Strictness: <S,U>, Inline: [0] -}
                            = \ (ww :: GHC.Prim.Int#) ->
                              case GHC.Prim.tagToEnum#
@@ -2098,129 +612,27 @@ a3169a7a3148c8291f47f0a8b2da7428
                                     (GHC.Prim.>=# ww dt6) of wild1 {
                                GHC.Types.False
                                -> case GHC.Prim.indexArray#
-                                         @ GithubHelper.RepoInfo
+                                         @ DBHelper.RepoDB
                                          ipv10
                                          ww of ds5 { Unit# ipv11 ->
-                                  GHC.Types.:
-                                    @ GithubHelper.RepoInfo
-                                    ipv11
-                                    ($wgo (GHC.Prim.+# ww 1#)) }
-                               GHC.Types.True -> GHC.Types.[] @ GithubHelper.RepoInfo }
+                                  GHC.Types.: @ DBHelper.RepoDB ipv11 ($wgo (GHC.Prim.+# ww 1#)) }
+                               GHC.Types.True -> GHC.Types.[] @ DBHelper.RepoDB }
                          } in
                          $wgo 0# #) } } } } } } }) -}
-51bca2455fe1b69d45ff07817bafd1e2
-  repos2 :: [GithubHelper.RepoInfo]
-  {- Strictness: m2,
-     Unfolding: (GHC.Types.:
-                   @ GithubHelper.RepoInfo
-                   GithubHelper.repos3
-                   (GHC.Types.[] @ GithubHelper.RepoInfo)) -}
-e40c16a6fff1702e568e5a4a1beb2563
-  repos3 :: GithubHelper.RepoInfo
-  {- Strictness: m,
-     Unfolding: (GithubHelper.RepoInfo
-                   GithubHelper.repos4
-                   GithubHelper.formatNumber2) -}
-935768b03aa4d824051ab9eb59ad118d
-  repos4 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString# "Error"#) -}
-e8b9335ce2b03bf41104f3f4667d8c6c
-  size :: GithubHelper.RepoInfo -> GHC.Integer.Type.Integer
-  RecSel Left GithubHelper.RepoInfo
-  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
-     Unfolding: InlineRule (1, True, False)
-                (\ (ds :: GithubHelper.RepoInfo) ->
-                 case ds of wild { GithubHelper.RepoInfo ds1 ds2 -> ds2 }) -}
-instance GHC.Classes.Eq [GithubHelper.RepoInfo]
-  = GithubHelper.$fEqRepoInfo
-instance Data.Aeson.Types.FromJSON.FromJSON [GithubHelper.RepoInfo]
-  = GithubHelper.$fFromJSONRepoInfo
-instance GHC.Generics.Generic [GithubHelper.RepoInfo]
-  = GithubHelper.$fGenericRepoInfo
-instance GHC.Show.Show [GithubHelper.RepoInfo]
-  = GithubHelper.$fShowRepoInfo
-instance Data.Aeson.Types.ToJSON.ToJSON [GithubHelper.RepoInfo]
-  = GithubHelper.$fToJSONRepoInfo
-family instance GHC.Generics.Rep [GithubHelper.RepoInfo]
-  = GithubHelper.Rep_RepoInfo
-"SPEC/GithubHelper $fSelectorMetaMetaSel @ ('Just
-                                             "name") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI3 :: GHC.Generics.SingI
-                                                                                                                                                                                                    'GHC.Generics.DecidedLazy)
-                                                                                                                                                                                     ($dSingI2 :: GHC.Generics.SingI
-                                                                                                                                                                                                    'GHC.Generics.NoSourceStrictness)
-                                                                                                                                                                                     ($dSingI1 :: GHC.Generics.SingI
-                                                                                                                                                                                                    'GHC.Generics.NoSourceUnpackedness)
-                                                                                                                                                                                     ($dSingI :: GHC.Generics.SingI
-                                                                                                                                                                                                   ('GHC.Base.Just
-                                                                                                                                                                                                      "name"))
-  GHC.Generics.$fSelectorMetaMetaSel @ ('GHC.Base.Just "name")
-                                     @ 'GHC.Generics.NoSourceUnpackedness
-                                     @ 'GHC.Generics.NoSourceStrictness
-                                     @ 'GHC.Generics.DecidedLazy
-                                     $dSingI
-                                     $dSingI1
-                                     $dSingI2
-                                     $dSingI3
-  = GithubHelper.$fFromJSONRepoInfo_$s$fSelectorMetaMetaSel1
-"SPEC/GithubHelper $fSelectorMetaMetaSel @ ('Just
-                                             "size") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI3 :: GHC.Generics.SingI
-                                                                                                                                                                                                    'GHC.Generics.DecidedLazy)
-                                                                                                                                                                                     ($dSingI2 :: GHC.Generics.SingI
-                                                                                                                                                                                                    'GHC.Generics.NoSourceStrictness)
-                                                                                                                                                                                     ($dSingI1 :: GHC.Generics.SingI
-                                                                                                                                                                                                    'GHC.Generics.NoSourceUnpackedness)
-                                                                                                                                                                                     ($dSingI :: GHC.Generics.SingI
-                                                                                                                                                                                                   ('GHC.Base.Just
-                                                                                                                                                                                                      "size"))
-  GHC.Generics.$fSelectorMetaMetaSel @ ('GHC.Base.Just "size")
-                                     @ 'GHC.Generics.NoSourceUnpackedness
-                                     @ 'GHC.Generics.NoSourceStrictness
-                                     @ 'GHC.Generics.DecidedLazy
-                                     $dSingI
-                                     $dSingI1
-                                     $dSingI2
-                                     $dSingI3
-  = GithubHelper.$fFromJSONRepoInfo_$s$fSelectorMetaMetaSel
-"SPEC/GithubHelper $fSelectorMetaMetaSel_$cselName @ ('Just
-                                                       "name") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI3 :: GHC.Generics.SingI
-                                                                                                                                                                                                                        'GHC.Generics.DecidedLazy)
-                                                                                                                                                                                                         ($dSingI2 :: GHC.Generics.SingI
-                                                                                                                                                                                                                        'GHC.Generics.NoSourceStrictness)
-                                                                                                                                                                                                         ($dSingI1 :: GHC.Generics.SingI
-                                                                                                                                                                                                                        'GHC.Generics.NoSourceUnpackedness)
-                                                                                                                                                                                                         ($dSingI :: GHC.Generics.SingI
-                                                                                                                                                                                                                       ('GHC.Base.Just
-                                                                                                                                                                                                                          "name"))
-  GHC.Generics.$fSelectorMetaMetaSel_$cselName @ ('GHC.Base.Just
-                                                    "name")
-                                               @ 'GHC.Generics.NoSourceUnpackedness
-                                               @ 'GHC.Generics.NoSourceStrictness
-                                               @ 'GHC.Generics.DecidedLazy
-                                               $dSingI
-                                               $dSingI1
-                                               $dSingI2
-                                               $dSingI3
-  = GithubHelper.$fFromJSONRepoInfo_$s$fSelectorMetaMetaSel_$cselName1
-"SPEC/GithubHelper $fSelectorMetaMetaSel_$cselName @ ('Just
-                                                       "size") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI3 :: GHC.Generics.SingI
-                                                                                                                                                                                                                        'GHC.Generics.DecidedLazy)
-                                                                                                                                                                                                         ($dSingI2 :: GHC.Generics.SingI
-                                                                                                                                                                                                                        'GHC.Generics.NoSourceStrictness)
-                                                                                                                                                                                                         ($dSingI1 :: GHC.Generics.SingI
-                                                                                                                                                                                                                        'GHC.Generics.NoSourceUnpackedness)
-                                                                                                                                                                                                         ($dSingI :: GHC.Generics.SingI
-                                                                                                                                                                                                                       ('GHC.Base.Just
-                                                                                                                                                                                                                          "size"))
-  GHC.Generics.$fSelectorMetaMetaSel_$cselName @ ('GHC.Base.Just
-                                                    "size")
-                                               @ 'GHC.Generics.NoSourceUnpackedness
-                                               @ 'GHC.Generics.NoSourceStrictness
-                                               @ 'GHC.Generics.DecidedLazy
-                                               $dSingI
-                                               $dSingI1
-                                               $dSingI2
-                                               $dSingI3
-  = GithubHelper.$fFromJSONRepoInfo_$s$fSelectorMetaMetaSel_$cselName
+d0d9ff9f30f1dbb3e59eea6cf449cd55
+  usersOf :: DBHelper.RepoDB -> GHC.Types.IO [DBHelper.UserDB]
+  {- Arity: 2, Strictness: <L,U(1*U,1*U,A)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                GithubHelper.usersOf1
+                  `cast`
+                (<DBHelper.RepoDB>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <[DBHelper.UserDB]>_R)) -}
+273ce30b37f08eb8bc42a86f5307213c
+  usersOf1 ::
+    DBHelper.RepoDB
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [DBHelper.UserDB] #)
+  {- Arity: 2, Strictness: <L,U(1*U,1*U,A)><S,U> -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

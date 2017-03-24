@@ -46,14 +46,14 @@ users = [ Log "One" 1
 user :: String -> Int -> ApiHandler Log
 user userName ttl =  liftIO $ do
     putStrLn "Output"
-    let newU = UserDB ttl userName 
+    let newU = UserDB userName  
     b <- addUser newU
     return (Log userName ttl)
 
 startC :: UserDB -> ApiHandler Log
-startC (UserDB h userN) =  liftIO $ do 
+startC (UserDB userN) =  liftIO $ do 
     putStrLn "Output"
-    let repositorys = repos $ pack userN 
+    --let repositorys = repos $ pack userN 
     let repNo = 8
     let p = (Log userN repNo)
     return p

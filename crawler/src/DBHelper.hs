@@ -20,20 +20,20 @@ data Log = Log
   
 --Types saved in dB
 data UserDB = UserDB
-  { hops          :: Int
-  , userId        :: String
+  { userId        :: String
   } deriving (ToJSON, FromJSON, Generic, Eq, Show)
   
 data RepoDB = RepoDB
-  { repoId        :: String
-  , repolabel     :: String
+  { repoName      :: String
+  , repoOwner     :: String
+  , repoSize      :: Int
   } deriving (ToJSON, FromJSON, Generic, Eq, Show)
   
 data LinkDB = LinkDB
   { linkType      :: Int
+  , linkName      :: String
   , source        :: String
   , destination   :: String
-  , linkName      :: String
   } deriving (ToJSON, FromJSON, Generic, Eq, Show)
   
 userRepo :: Int
@@ -42,6 +42,9 @@ userUser :: Int
 userUser = 2
 repoUser :: Int
 repoUser = 3
+
+owns = "Owns"
+contributesTo = "ContributesTo"
 
 n4password = "neo4J"
 n4user = "neo4j"
@@ -59,10 +62,9 @@ allUsers = do
    
 toUser :: Record-> IO UserDB
 toUser record = do
-    T name <- record `at` "name"
-    I h <- record `at` "hops"
+    T name <- record `at` "userName"
     putStrLn $ show record
-    return $ UserDB h $ unpack name
+    return $ UserDB (unpack name)
    
 allRepo :: IO[RepoDB]
 allRepo = do
@@ -75,10 +77,11 @@ allRepo = do
    
 toRepo :: Record-> IO RepoDB
 toRepo record = do    
-    T id <- record `at` "repoId"
-    T label <- record `at` "repolabel"
+    T name <- record `at` "repoName"
+    T owner <- record `at` "repoOwner"
+    I rSize <- record `at` "repoSize"
     putStrLn $ show record
-    return $ RepoDB (unpack id) $ unpack label
+    return $ RepoDB (unpack name) (unpack owner) rSize
    
 -- allLinks :: IO [LinkDB]
 -- allLinks = do
@@ -116,8 +119,8 @@ clearDB = do
 addUser :: UserDB -> IO String
 addUser newUser = do
    pipe <- connect $ def { user = n4user, password = n4password }
-   result <- run pipe $ queryP "MERGE (n:User {userId: {id}}) ON MATCH SET n.hops = {h} ON CREATE SET n.hops = {h} RETURN n" 
-                               (fromList [("id", T (fromString (userId newUser))), ("h", I (hops newUser))])
+   result <- run pipe $ queryP "MERGE (n:User {userId: {id}}) RETURN n" 
+                               (fromList [("id", T (fromString (userId newUser)))])
    close pipe
    putStrLn $ show result
    let r = show result
@@ -126,12 +129,13 @@ addUser newUser = do
 addRepo :: RepoDB -> IO String
 addRepo newRepo = do
    pipe <- connect $ def { user = n4user, password = n4password }
-   result <- run pipe $ queryP "MERGE (n:Repo {repoId: {id}}) ON MATCH SET n.repolabel = {label} ON CREATE SET n.repolabel = {label} RETURN n" 
-                               (fromList [("id", T (fromString (repoId newRepo))), ("id", T (fromString (repolabel newRepo)))])
+   result <- run pipe $ queryP "MERGE (n:Repo {repoName: {name}, repoOwner: {owner} }) ON MATCH SET n.repoSize = {size} ON CREATE SET n.repoSize = {size} RETURN n" 
+                               (fromList [("name", T (fromString (repoName newRepo))), ("owner", T (fromString (repoOwner newRepo))), ("size", I (repoSize newRepo))])
    close pipe
    putStrLn $ show result
    let r = show result
    return r
+
    
 addLink :: LinkDB -> IO String
 addLink newLink = do
@@ -144,8 +148,8 @@ addLink newLink = do
       
 linkRequest :: LinkDB -> String  
 linkRequest newLink
-   | (lt == userRepo) = "MATCH  (s:User {userId: " ++ (source newLink) ++ "}) MATCH  (d:Repo {repoId: "++ (destination newLink) ++ ") MERGE (s)-[o:" ++ (linkName newLink) ++ "]->(d) RETURN o"
+   | (lt == userRepo) = "MATCH  (s:User {userId: " ++ (source newLink) ++ "}) MATCH  (d:Repo {repoName: "++ (destination newLink) ++ ") MERGE (s)-[o:" ++ (linkName newLink) ++ "]->(d) RETURN o"
    | (lt == userUser) = "MATCH  (s:User {userId: " ++ (source newLink) ++ "}) MATCH  (d:User {userId: "++ (destination newLink)  ++ ") MERGE (s)-[o:" ++ (linkName newLink) ++ "]->(d) RETURN o"
-   | otherwise        = "MATCH  (d:User {userId: " ++ (source newLink) ++ "}) MATCH  (s:Repo {repoId: "++ (destination newLink)  ++ ") MERGE (s)-[o:" ++ (linkName newLink) ++ "]->(d) RETURN o"
+   | otherwise        = "MATCH  (d:User {userId: " ++ (source newLink) ++ "}) MATCH  (s:Repo {repoName: "++ (destination newLink)  ++ ") MERGE (s)-[o:" ++ (linkName newLink) ++ "]->(d) RETURN o"
    where lt = linkType newLink
    

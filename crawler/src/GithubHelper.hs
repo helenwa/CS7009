@@ -1,11 +1,17 @@
 {-# LANGUAGE DeriveAnyClass         #-}
 {-# LANGUAGE DeriveGeneric          #-}
+{-# LANGUAGE OverloadedStrings      #-}
+{-# LANGUAGE ExtendedDefaultRules   #-}
 
 module GithubHelper where
 
 import GitHub
 import GitHub.Data.Repos
 import GitHub.Endpoints.Repos
+import GitHub.Endpoints.Repos.Collaborators
+import GitHub.Data.Definitions
+
+import Control.Monad.IO.Class (liftIO)
 
 import Data.Text hiding(intercalate, map, lookup)
 import Data.Vector hiding(map, mapM)
@@ -14,51 +20,56 @@ import GHC.Generics
 import Data.Maybe
 import DBHelper
 
-data RepoInfo = RepoInfo{
-    name::Text,
-    size::Integer
-}deriving(ToJSON, FromJSON, Generic, Eq, Show)
-
 --Get users repositorys   
-repos :: Text -> IO[RepoInfo]
+repos :: Text -> IO[RepoDB]
 repos userName = do
   possibleRepos <- GitHub.Endpoints.Repos.userRepos (mkOwnerName userName) GitHub.Data.Repos.RepoPublicityAll
   case possibleRepos of
        (Left error)  -> do 
             return $ ([])
-            
        (Right repos) -> do 
             x <- mapM formatRepoDB repos
             return $ Data.Vector.toList x 
-         
-formatRepo :: GitHub.Repo -> IO(RepoInfo)
-formatRepo repo = do
-    let name = untagName (GitHub.Data.Repos.repoName repo)
-    size <-  formatNumber (GitHub.Data.Repos.repoSize repo)
-    return (RepoInfo name size)
-    
-formatRepoDB :: String -> GitHub.Repo -> IO(RepoDB)
-formatRepo userName repo = do
-    let name = untagName (GitHub.Data.Repos.repoName repo)
-    let id = userName + name
-    --size <-  formatNumber (GitHub.Data.Repos.repoSize repo)
-    return (RepoDB id name)
             
-formatNumber :: Maybe Int -> IO(Integer)
-formatNumber n =
-    let r = toEnum $ fromMaybe 0 n
-    in return r
+usersOf :: RepoDB -> IO[UserDB]
+usersOf repo = do
+    possibleUsers <- GitHub.Endpoints.Repos.Collaborators.collaboratorsOn  (mkOwnerName (pack(DBHelper.repoOwner repo))) (mkRepoName (pack(DBHelper.repoName repo)))
+    case possibleUsers of
+       (Left error)  -> do 
+            return $ ([])
+       (Right users) -> do 
+            x <- mapM formatUserDB users
+            return $ Data.Vector.toList x 
+             
+formatRepoDB :: GitHub.Repo -> IO(RepoDB)
+formatRepoDB repo = do
+    let name = untagName (GitHub.Data.Repos.repoName repo)
+    let owner = (GitHub.Data.Repos.repoOwner repo)
+    let ownerName = untagName $ GitHub.Data.Definitions.simpleOwnerLogin owner
+    sizeOf <- liftIO $ formatNumber (GitHub.Data.Repos.repoSize repo)
+    return (RepoDB (unpack name) (unpack ownerName) sizeOf)
+            
+formatNumber :: Maybe Int -> IO(Int)
+formatNumber n = do
+    return $ fromMaybe (toEnum 0) n
     
-crawlUser :: userDB -> Int -> IO
-crawlUser user ttl = do 
-    let repositorys = repos $ userId user
-    x <- mapM addRepo repositorys
-    --do links
-    if (ttl>0)
-        mapM crawlRepo repositorys $ ttl - 1
+formatUserDB :: GitHub.Data.Definitions.SimpleUser -> IO(UserDB)
+formatUserDB user = do
+    let name = untagName $ GitHub.Data.Definitions.simpleUserLogin user
+    return (UserDB (unpack name) )
+    
+-- crawlUser :: UserDB -> Int -> IO()
+-- crawlUser user ttl = do 
+    -- let repositorys = repos $ DBHelper.userId user
+    -- x <- mapM addRepo repositorys
+    -- --do links
+    -- if (ttl>0)
+        -- then mapM crawlRepo repositorys $ ttl - 1
+        -- else putStrLn $ "ended on " + (DBHelper.userId user)
             
     
-crawlRepo :: repoDB -> Int -> IO
-crawlRepo repo ttl = do 
-    let users = usersOf $ repoId repo
+-- crawlRepo :: RepoDB -> Int -> IO()
+-- crawlRepo repo ttl = do 
+    -- let users = usersOf $ DBHelper.repoId repo
+    -- putStrLn "repo"
     
