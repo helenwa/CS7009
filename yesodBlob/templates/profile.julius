@@ -1,20 +1,15 @@
-var HttpClient = function() {
-    this.get = function(aUrl, aCallback) {
-        var anHttpRequest = new XMLHttpRequest();
-        anHttpRequest.onreadystatechange = function() { 
-            if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
-                aCallback(anHttpRequest.responseText);
-        }
-
-        anHttpRequest.open( "GET", aUrl, true );            
-        anHttpRequest.send( null );
-    }
-}
-        
-var client = new HttpClient();
-client.get('http://localhost:8080/users', function(response) {
-    document.getElementById("fromGet").innerHTML = response;
-});
+var response = $.ajax({
+          url: "http://localhost:8080/userList",
+          type: "get",
+          contentType: "text/plain",
+          dataType: "json",
+          crossDomain:true,
+          success: function( data ) {
+          console.log(data);},
+          error: function( status ) {
+          console.log("failed");
+          }
+  });
     
 var svg = d3.select("svg"),
     width = +svg.attr("width"),

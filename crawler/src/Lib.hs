@@ -8,6 +8,7 @@ module Lib
 
 import Network.Wai
 import Network.Wai.Handler.Warp
+import Network.Wai.Middleware.Cors
 import Data.Text hiding(intercalate, map, lookup)
 import Control.Monad.Trans.Except
 import Control.Monad.IO.Class (liftIO)
@@ -26,7 +27,7 @@ startApp :: IO ()
 startApp = run 8080 app
 
 app :: Application
-app = serve api server
+app = simpleCors $ serve api server
 
 api :: Proxy API
 api = Proxy

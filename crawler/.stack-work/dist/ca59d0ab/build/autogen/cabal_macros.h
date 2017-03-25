@@ -77,6 +77,13 @@
   (major1) == 3 && (major2) <  2 || \
   (major1) == 3 && (major2) == 2 && (minor) <= 1)
 
+/* package wai-cors-0.2.5 */
+#define VERSION_wai_cors "0.2.5"
+#define MIN_VERSION_wai_cors(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  2 || \
+  (major1) == 0 && (major2) == 2 && (minor) <= 5)
+
 /* package warp-3.2.11.1 */
 #define VERSION_warp "3.2.11.1"
 #define MIN_VERSION_warp(major1,major2,minor) (\
@@ -133,7 +140,7 @@
   (major1) == 2 && (major2) <  25 || \
   (major1) == 2 && (major2) == 25 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"
+#define CURRENT_COMPONENT_ID "crawler-0.1.0.0-56JZBgNCq73H8nAI1znk6P"
 
-#define CURRENT_PACKAGE_KEY "crawler-0.1.0.0-68IgkCulecg9CYEjVSVWnJ"
+#define CURRENT_PACKAGE_KEY "crawler-0.1.0.0-56JZBgNCq73H8nAI1znk6P"
 
