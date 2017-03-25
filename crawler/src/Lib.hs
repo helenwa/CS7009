@@ -21,13 +21,13 @@ type ApiHandler = ExceptT ServantErr IO
 
 type API = "userList" :> Get '[JSON] [Log]
         :<|> "user" :> Capture "id" String :> Capture "hops" Int :> Get '[JSON] Log
-        :<|> "startC" :> ReqBody '[JSON] UserDB :> Post '[JSON] Log
+        :<|> "startC" :> Capture "usern" String :> Get '[JSON] Log
 
 startApp :: IO ()
 startApp = run 8080 app
 
 app :: Application
-app = simpleCors $ serve api server
+app = simpleCors ( serve api server)
 
 api :: Proxy API
 api = Proxy
@@ -51,12 +51,16 @@ user userName ttl =  liftIO $ do
     b <- addUser newU
     return (Log userName ttl)
 
-startC :: UserDB -> ApiHandler Log
-startC user =  liftIO $ do 
+startC :: String -> ApiHandler Log
+startC usern =  liftIO $ do 
     putStrLn "Output"
-    crawlUser 2 user
+    let startingUser = UserDB usern
+    b <- addUser startingUser
+    r <- crawlUser 2 startingUser
+    putStrLn show b
+    putStrLn show r
     let repNo = 8
-    let p = (Log (userId user) repNo)
+    let p = (Log usern repNo)
     return p
 
 

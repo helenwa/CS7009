@@ -61,8 +61,11 @@ formatUserDB user = do
 crawlUser :: Int -> UserDB -> IO()
 crawlUser ttl user  = do 
     repositorys <- reposOf $ pack $ DBHelper.userId user
+    putStrLn show repositorys
     x <- mapM addRepo repositorys
+    putStrLn show x
     links <- mapM (makeLink userRepo owns user) repositorys
+    putStrLn show links
     if (ttl>0)
         then mapM_ (crawlRepo (ttl - 1)) repositorys
         else putStrLn "ended on "

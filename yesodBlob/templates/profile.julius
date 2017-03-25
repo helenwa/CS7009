@@ -5,9 +5,22 @@ var response = $.ajax({
           dataType: "json",
           crossDomain:true,
           success: function( data ) {
-          console.log(data);},
+            console.log(data);},
           error: function( status ) {
-          console.log("failed");
+            console.log("failed");
+          }
+  });
+  
+var response2 = $.ajax({
+          url: "http://localhost:8080/startC/helenwa",
+          type: "get",
+          contentType: "text/plain",
+          dataType: "json",
+          crossDomain:true,
+          success: function( data ) {
+            console.log(data);},
+          error: function( status ) {
+            console.log("failed");
           }
   });
     
