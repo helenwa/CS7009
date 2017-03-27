@@ -111,7 +111,6 @@ makeLink linkType linkName user repository =  do
     
 makeLink2 :: Int -> String -> RepoDB -> UserDB -> IO LinkDB
 makeLink2 linkType linkName repository user=  do
-    putStrLn "madelink"
     let link = LinkDB linkType linkName (userId user) (repoName repository)
     return link
       
@@ -130,7 +129,8 @@ clearDB = do
 addUser :: UserDB -> IO String
 addUser newUser = do
    pipe <- connect $ def { user = n4user, password = n4password }
-   result <- run pipe $ queryP "MERGE (n:User {userId: {id}}) RETURN n" 
+   putStrLn $ "MERGE (n:User {userId: " ++ (userId newUser) ++ "}) RETURN n" 
+   result <- run pipe $ queryP "MERGE (n:User {userId: {id}})" 
                                (fromList [("id", T (fromString (userId newUser)))])
    close pipe
    putStrLn $ show result
@@ -140,7 +140,7 @@ addUser newUser = do
 addRepo :: RepoDB -> IO()
 addRepo newRepo = do
    pipe <- connect $ def { user = n4user, password = n4password }
-   result <- run pipe $ queryP "MERGE (n:Repo {repoName: {name}, repoOwner: {owner} }) ON MATCH SET n.repoSize = {size} ON CREATE SET n.repoSize = {size} RETURN n" 
+   result <- run pipe $ queryP "MERGE (n:Repo {repoName: {name}, repoOwner: {owner} }) ON MATCH SET n.repoSize = {size} ON CREATE SET n.repoSize = {size}" 
                                (fromList [("name", T (fromString (repoName newRepo))), ("owner", T (fromString (repoOwner newRepo))), ("size", I (repoSize newRepo))])
    close pipe
    putStrLn $ show result
@@ -157,8 +157,8 @@ addLink newLink = do
       
 linkRequest :: LinkDB -> String  
 linkRequest newLink
-   | (lt == userRepo) = "MATCH  (s:User {userId: " ++ (source newLink) ++ "}) MATCH  (d:Repo {repoName: "++ (destination newLink) ++ ") MERGE (s)-[o:" ++ (linkName newLink) ++ "]->(d) RETURN o"
-   | (lt == userUser) = "MATCH  (s:User {userId: " ++ (source newLink) ++ "}) MATCH  (d:User {userId: "++ (destination newLink)  ++ ") MERGE (s)-[o:" ++ (linkName newLink) ++ "]->(d) RETURN o"
-   | otherwise        = "MATCH  (d:User {userId: " ++ (source newLink) ++ "}) MATCH  (s:Repo {repoName: "++ (destination newLink)  ++ ") MERGE (s)-[o:" ++ (linkName newLink) ++ "]->(d) RETURN o"
+   | (lt == userRepo) = "MATCH  (s:User {userId: \"" ++ (source newLink) ++ "\"}) MATCH  (d:Repo {repoName: \""++ (destination newLink) ++ "\"}) MERGE (s)-[o:" ++ (linkName newLink) ++ "]->(d)"
+   | (lt == userUser) = "MATCH  (s:User {userId: \"" ++ (source newLink) ++ "\"}) MATCH  (d:User {userId: \""++ (destination newLink)  ++ "\") MERGE (s)-[o:\"" ++ (linkName newLink) ++ "\"]->(d)"
+   | otherwise        = "MATCH  (d:User {userId: \"" ++ (source newLink) ++ "\"}) MATCH  (s:Repo {repoName: \""++ (destination newLink)  ++ "\") MERGE (s)-[o:\"" ++ (linkName newLink) ++ "\"]->(d)"
    where lt = linkType newLink
    

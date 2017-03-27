@@ -19,6 +19,7 @@ import Data.Aeson
 import GHC.Generics
 import Data.Maybe
 import DBHelper
+import Data.Text.Internal
 
 --Get users repositorys   
 reposOf :: Text -> IO[RepoDB]
@@ -58,23 +59,29 @@ formatUserDB user = do
     let name = untagName $ GitHub.Data.Definitions.simpleUserLogin user
     return (UserDB (unpack name) )
     
-crawlUser :: Int -> UserDB -> IO()
+crawlUser :: Integer -> UserDB -> IO()
 crawlUser ttl user  = do 
     repositorys <- reposOf $ pack $ DBHelper.userId user
-    putStrLn show repositorys
+    --putStrLn show repositorys
     x <- mapM addRepo repositorys
-    putStrLn show x
+    --putStrLn show x
     links <- mapM (makeLink userRepo owns user) repositorys
-    putStrLn show links
-    if (ttl>0)
-        then mapM_ (crawlRepo (ttl - 1)) repositorys
-        else putStrLn "ended on "
+    y <- mapM addLink links
+    --putStrLn show links
+    putStrLn $ show ttl
+    case (ttl) of 
+             0 ->  putStrLn "ended on "
+             _ ->  mapM_ (crawlRepo (ttl - 1)) repositorys
+    -- if (ttl >= 0)
+        -- then mapM_ (crawlRepo (ttl - 1)) repositorys
+        -- else putStrLn "ended on "
     
-crawlRepo :: Int -> RepoDB ->  IO()
+crawlRepo :: Integer -> RepoDB ->  IO()
 crawlRepo ttl repo  = do 
     ppl <- usersOf repo
     x <- mapM addUser ppl
     links <- mapM (makeLink2 userRepo contributesTo repo) ppl
+    y <- mapM addLink links
     if (ttl>0)
         then mapM_ (crawlUser (ttl - 1)) ppl
         else putStrLn "ended on "
