@@ -12,7 +12,6 @@ import Data.Aeson
 import GHC.Generics
 import Data.String
 import Data.Vector (toList)
-import Data.List (head)
 
 data Log = Log
   { word :: String
@@ -112,7 +111,6 @@ makeLink linkType linkName user repository =  do
     
 makeLink2 :: Int -> String -> RepoDB -> UserDB -> IO LinkDB
 makeLink2 linkType linkName repository user=  do
-    putStrLn "madelink"
     let link = LinkDB linkType linkName (userId user) (repoName repository)
     return link
       
@@ -131,7 +129,7 @@ clearDB = do
 addUser :: UserDB -> IO String
 addUser newUser = do
    pipe <- connect $ def { user = n4user, password = n4password }
-   putStrLn $ "MERGE (n:User {userId: " ++ (userId newUser) ++ "})" 
+   putStrLn $ "MERGE (n:User {userId: " ++ (userId newUser) ++ "}) RETURN n" 
    result <- run pipe $ queryP "MERGE (n:User {userId: {id}})" 
                                (fromList [("id", T (fromString (userId newUser)))])
    close pipe
@@ -164,25 +162,3 @@ linkRequest newLink
    | otherwise        = "MATCH  (d:User {userId: \"" ++ (source newLink) ++ "\"}) MATCH  (s:Repo {repoName: \""++ (destination newLink)  ++ "\") MERGE (s)-[o:\"" ++ (linkName newLink) ++ "\"]->(d)"
    where lt = linkType newLink
    
-saveToken :: String -> IO()
-saveToken token = do 
-   pipe <- connect $ def { user = n4user, password = n4password }
-   result <- run pipe $ queryP "MERGE (n:Token) ON MATCH SET n.token = {tk} ON CREATE SET n.token = {tk}" 
-                               (fromList [("tk", T (fromString token))])
-   close pipe
-   putStrLn $ show result
-
-getToken :: IO(String)
-getToken = do
-   pipe <- connect $ def { user = n4user, password = n4password }
-   result <- run pipe $ query "MATCH (n:Token)  RETURN n"
-   close pipe
-   putStrLn $ show result
-   x <- mapM toToken result
-   return $ Data.List.head x
-       
-toToken :: Record -> IO(String)
-toToken record = do
-    putStrLn $ show record
-    T name <- record `at` "token"
-    return $ unpack name

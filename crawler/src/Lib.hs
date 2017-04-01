@@ -22,7 +22,6 @@ type ApiHandler = ExceptT ServantErr IO
 type API = "userList" :> Get '[JSON] [Log]
         :<|> "user" :> Capture "id" String :> Capture "hops" Int :> Get '[JSON] Log
         :<|> "startC" :> Capture "usern" String :> Capture "hops" Integer :> Get '[JSON] Log
-        :<|> "testing" :> Get '[JSON] Log
 
 startApp :: IO ()
 startApp = run 8080 app
@@ -37,7 +36,6 @@ server :: Server API
 server = userList
     :<|> user
     :<|> startC
-    :<|> testing
     where
     userList = return users
 
@@ -63,15 +61,6 @@ startC usern hops=  liftIO $ do
     --putStrLn show r
     let repNo = 8
     let p = (Log usern repNo)
-    return p
-
-testing :: ApiHandler Log
-testing =  liftIO $ do 
-    putStrLn "Output"
-    let testRepo = RepoDB "motivationstation"  "osheac5"  896
-    b <- usersOf testRepo
-    putStrLn $ show b
-    let p = (Log "test" 9)
     return p
 
 

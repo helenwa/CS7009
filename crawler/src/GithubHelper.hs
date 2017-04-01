@@ -15,7 +15,6 @@ import Control.Monad.IO.Class (liftIO)
 
 import Data.Text hiding(intercalate, map, lookup)
 import Data.Vector hiding(map, mapM, mapM_)
-import Data.List
 import Data.Aeson
 import GHC.Generics
 import Data.Maybe
@@ -30,25 +29,21 @@ reposOf userName = do
        (Left error)  -> do 
             return $ ([])
        (Right repos) -> do 
-            putStrLn $ show repos
             x <- mapM formatRepoDB repos
             return $ Data.Vector.toList x 
             
 usersOf :: RepoDB -> IO[UserDB]
 usersOf repo = do
     possibleUsers <- GitHub.Endpoints.Repos.Collaborators.collaboratorsOn  (mkOwnerName (pack(DBHelper.repoOwner repo))) (mkRepoName (pack(DBHelper.repoName repo)))
-    putStrLn $ show possibleUsers
     case possibleUsers of
        (Left error)  -> do 
             return $ ([])
        (Right users) -> do 
-            putStrLn $ show users
             x <- mapM formatUserDB users
             return $ Data.Vector.toList x 
              
 formatRepoDB :: GitHub.Repo -> IO(RepoDB)
 formatRepoDB repo = do
-    putStrLn $ show repo
     let name = untagName (GitHub.Data.Repos.repoName repo)
     let owner = (GitHub.Data.Repos.repoOwner repo)
     let ownerName = untagName $ GitHub.Data.Definitions.simpleOwnerLogin owner
@@ -66,34 +61,28 @@ formatUserDB user = do
     
 crawlUser :: Integer -> UserDB -> IO()
 crawlUser ttl user  = do 
-    putStrLn "userCrawl"
     repositorys <- reposOf $ pack $ DBHelper.userId user
+    --putStrLn show repositorys
     x <- mapM addRepo repositorys
+    --putStrLn show x
     links <- mapM (makeLink userRepo owns user) repositorys
     y <- mapM addLink links
-    putStrLn $show $ Data.List.length y
+    --putStrLn show links
     putStrLn $ show ttl
-    putStrLn $show $ Data.List.length repositorys
-    putStrLn $show (ttl > 0)
-    case (ttl > 0) of 
-        False ->  putStrLn "ended"
-        True ->  do
-            putStrLn "mosy on"
-            a <- mapM_ (crawlRepo (ttl - 1)) repositorys
-            putStrLn "done?"
+    case (ttl) of 
+             0 ->  putStrLn "ended on "
+             _ ->  mapM_ (crawlRepo (ttl - 1)) repositorys
+    -- if (ttl >= 0)
+        -- then mapM_ (crawlRepo (ttl - 1)) repositorys
+        -- else putStrLn "ended on "
     
 crawlRepo :: Integer -> RepoDB ->  IO()
 crawlRepo ttl repo  = do 
-    putStrLn "repoCrawl"
     ppl <- usersOf repo
-    putStrLn $ show (Data.List.length  ppl)
-    case ((Data.List.length  ppl) >1) of
-        True -> do 
-            x <- mapM addUser ppl
-            links <- mapM (makeLink2 userRepo contributesTo repo) ppl
-            y <- mapM addLink links
-            case (ttl > 0) of 
-                False ->  putStrLn "ended on "
-                True -> mapM_ (crawlUser (ttl - 1)) ppl
-        False ->  putStrLn "loner repo"
+    x <- mapM addUser ppl
+    links <- mapM (makeLink2 userRepo contributesTo repo) ppl
+    y <- mapM addLink links
+    if (ttl>0)
+        then mapM_ (crawlUser (ttl - 1)) ppl
+        else putStrLn "ended on "
     

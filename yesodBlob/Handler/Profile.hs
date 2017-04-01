@@ -13,7 +13,7 @@ import Data.Text.Encoding
 import Data.Vector hiding(map, mapM)
 import Data.Text hiding(intercalate, map, lookup)
 import GitHub.Auth
-import DBHelper
+
 
 data RepoInfo = RepoInfo{
     name::Text,
@@ -29,7 +29,6 @@ getProfileR = do
     sess <- getSession
     let log = lookup "login" sess
     let token = lookup "access_token" sess
-    x <- DBHelper.saveToken token
     let textName = Data.Text.Encoding.decodeUtf8 (fromJust log)
     let auth = Just $ GitHub.Auth.OAuth $ fromJust token 
     repositorys <- liftIO $ repos textName
