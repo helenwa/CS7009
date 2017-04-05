@@ -162,3 +162,26 @@ linkRequest newLink
    | otherwise        = "MATCH  (d:User {userId: \"" ++ (source newLink) ++ "\"}) MATCH  (s:Repo {repoName: \""++ (destination newLink)  ++ "\") MERGE (s)-[o:\"" ++ (linkName newLink) ++ "\"]->(d)"
    where lt = linkType newLink
    
+addAuth :: Text -> IO()
+addAuth auth = do
+   pipe <- connect $ def { user = n4user, password = n4password }
+   result <- run pipe $ queryP "MERGE (n:Auth {token: {a}})" 
+                               (fromList [("a", T (fromString (unpack auth)))])
+   close pipe
+   putStrLn $ show result
+
+getAuth :: IO(Text)
+getAuth = do
+   pipe <- connect $ def { user = n4user, password = n4password }
+   result <- run pipe $ query "MATCH (n:Auth)  RETURN n"
+   close pipe
+   putStrLn $ show result
+   x <- mapM toAuth result
+   
+   return $ Prelude.head x
+
+toAuth :: Record-> IO Text
+toAuth record = do
+    T token <- record `at` "token"
+    putStrLn $ show record
+    return token

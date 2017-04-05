@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2017-03-27 15:07:39.0751025 UTC
+2017-04-03 11:04:57.3669478 UTC
 
 interface crawler-0.1.0.0-56JZBgNCq73H8nAI1znk6P:GithubHelper 8002
-  interface hash: de17a0972442a9da8b469d44a6185204
+  interface hash: e681cc50741ee4ac8b7f324516bc3382
   ABI hash: b33edc642b3057278bf8455f2853a4b7
   export-list hash: cdfa172a72d6a25157592b6c37cc3c47
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
@@ -220,8 +220,8 @@ import  -/  base-4.9.1.0:GHC.Num 38b8aac8807c096c7f3ca3c1eff02939
 import  -/  base-4.9.1.0:GHC.Show eca5834daba3b6a2bbbe64ab52056707
 import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
 import  -/  base-4.9.1.0:System.IO 5daf3f384209c11d9566e3409af8ec5d
-import  -/  DBHelper bfe261523a48ac33f10e2e9a6ae75980
-  exports: dbd9464b5d3e36805e3a63d44638d2bc
+import  -/  DBHelper c479d9a01d1c970ad73a50c7c3c49f62
+  exports: 177310ec88de75419d6b603b484146f3
   RepoDB 8e401c74ffcb2f098f7a85223e0402ef
   RepoDB 30107d81e22c18a98c905013ec5a3c7e
   UserDB fc43c28340db622023669095dde69413

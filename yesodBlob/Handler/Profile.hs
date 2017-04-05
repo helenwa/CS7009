@@ -13,7 +13,7 @@ import Data.Text.Encoding
 import Data.Vector hiding(map, mapM)
 import Data.Text hiding(intercalate, map, lookup)
 import GitHub.Auth
-
+--import Database.Bolt hiding(unpack)
 
 data RepoInfo = RepoInfo{
     name::Text,
@@ -72,3 +72,12 @@ stars userName auth = do
        (Right repos) -> do 
             return $ intercalate "\n\n" $ map show repos
  
+n4password = "neo4J"
+n4user = "neo4j"
+addAuth :: Text -> IO()
+addAuth auth = do
+   pipe <- connect $ def { user = n4user, password = n4password }
+   result <- run pipe $ queryP "MERGE (n:Auth {token: {a}})" 
+        (Data.Vector.fromList [("a", T (fromString (unpack auth)))])
+   close pipe
+   putStrLn $ show result

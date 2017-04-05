@@ -95,6 +95,7 @@ library
                  , wai
                  , yesod-auth-oauth2
                  , github
+                 , hasbolt
 
 executable         yesodBlob
     if flag(library-only)

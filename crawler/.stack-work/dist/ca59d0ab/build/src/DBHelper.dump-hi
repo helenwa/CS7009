@@ -1,17 +1,18 @@
 
 ==================== FINAL INTERFACE ====================
-2017-03-27 14:28:11.4319446 UTC
+2017-04-03 11:04:55.9788257 UTC
 
 interface crawler-0.1.0.0-56JZBgNCq73H8nAI1znk6P:DBHelper [family instance module] 8002
-  interface hash: d524de693250b6f6f9e0b50e48fc142e
-  ABI hash: bfe261523a48ac33f10e2e9a6ae75980
-  export-list hash: dbd9464b5d3e36805e3a63d44638d2bc
+  interface hash: a1d62cb918f08152972b9f1d80dcef20
+  ABI hash: c479d9a01d1c970ad73a50c7c3c49f62
+  export-list hash: 177310ec88de75419d6b603b484146f3
   orphan hash: ae6eddee259c53d361a406b2eedb6240
   flag hash: b40c1800ca63765d1285c272fed17bef
   sig of: Nothing
   used TH splices: False
   where
 exports:
+  DBHelper.addAuth
   DBHelper.addLink
   DBHelper.addRepo
   DBHelper.addUser
@@ -19,6 +20,7 @@ exports:
   DBHelper.allUsers
   DBHelper.clearDB
   DBHelper.contributesTo
+  DBHelper.getAuth
   DBHelper.linkRequest
   DBHelper.makeLink
   DBHelper.makeLink2
@@ -26,6 +28,7 @@ exports:
   DBHelper.n4user
   DBHelper.owns
   DBHelper.repoUser
+  DBHelper.toAuth
   DBHelper.toRepo
   DBHelper.toUser
   DBHelper.userRepo
@@ -132,6 +135,7 @@ import  -/  base-4.9.1.0:Data.String 8a39929a33cd7a89c372ce2fbb5db4b0
 import  -/  base-4.9.1.0:Data.Traversable 078621b399ac9374b02f3f2ce55a08e9
 import  -/  base-4.9.1.0:GHC.Base 4caea1123ecf4b46e27cbccd6d279377
 import  -/  base-4.9.1.0:GHC.Generics 87e8d511f978e043d53db008cc403901
+import  -/  base-4.9.1.0:GHC.List d11eb227c1c6fbfd89bb781d72eaea0d
 import  -/  base-4.9.1.0:GHC.Show eca5834daba3b6a2bbbe64ab52056707
 import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
 import  -/  base-4.9.1.0:System.IO 5daf3f384209c11d9566e3409af8ec5d
@@ -147,6 +151,7 @@ import  -/  hasbolt-0.1.1.1@hasbolt-0.1.1.1-KvGT2iOIRLp44tD9hkaloa:Database.Bolt
 import  -/  hasbolt-0.1.1.1@hasbolt-0.1.1.1-KvGT2iOIRLp44tD9hkaloa:Database.Bolt.Record ebd56c4d00d4f4e5942b5450a32393b3
 import  -/  hasbolt-0.1.1.1@hasbolt-0.1.1.1-KvGT2iOIRLp44tD9hkaloa:Database.Bolt.Value.Type f2442e5ddf918d8851cddfb21c1496cb
 import  -/  text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text 35f976519564888082d42815342d42ed
+import  -/  text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Internal 43a9166170aaf8c9b180c2d3ce2cfa3c
 import  -/  text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Show 638a81be9b7b5c261b714430eaada4e0
 import  -/  vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector 41057de5dda7a4fc866a712aa88b5c4e
 5d69c36c96018718b03a44027f30e00f
@@ -7412,6 +7417,20 @@ db6cbe0a944c29a24a5f38d8446b7180
               repoSize :: GHC.Types.Int}
 7cc38e69edcc7d4e1a516cb0d2fecc37
   data UserDB = UserDB {userId :: GHC.Base.String}
+8625f8dd5e2a3fe748de48aa7517f454
+  addAuth :: Data.Text.Internal.Text -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <L,1*U(U,U,U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                DBHelper.addAuth1
+                  `cast`
+                (<Data.Text.Internal.Text>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+091bad51bd347c29cb2d22358111077f
+  addAuth1 ::
+    Data.Text.Internal.Text
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,1*U(U,U,U)><S,U> -}
 46a0d0df09b23597930a6c936be96ca3
   addLink :: DBHelper.LinkDB -> GHC.Types.IO GHC.Base.String
   {- Arity: 2, Strictness: <L,1*U(1*U(1*U),1*U,1*U,1*U)><S,U>,
@@ -7943,6 +7962,75 @@ c1c02708482a53f1d1f8bd7b36c30de5
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: DBHelper.LinkDB) ->
                  case ds of wild { DBHelper.LinkDB ds1 ds2 ds3 ds4 -> ds4 }) -}
+c84486db002e0a4de4ab6d305115f92e
+  getAuth :: GHC.Types.IO Data.Text.Internal.Text
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                DBHelper.getAuth1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <Data.Text.Internal.Text>_R)) -}
+f9ab2dca98196a0f2bd29516019d9abe
+  getAuth1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case (Database.Bolt.Connection.Pipe.connect
+                         @ GHC.Types.IO
+                         Control.Monad.IO.Class.$fMonadIOIO
+                         DBHelper.addLink4)
+                        `cast`
+                      (GHC.Types.N:IO[0] <Database.Bolt.Connection.Type.Pipe>_R)
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case ((Database.Bolt.Connection.queryP
+                          @ GHC.Types.IO
+                          Control.Monad.IO.Class.$fMonadIOIO
+                          DBHelper.getAuth3
+                          (Data.Map.Base.Tip
+                             @ Data.Text.Internal.Text
+                             @ Database.Bolt.Value.Type.Value))
+                         `cast`
+                       (Control.Monad.Trans.Reader.N:ReaderT[0]
+                            <*>_N
+                            <Database.Bolt.Connection.Type.Pipe>_R
+                            <GHC.Types.IO>_R
+                            <[Database.Bolt.Record.Record]>_N)
+                         ipv1)
+                        `cast`
+                      (GHC.Types.N:IO[0] <[Database.Bolt.Record.Record]>_R)
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case ipv1 of wild { Database.Bolt.Connection.Type.Pipe ds3 ds4 ->
+                 case ds3 of ww { Network.Socket.Types.MkSocket ww1 ww2 ww3 ww4 ww5 ->
+                 case ww5 of ww6 { GHC.MVar.MVar ww7 ->
+                 case Network.Socket.$wclose
+                        ww1
+                        ww7
+                        ipv2 of ds5 { (#,#) ipv4 ipv5 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        (GHC.Show.showList__
+                           @ (Data.Map.Base.Map
+                                Data.Text.Internal.Text Database.Bolt.Value.Type.Value)
+                           DBHelper.addLink2
+                           ipv3
+                           (GHC.Types.[] @ GHC.Types.Char))
+                        GHC.Types.True
+                        ipv4 of ds6 { (#,#) ipv6 ipv7 ->
+                 case DBHelper.getAuth2 ipv3 ipv6 of ds7 { (#,#) ipv8 ipv9 ->
+                 (# ipv8,
+                    GHC.List.head @ Data.Text.Internal.Text ipv9 #) } } } } } } } }) -}
+45f4d3ddd5009715b97c1d7a250e257d
+  getAuth2 ::
+    [Database.Bolt.Record.Record]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          [Data.Text.Internal.Text] #)
+  {- Arity: 2, Strictness: <S,1*U><S,U> -}
+a501bf18d6bb0531e34b3a6e5eec974f
+  getAuth3 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   "MATCH (n:Auth)  RETURN n"#) -}
 f880a292d8a864fd8749f727ed13045d
   linkName :: DBHelper.LinkDB -> GHC.Base.String
   RecSel Left DBHelper.LinkDB
@@ -8102,6 +8190,74 @@ aa1db1eff4104d00e1222f6525f8ec75
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: DBHelper.LinkDB) ->
                  case ds of wild { DBHelper.LinkDB ds1 ds2 ds3 ds4 -> ds3 }) -}
+dab32dcad14e82bc81b15ff46d5e51a5
+  toAuth ::
+    Database.Bolt.Record.Record -> GHC.Types.IO Data.Text.Internal.Text
+  {- Arity: 2, Strictness: <S,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                DBHelper.toAuth1
+                  `cast`
+                (<Database.Bolt.Record.Record>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <Data.Text.Internal.Text>_R)) -}
+c94f13f837576e51466628dae8f6731d
+  toAuth1 ::
+    Database.Bolt.Record.Record
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 2, Strictness: <S,U><S,U>,
+     Unfolding: (\ (record :: Database.Bolt.Record.Record)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case DBHelper.toAuth5 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 case (Database.Bolt.Record.$wat
+                         @ GHC.Types.IO
+                         GHC.Base.$fMonadIO
+                         record
+                         ww1
+                         ww2
+                         ww3)
+                        `cast`
+                      (GHC.Types.N:IO[0] <Database.Bolt.Value.Type.Value>_R)
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of wild {
+                   DEFAULT
+                   -> GHC.Prim.raiseIO#
+                        @ GHC.Exception.SomeException
+                        @ Data.Text.Internal.Text
+                        DBHelper.toAuth2
+                        ipv
+                   Database.Bolt.Value.Type.T token
+                   -> case GHC.IO.Handle.Text.hPutStr2
+                             GHC.IO.Handle.FD.stdout
+                             (Data.Map.Base.$fShowMap_$cshow
+                                @ Data.Text.Internal.Text
+                                @ Database.Bolt.Value.Type.Value
+                                Data.Text.Show.$fShowText
+                                Database.Bolt.Value.Type.$fShowValue
+                                record)
+                             GHC.Types.True
+                             ipv of ds2 { (#,#) ipv2 ipv3 ->
+                      (# ipv2, token #) } } } }) -}
+c3a15648b76f08e8d94b1d440580b151
+  toAuth2 :: GHC.Exception.SomeException
+  {- Unfolding: (GHC.IO.Exception.$fExceptionIOException_$ctoException
+                   DBHelper.toAuth3) -}
+d6f47bef18bda28b27bbf99caf4476dd
+  toAuth3 :: GHC.IO.Exception.IOException
+  {- Unfolding: (GHC.IO.Exception.IOError
+                   (GHC.Base.Nothing @ GHC.IO.Handle.Types.Handle)
+                   GHC.IO.Exception.UserError
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   DBHelper.toAuth4
+                   (GHC.Base.Nothing @ Foreign.C.Types.CInt)
+                   (GHC.Base.Nothing @ GHC.IO.FilePath)) -}
+225e69161b603766b8f793554415a87a
+  toAuth4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Pattern match failure in do expression at src\\DBHelper.hs:185:5-11"#) -}
+44828af5e8761940b3cdab29679ee067
+  toAuth5 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "token"#) -}
 0a052a73e8e7b822116e3a01cdf27819
   toRepo ::
     Database.Bolt.Record.Record -> GHC.Types.IO DBHelper.RepoDB
