@@ -24,6 +24,7 @@ library
                      Handler.Home
                      Handler.Comment
                      Handler.Profile
+                     Handler.Req
 
     if flag(dev) || flag(library-only)
         cpp-options:   -DDEVELOPMENT
@@ -95,7 +96,8 @@ library
                  , wai
                  , yesod-auth-oauth2
                  , github
-                 , hasbolt
+                 , http-client
+                 , http-types
 
 executable         yesodBlob
     if flag(library-only)

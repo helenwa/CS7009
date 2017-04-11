@@ -1,19 +1,26 @@
 {-# LANGUAGE DeriveAnyClass       #-}
 {-# LANGUAGE DeriveGeneric        #-}
+{-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE ExtendedDefaultRules   #-}
+{-# LANGUAGE DataKinds       #-}
+{-# LANGUAGE TypeOperators   #-}
+
 module Handler.Profile where
 
 import Import hiding (unpack, pack, Auth)
 import Data.List hiding(intercalate, map, lookup)
-import GitHub
-import GitHub.Data.Repos
-import GitHub.Endpoints.Repos
-import GitHub.Endpoints.Activity.Starring
 import Data.Maybe
 import Data.Text.Encoding
 import Data.Vector hiding(map, mapM)
 import Data.Text hiding(intercalate, map, lookup)
+
+import GitHub
+import GitHub.Data.Repos
+import GitHub.Endpoints.Repos
+import GitHub.Endpoints.Activity.Starring
 import GitHub.Auth
---import Database.Bolt hiding(unpack)
+
+import Handler.Req
 
 data RepoInfo = RepoInfo{
     name::Text,
@@ -29,8 +36,10 @@ getProfileR = do
     sess <- getSession
     let log = lookup "login" sess
     let token = lookup "access_token" sess
+    let tkString = unpack $ Data.Text.Encoding.decodeUtf8 (fromJust token)
     let textName = Data.Text.Encoding.decodeUtf8 (fromJust log)
     let auth = Just $ GitHub.Auth.OAuth $ fromJust token 
+    call <- liftIO $ callCrawler tkString
     repositorys <- liftIO $ repos textName
     stared <- liftIO $ stars textName auth  
     let repNo = Data.List.length repositorys
@@ -71,13 +80,4 @@ stars userName auth = do
             return $ "Error: " Data.List.++ (show error)
        (Right repos) -> do 
             return $ intercalate "\n\n" $ map show repos
- 
-n4password = "neo4J"
-n4user = "neo4j"
-addAuth :: Text -> IO()
-addAuth auth = do
-   pipe <- connect $ def { user = n4user, password = n4password }
-   result <- run pipe $ queryP "MERGE (n:Auth {token: {a}})" 
-        (Data.Vector.fromList [("a", T (fromString (unpack auth)))])
-   close pipe
-   putStrLn $ show result
+
