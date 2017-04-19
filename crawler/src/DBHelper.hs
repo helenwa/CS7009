@@ -129,7 +129,6 @@ clearDB = do
 addUser :: UserDB -> IO String
 addUser newUser = do
    pipe <- connect $ def { user = n4user, password = n4password }
-   putStrLn $ "MERGE (n:User {userId: " ++ (userId newUser) ++ "}) RETURN n" 
    result <- run pipe $ queryP "MERGE (n:User {userId: {id}})" 
                                (fromList [("id", T (fromString (userId newUser)))])
    close pipe
@@ -162,26 +161,27 @@ linkRequest newLink
    | otherwise        = "MATCH  (d:User {userId: \"" ++ (source newLink) ++ "\"}) MATCH  (s:Repo {repoName: \""++ (destination newLink)  ++ "\") MERGE (s)-[o:\"" ++ (linkName newLink) ++ "\"]->(d)"
    where lt = linkType newLink
    
-addAuth :: Text -> IO()
+addAuth :: String -> IO()
 addAuth auth = do
    pipe <- connect $ def { user = n4user, password = n4password }
-   result <- run pipe $ queryP "MERGE (n:Auth {token: {a}})" 
-                               (fromList [("a", T (fromString (unpack auth)))])
-   close pipe
+   result <- run pipe $ query "MATCH (r:Auth) DELETE r" 
+   result <- run pipe $ queryP "CREATE (n:Auth {token: {a}})" 
+                               (fromList [("a", T (fromString auth))])
+   
    putStrLn $ show result
+   close pipe
 
 getAuth :: IO(Text)
 getAuth = do
    pipe <- connect $ def { user = n4user, password = n4password }
-   result <- run pipe $ query "MATCH (n:Auth)  RETURN n"
-   close pipe
-   putStrLn $ show result
+   result <- run pipe $ query "MATCH (n:Auth) RETURN n.token as token"
    x <- mapM toAuth result
-   
+   close pipe
    return $ Prelude.head x
 
 toAuth :: Record-> IO Text
 toAuth record = do
-    T token <- record `at` "token"
     putStrLn $ show record
+    T token <- record `at` "token"
+    putStrLn $ unpack token
     return token

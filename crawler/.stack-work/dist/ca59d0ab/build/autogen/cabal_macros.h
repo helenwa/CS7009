@@ -21,6 +21,13 @@
   (major1) == 4 && (major2) <  9 || \
   (major1) == 4 && (major2) == 9 && (minor) <= 1)
 
+/* package bytestring-0.10.8.1 */
+#define VERSION_bytestring "0.10.8.1"
+#define MIN_VERSION_bytestring(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  10 || \
+  (major1) == 0 && (major2) == 10 && (minor) <= 8)
+
 /* package containers-0.5.7.1 */
 #define VERSION_containers "0.5.7.1"
 #define MIN_VERSION_containers(major1,major2,minor) (\
@@ -140,7 +147,7 @@
   (major1) == 2 && (major2) <  25 || \
   (major1) == 2 && (major2) == 25 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "crawler-0.1.0.0-56JZBgNCq73H8nAI1znk6P"
+#define CURRENT_COMPONENT_ID "crawler-0.1.0.0-Annm8vHT08AKHY6xiJUgHQ"
 
-#define CURRENT_PACKAGE_KEY "crawler-0.1.0.0-56JZBgNCq73H8nAI1znk6P"
+#define CURRENT_PACKAGE_KEY "crawler-0.1.0.0-Annm8vHT08AKHY6xiJUgHQ"
 

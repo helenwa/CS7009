@@ -20,6 +20,8 @@ import GitHub.Endpoints.Repos
 import GitHub.Endpoints.Activity.Starring
 import GitHub.Auth
 
+
+
 import Handler.Req
 
 data RepoInfo = RepoInfo{
@@ -40,6 +42,7 @@ getProfileR = do
     let textName = Data.Text.Encoding.decodeUtf8 (fromJust log)
     let auth = Just $ GitHub.Auth.OAuth $ fromJust token 
     call <- liftIO $ callCrawler tkString
+    putStrLn "token"
     repositorys <- liftIO $ repos textName
     stared <- liftIO $ stars textName auth  
     let repNo = Data.List.length repositorys

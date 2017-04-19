@@ -10,6 +10,6 @@ import Network.HTTP.Types.Status (statusCode)
 callCrawler :: String -> IO ()
 callCrawler tkn = do
   manager <- newManager defaultManagerSettings
-  request <- parseRequest "http://localhost:8080/user/FromProfile/1"
+  request <- parseRequest $ "http://localhost:8080/token/" ++ tkn
   response <- httpLbs request manager
   putStrLn $ pack $ show $ responseBody response

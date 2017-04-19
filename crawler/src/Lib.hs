@@ -20,6 +20,7 @@ import Servant
 type ApiHandler = ExceptT ServantErr IO
 
 type API = "userList" :> Get '[JSON] [Log]
+        :<|> "token" :> Capture "tkn" String :> Get '[JSON] Log
         :<|> "user" :> Capture "id" String :> Capture "hops" Int :> Get '[JSON] Log
         :<|> "startC" :> Capture "usern" String :> Capture "hops" Integer :> Get '[JSON] Log
 
@@ -34,6 +35,7 @@ api = Proxy
 
 server :: Server API
 server = userList
+    :<|> token
     :<|> user
     :<|> startC
     where
@@ -50,15 +52,21 @@ user userName ttl =  liftIO $ do
     let newU = UserDB userName  
     b <- addUser newU
     return (Log userName ttl)
+    
+token :: String -> ApiHandler Log
+token tkn =  liftIO $ do
+    putStrLn "Output" 
+    b <- addAuth tkn
+    return (Log "done" 0)
 
 startC :: String -> Integer-> ApiHandler Log
 startC usern hops=  liftIO $ do 
     putStrLn "Output"
     let startingUser = UserDB usern
     b <- addUser startingUser
-    r <- crawlUser hops startingUser
-    --putStrLn show b
-    --putStrLn show r
+    authDb <- getAuth
+    aAuth <- tokenToAuth authDb
+    r <- crawlUser hops aAuth startingUser 
     let repNo = 8
     let p = (Log usern repNo)
     return p

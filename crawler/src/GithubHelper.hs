@@ -10,6 +10,7 @@ import GitHub.Data.Repos
 import GitHub.Endpoints.Repos
 import GitHub.Endpoints.Repos.Collaborators
 import GitHub.Data.Definitions
+import GitHub.Auth
 
 import Control.Monad.IO.Class (liftIO)
 
@@ -20,11 +21,12 @@ import GHC.Generics
 import Data.Maybe
 import DBHelper
 import Data.Text.Internal
+import qualified Data.ByteString.Char8 as BS
 
 --Get users repositorys   
-reposOf :: Text -> IO[RepoDB]
-reposOf userName = do
-  possibleRepos <- GitHub.Endpoints.Repos.userRepos (mkOwnerName userName) GitHub.Data.Repos.RepoPublicityAll
+reposOf :: Text -> GitHub.Auth.Auth -> IO[RepoDB]
+reposOf userName auth= do
+  possibleRepos <- GitHub.Endpoints.Repos.userRepos' (Just auth) (mkOwnerName userName) GitHub.Data.Repos.RepoPublicityAll
   case possibleRepos of
        (Left error)  -> do 
             return $ ([])
@@ -32,9 +34,9 @@ reposOf userName = do
             x <- mapM formatRepoDB repos
             return $ Data.Vector.toList x 
             
-usersOf :: RepoDB -> IO[UserDB]
-usersOf repo = do
-    possibleUsers <- GitHub.Endpoints.Repos.Collaborators.collaboratorsOn  (mkOwnerName (pack(DBHelper.repoOwner repo))) (mkRepoName (pack(DBHelper.repoName repo)))
+usersOf :: RepoDB -> GitHub.Auth.Auth -> IO[UserDB]
+usersOf repo auth = do
+    possibleUsers <- GitHub.Endpoints.Repos.Collaborators.collaboratorsOn' (Just auth)  (mkOwnerName (pack(DBHelper.repoOwner repo))) (mkRepoName (pack(DBHelper.repoName repo)))
     case possibleUsers of
        (Left error)  -> do 
             return $ ([])
@@ -57,32 +59,34 @@ formatNumber n = do
 formatUserDB :: GitHub.Data.Definitions.SimpleUser -> IO(UserDB)
 formatUserDB user = do
     let name = untagName $ GitHub.Data.Definitions.simpleUserLogin user
+    putStrLn $ unpack $ name
     return (UserDB (unpack name) )
     
-crawlUser :: Integer -> UserDB -> IO()
-crawlUser ttl user  = do 
-    repositorys <- reposOf $ pack $ DBHelper.userId user
-    --putStrLn show repositorys
+crawlUser :: Integer -> GitHub.Auth.Auth -> UserDB ->  IO()
+crawlUser ttl auth user  = do 
+    putStrLn "user"
+    putStrLn $ show ttl
+    repositorys <- reposOf (pack ( DBHelper.userId user)) auth
     x <- mapM addRepo repositorys
-    --putStrLn show x
     links <- mapM (makeLink userRepo owns user) repositorys
     y <- mapM addLink links
-    --putStrLn show links
-    putStrLn $ show ttl
     case (ttl) of 
              0 ->  putStrLn "ended on "
-             _ ->  mapM_ (crawlRepo (ttl - 1)) repositorys
-    -- if (ttl >= 0)
-        -- then mapM_ (crawlRepo (ttl - 1)) repositorys
-        -- else putStrLn "ended on "
+             _ ->  mapM_ (crawlRepo (ttl - 1) auth) repositorys 
     
-crawlRepo :: Integer -> RepoDB ->  IO()
-crawlRepo ttl repo  = do 
-    ppl <- usersOf repo
+crawlRepo :: Integer -> GitHub.Auth.Auth -> RepoDB  -> IO()
+crawlRepo ttl auth repo  = do 
+    putStrLn "repo"
+    putStrLn $ show ttl
+    ppl <- usersOf repo auth
     x <- mapM addUser ppl
     links <- mapM (makeLink2 userRepo contributesTo repo) ppl
     y <- mapM addLink links
     if (ttl>0)
-        then mapM_ (crawlUser (ttl - 1)) ppl
+        then mapM_ (crawlUser (ttl - 1) auth) ppl
         else putStrLn "ended on "
-    
+        
+tokenToAuth :: Text -> IO(GitHub.Auth.Auth)
+tokenToAuth tkn = do
+    let t = GitHub.Auth.OAuth $ BS.pack $ unpack tkn
+    return t

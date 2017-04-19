@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2017-04-03 11:04:58.0840191 UTC
+2017-04-19 10:08:17.4603758 UTC
 
-interface crawler-0.1.0.0-56JZBgNCq73H8nAI1znk6P:Lib 8002
-  interface hash: 27c6d095ce1fa018910ccac361e33e1d
-  ABI hash: c6641f68134aa614a833e01c0c45a71b
-  export-list hash: 48941b50059d90f0967044eb0969f8b1
-  orphan hash: ad4d0dff46eb05e8ec7064d627193e56
+interface crawler-0.1.0.0-Annm8vHT08AKHY6xiJUgHQ:Lib 8002
+  interface hash: ee8eca299aa2ef0626fcb8ea84f0bec3
+  ABI hash: 94d5895cfdcdb8755f49141ef1e2fa09
+  export-list hash: a7a3abb114bf5803f9b5305d61edc7f3
+  orphan hash: f04b3966fda0b2a2dd0d1318e28602b0
   flag hash: f812823c9e94dadfbc1ee115e207d34b
   sig of: Nothing
   used TH splices: False
@@ -193,7 +193,7 @@ family instance modules: adjunctions-4.3@adjunctions-4.3-5CqTSM7liCdC9cb4N2IolK:
                          containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
                          containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
                          containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
-                         crawler-0.1.0.0-56JZBgNCq73H8nAI1znk6P:DBHelper
+                         crawler-0.1.0.0-Annm8vHT08AKHY6xiJUgHQ:DBHelper
                          dlist-0.8.0.2@dlist-0.8.0.2-6Wnps4GD7EFnRucVzXIFD:Data.DList
                          ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
                          github-0.15.0@github-0.15.0-4xrLmRvOvcILQ4PSubpbiB:GitHub.Auth
@@ -254,15 +254,18 @@ import  -/  base-4.9.1.0:Data.Proxy 657d37a7ff49fc895edf1c731d0fa581
 import  -/  base-4.9.1.0:GHC.Base 4caea1123ecf4b46e27cbccd6d279377
 import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
 import  -/  base-4.9.1.0:System.IO 5daf3f384209c11d9566e3409af8ec5d
-import  -/  DBHelper c479d9a01d1c970ad73a50c7c3c49f62
-  exports: 177310ec88de75419d6b603b484146f3
-  Log 24f6e0f12d20210a7ea132b66f214115
-  Log db6cbe0a944c29a24a5f38d8446b7180
-  UserDB fc43c28340db622023669095dde69413
-  addUser 03193c5661567ed7a9e6a9ee8d07b3f0
-import  -/  GithubHelper b33edc642b3057278bf8455f2853a4b7
-  exports: cdfa172a72d6a25157592b6c37cc3c47
-  crawlUser ed657f46c567ad082bef84f419463edd
+import  -/  DBHelper 95fde9cd744c7ad203a3be4901f885dc
+  exports: 721ec98a91c045f0936701662de25e80
+  Log 0d3a17f906c60e27a6b15260c290351c
+  Log 217cb33107d60ca5721dd4018830f8f3
+  UserDB e48f3ce402b61da5e0cb178498e827a0
+  addAuth 915bb9fad4fa1327df4897db96273026
+  addUser 871dffe76390348f05d0a700ff40f0fb
+  getAuth f0e387b47c1ad931dd9a165eb98f6b77
+import  -/  GithubHelper 11b1da64d45492266a5064cd9d16b9e3
+  exports: ef25810d77267609aeb8d9b48ce9ca95
+  crawlUser d6a457b78abcccc7c7b7bae5d7c0bb90
+  tokenToAuth 0696cf9956223d91523fa483cc278417
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
 import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 5e60b761569ee353529e98a36b72df11
 import  -/  servant-0.9.1.1@servant-0.9.1.1-H1lruO0TAg3G9UAV7nwwvZ:Servant.API.Alternative 91077e80e8eb35b5bf7b496af1219925
@@ -280,7 +283,7 @@ import  -/  wai-3.2.1.1@wai-3.2.1.1-GB3RulwwXCN9MymRcZJtxu:Network.Wai 026204f66
 import  -/  wai-cors-0.2.5@wai-cors-0.2.5-9TuxlMpmAQhFIx6d3e1iRd:Network.Wai.Middleware.Cors fe0fd1973f185bd3b41d19633c272d79
 import  -/  warp-3.2.11.1@warp-3.2.11.1-GyFH0rBhfwF4UQ6knVFPXv:Network.Wai.Handler.Warp dedcf9f5c55e0f5719bab97ea2b8545e
 import  -/  warp-3.2.11.1@warp-3.2.11.1-GyFH0rBhfwF4UQ6knVFPXv:Network.Wai.Handler.Warp.Run 2c9194fe3cfe5e1d26b1456f5f1e65c3
-3c3181916bf77475ceeb8f58449aba40
+2277f032ce84dd13487050e939514d51
   $s$fAllCTRender:a ::
     Servant.API.ContentTypes.AllCTRender
       '[Servant.API.ContentTypes.JSON] [DBHelper.Log]
@@ -312,7 +315,7 @@ import  -/  warp-3.2.11.1@warp-3.2.11.1-GyFH0rBhfwF4UQ6knVFPXv:Network.Wai.Handl
                        `cast`
                      (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
                      Lib.$s$fAllCTRender:a_$dAllMimeRender) -}
-e83f18489e961ca45b97ab9df3463f27
+6c6f48026c46528a1e0598911e692ca7
   $s$fAllCTRender:a1 ::
     Servant.API.ContentTypes.AllCTRender
       '[Servant.API.ContentTypes.JSON] DBHelper.Log
@@ -344,14 +347,14 @@ e83f18489e961ca45b97ab9df3463f27
                        `cast`
                      (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
                      Lib.$s$fAllCTRender:a2) -}
-d583120f7352726fa340484aa55dc174
+b2836b01e4fb479dd4aa7d2136367395
   $s$fAllCTRender:a2 ::
     Servant.API.ContentTypes.AllMimeRender
       '[Servant.API.ContentTypes.JSON] DBHelper.Log
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a1 -}
-59a270a5bfbffe14843ee687bc847e54
+d04d0914edb1d06a8932351908987d72
   $s$fAllCTRender:a3 ::
     Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON]
     -> DBHelper.Log
@@ -369,34 +372,34 @@ d583120f7352726fa340484aa55dc174
                    (GHC.Types.[]
                       @ (Network.HTTP.Media.MediaType.Internal.MediaType,
                          Data.ByteString.Lazy.Internal.ByteString))) -}
-d112d571fbf9c90cfc1f3124e10332a6
+58b23b9c2bc15a2f7cbc5b2b2fab8102
   $s$fAllCTRender:a4 ::
     Servant.API.ContentTypes.MimeRender
       Servant.API.ContentTypes.JSON DBHelper.Log
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa1 -}
-68c41ff68139e2cf918bb3c106c7730f
+28785abb880f293fc55d1816a4ef03c2
   $s$fAllCTRender:a_$dAllMimeRender ::
     Servant.API.ContentTypes.AllMimeRender
       '[Servant.API.ContentTypes.JSON] [DBHelper.Log]
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a0 -}
-330fe4eb09f56e1bf70cbd5d61fb9c09
+ac0780e974006d6581bcca902376d164
   $s$fAllCTRender:a_$dMimeRender ::
     Servant.API.ContentTypes.MimeRender
       Servant.API.ContentTypes.JSON [DBHelper.Log]
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa -}
-c6202facf7bc4d1fa5ffb17314687ac9
+219053e756e89e54fdba29dd6fb60455
   $s$fAllCTRender:a_$dToJSON ::
     Data.Aeson.Types.ToJSON.ToJSON [DBHelper.Log]
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Lib.$s$fAllCTRender:a_$s$fToJSON[] -}
-e067cf562ca38c54bd9c0b7e983526c1
+c72acc226a98acface59a52ecf97f23e
   $s$fAllCTRender:a_$s$fAllMimeRender:a0 ::
     Servant.API.ContentTypes.AllMimeRender
       '[Servant.API.ContentTypes.JSON] [DBHelper.Log]
@@ -409,7 +412,7 @@ e067cf562ca38c54bd9c0b7e983526c1
                      @ [DBHelper.Log]
                      Lib.$s$fAllCTRender:a_$dMimeRender)
                   Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a0_$callMimeRender -}
-3659fd8883c051f86bf9dd4735aeafe6
+2c9f0f59b99b8f415e827b900d47d412
   $s$fAllCTRender:a_$s$fAllMimeRender:a0_$callMimeRender ::
     Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON]
     -> [DBHelper.Log]
@@ -435,7 +438,7 @@ e067cf562ca38c54bd9c0b7e983526c1
                    (GHC.Types.[]
                       @ (Network.HTTP.Media.MediaType.Internal.MediaType,
                          Data.ByteString.Lazy.Internal.ByteString))) -}
-9efa7972632bc761f171e84908effe69
+3112541b4f17068b545eb4c3792ed6f0
   $s$fAllCTRender:a_$s$fAllMimeRender:a1 ::
     Servant.API.ContentTypes.AllMimeRender
       '[Servant.API.ContentTypes.JSON] DBHelper.Log
@@ -448,7 +451,7 @@ e067cf562ca38c54bd9c0b7e983526c1
                      @ DBHelper.Log
                      Lib.$s$fAllCTRender:a4)
                   Lib.$s$fAllCTRender:a3 -}
-b55f23367434ea9f458058f2a9d49d97
+0c1d286f2ab1dc081d72625033615e17
   $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa ::
     Servant.API.ContentTypes.MimeRender
       Servant.API.ContentTypes.JSON [DBHelper.Log]
@@ -461,7 +464,7 @@ b55f23367434ea9f458058f2a9d49d97
                      @ [DBHelper.Log]
                      Lib.$s$fAllCTRender:a_$dToJSON)
                   Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender -}
-6b2be52c9853cda69a1814b83adeb319
+bed86bd97afdda5612ecfea4e412fea9
   $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa1 ::
     Servant.API.ContentTypes.MimeRender
       Servant.API.ContentTypes.JSON DBHelper.Log
@@ -474,7 +477,7 @@ b55f23367434ea9f458058f2a9d49d97
                      @ DBHelper.Log
                      DBHelper.$fToJSONLog)
                   Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender1 -}
-83b60b29b335a3f3f9923449a13c50e9
+c57e4ce8428e261c589a5fda1612b290
   $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender ::
     Data.Proxy.Proxy Servant.API.ContentTypes.JSON
     -> [DBHelper.Log] -> Data.ByteString.Lazy.Internal.ByteString
@@ -486,7 +489,7 @@ b55f23367434ea9f458058f2a9d49d97
                    @ [DBHelper.Log]
                    Lib.$s$fAllCTRender:a_$dToJSON
                    eta) -}
-4fa014e9820f2bb0c4ccbe815c0701d8
+3d08b892f8cad2a869ce7b2ef2a7c6f4
   $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender1 ::
     Data.Proxy.Proxy Servant.API.ContentTypes.JSON
     -> DBHelper.Log -> Data.ByteString.Lazy.Internal.ByteString
@@ -495,7 +498,7 @@ b55f23367434ea9f458058f2a9d49d97
                 (\ (ds :: Data.Proxy.Proxy Servant.API.ContentTypes.JSON)
                    (eta :: DBHelper.Log) ->
                  Lib.$s$fAllCTRender:a_$sencode eta) -}
-d57251ea60b8df4db7f382a662937cfa
+b51a3e0397edc01ecb241d4dc63a335a
   $s$fAllCTRender:a_$s$fToJSON[] ::
     Data.Aeson.Types.ToJSON.ToJSON [DBHelper.Log]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -706,7 +709,7 @@ d57251ea60b8df4db7f382a662937cfa
                           `cast`
                         (Sym (Data.Aeson.Encoding.Internal.N:Encoding'[0]
                                   <Data.Aeson.Types.Internal.Value>_P)) }) -}
-5592fbef62b7a9f53170397c55586b50
+e5f67bbca6eef6e7eb209634c6dccc8c
   $s$fAllCTRender:a_$sencode ::
     DBHelper.Log -> Data.ByteString.Lazy.Internal.ByteString
   {- Arity: 1, Strictness: <L,1*U(U,U)>,
@@ -718,48 +721,56 @@ d57251ea60b8df4db7f382a662937cfa
                      `cast`
                    (Data.Aeson.Encoding.Internal.N:Encoding'[0]
                         <Data.Aeson.Types.Internal.Value>_P)) -}
-c02969bd562f471612ca02003e3a51ad
+19978ada72c209d844c995e092440b6c
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module Lib.$trModule2 Lib.$trModule1) -}
-9d9acde41bb5a79fe717a0cd9c41a5d4
+156be1e6897660f3bd36483a2f648be1
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Lib"#) -}
-574f610e5d5013d569f26ab0f71d82a7
+7b70c1ffe5127239ec4c9c12553aa008
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "crawler-0.1.0.0-56JZBgNCq73H8nAI1znk6P"#) -}
-1b945a02bd012803f1969858f15cc442
+                   "crawler-0.1.0.0-Annm8vHT08AKHY6xiJUgHQ"#) -}
+48e66cc76e98bbce7006f7f8739e608e
   type API =
     ("userList"
      Servant.API.Sub.:> Servant.API.Verbs.Get
                           '[Servant.API.ContentTypes.JSON] [DBHelper.Log])
-    Servant.API.Alternative.:<|> (("user"
+    Servant.API.Alternative.:<|> (("token"
                                    Servant.API.Sub.:> (Servant.API.Capture.Capture
-                                                         "id" GHC.Base.String
-                                                       Servant.API.Sub.:> (Servant.API.Capture.Capture
-                                                                             "hops" GHC.Types.Int
-                                                                           Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                '[Servant.API.ContentTypes.JSON]
-                                                                                                DBHelper.Log)))
-                                  Servant.API.Alternative.:<|> ("startC"
-                                                                Servant.API.Sub.:> (Servant.API.Capture.Capture
-                                                                                      "usern"
-                                                                                      GHC.Base.String
-                                                                                    Servant.API.Sub.:> (Servant.API.Capture.Capture
-                                                                                                          "hops"
-                                                                                                          GHC.Integer.Type.Integer
-                                                                                                        Servant.API.Sub.:> Servant.API.Verbs.Get
-                                                                                                                             '[Servant.API.ContentTypes.JSON]
-                                                                                                                             DBHelper.Log))))
-766daefbccf968c6be909f7eafef95fe
+                                                         "tkn" GHC.Base.String
+                                                       Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                            '[Servant.API.ContentTypes.JSON]
+                                                                            DBHelper.Log))
+                                  Servant.API.Alternative.:<|> (("user"
+                                                                 Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                       "id"
+                                                                                       GHC.Base.String
+                                                                                     Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                           "hops"
+                                                                                                           GHC.Types.Int
+                                                                                                         Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                              '[Servant.API.ContentTypes.JSON]
+                                                                                                                              DBHelper.Log)))
+                                                                Servant.API.Alternative.:<|> ("startC"
+                                                                                              Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                                    "usern"
+                                                                                                                    GHC.Base.String
+                                                                                                                  Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                                                                                                                        "hops"
+                                                                                                                                        GHC.Integer.Type.Integer
+                                                                                                                                      Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                                                                                                           '[Servant.API.ContentTypes.JSON]
+                                                                                                                                                           DBHelper.Log)))))
+4cbd215fcb8d08404f07ef3ecc2eab32
   type ApiHandler =
     Control.Monad.Trans.Except.ExceptT
       Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO
     :: * -> *
-9bb0181ffa9261404a7e6dd928e4d004
+1d39ad880d98d7afca66960efe71c597
   app :: Network.Wai.Application
   {- Arity: 3,
      Unfolding: InlineRule (0, True, True)
@@ -770,7 +781,7 @@ c02969bd562f471612ca02003e3a51ad
                        -> GHC.Types.IO Network.Wai.Internal.ResponseReceived>_R
                  ->_R Sym (GHC.Types.N:IO[0]
                                <Network.Wai.Internal.ResponseReceived>_R)) -}
-de55efea6c9adb56e0e08dc22a0eb01a
+ea9d5b393bca007ca433ff55cc68014d
   app1 ::
     Network.Wai.Internal.Request
     -> (Network.Wai.Internal.Response
@@ -780,8 +791,13 @@ de55efea6c9adb56e0e08dc22a0eb01a
           Network.Wai.Internal.ResponseReceived #)
   {- Arity: 3,
      Unfolding: (Network.Wai.Middleware.Cors.simpleCors1 Lib.app2) -}
-c4d5e3489d2f6f43b0a6a5df043e7669
+76dfbb856be8f58202470636f79dcff2
   app10 ::
+    Servant.Server.Internal.Router.Router
+      (Data.Text.Internal.Text, (Data.Text.Internal.Text, ()))
+  {- Unfolding: (Lib.app21 Lib.app11) -}
+017dc07b0fd7291589686d726ef7c331
+  app11 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       (Data.Text.Internal.Text, (Data.Text.Internal.Text, ()))
       (Servant.Server.Internal.Server
@@ -800,7 +816,7 @@ c4d5e3489d2f6f43b0a6a5df043e7669
                            '[Servant.API.ContentTypes.JSON]
                            DBHelper.Log))
                    @ Data.Text.Internal.Text
-                   Lib.app12
+                   Lib.app13
                      `cast`
                    (Servant.Server.Internal.RoutingApplication.Delayed
                       <(Data.Text.Internal.Text, ())>_R
@@ -816,9 +832,9 @@ c4d5e3489d2f6f43b0a6a5df043e7669
                                 <Control.Monad.Trans.Except.ExceptT
                                    Servant.Server.Internal.ServantErr.ServantErr
                                    GHC.Types.IO>_N)))_R
-                   Lib.app11) -}
-29c80164ed05501cd019dc6fa0965468
-  app11 ::
+                   Lib.app12) -}
+548e1e2b52c6e995b1e4286b2437d514
+  app12 ::
     Data.Text.Internal.Text
     -> Servant.Server.Internal.RoutingApplication.DelayedIO
          GHC.Integer.Type.Integer
@@ -851,8 +867,8 @@ c4d5e3489d2f6f43b0a6a5df043e7669
                                              GHC.Integer.Type.Integer>_R))
                            (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
                                      <GHC.Integer.Type.Integer>_R))) }) -}
-6f2742795a855600445ba908d82dc704
-  app12 ::
+66f701228b04d86240a144d136b57a39
+  app13 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       (Data.Text.Internal.Text, ())
       (Servant.Server.Internal.Server
@@ -867,7 +883,7 @@ c4d5e3489d2f6f43b0a6a5df043e7669
                          Servant.API.Sub.:> Servant.API.Verbs.Get
                                               '[Servant.API.ContentTypes.JSON] DBHelper.Log))
                    @ Data.Text.Internal.Text
-                   Lib.app14
+                   Lib.app15
                      `cast`
                    (Servant.Server.Internal.RoutingApplication.Delayed
                       <()>_R
@@ -895,9 +911,9 @@ c4d5e3489d2f6f43b0a6a5df043e7669
                                      <Control.Monad.Trans.Except.ExceptT
                                         Servant.Server.Internal.ServantErr.ServantErr
                                         GHC.Types.IO>_N))))_R
-                   Lib.app13) -}
-d394153678fabb7e2d239a007590abf2
-  app13 ::
+                   Lib.app14) -}
+bb91d5bdd2cdd490f766a24ae5232d29
+  app14 ::
     Data.Text.Internal.Text
     -> Servant.Server.Internal.RoutingApplication.DelayedIO
          [GHC.Types.Char]
@@ -916,8 +932,8 @@ d394153678fabb7e2d239a007590abf2
                                         [GHC.Types.Char]>_R))
                       (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
                                 <[GHC.Types.Char]>_R))) }) -}
-2036b37932746173f227ab69d974b583
-  app14 ::
+bf75fd983de315fe041de239eac5c992
+  app15 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       ()
       (Servant.Server.Internal.Server
@@ -980,9 +996,9 @@ d394153678fabb7e2d239a007590abf2
                                           ()>_R))
                         (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
                                   <()>_R)))
-                   Lib.app15) -}
-026bf361574bee99075c519efd55947e
-  app15 ::
+                   Lib.app16) -}
+4b68fb1bc7d6155542c90e876541e62a
+  app16 ::
     ()
     -> ()
     -> ()
@@ -1002,9 +1018,9 @@ d394153678fabb7e2d239a007590abf2
                    (a1 :: ())
                    (b1 :: ())
                    (req :: Network.Wai.Internal.Request) ->
-                 Lib.app16) -}
-b650ad1c5469f12cb4e525d1b3a1ae4f
-  app16 ::
+                 Lib.app17) -}
+7407e104887bf9fcf9f70872ae1f3434
+  app17 ::
     Servant.Server.Internal.RoutingApplication.RouteResult
       (Servant.Server.Internal.Server
          ("startC"
@@ -1025,7 +1041,7 @@ b650ad1c5469f12cb4e525d1b3a1ae4f
                                                                  Servant.API.Sub.:> Servant.API.Verbs.Get
                                                                                       '[Servant.API.ContentTypes.JSON]
                                                                                       DBHelper.Log))))
-                   Lib.app17
+                   Lib.app18
                      `cast`
                    (Trans
                         (<[GHC.Types.Char]>_R
@@ -1087,8 +1103,8 @@ b650ad1c5469f12cb4e525d1b3a1ae4f
                                             <Control.Monad.Trans.Except.ExceptT
                                                Servant.Server.Internal.ServantErr.ServantErr
                                                GHC.Types.IO>_N)))))) -}
-8f608fe3b4dd62edb6ecb1662653f4e8
-  app17 ::
+38f5dedb8dbf9307e10ded0a3dfdd9b5
+  app18 ::
     GHC.Base.String
     -> GHC.Integer.Type.Integer
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -1101,7 +1117,7 @@ b650ad1c5469f12cb4e525d1b3a1ae4f
                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  case GHC.IO.Handle.Text.hPutStr2
                         GHC.IO.Handle.FD.stdout
-                        Lib.app19
+                        Lib.app20
                         GHC.Types.True
                         s of ds1 { (#,#) ipv ipv1 ->
                  let {
@@ -1109,28 +1125,33 @@ b650ad1c5469f12cb4e525d1b3a1ae4f
                    = DBHelper.UserDB usern
                  } in
                  case DBHelper.addUser1 startingUser ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case DBHelper.getAuth1 ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                 case GithubHelper.tokenToAuth1
+                        ipv5
+                        ipv4 of ds4 { (#,#) ipv6 ipv7 ->
                  case GithubHelper.crawlRepo2
                         hops
+                        ipv7
                         startingUser
-                        ipv2 of ds3 { (#,#) ipv4 ipv5 ->
-                 (# ipv4,
+                        ipv6 of ds5 { (#,#) ipv8 ipv9 ->
+                 (# ipv8,
                     Data.Either.Right
                       @ Servant.Server.Internal.ServantErr.ServantErr
                       @ DBHelper.Log
-                      (DBHelper.Log usern Lib.app18) #) } } }) -}
-cdbcd9b869ee6115b84bf0ae39b9551f
-  app18 :: GHC.Types.Int
+                      (DBHelper.Log usern Lib.app19) #) } } } } }) -}
+a115864244b5434ef002aaac99009244
+  app19 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 8#) -}
-ec82353eec4669f37034e3068fd49a6a
-  app19 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "Output"#) -}
-17fe6a2343212269b0936c5bd1d3a6e1
+b883470b41f1a8897e0fd5ebf5bf310d
   app2 :: Network.Wai.Application
   {- Arity: 2,
      Unfolding: (Servant.Server.Internal.RoutingApplication.toApplication
                    Lib.app3) -}
-6727acffa9a4b97f15d2a4582757e4e2
-  app20 ::
+9ec5bae6db0d9727dd33b8e49c587c81
+  app20 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Output"#) -}
+20eeba10c1cc9fe783522f42673e65fc
+  app21 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       (Data.Text.Internal.Text, (Data.Text.Internal.Text, ()))
       (Servant.Server.Internal.Server
@@ -1154,7 +1175,7 @@ ec82353eec4669f37034e3068fd49a6a
                    (Sym (Servant.API.Verbs.N:ReflectMethod[0]
                              <Network.HTTP.Types.Method.StdMethod>_N
                              <'Network.HTTP.Types.Method.GET>_N))
-                   Lib.app21
+                   Lib.app22
                      `cast`
                    (Trans
                         (Sym (GHC.TypeLits.N:SNat[0] <200>_P))
@@ -1167,11 +1188,11 @@ ec82353eec4669f37034e3068fd49a6a
                            200
                            '[Servant.API.ContentTypes.JSON]
                            DBHelper.Log))) -}
-05750aeb497cff13b11637c2669d5a1d
-  app21 :: GHC.Integer.Type.Integer
+23742e34e5b02c34052bdea7df6404b4
+  app22 :: GHC.Integer.Type.Integer
   {- HasNoCafRefs, Unfolding: (200) -}
-9d5cce389845b64c323996c2e6008e03
-  app22 ::
+d4448e9ae0642297d206d0491f10aa66
+  app23 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           Data.Text.Internal.Text #)
@@ -1185,25 +1206,25 @@ ec82353eec4669f37034e3068fd49a6a
                  Servant.Server.Internal.$wouter
                    (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
                    Servant.Server.Internal.$fHasServerTYPE:>context20
-                   Lib.app23
+                   Lib.app24
                    0#
                    ipv }) -}
-4b6bbfe1ef6d41125701d98d727fd1d9
-  app23 :: [GHC.Types.Char]
+17f1031a0abf483b8fbb2288bb695cd5
+  app24 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "startC"#) -}
-30b51220a2d2a8e1d120ac690214d5f2
-  app24 ::
+e001bf647e7ff71b34aa07e4f849c53f
+  app25 ::
     Servant.Server.Internal.Router.Router'
       () Servant.Server.Internal.RoutingApplication.RoutingApplication
   {- Unfolding: (Servant.Server.Internal.Router.StaticRouter
                    @ ()
                    @ Servant.Server.Internal.RoutingApplication.RoutingApplication
-                   Lib.app25
+                   Lib.app26
                    (GHC.Types.[]
                       @ (()
                          -> Servant.Server.Internal.RoutingApplication.RoutingApplication))) -}
-52f8fbd926a9be735e264c12dbbdf0da
-  app25 ::
+b3e774246d09c8adaf38d0e1890a8b7f
+  app26 ::
     Data.Map.Base.Map
       Data.Text.Internal.Text
       (Servant.Server.Internal.Router.Router'
@@ -1211,7 +1232,7 @@ ec82353eec4669f37034e3068fd49a6a
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Lib.app36 of ds1 { (#,#) ipv ipv1 ->
+                        Lib.app37 of ds1 { (#,#) ipv ipv1 ->
                  case ipv1 of dt { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
                  Data.Map.Base.Bin
                    @ Data.Text.Internal.Text
@@ -1219,7 +1240,7 @@ ec82353eec4669f37034e3068fd49a6a
                         () Servant.Server.Internal.RoutingApplication.RoutingApplication)
                    1#
                    dt
-                   Lib.app26
+                   Lib.app27
                    (Data.Map.Base.Tip
                       @ Data.Text.Internal.Text
                       @ (Servant.Server.Internal.Router.Router'
@@ -1229,66 +1250,29 @@ ec82353eec4669f37034e3068fd49a6a
                       @ (Servant.Server.Internal.Router.Router'
                            ()
                            Servant.Server.Internal.RoutingApplication.RoutingApplication)) } }) -}
-bd10aa19cf0d89a1cc3acf0fd981ad1e
-  app26 ::
+1e048a1397fe3db91b71e337218093a7
+  app27 ::
     Servant.Server.Internal.Router.Router'
       () Servant.Server.Internal.RoutingApplication.RoutingApplication
   {- Unfolding: (Servant.Server.Internal.Router.CaptureRouter
                    @ ()
                    @ Servant.Server.Internal.RoutingApplication.RoutingApplication
-                   Lib.app27) -}
-605ae4b151651312f2de025862da6ef0
-  app27 ::
+                   Lib.app28) -}
+2b18da50fa395ed74dd234664f1ad710
+  app28 ::
     Servant.Server.Internal.Router.Router'
       (Data.Text.Internal.Text, ())
       Servant.Server.Internal.RoutingApplication.RoutingApplication
   {- Unfolding: (Servant.Server.Internal.Router.CaptureRouter
                    @ (Data.Text.Internal.Text, ())
                    @ Servant.Server.Internal.RoutingApplication.RoutingApplication
-                   Lib.app28) -}
-97f6aa7975201f22b1543bd55df6ab22
-  app28 ::
+                   Lib.app29) -}
+e5479bae8e9f21d1a2e11ad555cd4116
+  app29 ::
     Servant.Server.Internal.Router.Router
       (Data.Text.Internal.Text, (Data.Text.Internal.Text, ()))
-  {- Unfolding: (Lib.app20 Lib.app29) -}
-e76a7ed38d789ac023c4a29e7294c2dd
-  app29 ::
-    Servant.Server.Internal.RoutingApplication.Delayed
-      (Data.Text.Internal.Text, (Data.Text.Internal.Text, ()))
-      (Servant.Server.Internal.Server
-         (Servant.API.Verbs.Verb
-            'Network.HTTP.Types.Method.GET
-            200
-            '[Servant.API.ContentTypes.JSON]
-            DBHelper.Log))
-  {- Unfolding: (Servant.Server.Internal.RoutingApplication.addCapture
-                   @ (Data.Text.Internal.Text, ())
-                   @ GHC.Types.Int
-                   @ (Servant.Server.Internal.Server
-                        (Servant.API.Verbs.Verb
-                           'Network.HTTP.Types.Method.GET
-                           200
-                           '[Servant.API.ContentTypes.JSON]
-                           DBHelper.Log))
-                   @ Data.Text.Internal.Text
-                   Lib.app31
-                     `cast`
-                   (Servant.Server.Internal.RoutingApplication.Delayed
-                      <(Data.Text.Internal.Text, ())>_R
-                      (Sub (Servant.Server.Internal.D:R:ServerTTYPE:>m11[0]
-                                <*>_N
-                                <GHC.Types.Int>_N
-                                <"hops">_N
-                                <Servant.API.Verbs.Verb
-                                   'Network.HTTP.Types.Method.GET
-                                   200
-                                   '[Servant.API.ContentTypes.JSON]
-                                   DBHelper.Log>_N
-                                <Control.Monad.Trans.Except.ExceptT
-                                   Servant.Server.Internal.ServantErr.ServantErr
-                                   GHC.Types.IO>_N)))_R
-                   Lib.app30) -}
-6e5774374402ffe0d65ba97b2f56df81
+  {- Unfolding: (Lib.app21 Lib.app30) -}
+c482e8d56a98a92553bf2f7e1e63fae4
   app3 ::
     Network.Wai.Internal.Request
     -> (Servant.Server.Internal.RoutingApplication.RouteResult
@@ -1308,8 +1292,45 @@ e76a7ed38d789ac023c4a29e7294c2dd
                    GHC.Tuple.()
                    eta
                    eta1) -}
-1208c32e959a04f13d81c2c029dac5fa
+fe8718f7a879cd9f9a2367e75cffa85c
   app30 ::
+    Servant.Server.Internal.RoutingApplication.Delayed
+      (Data.Text.Internal.Text, (Data.Text.Internal.Text, ()))
+      (Servant.Server.Internal.Server
+         (Servant.API.Verbs.Verb
+            'Network.HTTP.Types.Method.GET
+            200
+            '[Servant.API.ContentTypes.JSON]
+            DBHelper.Log))
+  {- Unfolding: (Servant.Server.Internal.RoutingApplication.addCapture
+                   @ (Data.Text.Internal.Text, ())
+                   @ GHC.Types.Int
+                   @ (Servant.Server.Internal.Server
+                        (Servant.API.Verbs.Verb
+                           'Network.HTTP.Types.Method.GET
+                           200
+                           '[Servant.API.ContentTypes.JSON]
+                           DBHelper.Log))
+                   @ Data.Text.Internal.Text
+                   Lib.app32
+                     `cast`
+                   (Servant.Server.Internal.RoutingApplication.Delayed
+                      <(Data.Text.Internal.Text, ())>_R
+                      (Sub (Servant.Server.Internal.D:R:ServerTTYPE:>m11[0]
+                                <*>_N
+                                <GHC.Types.Int>_N
+                                <"hops">_N
+                                <Servant.API.Verbs.Verb
+                                   'Network.HTTP.Types.Method.GET
+                                   200
+                                   '[Servant.API.ContentTypes.JSON]
+                                   DBHelper.Log>_N
+                                <Control.Monad.Trans.Except.ExceptT
+                                   Servant.Server.Internal.ServantErr.ServantErr
+                                   GHC.Types.IO>_N)))_R
+                   Lib.app31) -}
+07457e5f44afa03da4742651846a2aa5
+  app31 ::
     Data.Text.Internal.Text
     -> Servant.Server.Internal.RoutingApplication.DelayedIO
          GHC.Types.Int
@@ -1341,8 +1362,8 @@ e76a7ed38d789ac023c4a29e7294c2dd
                                              GHC.Types.Int>_R))
                            (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
                                      <GHC.Types.Int>_R))) }) -}
-76aaef61e84686876a73a4345f32d6be
-  app31 ::
+cdbcd2fb2e116c7c5df94a2e151fb897
+  app32 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       (Data.Text.Internal.Text, ())
       (Servant.Server.Internal.Server
@@ -1357,7 +1378,7 @@ e76a7ed38d789ac023c4a29e7294c2dd
                          Servant.API.Sub.:> Servant.API.Verbs.Get
                                               '[Servant.API.ContentTypes.JSON] DBHelper.Log))
                    @ Data.Text.Internal.Text
-                   Lib.app32
+                   Lib.app33
                      `cast`
                    (Servant.Server.Internal.RoutingApplication.Delayed
                       <()>_R
@@ -1385,9 +1406,9 @@ e76a7ed38d789ac023c4a29e7294c2dd
                                      <Control.Monad.Trans.Except.ExceptT
                                         Servant.Server.Internal.ServantErr.ServantErr
                                         GHC.Types.IO>_N))))_R
-                   Lib.app13) -}
-3f4dc47c92e0eb8f173522e325d892cd
-  app32 ::
+                   Lib.app14) -}
+c918914bf7e698519bdaf661e4b0b69b
+  app33 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       ()
       (Servant.Server.Internal.Server
@@ -1450,9 +1471,9 @@ e76a7ed38d789ac023c4a29e7294c2dd
                                           ()>_R))
                         (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
                                   <()>_R)))
-                   Lib.app33) -}
-f5fac3f0cfb1a5949cda9720eac3f789
-  app33 ::
+                   Lib.app34) -}
+95349dbc5d91ddc034e932f390b4e28e
+  app34 ::
     ()
     -> ()
     -> ()
@@ -1472,9 +1493,9 @@ f5fac3f0cfb1a5949cda9720eac3f789
                    (a1 :: ())
                    (b1 :: ())
                    (req :: Network.Wai.Internal.Request) ->
-                 Lib.app34) -}
-f53a77fbb3cc0c6cef188bd93f45be75
-  app34 ::
+                 Lib.app35) -}
+b991c5cfbef8aa834bc8152ee4919740
+  app35 ::
     Servant.Server.Internal.RoutingApplication.RouteResult
       (Servant.Server.Internal.Server
          ("user"
@@ -1495,7 +1516,7 @@ f53a77fbb3cc0c6cef188bd93f45be75
                                                                  Servant.API.Sub.:> Servant.API.Verbs.Get
                                                                                       '[Servant.API.ContentTypes.JSON]
                                                                                       DBHelper.Log))))
-                   Lib.app35
+                   Lib.app36
                      `cast`
                    (Trans
                         (<[GHC.Types.Char]>_R
@@ -1556,8 +1577,8 @@ f53a77fbb3cc0c6cef188bd93f45be75
                                             <Control.Monad.Trans.Except.ExceptT
                                                Servant.Server.Internal.ServantErr.ServantErr
                                                GHC.Types.IO>_N)))))) -}
-b5f8d68aae3b786e2a063cd425836e68
-  app35 ::
+895277e2878dc8e82885ec1e70a360b3
+  app36 ::
     GHC.Base.String
     -> GHC.Types.Int
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -1570,7 +1591,7 @@ b5f8d68aae3b786e2a063cd425836e68
                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  case GHC.IO.Handle.Text.hPutStr2
                         GHC.IO.Handle.FD.stdout
-                        Lib.app19
+                        Lib.app20
                         GHC.Types.True
                         s of ds1 { (#,#) ipv ipv1 ->
                  case DBHelper.addUser1
@@ -1581,8 +1602,8 @@ b5f8d68aae3b786e2a063cd425836e68
                       @ Servant.Server.Internal.ServantErr.ServantErr
                       @ DBHelper.Log
                       (DBHelper.Log userName ttl) #) } }) -}
-0e04127d4529d9e915060132340738f4
-  app36 ::
+e6fda8e239d92606da910eae92a0cfbe
+  app37 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           Data.Text.Internal.Text #)
@@ -1596,25 +1617,34 @@ b5f8d68aae3b786e2a063cd425836e68
                  Servant.Server.Internal.$wouter
                    (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
                    Servant.Server.Internal.$fHasServerTYPE:>context20
-                   Lib.app37
+                   Lib.app38
                    0#
                    ipv }) -}
-1b8c5766db16c22381a81ebe7fb16761
-  app37 :: [GHC.Types.Char]
+18715ae342d87afdccc49182b929ab47
+  app38 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "user"#) -}
-e2a51367c5e20191e9ae1fd902753b3b
-  app38 ::
+887dae80a30067c89635f2cb83e64345
+  app39 ::
     Servant.Server.Internal.Router.Router'
       () Servant.Server.Internal.RoutingApplication.RoutingApplication
   {- Unfolding: (Servant.Server.Internal.Router.StaticRouter
                    @ ()
                    @ Servant.Server.Internal.RoutingApplication.RoutingApplication
-                   Lib.app39
+                   Lib.app40
                    (GHC.Types.[]
                       @ (()
                          -> Servant.Server.Internal.RoutingApplication.RoutingApplication))) -}
-203182178a9d9972efb28bf8e17f6b80
-  app39 ::
+496edbc989b6e34210de1c4c050e8a69
+  app4 ::
+    Servant.Server.Internal.Router.Router'
+      () Servant.Server.Internal.RoutingApplication.RoutingApplication
+  {- Unfolding: (Servant.Server.Internal.Router.choice
+                   @ ()
+                   @ Servant.Server.Internal.RoutingApplication.RoutingApplication
+                   Lib.app39
+                   Lib.app5) -}
+65f2da6f8c8efca48f0328ce7770c655
+  app40 ::
     Data.Map.Base.Map
       Data.Text.Internal.Text
       (Servant.Server.Internal.Router.Router'
@@ -1622,7 +1652,7 @@ e2a51367c5e20191e9ae1fd902753b3b
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Lib.app55 of ds1 { (#,#) ipv ipv1 ->
+                        Lib.app52 of ds1 { (#,#) ipv ipv1 ->
                  case ipv1 of dt { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
                  Data.Map.Base.Bin
                    @ Data.Text.Internal.Text
@@ -1630,7 +1660,7 @@ e2a51367c5e20191e9ae1fd902753b3b
                         () Servant.Server.Internal.RoutingApplication.RoutingApplication)
                    1#
                    dt
-                   Lib.app40
+                   Lib.app41
                    (Data.Map.Base.Tip
                       @ Data.Text.Internal.Text
                       @ (Servant.Server.Internal.Router.Router'
@@ -1640,19 +1670,350 @@ e2a51367c5e20191e9ae1fd902753b3b
                       @ (Servant.Server.Internal.Router.Router'
                            ()
                            Servant.Server.Internal.RoutingApplication.RoutingApplication)) } }) -}
-712f11982c74d221d78165e709751e65
-  app4 ::
+9b5734c8aad890ba1d27f82096bca1e0
+  app41 ::
+    Servant.Server.Internal.Router.Router'
+      () Servant.Server.Internal.RoutingApplication.RoutingApplication
+  {- Unfolding: (Servant.Server.Internal.Router.CaptureRouter
+                   @ ()
+                   @ Servant.Server.Internal.RoutingApplication.RoutingApplication
+                   Lib.app42) -}
+a829da3c83134e54bdb7b0fb2cb2ccff
+  app42 ::
+    Servant.Server.Internal.Router.Router (Data.Text.Internal.Text, ())
+  {- Unfolding: (Lib.app51 Lib.app43) -}
+b2028be789ecbd59cae951ace7882a28
+  app43 ::
+    Servant.Server.Internal.RoutingApplication.Delayed
+      (Data.Text.Internal.Text, ())
+      (Servant.Server.Internal.Server
+         (Servant.API.Verbs.Verb
+            'Network.HTTP.Types.Method.GET
+            200
+            '[Servant.API.ContentTypes.JSON]
+            DBHelper.Log))
+  {- Unfolding: (Servant.Server.Internal.RoutingApplication.addCapture
+                   @ ()
+                   @ [GHC.Types.Char]
+                   @ (Servant.Server.Internal.Server
+                        (Servant.API.Verbs.Verb
+                           'Network.HTTP.Types.Method.GET
+                           200
+                           '[Servant.API.ContentTypes.JSON]
+                           DBHelper.Log))
+                   @ Data.Text.Internal.Text
+                   Lib.app44
+                     `cast`
+                   (Servant.Server.Internal.RoutingApplication.Delayed
+                      <()>_R
+                      (Trans
+                           (Sub (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
+                                     <*>_N
+                                     <Servant.API.Capture.Capture "tkn" GHC.Base.String
+                                      Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                           '[Servant.API.ContentTypes.JSON]
+                                                           DBHelper.Log>_N
+                                     <"token">_N
+                                     <Control.Monad.Trans.Except.ExceptT
+                                        Servant.Server.Internal.ServantErr.ServantErr
+                                        GHC.Types.IO>_N))
+                           (Sub (Servant.Server.Internal.D:R:ServerTTYPE:>m11[0]
+                                     <*>_N
+                                     <[GHC.Types.Char]>_N
+                                     <"tkn">_N
+                                     <Servant.API.Verbs.Verb
+                                        'Network.HTTP.Types.Method.GET
+                                        200
+                                        '[Servant.API.ContentTypes.JSON]
+                                        DBHelper.Log>_N
+                                     <Control.Monad.Trans.Except.ExceptT
+                                        Servant.Server.Internal.ServantErr.ServantErr
+                                        GHC.Types.IO>_N))))_R
+                   Lib.app14) -}
+21fd90edaf3be90530e732ce7d0c3d91
+  app44 ::
+    Servant.Server.Internal.RoutingApplication.Delayed
+      ()
+      (Servant.Server.Internal.Server
+         ("token"
+          Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                "tkn" GHC.Base.String
+                              Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                   '[Servant.API.ContentTypes.JSON] DBHelper.Log)))
+  {- Unfolding: (Servant.Server.Internal.RoutingApplication.Delayed
+                   @ ()
+                   @ (Servant.Server.Internal.Server
+                        ("token"
+                         Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                               "tkn" GHC.Base.String
+                                             Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                  '[Servant.API.ContentTypes.JSON]
+                                                                  DBHelper.Log)))
+                   @ ()
+                   @ ()
+                   @ ()
+                   (Servant.Server.Internal.RoutingApplication.emptyDelayed2 @ ())
+                     `cast`
+                   (<()>_R
+                    ->_R Trans
+                             (<Network.Wai.Internal.Request>_R
+                              ->_R Sym (GHC.Types.N:IO[0]
+                                            <Servant.Server.Internal.RoutingApplication.RouteResult
+                                               ()>_R))
+                             (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
+                                       <()>_R)))
+                   Servant.Server.Internal.RoutingApplication.emptyDelayed1
+                     `cast`
+                   (Trans
+                        (<Network.Wai.Internal.Request>_R
+                         ->_R Sym (GHC.Types.N:IO[0]
+                                       <Servant.Server.Internal.RoutingApplication.RouteResult
+                                          ()>_R))
+                        (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
+                                  <()>_R)))
+                   Servant.Server.Internal.RoutingApplication.emptyDelayed1
+                     `cast`
+                   (Trans
+                        (<Network.Wai.Internal.Request>_R
+                         ->_R Sym (GHC.Types.N:IO[0]
+                                       <Servant.Server.Internal.RoutingApplication.RouteResult
+                                          ()>_R))
+                        (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
+                                  <()>_R)))
+                   Servant.Server.Internal.RoutingApplication.emptyDelayed1
+                     `cast`
+                   (Trans
+                        (<Network.Wai.Internal.Request>_R
+                         ->_R Sym (GHC.Types.N:IO[0]
+                                       <Servant.Server.Internal.RoutingApplication.RouteResult
+                                          ()>_R))
+                        (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
+                                  <()>_R)))
+                   Lib.app45) -}
+cbd8fc668114555068cd36655f92de6d
+  app45 ::
+    ()
+    -> ()
+    -> ()
+    -> Network.Wai.Internal.Request
+    -> Servant.Server.Internal.RoutingApplication.RouteResult
+         (Servant.Server.Internal.Server
+            ("token"
+             Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                   "tkn" GHC.Base.String
+                                 Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                      '[Servant.API.ContentTypes.JSON]
+                                                      DBHelper.Log)))
+  {- Arity: 4,
+     Unfolding: (\ (c :: ())
+                   (a1 :: ())
+                   (b1 :: ())
+                   (req :: Network.Wai.Internal.Request) ->
+                 Lib.app46) -}
+624513f9f3f296963f00d58e833b414a
+  app46 ::
+    Servant.Server.Internal.RoutingApplication.RouteResult
+      (Servant.Server.Internal.Server
+         ("token"
+          Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                "tkn" GHC.Base.String
+                              Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                   '[Servant.API.ContentTypes.JSON] DBHelper.Log)))
+  {- Unfolding: (Servant.Server.Internal.RoutingApplication.Route
+                   @ (Servant.Server.Internal.Server
+                        ("token"
+                         Servant.API.Sub.:> (Servant.API.Capture.Capture
+                                               "tkn" GHC.Base.String
+                                             Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                  '[Servant.API.ContentTypes.JSON]
+                                                                  DBHelper.Log)))
+                   Lib.app47
+                     `cast`
+                   (Trans
+                        (<[GHC.Types.Char]>_R
+                         ->_R Trans
+                                  (Sym (GHC.Types.N:IO[0]
+                                            <Data.Either.Either
+                                               Servant.Server.Internal.ServantErr.ServantErr
+                                               DBHelper.Log>_R))
+                                  (Trans
+                                       (Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                                 <Servant.Server.Internal.ServantErr.ServantErr>_N
+                                                 <GHC.Types.IO>_R
+                                                 <DBHelper.Log>_N))
+                                       (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPEVerbm0[0]
+                                                      <Network.HTTP.Types.Method.StdMethod>_N
+                                                      <DBHelper.Log>_N
+                                                      <'[Servant.API.ContentTypes.JSON]>_N
+                                                      <200>_N
+                                                      <'Network.HTTP.Types.Method.GET>_N
+                                                      <Control.Monad.Trans.Except.ExceptT
+                                                         Servant.Server.Internal.ServantErr.ServantErr
+                                                         GHC.Types.IO>_N)))))
+                        (Trans
+                             (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m11[0]
+                                            <*>_N
+                                            <[GHC.Types.Char]>_N
+                                            <"tkn">_N
+                                            <Servant.API.Verbs.Verb
+                                               'Network.HTTP.Types.Method.GET
+                                               200
+                                               '[Servant.API.ContentTypes.JSON]
+                                               DBHelper.Log>_N
+                                            <Control.Monad.Trans.Except.ExceptT
+                                               Servant.Server.Internal.ServantErr.ServantErr
+                                               GHC.Types.IO>_N)))
+                             (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
+                                            <*>_N
+                                            <Servant.API.Capture.Capture "tkn" GHC.Base.String
+                                             Servant.API.Sub.:> Servant.API.Verbs.Get
+                                                                  '[Servant.API.ContentTypes.JSON]
+                                                                  DBHelper.Log>_N
+                                            <"token">_N
+                                            <Control.Monad.Trans.Except.ExceptT
+                                               Servant.Server.Internal.ServantErr.ServantErr
+                                               GHC.Types.IO>_N)))))) -}
+ba61cb2ea7f78d9fadffa31ff971dd7c
+  app47 ::
+    GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Either.Either
+            Servant.Server.Internal.ServantErr.ServantErr DBHelper.Log #)
+  {- Arity: 2, Strictness: <L,1*U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (tkn :: GHC.Base.String)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Lib.app20
+                        GHC.Types.True
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case DBHelper.addAuth1 tkn ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 (# ipv2,
+                    Data.Either.Right
+                      @ Servant.Server.Internal.ServantErr.ServantErr
+                      @ DBHelper.Log
+                      Lib.app48 #) } }) -}
+2df8217aaa1362c18bcf10c2fb549137
+  app48 :: DBHelper.Log
+  {- Strictness: m, Unfolding: (DBHelper.Log Lib.app50 Lib.app49) -}
+008a6cd3a166cd9d567564e94ec7e787
+  app49 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+496d0c9b2d567a246cdabd560baacc87
+  app5 ::
     Servant.Server.Internal.Router.Router'
       () Servant.Server.Internal.RoutingApplication.RoutingApplication
   {- Unfolding: (Servant.Server.Internal.Router.choice
                    @ ()
                    @ Servant.Server.Internal.RoutingApplication.RoutingApplication
-                   Lib.app24
-                   Lib.app5) -}
-6250d8bf786c87676d150a422b958ec4
-  app40 :: Servant.Server.Internal.Router.Router ()
-  {- Unfolding: (Lib.app54
-                   Lib.app41
+                   Lib.app25
+                   Lib.app6) -}
+6f4456709c191e1278df470ba7d24c05
+  app50 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "done"#) -}
+b75e3444972663af507ea4ab1b75e2dc
+  app51 ::
+    Servant.Server.Internal.RoutingApplication.Delayed
+      (Data.Text.Internal.Text, ())
+      (Servant.Server.Internal.Server
+         (Servant.API.Verbs.Verb
+            'Network.HTTP.Types.Method.GET
+            200
+            '[Servant.API.ContentTypes.JSON]
+            DBHelper.Log))
+    -> Servant.Server.Internal.Router.Router
+         (Data.Text.Internal.Text, ())
+  {- Unfolding: (Servant.Server.Internal.$w$croute9
+                   @ Network.HTTP.Types.Method.StdMethod
+                   @ '[Servant.API.ContentTypes.JSON]
+                   @ DBHelper.Log
+                   @ 'Network.HTTP.Types.Method.GET
+                   @ 200
+                   @ '[]
+                   Lib.$s$fAllCTRender:a1
+                   Servant.API.Verbs.$fReflectMethodStdMethodGET_$creflectMethod
+                     `cast`
+                   (Sym (Servant.API.Verbs.N:ReflectMethod[0]
+                             <Network.HTTP.Types.Method.StdMethod>_N
+                             <'Network.HTTP.Types.Method.GET>_N))
+                   Lib.app22
+                     `cast`
+                   (Trans
+                        (Sym (GHC.TypeLits.N:SNat[0] <200>_P))
+                        (Sym (GHC.TypeLits.N:KnownNat[0]) <200>_N))
+                   @ (Data.Text.Internal.Text, ())
+                   (Data.Proxy.Proxy
+                      @ *
+                      @ (Servant.API.Verbs.Verb
+                           'Network.HTTP.Types.Method.GET
+                           200
+                           '[Servant.API.ContentTypes.JSON]
+                           DBHelper.Log))) -}
+67000523789158f2d3d3837791f98be6
+  app52 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Servant.Server.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Servant.Server.Internal.$fHasServerTYPE:>context20
+                   Lib.app53
+                   0#
+                   ipv }) -}
+19ecbb71be3ef2c43615939ffc1f05a1
+  app53 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "token"#) -}
+e82c7d8e0ae26187b532e9fb0d3cf28c
+  app54 ::
+    Servant.Server.Internal.Router.Router'
+      () Servant.Server.Internal.RoutingApplication.RoutingApplication
+  {- Unfolding: (Servant.Server.Internal.Router.StaticRouter
+                   @ ()
+                   @ Servant.Server.Internal.RoutingApplication.RoutingApplication
+                   Lib.app55
+                   (GHC.Types.[]
+                      @ (()
+                         -> Servant.Server.Internal.RoutingApplication.RoutingApplication))) -}
+21a235cdd80de9bebf66379d672620e3
+  app55 ::
+    Data.Map.Base.Map
+      Data.Text.Internal.Text
+      (Servant.Server.Internal.Router.Router'
+         () Servant.Server.Internal.RoutingApplication.RoutingApplication)
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ Data.Text.Internal.Text
+                        Lib.app71 of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of dt { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
+                 Data.Map.Base.Bin
+                   @ Data.Text.Internal.Text
+                   @ (Servant.Server.Internal.Router.Router'
+                        () Servant.Server.Internal.RoutingApplication.RoutingApplication)
+                   1#
+                   dt
+                   Lib.app56
+                   (Data.Map.Base.Tip
+                      @ Data.Text.Internal.Text
+                      @ (Servant.Server.Internal.Router.Router'
+                           () Servant.Server.Internal.RoutingApplication.RoutingApplication))
+                   (Data.Map.Base.Tip
+                      @ Data.Text.Internal.Text
+                      @ (Servant.Server.Internal.Router.Router'
+                           ()
+                           Servant.Server.Internal.RoutingApplication.RoutingApplication)) } }) -}
+ee5e3d85e1d24cdfa6e30c0a9649562b
+  app56 :: Servant.Server.Internal.Router.Router ()
+  {- Unfolding: (Lib.app70
+                   Lib.app57
                      `cast`
                    (Servant.Server.Internal.RoutingApplication.Delayed
                       <()>_R
@@ -1667,8 +2028,8 @@ e2a51367c5e20191e9ae1fd902753b3b
                                 <Control.Monad.Trans.Except.ExceptT
                                    Servant.Server.Internal.ServantErr.ServantErr
                                    GHC.Types.IO>_N)))_R) -}
-cc034d93d3f6d0d5b943573ae0f0c636
-  app41 ::
+d7e8601ce7d4394a1bc6eac6ee6004d4
+  app57 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       ()
       (Servant.Server.Internal.Server
@@ -1721,9 +2082,9 @@ cc034d93d3f6d0d5b943573ae0f0c636
                                           ()>_R))
                         (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
                                   <()>_R)))
-                   Lib.app42) -}
-80ff04bd531f32efe84798d7f487a8f7
-  app42 ::
+                   Lib.app58) -}
+e8b12627b5e7f9b958fde57322334658
+  app58 ::
     ()
     -> ()
     -> ()
@@ -1738,9 +2099,9 @@ cc034d93d3f6d0d5b943573ae0f0c636
                    (a1 :: ())
                    (b1 :: ())
                    (req :: Network.Wai.Internal.Request) ->
-                 Lib.app43) -}
-0af2d34ab10d61bcd7a3179e3555d435
-  app43 ::
+                 Lib.app59) -}
+b0072f7cfe79b08e5f93b69a213bc8e7
+  app59 ::
     Servant.Server.Internal.RoutingApplication.RouteResult
       (Servant.Server.Internal.Server
          ("userList"
@@ -1751,7 +2112,7 @@ cc034d93d3f6d0d5b943573ae0f0c636
                         ("userList"
                          Servant.API.Sub.:> Servant.API.Verbs.Get
                                               '[Servant.API.ContentTypes.JSON] [DBHelper.Log]))
-                   Lib.app44
+                   Lib.app60
                      `cast`
                    (Trans
                         (Sym (GHC.Types.N:IO[0]
@@ -1784,63 +2145,90 @@ cc034d93d3f6d0d5b943573ae0f0c636
                                                  <Control.Monad.Trans.Except.ExceptT
                                                     Servant.Server.Internal.ServantErr.ServantErr
                                                     GHC.Types.IO>_N))))))) -}
-827fb8033221c813493fd4886c7d34bc
-  app44 ::
+09eedf052461da7bcadb11fae05fd1db
+  app6 ::
+    Servant.Server.Internal.Router.Router'
+      () Servant.Server.Internal.RoutingApplication.RoutingApplication
+  {- Unfolding: (Servant.Server.Internal.Router.StaticRouter
+                   @ ()
+                   @ Servant.Server.Internal.RoutingApplication.RoutingApplication
+                   Lib.app7
+                   (GHC.Types.[]
+                      @ (()
+                         -> Servant.Server.Internal.RoutingApplication.RoutingApplication))) -}
+62ca941261337871c7211bd1ec8dfd48
+  app60 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           Data.Either.Either
             Servant.Server.Internal.ServantErr.ServantErr [DBHelper.Log] #)
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 (# s, Lib.app45 #)) -}
-c12ddd0306235b8989e0409dc18eaae4
-  app45 ::
+                 (# s, Lib.app61 #)) -}
+6a0eb2516b6a370f74f3dcc1480a5ba9
+  app61 ::
     Data.Either.Either
       Servant.Server.Internal.ServantErr.ServantErr [DBHelper.Log]
   {- Unfolding: (Data.Either.Right
                    @ Servant.Server.Internal.ServantErr.ServantErr
                    @ [DBHelper.Log]
-                   Lib.app46) -}
-ac9735897ccdedbe5c8abef8d0ed2ab6
-  app46 :: [DBHelper.Log]
-  {- Unfolding: (GHC.Types.: @ DBHelper.Log Lib.app51 Lib.app47) -}
-2b699e95fc966213fbd336eef5ac31cb
-  app47 :: [DBHelper.Log]
+                   Lib.app62) -}
+807454a01f2f30ec3be86119c148fab5
+  app62 :: [DBHelper.Log]
+  {- Unfolding: (GHC.Types.: @ DBHelper.Log Lib.app67 Lib.app63) -}
+153e978df9e912e3ae75c67a57508f57
+  app63 :: [DBHelper.Log]
   {- Unfolding: (GHC.Types.:
                    @ DBHelper.Log
-                   Lib.app48
+                   Lib.app64
                    (GHC.Types.[] @ DBHelper.Log)) -}
-d35488db6edad59a62b2abacf3602000
-  app48 :: DBHelper.Log
-  {- Unfolding: (DBHelper.Log Lib.app50 Lib.app49) -}
-bd9716dad9146efb74d259f47ae3b66b
-  app49 :: GHC.Types.Int
+d15db011ff58964e3ab26180b06e1b2e
+  app64 :: DBHelper.Log
+  {- Unfolding: (DBHelper.Log Lib.app66 Lib.app65) -}
+580facd2b27f522addff53e86689f79a
+  app65 :: GHC.Types.Int
   {- HasNoCafRefs, Unfolding: (GHC.Types.I# 2#) -}
-f80ed420fa885fe2a1ccca2d6da3ff27
-  app5 ::
-    Servant.Server.Internal.Router.Router'
-      () Servant.Server.Internal.RoutingApplication.RoutingApplication
-  {- Unfolding: (Servant.Server.Internal.Router.StaticRouter
-                   @ ()
-                   @ Servant.Server.Internal.RoutingApplication.RoutingApplication
-                   Lib.app6
-                   (GHC.Types.[]
-                      @ (()
-                         -> Servant.Server.Internal.RoutingApplication.RoutingApplication))) -}
-b9bbc2addbb1c23976d9f40766a48e26
-  app50 :: [GHC.Types.Char]
+decbece5c61e810eecbdbaffd98692bc
+  app66 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Two"#) -}
-436164e2ab1fb9d2c90be43db1ed149b
-  app51 :: DBHelper.Log
-  {- Unfolding: (DBHelper.Log Lib.app53 Lib.app52) -}
-c470140ca4a00e64984d560daaaac38b
-  app52 :: GHC.Types.Int
+5bf7ecd5d0a18e53a58edbe8b44abcb6
+  app67 :: DBHelper.Log
+  {- Unfolding: (DBHelper.Log Lib.app69 Lib.app68) -}
+b67a01787d6b7be3a8f31ebd4e0b4281
+  app68 :: GHC.Types.Int
   {- HasNoCafRefs, Unfolding: (GHC.Types.I# 1#) -}
-1c06a172158762a8307e029008a675d3
-  app53 :: [GHC.Types.Char]
+8726278641391e6ed5c5abc40d45c48c
+  app69 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "One"#) -}
-78bc8294d1fce29227f30911a0737180
-  app54 ::
+ff07b47d141f7fb8d30c627d3a4fbdee
+  app7 ::
+    Data.Map.Base.Map
+      Data.Text.Internal.Text
+      (Servant.Server.Internal.Router.Router'
+         () Servant.Server.Internal.RoutingApplication.RoutingApplication)
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ Data.Text.Internal.Text
+                        Lib.app23 of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of dt { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
+                 Data.Map.Base.Bin
+                   @ Data.Text.Internal.Text
+                   @ (Servant.Server.Internal.Router.Router'
+                        () Servant.Server.Internal.RoutingApplication.RoutingApplication)
+                   1#
+                   dt
+                   Lib.app8
+                   (Data.Map.Base.Tip
+                      @ Data.Text.Internal.Text
+                      @ (Servant.Server.Internal.Router.Router'
+                           () Servant.Server.Internal.RoutingApplication.RoutingApplication))
+                   (Data.Map.Base.Tip
+                      @ Data.Text.Internal.Text
+                      @ (Servant.Server.Internal.Router.Router'
+                           ()
+                           Servant.Server.Internal.RoutingApplication.RoutingApplication)) } }) -}
+e34b3f4ab570994a09b54dc7c812e721
+  app70 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       ()
       (Servant.Server.Internal.Server
@@ -1863,7 +2251,7 @@ c470140ca4a00e64984d560daaaac38b
                    (Sym (Servant.API.Verbs.N:ReflectMethod[0]
                              <Network.HTTP.Types.Method.StdMethod>_N
                              <'Network.HTTP.Types.Method.GET>_N))
-                   Lib.app21
+                   Lib.app22
                      `cast`
                    (Trans
                         (Sym (GHC.TypeLits.N:SNat[0] <200>_P))
@@ -1876,8 +2264,8 @@ c470140ca4a00e64984d560daaaac38b
                            200
                            '[Servant.API.ContentTypes.JSON]
                            [DBHelper.Log]))) -}
-594e97bb0bf7264ec5097f3a355e35a1
-  app55 ::
+43a4a8a7760167e48b6645a28aedf1c4
+  app71 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           Data.Text.Internal.Text #)
@@ -1891,74 +2279,42 @@ c470140ca4a00e64984d560daaaac38b
                  Servant.Server.Internal.$wouter
                    (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
                    Servant.Server.Internal.$fHasServerTYPE:>context20
-                   Lib.app56
+                   Lib.app72
                    0#
                    ipv }) -}
-74200223b5fc28c22089e75041331e7f
-  app56 :: [GHC.Types.Char]
+5fa56e4336f19f3ef14a5a3e2d424f3e
+  app72 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "userList"#) -}
-be1a417cc3d9cf660487d27d232a5a7c
-  app6 ::
-    Data.Map.Base.Map
-      Data.Text.Internal.Text
-      (Servant.Server.Internal.Router.Router'
-         () Servant.Server.Internal.RoutingApplication.RoutingApplication)
-  {- Unfolding: (case GHC.Magic.runRW#
-                        @ 'GHC.Types.PtrRepLifted
-                        @ Data.Text.Internal.Text
-                        Lib.app22 of ds1 { (#,#) ipv ipv1 ->
-                 case ipv1 of dt { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
-                 Data.Map.Base.Bin
-                   @ Data.Text.Internal.Text
-                   @ (Servant.Server.Internal.Router.Router'
-                        () Servant.Server.Internal.RoutingApplication.RoutingApplication)
-                   1#
-                   dt
-                   Lib.app7
-                   (Data.Map.Base.Tip
-                      @ Data.Text.Internal.Text
-                      @ (Servant.Server.Internal.Router.Router'
-                           () Servant.Server.Internal.RoutingApplication.RoutingApplication))
-                   (Data.Map.Base.Tip
-                      @ Data.Text.Internal.Text
-                      @ (Servant.Server.Internal.Router.Router'
-                           ()
-                           Servant.Server.Internal.RoutingApplication.RoutingApplication)) } }) -}
-6e4ee418ccbff73a0e72db1f02c685ca
-  app7 ::
+506a3ef9ccb7d002f54404c2cefad364
+  app8 ::
     Servant.Server.Internal.Router.Router'
       () Servant.Server.Internal.RoutingApplication.RoutingApplication
   {- Unfolding: (Servant.Server.Internal.Router.CaptureRouter
                    @ ()
                    @ Servant.Server.Internal.RoutingApplication.RoutingApplication
-                   Lib.app8) -}
-68b9739c2b241601239c92a60adcef4a
-  app8 ::
+                   Lib.app9) -}
+3f2b86e5797cfb5e6bd759af2d6d1a68
+  app9 ::
     Servant.Server.Internal.Router.Router'
       (Data.Text.Internal.Text, ())
       Servant.Server.Internal.RoutingApplication.RoutingApplication
   {- Unfolding: (Servant.Server.Internal.Router.CaptureRouter
                    @ (Data.Text.Internal.Text, ())
                    @ Servant.Server.Internal.RoutingApplication.RoutingApplication
-                   Lib.app9) -}
-58212f108f6af5fa87c66e89f7fa4a9d
-  app9 ::
-    Servant.Server.Internal.Router.Router
-      (Data.Text.Internal.Text, (Data.Text.Internal.Text, ()))
-  {- Unfolding: (Lib.app20 Lib.app10) -}
-a6cb6add8c2d7b389bd560a7787b2cd1
+                   Lib.app10) -}
+ab8aa312788487f0f21d93d1386a49b3
   app_r :: Servant.Server.Internal.Router.Router ()
   {- Unfolding: (Servant.Server.Internal.Router.choice
                    @ ()
                    @ Servant.Server.Internal.RoutingApplication.RoutingApplication
-                   Lib.app38
+                   Lib.app54
                    Lib.app4) -}
-08475d5e750d989ba7fa736724dbad8b
+cbaf63c0116a87b01a3ac1ab4d0b8be3
   startApp :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Lib.startApp1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-f0d6ed14d87c85cffde2492776ae9510
+665abb80c6fdbad80be532d4367aae6c
   startApp1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -2024,7 +2380,7 @@ f0d6ed14d87c85cffde2492776ae9510
                     ->_R Sym (GHC.Types.N:IO[0]
                                   <Network.Wai.Internal.ResponseReceived>_R))
                    eta1) -}
-54ebcfcac4bced0f0ff65e5ecfa0b5d0
+5ae508634ec6896bf616a4af1f99ae23
   startApp2 :: GHC.Types.Int
   {- HasNoCafRefs, Unfolding: (GHC.Types.I# 8080#) -}
 "SPEC/Lib $fAllCTRender:a @ JSON @ '[] @ Log" [ALWAYS] forall ($dAllMimeRender :: Servant.API.ContentTypes.AllMimeRender
