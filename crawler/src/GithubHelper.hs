@@ -27,6 +27,7 @@ import qualified Data.ByteString.Char8 as BS
 reposOf :: Text -> GitHub.Auth.Auth -> IO[RepoDB]
 reposOf userName auth= do
   possibleRepos <- GitHub.Endpoints.Repos.userRepos' (Just auth) (mkOwnerName userName) GitHub.Data.Repos.RepoPublicityAll
+
   case possibleRepos of
        (Left error)  -> do 
             return $ ([])
@@ -36,9 +37,10 @@ reposOf userName auth= do
             
 usersOf :: RepoDB -> GitHub.Auth.Auth -> IO[UserDB]
 usersOf repo auth = do
-    possibleUsers <- GitHub.Endpoints.Repos.Collaborators.collaboratorsOn' (Just auth)  (mkOwnerName (pack(DBHelper.repoOwner repo))) (mkRepoName (pack(DBHelper.repoName repo)))
+    possibleUsers <- GitHub.Endpoints.Repos.contributors' (Just auth)  (mkOwnerName (pack(DBHelper.repoOwner repo))) (mkRepoName (pack(DBHelper.repoName repo)))
     case possibleUsers of
        (Left error)  -> do 
+            putStrLn $ show error
             return $ ([])
        (Right users) -> do 
             x <- mapM formatUserDB users
@@ -56,8 +58,9 @@ formatNumber :: Maybe Int -> IO(Int)
 formatNumber n = do
     return $ fromMaybe (toEnum 0) n
     
-formatUserDB :: GitHub.Data.Definitions.SimpleUser -> IO(UserDB)
-formatUserDB user = do
+formatUserDB :: GitHub.Data.Repos.Contributor -> IO(UserDB)
+formatUserDB cont = do
+    let user = fromJust $ GitHub.Data.Repos.contributorToSimpleUser cont
     let name = untagName $ GitHub.Data.Definitions.simpleUserLogin user
     putStrLn $ unpack $ name
     return (UserDB (unpack name) )
@@ -68,11 +71,11 @@ crawlUser ttl auth user  = do
     putStrLn $ show ttl
     repositorys <- reposOf (pack ( DBHelper.userId user)) auth
     x <- mapM addRepo repositorys
-    links <- mapM (makeLink userRepo owns user) repositorys
+    links <- mapM (makeLink userRepo contributesTo user) repositorys
     y <- mapM addLink links
-    case (ttl) of 
-             0 ->  putStrLn "ended on "
-             _ ->  mapM_ (crawlRepo (ttl - 1) auth) repositorys 
+    if (ttl>0)  
+             then  mapM_ (crawlRepo (ttl - 1) auth) repositorys 
+             else  putStrLn "ended on "
     
 crawlRepo :: Integer -> GitHub.Auth.Auth -> RepoDB  -> IO()
 crawlRepo ttl auth repo  = do 

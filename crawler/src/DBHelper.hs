@@ -141,8 +141,12 @@ addRepo newRepo = do
    pipe <- connect $ def { user = n4user, password = n4password }
    result <- run pipe $ queryP "MERGE (n:Repo {repoName: {name}, repoOwner: {owner} }) ON MATCH SET n.repoSize = {size} ON CREATE SET n.repoSize = {size}" 
                                (fromList [("name", T (fromString (repoName newRepo))), ("owner", T (fromString (repoOwner newRepo))), ("size", I (repoSize newRepo))])
-   close pipe
+   addUser $ UserDB $ repoOwner newRepo 
+   resultOwns <- run pipe $ queryP "MATCH  (s:User {userId: {owner}}) MATCH  (d:Repo {repoName: {name}}) MERGE (s)-[o:Owns]->(d)" 
+                               (fromList [("name", T (fromString (repoName newRepo))), ("owner", T (fromString (repoOwner newRepo)))])                         
+   
    putStrLn $ show result
+   close pipe
 
    
 addLink :: LinkDB -> IO String

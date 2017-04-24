@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-04-19 10:08:16.7298366 UTC
+2017-04-24 13:01:02.8609166 UTC
 
 interface crawler-0.1.0.0-Annm8vHT08AKHY6xiJUgHQ:GithubHelper 8002
-  interface hash: 2cea180373f237e06199eaa5bda2c79d
-  ABI hash: 11b1da64d45492266a5064cd9d16b9e3
+  interface hash: e430e62fe4027917dbd04910ccd0ac2c
+  ABI hash: 9150f2b183d5a0703a99a2fcd37a12bb
   export-list hash: ef25810d77267609aeb8d9b48ce9ca95
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: b40c1800ca63765d1285c272fed17bef
@@ -222,19 +222,18 @@ import  -/  base-4.9.1.0:GHC.Show eca5834daba3b6a2bbbe64ab52056707
 import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
 import  -/  base-4.9.1.0:System.IO 5daf3f384209c11d9566e3409af8ec5d
 import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Char8 53131bf786c5438dfe07ccfe89b878d8
-import  -/  DBHelper 95fde9cd744c7ad203a3be4901f885dc
+import  -/  DBHelper 545e900c4da2a6a173e6390152dfd388
   exports: 721ec98a91c045f0936701662de25e80
   RepoDB 70431e6646dcfc18c9214ed23dbc73bc
   RepoDB 4312525a70890bd58f4ee247748c41ef
   UserDB e48f3ce402b61da5e0cb178498e827a0
   UserDB 70a417815d576cfe7439d7429875c560
   addLink cdbc48a4ffb4b38564912434d3ca6762
-  addRepo 5740c6cf37b088b9a25f7916ba6b85af
-  addUser 871dffe76390348f05d0a700ff40f0fb
+  addRepo dfab96de5f7612b2b2fb73ce1b834c40
+  addUser 3ba29fb93f9f94430215ba50c96c9cd1
   contributesTo ed2924c42a95b28de1d656acb0abf6ad
   makeLink 23acc7d7bc76c3990fb939cf6bccf25f
   makeLink2 1276e5d786fd81e29d38d20b2ba7dace
-  owns aa10660de1093dcff70a77818e4c1c41
   repoName aa35481d91b9420a58677cd1755a6503
   repoOwner 5b53a3671348fb83a2be299a94671884
   userId 2fe84934f9e6af123c6fb1dab5b4c248
@@ -291,7 +290,7 @@ import  -/  vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector 41
           Data.Text.Internal.Text #)
   {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
      Inline: [0] -}
-9f3b071704ab797df3284f9fd9e81d3f
+334eb45b27cd43b0151df118bb321d7f
   crawlRepo ::
     GHC.Integer.Type.Integer
     -> GitHub.Auth.Auth -> DBHelper.RepoDB -> GHC.Types.IO ()
@@ -303,7 +302,7 @@ import  -/  vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector 41
                  ->_R <GitHub.Auth.Auth>_R
                  ->_R <DBHelper.RepoDB>_R
                  ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-4ea1bc99c64969fdebfa2555ac995eb5
+5f8e1fc9d69fa821cd9a7184550b9d0b
   crawlRepo1 ::
     GHC.Integer.Type.Integer
     -> GitHub.Auth.Auth
@@ -427,7 +426,7 @@ da69e03680f58c21d140a9b2f86cad5b
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Base.String] #)
   {- Arity: 2, Strictness: <S,1*U><S,U> -}
-9544e7e6a5b6199424a8920e1a93a12d
+06887ec339069fc5b0ced10b298f0c79
   crawlRepo8 ::
     DBHelper.RepoDB
     -> GitHub.Auth.Auth
@@ -439,20 +438,20 @@ da69e03680f58c21d140a9b2f86cad5b
                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  case GitHub.Request.executeRequest1
                         @ 'GitHub.Data.Request.RO
-                        @ (Data.Vector.Vector GitHub.Data.Definitions.SimpleUser)
+                        @ (Data.Vector.Vector GitHub.Data.Repos.Contributor)
                         auth
                         (GitHub.Data.Request.SimpleQuery
                            @ 'GitHub.Data.Request.RO
-                           @ (Data.Vector.Vector GitHub.Data.Definitions.SimpleUser)
-                           GitHub.Endpoints.Repos.Collaborators.collaboratorsOn'_$dFromJSON1
+                           @ (Data.Vector.Vector GitHub.Data.Repos.Contributor)
+                           GitHub.Endpoints.Repos.contributors'_$dFromJSON1
                            (GitHub.Data.Request.PagedQuery
                               @ 'GitHub.Data.Request.RO
-                              @ (Data.Vector.Vector GitHub.Data.Definitions.SimpleUser)
-                              @ GitHub.Data.Definitions.SimpleUser
-                              @~ <Data.Vector.Vector GitHub.Data.Definitions.SimpleUser>_N
+                              @ (Data.Vector.Vector GitHub.Data.Repos.Contributor)
+                              @ GitHub.Data.Repos.Contributor
+                              @~ <Data.Vector.Vector GitHub.Data.Repos.Contributor>_N
                               (GHC.Types.:
                                  @ Data.Text.Internal.Text
-                                 GitHub.Endpoints.Repos.Collaborators.collaboratorsOn3
+                                 GitHub.Endpoints.Repos.branchesFor3
                                  (GHC.Types.:
                                     @ Data.Text.Internal.Text
                                     (case repo of wild { DBHelper.RepoDB ds1 ds2 ds3 ->
@@ -491,14 +490,20 @@ da69e03680f58c21d140a9b2f86cad5b
                                                   0#
                                                   ipv }) of ds4 { (#,#) ipv ipv1 ->
                                         ipv1 } })
-                                       GitHub.Endpoints.Repos.Collaborators.collaboratorsOn'2)))
+                                       GitHub.Endpoints.Repos.contributors'2)))
                               (GHC.Types.[]
                                  @ (Data.ByteString.Internal.ByteString,
                                     GHC.Base.Maybe Data.ByteString.Internal.ByteString))
                               GitHub.Data.Request.FetchAll))
                         s of ds1 { (#,#) ipv ipv1 ->
                  case ipv1 of wild {
-                   Data.Either.Left error -> (# ipv, GHC.Types.[] @ DBHelper.UserDB #)
+                   Data.Either.Left error
+                   -> case GHC.IO.Handle.Text.hPutStr2
+                             GHC.IO.Handle.FD.stdout
+                             (GitHub.Data.Definitions.$fExceptionError_$cshow error)
+                             GHC.Types.True
+                             ipv of ds2 { (#,#) ipv2 ipv3 ->
+                      (# ipv2, GHC.Types.[] @ DBHelper.UserDB #) }
                    Data.Either.Right users
                    -> case users of v2 { Data.Vector.Vector ipv2 ipv3 ipv4 ->
                       case GHC.Prim.newArray#
@@ -527,7 +532,7 @@ da69e03680f58c21d140a9b2f86cad5b
                                  (GHC.Prim.>=# ww1 ipv3) of wild1 {
                             GHC.Types.False
                             -> case GHC.Prim.indexArray#
-                                      @ GitHub.Data.Definitions.SimpleUser
+                                      @ GitHub.Data.Repos.Contributor
                                       ipv4
                                       (GHC.Prim.+# ipv2 ww1) of ds3 { Unit# ipv7 ->
                                case GithubHelper.crawlRepo9 ipv7 w1 of ds4 { (#,#) ipv8 ipv9 ->
@@ -587,20 +592,23 @@ da69e03680f58c21d140a9b2f86cad5b
                                GHC.Types.True -> GHC.Types.[] @ DBHelper.UserDB }
                          } in
                          $wgo 0# #) } } } } } } }) -}
-cbd63127f1112e2437037e1b05581936
+b274b69ec9ec37ac40d17f4ef539a9e5
   crawlRepo9 ::
-    GitHub.Data.Definitions.SimpleUser
+    GitHub.Data.Repos.Contributor
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, DBHelper.UserDB #)
-  {- Arity: 2, Strictness: <L,1*U(A,U(U,U,U),A,A)><S,U>,
-     Unfolding: (\ (user :: GitHub.Data.Definitions.SimpleUser)
+  {- Arity: 2, Strictness: <L,1*U><S,U>,
+     Unfolding: (\ (cont :: GitHub.Data.Repos.Contributor)
                    (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  let {
                    name :: Data.Text.Internal.Text
-                   = case user of wild { GitHub.Data.Definitions.SimpleUser dt ds1 ds2 ds3 ->
-                     ds1
-                       `cast`
-                     (GitHub.Data.Name.N:Name[0] <GitHub.Data.Definitions.User>_P) }
+                   = case cont of wild {
+                       GitHub.Data.Repos.KnownContributor dt avatarUrl name1 url dt1 _gravatarid
+                       -> name1
+                            `cast`
+                          (GitHub.Data.Name.N:Name[0] <GitHub.Data.Definitions.User>_P)
+                       GitHub.Data.Repos.AnonymousContributor dt ds1
+                       -> case Data.Maybe.fromJust1 ret_ty Data.Text.Internal.Text of {} }
                  } in
                  case GHC.IO.Handle.Text.hPutStr2
                         GHC.IO.Handle.FD.stdout
@@ -891,14 +899,14 @@ d6a457b78abcccc7c7b7bae5d7c0bb90
                        case ds12 of wild1 {
                          GHC.Base.Nothing -> GithubHelper.formatNumber2
                          GHC.Base.Just v -> v } }) #)) -}
-515f6366a5553d6f9beae8cec1c4a2ef
+21228daabc13a1301652a24e23fe57af
   formatUserDB ::
-    GitHub.Data.Definitions.SimpleUser -> GHC.Types.IO DBHelper.UserDB
-  {- Arity: 2, Strictness: <L,1*U(A,U(U,U,U),A,A)><S,U>,
+    GitHub.Data.Repos.Contributor -> GHC.Types.IO DBHelper.UserDB
+  {- Arity: 2, Strictness: <L,1*U><S,U>,
      Unfolding: InlineRule (0, True, True)
                 GithubHelper.crawlRepo9
                   `cast`
-                (<GitHub.Data.Definitions.SimpleUser>_R
+                (<GitHub.Data.Repos.Contributor>_R
                  ->_R Sym (GHC.Types.N:IO[0] <DBHelper.UserDB>_R)) -}
 9a7117e6c375bbcfe31e96ff6d25c3d0
   reposOf ::
@@ -1124,7 +1132,7 @@ ba075e0b345ea833cb159fdbd40593a3
                        } in
                        case GHC.List.$wlenAcc @ GHC.Types.Char cs 0# of ww2 { DEFAULT ->
                        Data.ByteString.Internal.$wunsafePackLenChars ww2 cs } }) #)) -}
-77f4ee23a1d3ff74569ba9bea9f56c9e
+ff5afcdab4d1d66613456fd1f36460ad
   usersOf ::
     DBHelper.RepoDB
     -> GitHub.Auth.Auth -> GHC.Types.IO [DBHelper.UserDB]
