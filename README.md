@@ -6,14 +6,13 @@ start neo4J
 start yesod webpage;
 cd yesodBlob
 stack exec yesodBlob
-you need to login at least once before starting the crawler or the rate limit will be deadful.
 
 start crawler;
   cd crawler
   stack exec crawler-exe
+  access webpage on localhost:3000
+  login using github at this point.
   get request to;
   "localhost:8080/startC/username/hops"
   eg localhost:8080/startC/helenwa/4
 
-access on
-localhost:3000
