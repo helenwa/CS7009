@@ -22,6 +22,7 @@ import Data.Maybe
 import DBHelper
 import Data.Text.Internal
 import qualified Data.ByteString.Char8 as BS
+import Data.Time as Clock
 
 --Get users repositorys   
 reposOf :: Text -> GitHub.Auth.Auth -> IO[RepoDB]
@@ -51,8 +52,25 @@ formatRepoDB repo = do
     let name = untagName (GitHub.Data.Repos.repoName repo)
     let owner = (GitHub.Data.Repos.repoOwner repo)
     let ownerName = untagName $ GitHub.Data.Definitions.simpleOwnerLogin owner
+    let recent = formatDate $GitHub.Data.Repos.repoUpdatedAt repo
     sizeOf <- liftIO $ formatNumber (GitHub.Data.Repos.repoSize repo)
     return (RepoDB (unpack name) (unpack ownerName) sizeOf)
+            
+formatDate :: Maybe UTCTime -> IO(Bool)
+formatDate date = 
+    case date of
+        Nothing -> return False
+        Just d -> recentDate d
+        
+recentDate :: UTCTime -> IO(Bool)
+recentDate d = do
+    let sixM = 60*86400
+    curr <- getCurrentTime
+    let diff = abs $ diffUTCTime d curr
+    putStrLn $ show diff
+    if(diff>sixM)
+        then return False
+        else return True
             
 formatNumber :: Maybe Int -> IO(Int)
 formatNumber n = do

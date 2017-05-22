@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-04-24 13:01:02.8609166 UTC
+2017-05-22 15:58:53.4142347 UTC
 
-interface crawler-0.1.0.0-Annm8vHT08AKHY6xiJUgHQ:GithubHelper 8002
-  interface hash: e430e62fe4027917dbd04910ccd0ac2c
-  ABI hash: 9150f2b183d5a0703a99a2fcd37a12bb
-  export-list hash: ef25810d77267609aeb8d9b48ce9ca95
+interface crawler-0.1.0.0-2jLxW5sGj234Y0KdhjvaTi:GithubHelper 8002
+  interface hash: c4bde7eaa8a5360eefe26723561f9753
+  ABI hash: d1e84bd794213cef85cf03b5c0e606f4
+  export-list hash: 47d7cba23118888bfd4c61d0bce8bb02
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: b40c1800ca63765d1285c272fed17bef
   sig of: Nothing
@@ -14,9 +14,11 @@ interface crawler-0.1.0.0-Annm8vHT08AKHY6xiJUgHQ:GithubHelper 8002
 exports:
   GithubHelper.crawlRepo
   GithubHelper.crawlUser
+  GithubHelper.formatDate
   GithubHelper.formatNumber
   GithubHelper.formatRepoDB
   GithubHelper.formatUserDB
+  GithubHelper.recentDate
   GithubHelper.reposOf
   GithubHelper.tokenToAuth
   GithubHelper.usersOf
@@ -166,7 +168,7 @@ family instance modules: adjunctions-4.3@adjunctions-4.3-5CqTSM7liCdC9cb4N2IolK:
                          containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
                          containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
                          containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
-                         crawler-0.1.0.0-Annm8vHT08AKHY6xiJUgHQ:DBHelper
+                         crawler-0.1.0.0-2jLxW5sGj234Y0KdhjvaTi:DBHelper
                          dlist-0.8.0.2@dlist-0.8.0.2-6Wnps4GD7EFnRucVzXIFD:Data.DList
                          ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
                          github-0.15.0@github-0.15.0-4xrLmRvOvcILQ4PSubpbiB:GitHub.Auth
@@ -222,22 +224,22 @@ import  -/  base-4.9.1.0:GHC.Show eca5834daba3b6a2bbbe64ab52056707
 import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
 import  -/  base-4.9.1.0:System.IO 5daf3f384209c11d9566e3409af8ec5d
 import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Char8 53131bf786c5438dfe07ccfe89b878d8
-import  -/  DBHelper 545e900c4da2a6a173e6390152dfd388
-  exports: 721ec98a91c045f0936701662de25e80
-  RepoDB 70431e6646dcfc18c9214ed23dbc73bc
-  RepoDB 4312525a70890bd58f4ee247748c41ef
-  UserDB e48f3ce402b61da5e0cb178498e827a0
-  UserDB 70a417815d576cfe7439d7429875c560
-  addLink cdbc48a4ffb4b38564912434d3ca6762
-  addRepo dfab96de5f7612b2b2fb73ce1b834c40
-  addUser 3ba29fb93f9f94430215ba50c96c9cd1
-  contributesTo ed2924c42a95b28de1d656acb0abf6ad
-  makeLink 23acc7d7bc76c3990fb939cf6bccf25f
-  makeLink2 1276e5d786fd81e29d38d20b2ba7dace
-  repoName aa35481d91b9420a58677cd1755a6503
-  repoOwner 5b53a3671348fb83a2be299a94671884
-  userId 2fe84934f9e6af123c6fb1dab5b4c248
-  userRepo 4cecaee86649124bfd409da399acc62d
+import  -/  DBHelper 5a8a73505a0998f1131068d88ce8677c
+  exports: 90afc5b1d30cdd0998459c3f461c7c33
+  RepoDB b5c3c24f49d29cd03877eb34b985f8a7
+  RepoDB 15a180dd81a03a5a70d2e687e65a8d0d
+  UserDB 83eafa9d9cf90587e0e39266133750e7
+  UserDB 0ba2347a030978e70bc2ad655c8f07b8
+  addLink 7f7e615d68efc76a38c47ae59f8129ce
+  addRepo fc28bf006691023f3cdbe32cc7c88467
+  addUser e2b446ac87a9367a443fae7862b570bd
+  contributesTo 22c691084d66c7dfa4a9bd1a244ea203
+  makeLink b0271675ff2ce0b8b9bbe670738e8c99
+  makeLink2 a4c0cbf447a173d52c7cad8ffed4580a
+  repoName b5fc0588a9b1535cabfd7ddf9c7c2bb5
+  repoOwner 6d02e729588a7c75a78e6c144416fa70
+  userId f146cc89bddb7a907fd3f1eb1d4dc89a
+  userRepo f719af1feffa18462598af6c2d535a4b
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 16d48e012d23eaef9bca91ccdd572c02
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
 import  -/  github-0.15.0@github-0.15.0-4xrLmRvOvcILQ4PSubpbiB:GitHub 44602a47955be288246df9ee89f6243f
@@ -252,23 +254,27 @@ import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 5e60b761569ee353529e98a36b72df1
 import  -/  text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text 35f976519564888082d42815342d42ed
 import  -/  text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Internal 43a9166170aaf8c9b180c2d3ce2cfa3c
 import  -/  text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Show 638a81be9b7b5c261b714430eaada4e0
+import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time 819d175a9e4b0a72c362762da9ea1ccd
+import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Clock.POSIX 61428f31307889ffd40365cd5c4e9ca2
+import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Clock.UTC 46d261daaec8690377e222f43480e5d2
+import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Clock.UTCDiff f895196ac3d1c6e07ef9064e6ec843ef
 import  -/  vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector 41057de5dda7a4fc866a712aa88b5c4e
-183de8afaeac571c91772caa1a4ba12e
+27b556befa72f9617c2cf65b4f022070
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module
                    GithubHelper.$trModule2
                    GithubHelper.$trModule1) -}
-1767f89f9ca29765babc31af70c34c1b
+75269e2c0eb471dbbcf6a25ea07825c6
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "GithubHelper"#) -}
-668f18d419e92158f26d6f1cbe55b3dd
+9d6e1244c7b85fea1ea50a5457243478
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "crawler-0.1.0.0-Annm8vHT08AKHY6xiJUgHQ"#) -}
-1dbeda838ef8b7047ee683b2158c6abb
+                   "crawler-0.1.0.0-2jLxW5sGj234Y0KdhjvaTi"#) -}
+308b016f4c416d2fe45f2e4746abb262
   $wouter ::
     Data.Text.Array.MArray GHC.Prim.RealWorld
     -> GHC.Types.Int
@@ -279,7 +285,7 @@ import  -/  vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector 41
           Data.Text.Internal.Text #)
   {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
      Inline: [0] -}
-796b028b4c154609778ea26a6f422dbf
+5b04dac227d27ac8093060ae01c21714
   $wouter1 ::
     Data.Text.Array.MArray GHC.Prim.RealWorld
     -> GHC.Types.Int
@@ -290,7 +296,7 @@ import  -/  vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector 41
           Data.Text.Internal.Text #)
   {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
      Inline: [0] -}
-334eb45b27cd43b0151df118bb321d7f
+e489877b982c129964175b6bce8197a4
   crawlRepo ::
     GHC.Integer.Type.Integer
     -> GitHub.Auth.Auth -> DBHelper.RepoDB -> GHC.Types.IO ()
@@ -302,7 +308,7 @@ import  -/  vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector 41
                  ->_R <GitHub.Auth.Auth>_R
                  ->_R <DBHelper.RepoDB>_R
                  ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-5f8e1fc9d69fa821cd9a7184550b9d0b
+ea289fbb02f7ff144510da34e9e98281
   crawlRepo1 ::
     GHC.Integer.Type.Integer
     -> GitHub.Auth.Auth
@@ -391,13 +397,13 @@ import  -/  vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector 41
                                go3 ys ipv12 } }
                       } in
                       go3 ipv5 ipv10 } } } } } } } }) -}
-9224ddc0944af870f6740db734169a06
+1be185415bd64d2b2e012f75aa038d5c
   crawlRepo10 :: GHC.Types.Int
   {- HasNoCafRefs, Unfolding: (GHC.Types.I# 4#) -}
-ba9a1aa788cdd5c3743fb24e49311d6c
+b5dcb9f63b9a20e53644e19c675c89e8
   crawlRepo11 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "repo"#) -}
-f8c41d9e7f866992daae41792c109827
+2f4f27673c0543b71045b83176118633
   crawlRepo2 ::
     GHC.Integer.Type.Integer
     -> GitHub.Auth.Auth
@@ -405,28 +411,28 @@ f8c41d9e7f866992daae41792c109827
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 4, Strictness: <L,U><L,U><L,U(U)><S,U> -}
-f82117593dc384cbbb68ddbb2bee88e9
+a549162c77a6756190126ba07550fcdc
   crawlRepo3 :: GHC.Integer.Type.Integer
   {- HasNoCafRefs, Unfolding: (1) -}
-da69e03680f58c21d140a9b2f86cad5b
+7dacba3261722b97a9be544447194f32
   crawlRepo4 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "ended on "#) -}
-85c71f89ccc4ae6c56433743253bb3d9
+60e573103af73c10efd1a47dfdac5e4d
   crawlRepo5 :: GHC.Integer.Type.Integer
   {- HasNoCafRefs, Unfolding: (0) -}
-4741de7268caed6c5492bfaa1c2b5920
+d5fae1e84d5571a9360e4709d0bf2564
   crawlRepo6 ::
     [DBHelper.LinkDB]
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Base.String] #)
   {- Arity: 2, Strictness: <S,1*U><S,U> -}
-7f87d72d6b943d0ff09163b5c6500efe
+22238ed2f7e4fec3f63e71f9f4c96032
   crawlRepo7 ::
     [DBHelper.UserDB]
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Base.String] #)
   {- Arity: 2, Strictness: <S,1*U><S,U> -}
-06887ec339069fc5b0ced10b298f0c79
+9e52a63dc95893f30f26d844d3277804
   crawlRepo8 ::
     DBHelper.RepoDB
     -> GitHub.Auth.Auth
@@ -592,7 +598,7 @@ da69e03680f58c21d140a9b2f86cad5b
                                GHC.Types.True -> GHC.Types.[] @ DBHelper.UserDB }
                          } in
                          $wgo 0# #) } } } } } } }) -}
-b274b69ec9ec37ac40d17f4ef539a9e5
+22e55ae5c1cbe3ac5f4657099e99179e
   crawlRepo9 ::
     GitHub.Data.Repos.Contributor
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -722,7 +728,7 @@ b274b69ec9ec37ac40d17f4ef539a9e5
                              GHC.Types.True -> GHC.Types.[] @ GHC.Types.Char }
                        } in
                        $wunfold dt1 }) #) }) -}
-d6a457b78abcccc7c7b7bae5d7c0bb90
+ad56908bd1af430743499869c65f1860
   crawlUser ::
     GHC.Integer.Type.Integer
     -> GitHub.Auth.Auth -> DBHelper.UserDB -> GHC.Types.IO ()
@@ -734,7 +740,76 @@ d6a457b78abcccc7c7b7bae5d7c0bb90
                  ->_R <GitHub.Auth.Auth>_R
                  ->_R <DBHelper.UserDB>_R
                  ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-7f44a8c27dee0f60c98ca6e15e0790fc
+0ad302ee37007cfdc7c14934e53ecc16
+  formatDate ::
+    GHC.Base.Maybe Data.Time.Clock.UTC.UTCTime
+    -> GHC.Types.IO GHC.Types.Bool
+  {- Arity: 2, Strictness: <S,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                GithubHelper.formatDate1
+                  `cast`
+                (<GHC.Base.Maybe Data.Time.Clock.UTC.UTCTime>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)) -}
+c5ba08426270228af1df4f45dda22fcf
+  formatDate1 ::
+    GHC.Base.Maybe Data.Time.Clock.UTC.UTCTime
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Bool #)
+  {- Arity: 2, Strictness: <S,1*U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (date :: GHC.Base.Maybe Data.Time.Clock.UTC.UTCTime)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case date of wild {
+                   GHC.Base.Nothing -> (# eta, GHC.Types.False #)
+                   GHC.Base.Just d -> GithubHelper.formatDate2 d eta }) -}
+a89fb9c53766b0ddebb890adea4d78e1
+  formatDate2 ::
+    Data.Time.Clock.UTC.UTCTime
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Bool #)
+  {- Arity: 2, Strictness: <L,1*U(1*U,U)><S,U>,
+     Unfolding: (\ (d :: Data.Time.Clock.UTC.UTCTime)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Data.Time.Clock.POSIX.getCurrentTime2
+                        eta of ds { (#,#) ipv ipv1 ->
+                 let {
+                   diff :: GHC.Integer.Type.Integer
+                   = case d of ww { Data.Time.Clock.UTC.UTCTime ww1 ww2 ->
+                     case Data.Time.Clock.POSIX.$wposixSecondsToUTCTime
+                            ipv1 of ww4 { (#,#) ww5 ww6 ->
+                     GHC.Integer.Type.absInteger
+                       (GHC.Integer.Type.minusInteger
+                          (Data.Time.Clock.POSIX.$wutcTimeToPOSIXSeconds ww1 ww2)
+                            `cast`
+                          (Trans
+                               (Data.Time.Clock.UTC.N:NominalDiffTime[0])
+                               (Data.Fixed.N:Fixed[0] <Data.Fixed.E12>_P))
+                          (Data.Time.Clock.POSIX.$wutcTimeToPOSIXSeconds ww5 ww6)
+                            `cast`
+                          (Trans
+                               (Data.Time.Clock.UTC.N:NominalDiffTime[0])
+                               (Data.Fixed.N:Fixed[0] <Data.Fixed.E12>_P))) } }
+                 } in
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        (Data.Time.Clock.UTC.$fShowNominalDiffTime_$cshow
+                           diff
+                             `cast`
+                           (Trans
+                                (Sym (Data.Fixed.N:Fixed[0] <Data.Fixed.E12>_P))
+                                (Sym (Data.Time.Clock.UTC.N:NominalDiffTime[0]))))
+                        GHC.Types.True
+                        ipv of ds1 { (#,#) ipv2 ipv3 ->
+                 case GHC.Integer.Type.gtInteger#
+                        diff
+                        GithubHelper.formatDate3 of wild { DEFAULT ->
+                 case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild of wild1 {
+                   GHC.Types.False -> (# ipv2, GHC.Types.True #)
+                   GHC.Types.True -> (# ipv2, GHC.Types.False #) } } } }) -}
+bf36c58100126942bae59d7d7e68831b
+  formatDate3 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (5184000000000000000) -}
+efcd6fc6d7405bfe65da221ce750fed1
   formatNumber ::
     GHC.Base.Maybe GHC.Types.Int -> GHC.Types.IO GHC.Types.Int
   {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U><S,U>,
@@ -743,7 +818,7 @@ d6a457b78abcccc7c7b7bae5d7c0bb90
                   `cast`
                 (<GHC.Base.Maybe GHC.Types.Int>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Int>_R)) -}
-8e65cb98a8910c397f5b0086e761a57f
+0f319c180e55b7bd2509fbe65100a673
   formatNumber1 ::
     GHC.Base.Maybe GHC.Types.Int
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -756,10 +831,10 @@ d6a457b78abcccc7c7b7bae5d7c0bb90
                     case n of wild {
                       GHC.Base.Nothing -> GithubHelper.formatNumber2
                       GHC.Base.Just v -> v } #)) -}
-5fa9cecbd1f05424f1dc36c37421e240
+0b768d0b169011c29a9b9f6f6a626bdf
   formatNumber2 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
-8b4a3aa336a7dd492998aa59d896e2e5
+dd6d558290d806c75fbb69c1d832f29a
   formatRepoDB ::
     GitHub.Data.Repos.Repo -> GHC.Types.IO DBHelper.RepoDB
   {- Arity: 2, HasNoCafRefs,
@@ -769,7 +844,7 @@ d6a457b78abcccc7c7b7bae5d7c0bb90
                   `cast`
                 (<GitHub.Data.Repos.Repo>_R
                  ->_R Sym (GHC.Types.N:IO[0] <DBHelper.RepoDB>_R)) -}
-955854b7aeeaa3e6d3ba26d7f2e7d53c
+86e453a6765137fdb0e224d198f1c4f6
   formatRepoDB1 ::
     GitHub.Data.Repos.Repo
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -899,7 +974,7 @@ d6a457b78abcccc7c7b7bae5d7c0bb90
                        case ds12 of wild1 {
                          GHC.Base.Nothing -> GithubHelper.formatNumber2
                          GHC.Base.Just v -> v } }) #)) -}
-21228daabc13a1301652a24e23fe57af
+671855a73c6b2abbf59fb7b7e1d9fe22
   formatUserDB ::
     GitHub.Data.Repos.Contributor -> GHC.Types.IO DBHelper.UserDB
   {- Arity: 2, Strictness: <L,1*U><S,U>,
@@ -908,7 +983,16 @@ d6a457b78abcccc7c7b7bae5d7c0bb90
                   `cast`
                 (<GitHub.Data.Repos.Contributor>_R
                  ->_R Sym (GHC.Types.N:IO[0] <DBHelper.UserDB>_R)) -}
-9a7117e6c375bbcfe31e96ff6d25c3d0
+07642add5558e9505504ef140b078beb
+  recentDate ::
+    Data.Time.Clock.UTC.UTCTime -> GHC.Types.IO GHC.Types.Bool
+  {- Arity: 2, Strictness: <L,1*U(1*U,U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                GithubHelper.formatDate2
+                  `cast`
+                (<Data.Time.Clock.UTC.UTCTime>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)) -}
+b0472b9483c6a337eeba3510e1019da2
   reposOf ::
     Data.Text.Internal.Text
     -> GitHub.Auth.Auth -> GHC.Types.IO [DBHelper.RepoDB]
@@ -919,7 +1003,7 @@ d6a457b78abcccc7c7b7bae5d7c0bb90
                 (<Data.Text.Internal.Text>_R
                  ->_R <GitHub.Auth.Auth>_R
                  ->_R Sym (GHC.Types.N:IO[0] <[DBHelper.RepoDB]>_R)) -}
-f61920e1b33a8ca5be9d3e0c5421155e
+928dfbc58d92e286b253e1fd93bb8fb0
   reposOf1 ::
     Data.Text.Internal.Text
     -> GitHub.Auth.Auth
@@ -954,7 +1038,7 @@ f61920e1b33a8ca5be9d3e0c5421155e
                               GitHub.Data.Request.FetchAll))
                         s of ds1 { (#,#) ipv ipv1 ->
                  GithubHelper.reposOf2 ipv1 ipv }) -}
-5cdedcf5f973486b681cfab9814675d7
+fc67ed280fadbcb11a29407af67c7e3c
   reposOf2 ::
     Data.Either.Either
       GitHub.Data.Definitions.Error
@@ -1056,7 +1140,7 @@ f61920e1b33a8ca5be9d3e0c5421155e
                                GHC.Types.True -> GHC.Types.[] @ DBHelper.RepoDB }
                          } in
                          $wgo 0# #) } } } } } }) -}
-0696cf9956223d91523fa483cc278417
+ddd0c3843d588be3a1cdefa1ecf5a3df
   tokenToAuth ::
     Data.Text.Internal.Text -> GHC.Types.IO GitHub.Auth.Auth
   {- Arity: 2, Strictness: <L,1*U(U,U,U)><S,U>,
@@ -1065,7 +1149,7 @@ f61920e1b33a8ca5be9d3e0c5421155e
                   `cast`
                 (<Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GitHub.Auth.Auth>_R)) -}
-ba075e0b345ea833cb159fdbd40593a3
+df2693f6c61368f9beff6c9d66049ba6
   tokenToAuth1 ::
     Data.Text.Internal.Text
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -1132,7 +1216,7 @@ ba075e0b345ea833cb159fdbd40593a3
                        } in
                        case GHC.List.$wlenAcc @ GHC.Types.Char cs 0# of ww2 { DEFAULT ->
                        Data.ByteString.Internal.$wunsafePackLenChars ww2 cs } }) #)) -}
-ff5afcdab4d1d66613456fd1f36460ad
+9010a0bc0a917f196ced48b41097444f
   usersOf ::
     DBHelper.RepoDB
     -> GitHub.Auth.Auth -> GHC.Types.IO [DBHelper.UserDB]

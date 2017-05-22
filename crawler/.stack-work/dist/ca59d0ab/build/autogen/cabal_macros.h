@@ -63,6 +63,13 @@
   (major1) == 1 && (major2) <  2 || \
   (major1) == 1 && (major2) == 2 && (minor) <= 2)
 
+/* package time-1.6.0.1 */
+#define VERSION_time "1.6.0.1"
+#define MIN_VERSION_time(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  6 || \
+  (major1) == 1 && (major2) == 6 && (minor) <= 0)
+
 /* package transformers-0.5.2.0 */
 #define VERSION_transformers "0.5.2.0"
 #define MIN_VERSION_transformers(major1,major2,minor) (\
@@ -147,7 +154,7 @@
   (major1) == 2 && (major2) <  25 || \
   (major1) == 2 && (major2) == 25 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "crawler-0.1.0.0-Annm8vHT08AKHY6xiJUgHQ"
+#define CURRENT_COMPONENT_ID "crawler-0.1.0.0-2jLxW5sGj234Y0KdhjvaTi"
 
-#define CURRENT_PACKAGE_KEY "crawler-0.1.0.0-Annm8vHT08AKHY6xiJUgHQ"
+#define CURRENT_PACKAGE_KEY "crawler-0.1.0.0-2jLxW5sGj234Y0KdhjvaTi"
 
