@@ -13,6 +13,11 @@ import GHC.Generics
 import Data.String
 import Data.Vector (toList)
 
+data ListOb = ListOb
+ { users :: [UserDB]
+ , repos ::[RepoDB]
+ } deriving (ToJSON, FromJSON, Generic, Eq, Show)
+ 
 data Log = Log
   { word :: String
   , number :: Int
@@ -27,6 +32,8 @@ data RepoDB = RepoDB
   { repoName      :: String
   , repoOwner     :: String
   , repoSize      :: Int
+  , recent        :: Bool
+  , repoLanguage  :: String
   } deriving (ToJSON, FromJSON, Generic, Eq, Show)
   
 data LinkDB = LinkDB
@@ -54,15 +61,16 @@ n4user = "neo4j"
 allUsers :: IO[UserDB]
 allUsers = do
    pipe <- connect $ def { user = n4user, password = n4password }
-   result <- run pipe $ query "MATCH (n:User)  RETURN n"
-   close pipe
+   result <- run pipe $ query "MATCH (n:User)  RETURN n.userId"
+   
    putStrLn $ show result
    x <- mapM toUser result
+   close pipe
    return x
    
 toUser :: Record-> IO UserDB
 toUser record = do
-    T name <- record `at` "userName"
+    T name <- record `at` "n.userId"
     putStrLn $ show record
     return $ UserDB (unpack name)
    
@@ -80,8 +88,10 @@ toRepo record = do
     T name <- record `at` "repoName"
     T owner <- record `at` "repoOwner"
     I rSize <- record `at` "repoSize"
+    T lang <- record `at` "repoLanguage"
+    B recent <- record `at` "recent"
     putStrLn $ show record
-    return $ RepoDB (unpack name) (unpack owner) rSize
+    return $ RepoDB (unpack name) (unpack owner) rSize recent (unpack lang)
    
 -- allLinks :: IO [LinkDB]
 -- allLinks = do
@@ -139,15 +149,22 @@ addUser newUser = do
 addRepo :: RepoDB -> IO()
 addRepo newRepo = do
    pipe <- connect $ def { user = n4user, password = n4password }
-   result <- run pipe $ queryP "MERGE (n:Repo {repoName: {name}, repoOwner: {owner} }) ON MATCH SET n.repoSize = {size} ON CREATE SET n.repoSize = {size}" 
-                               (fromList [("name", T (fromString (repoName newRepo))), ("owner", T (fromString (repoOwner newRepo))), ("size", I (repoSize newRepo))])
+   result <- run pipe $ queryP "MERGE (n:Repo {repoName: {name}, repoOwner: {owner} }) ON MATCH SET n.repoSize = {size}, n.repoLanguage = {lang}, n.recent = {r}  ON CREATE SET n.repoSize = {size}, n.repoLanguage = {lang}, n.recent = {r}" 
+                               (fromList [("name", T (fromString (repoName newRepo))), ("owner", T (fromString (repoOwner newRepo))), ("size", I (repoSize newRepo)),("lang", T (fromString (repoLanguage newRepo))),("r", B (recent newRepo))])
    addUser $ UserDB $ repoOwner newRepo 
    resultOwns <- run pipe $ queryP "MATCH  (s:User {userId: {owner}}) MATCH  (d:Repo {repoName: {name}}) MERGE (s)-[o:Owns]->(d)" 
                                (fromList [("name", T (fromString (repoName newRepo))), ("owner", T (fromString (repoOwner newRepo)))])                         
-   
+   addLanguage $repoLanguage newRepo
    putStrLn $ show result
    close pipe
-
+   
+addLanguage:: String ->IO()
+addLanguage l = do
+   pipe <- connect $ def { user = n4user, password = n4password }
+   result <- run pipe $ queryP "MERGE (n:Language {name: {l}})" 
+                               (fromList [("l", T (fromString l))])
+   close pipe
+   putStrLn $ show result
    
 addLink :: LinkDB -> IO String
 addLink newLink = do

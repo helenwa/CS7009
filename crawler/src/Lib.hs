@@ -19,7 +19,7 @@ import Servant
 
 type ApiHandler = ExceptT ServantErr IO
 
-type API = "userList" :> Get '[JSON] [Log]
+type API = "userList" :> Get '[JSON] ListOb
         :<|> "token" :> Capture "tkn" String :> Get '[JSON] Log
         :<|> "user" :> Capture "id" String :> Capture "hops" Int :> Get '[JSON] Log
         :<|> "startC" :> Capture "usern" String :> Capture "hops" Integer :> Get '[JSON] Log
@@ -38,13 +38,11 @@ server = userList
     :<|> token
     :<|> user
     :<|> startC
-    where
-    userList = return users
-
-users :: [Log]
-users = [ Log "One" 1
-        , Log "Two" 2
-        ]
+    
+userList :: ApiHandler ListOb
+userList = liftIO $ do
+    users <- allUsers
+    return $ListOb users []
 
 user :: String -> Int -> ApiHandler Log
 user userName ttl =  liftIO $ do

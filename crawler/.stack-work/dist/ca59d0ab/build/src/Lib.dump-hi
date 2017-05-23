@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2017-05-22 15:56:29.7012678 UTC
+2017-05-23 11:40:15.0746439 UTC
 
 interface crawler-0.1.0.0-2jLxW5sGj234Y0KdhjvaTi:Lib 8002
-  interface hash: c52c34972043fc14c84c84c6a75ec24d
-  ABI hash: c0011218c724eb73686b641f2075e3fc
-  export-list hash: 8227552d6fcaee3ff8d2e8f555d84a1a
-  orphan hash: b254648bd8ca064af41986b1700d6cd9
+  interface hash: 4c7377106534c29fb26b215a3c4e4c35
+  ABI hash: bfdaa36f772e906fc43cb5bba6dd9def
+  export-list hash: 79f0ca480f20404cef830a7cb032b742
+  orphan hash: 923ac3190cc6484a0b2cc09f253070c5
   flag hash: f812823c9e94dadfbc1ee115e207d34b
   sig of: Nothing
   used TH splices: False
@@ -254,17 +254,20 @@ import  -/  base-4.9.1.0:Data.Proxy 657d37a7ff49fc895edf1c731d0fa581
 import  -/  base-4.9.1.0:GHC.Base 4caea1123ecf4b46e27cbccd6d279377
 import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
 import  -/  base-4.9.1.0:System.IO 5daf3f384209c11d9566e3409af8ec5d
-import  -/  DBHelper 5a8a73505a0998f1131068d88ce8677c
-  exports: 90afc5b1d30cdd0998459c3f461c7c33
-  Log e5416a46162c013c47a2728c7b63b3a8
-  Log d5262aa4b0842cb524ac604e806c33bc
-  UserDB 83eafa9d9cf90587e0e39266133750e7
+import  -/  DBHelper 10528420ebc8d2050df88e518ea2b516
+  exports: b85c912410984f2ea4b78a0c5febba15
+  ListOb f208ffa96ab57165f86730d219786df7
+  ListOb 00c69c59e7e7fd85d67b68b0287ad244
+  Log 34f9409ed7d682f490287b2c858fa3c3
+  Log 2784bf73fa593cefdf7df80ca797da8a
+  UserDB bc4c7cb5843c15c69d278068d7776c64
   addAuth 61708f7edd95f2c7ecf4864caeeba92e
-  addUser e2b446ac87a9367a443fae7862b570bd
+  addUser 93da4d872b44d28f8e48e7d88b5a5e4b
+  allUsers c51ad8d9a2c313a78d49e4e8587ee983
   getAuth de96a6ad9393ba5b86ccaf1a105b2905
-import  -/  GithubHelper cfdc8b25eb30fb0e7c217681231b1225
-  exports: 47d7cba23118888bfd4c61d0bce8bb02
-  crawlUser ad56908bd1af430743499869c65f1860
+import  -/  GithubHelper 3731937cacb06db18fc9d796921dde17
+  exports: aa09f13c73ce6378036fb6e4bc5ae4ab
+  crawlUser eddeda743802d41b0bdad410a0e41619
   tokenToAuth ddd0c3843d588be3a1cdefa1ecf5a3df
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
 import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 5e60b761569ee353529e98a36b72df11
@@ -283,40 +286,8 @@ import  -/  wai-3.2.1.1@wai-3.2.1.1-GB3RulwwXCN9MymRcZJtxu:Network.Wai 026204f66
 import  -/  wai-cors-0.2.5@wai-cors-0.2.5-9TuxlMpmAQhFIx6d3e1iRd:Network.Wai.Middleware.Cors fe0fd1973f185bd3b41d19633c272d79
 import  -/  warp-3.2.11.1@warp-3.2.11.1-GyFH0rBhfwF4UQ6knVFPXv:Network.Wai.Handler.Warp dedcf9f5c55e0f5719bab97ea2b8545e
 import  -/  warp-3.2.11.1@warp-3.2.11.1-GyFH0rBhfwF4UQ6knVFPXv:Network.Wai.Handler.Warp.Run 2c9194fe3cfe5e1d26b1456f5f1e65c3
-cd97f33c82232661ecc4c0952c8c0f0e
+1766f6c1512ab6225ee46df9ed6eb344
   $s$fAllCTRender:a ::
-    Servant.API.ContentTypes.AllCTRender
-      '[Servant.API.ContentTypes.JSON] [DBHelper.Log]
-  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ '[Servant.API.ContentTypes.JSON]
-                  @ [DBHelper.Log]
-                  (Servant.API.ContentTypes.$fAllCTRender:a_$cp1AllCTRender
-                     @ Servant.API.ContentTypes.JSON
-                     @ '[]
-                     @ [DBHelper.Log]
-                     Servant.API.ContentTypes.$fAcceptTYPEJSON_$ccontentType
-                       `cast`
-                     (Sym (Servant.API.ContentTypes.N:Accept[0]
-                               <*>_N <Servant.API.ContentTypes.JSON>_N))
-                     Servant.API.ContentTypes.$fAllMimeUnrender[]a_$callMime
-                       `cast`
-                     (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
-                     Lib.$s$fAllCTRender:a_$dAllMimeRender)
-                  (Servant.API.ContentTypes.$fAllCTRender:a_$chandleAcceptH
-                     @ Servant.API.ContentTypes.JSON
-                     @ '[]
-                     @ [DBHelper.Log]
-                     Servant.API.ContentTypes.$fAcceptTYPEJSON_$ccontentType
-                       `cast`
-                     (Sym (Servant.API.ContentTypes.N:Accept[0]
-                               <*>_N <Servant.API.ContentTypes.JSON>_N))
-                     Servant.API.ContentTypes.$fAllMimeUnrender[]a_$callMime
-                       `cast`
-                     (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
-                     Lib.$s$fAllCTRender:a_$dAllMimeRender) -}
-baddc100df2173286675bb0f4e12a8f3
-  $s$fAllCTRender:a1 ::
     Servant.API.ContentTypes.AllCTRender
       '[Servant.API.ContentTypes.JSON] DBHelper.Log
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -334,7 +305,7 @@ baddc100df2173286675bb0f4e12a8f3
                      Servant.API.ContentTypes.$fAllMimeUnrender[]a_$callMime
                        `cast`
                      (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
-                     Lib.$s$fAllCTRender:a2)
+                     Lib.$s$fAllCTRender:a1)
                   (Servant.API.ContentTypes.$fAllCTRender:a_$chandleAcceptH
                      @ Servant.API.ContentTypes.JSON
                      @ '[]
@@ -346,16 +317,16 @@ baddc100df2173286675bb0f4e12a8f3
                      Servant.API.ContentTypes.$fAllMimeUnrender[]a_$callMime
                        `cast`
                      (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
-                     Lib.$s$fAllCTRender:a2) -}
-504c5c019d2326ec2f9b74dbf9d5f87a
-  $s$fAllCTRender:a2 ::
+                     Lib.$s$fAllCTRender:a1) -}
+2dcdd7f2f185fc6c9386750eef6968e1
+  $s$fAllCTRender:a1 ::
     Servant.API.ContentTypes.AllMimeRender
       '[Servant.API.ContentTypes.JSON] DBHelper.Log
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
-                Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a1 -}
-e25dd46ab6bb4f9d4368f4c60c7d901b
-  $s$fAllCTRender:a3 ::
+                Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a0 -}
+835fd78467d18205db7fd27f93a60048
+  $s$fAllCTRender:a2 ::
     Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON]
     -> DBHelper.Log
     -> [(Network.HTTP.Media.MediaType.Internal.MediaType,
@@ -372,74 +343,79 @@ e25dd46ab6bb4f9d4368f4c60c7d901b
                    (GHC.Types.[]
                       @ (Network.HTTP.Media.MediaType.Internal.MediaType,
                          Data.ByteString.Lazy.Internal.ByteString))) -}
-fb4f9809790ce06fb98554fd32390836
-  $s$fAllCTRender:a4 ::
+a82b83980721894073e58e71464f091f
+  $s$fAllCTRender:a3 ::
     Servant.API.ContentTypes.MimeRender
       Servant.API.ContentTypes.JSON DBHelper.Log
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
-                Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa1 -}
-86829e7b46fb14a4dae2de318aa613c6
-  $s$fAllCTRender:a_$dAllMimeRender ::
-    Servant.API.ContentTypes.AllMimeRender
-      '[Servant.API.ContentTypes.JSON] [DBHelper.Log]
-  {- Strictness: m,
-     Unfolding: InlineRule (0, True, True)
-                Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a0 -}
-fa7bf1e42fc681f72bfc93ccf077df32
-  $s$fAllCTRender:a_$dMimeRender ::
-    Servant.API.ContentTypes.MimeRender
-      Servant.API.ContentTypes.JSON [DBHelper.Log]
-  {- Strictness: m,
-     Unfolding: InlineRule (0, True, True)
                 Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa -}
-c76fb7a0f1d0919b10a14bd3babd7a18
-  $s$fAllCTRender:a_$dToJSON ::
-    Data.Aeson.Types.ToJSON.ToJSON [DBHelper.Log]
-  {- Strictness: m,
-     Unfolding: InlineRule (0, True, True)
-                Lib.$s$fAllCTRender:a_$s$fToJSON[] -}
-e798649b398ff34fc55e5256f3f2f367
-  $s$fAllCTRender:a_$s$fAllMimeRender:a0 ::
-    Servant.API.ContentTypes.AllMimeRender
-      '[Servant.API.ContentTypes.JSON] [DBHelper.Log]
+a322c261013c153faba208f0290c708e
+  $s$fAllCTRender:a4 ::
+    Servant.API.ContentTypes.AllCTRender
+      '[Servant.API.ContentTypes.JSON] DBHelper.ListOb
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
                   @ '[Servant.API.ContentTypes.JSON]
-                  @ [DBHelper.Log]
-                  (Servant.API.ContentTypes.$fAllMimeRender:a0_$cp1AllMimeRender
+                  @ DBHelper.ListOb
+                  (Servant.API.ContentTypes.$fAllCTRender:a_$cp1AllCTRender
                      @ Servant.API.ContentTypes.JSON
-                     @ [DBHelper.Log]
-                     Lib.$s$fAllCTRender:a_$dMimeRender)
-                  Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a0_$callMimeRender -}
-1b688444c6ca83f3a856dfb0f66e6684
-  $s$fAllCTRender:a_$s$fAllMimeRender:a0_$callMimeRender ::
+                     @ '[]
+                     @ DBHelper.ListOb
+                     Servant.API.ContentTypes.$fAcceptTYPEJSON_$ccontentType
+                       `cast`
+                     (Sym (Servant.API.ContentTypes.N:Accept[0]
+                               <*>_N <Servant.API.ContentTypes.JSON>_N))
+                     Servant.API.ContentTypes.$fAllMimeUnrender[]a_$callMime
+                       `cast`
+                     (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
+                     Lib.$s$fAllCTRender:a_$dAllMimeRender)
+                  (Servant.API.ContentTypes.$fAllCTRender:a_$chandleAcceptH
+                     @ Servant.API.ContentTypes.JSON
+                     @ '[]
+                     @ DBHelper.ListOb
+                     Servant.API.ContentTypes.$fAcceptTYPEJSON_$ccontentType
+                       `cast`
+                     (Sym (Servant.API.ContentTypes.N:Accept[0]
+                               <*>_N <Servant.API.ContentTypes.JSON>_N))
+                     Servant.API.ContentTypes.$fAllMimeUnrender[]a_$callMime
+                       `cast`
+                     (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
+                     Lib.$s$fAllCTRender:a_$dAllMimeRender) -}
+a53e798950a8565a5406045e2c7a7801
+  $s$fAllCTRender:a5 ::
     Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON]
-    -> [DBHelper.Log]
+    -> DBHelper.ListOb
     -> [(Network.HTTP.Media.MediaType.Internal.MediaType,
          Data.ByteString.Lazy.Internal.ByteString)]
-  {- Arity: 2, Strictness: <L,A><L,1*U>m2,
+  {- Arity: 2, Strictness: <L,A><L,1*U(U,U)>m2,
      Unfolding: InlineRule (2, True, False)
                 (\ (eta :: Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON])
-                   (eta1 :: [DBHelper.Log]) ->
+                   (eta1 :: DBHelper.ListOb) ->
                  GHC.Types.:
                    @ (Network.HTTP.Media.MediaType.Internal.MediaType,
                       Data.ByteString.Lazy.Internal.ByteString)
-                   ((Servant.API.ContentTypes.$fMimeRenderTYPEJSONa_$cp1MimeRender
-                       @ [DBHelper.Log]
-                       Lib.$s$fAllCTRender:a_$dToJSON)
-                      `cast`
-                    (Servant.API.ContentTypes.N:Accept[0]
-                         <GHC.Types.*>_N <Servant.API.ContentTypes.JSON>_N)
-                      (Data.Proxy.Proxy @ GHC.Types.* @ Servant.API.ContentTypes.JSON),
-                    Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender
-                      (Data.Proxy.Proxy @ GHC.Types.* @ Servant.API.ContentTypes.JSON)
-                      eta1)
+                   (Servant.API.ContentTypes.$fAcceptTYPEJSON1,
+                    Lib.$s$fAllCTRender:a_$sencode1 eta1)
                    (GHC.Types.[]
                       @ (Network.HTTP.Media.MediaType.Internal.MediaType,
                          Data.ByteString.Lazy.Internal.ByteString))) -}
-3f158d5cf49f4d5dbdf3167f3135a11d
-  $s$fAllCTRender:a_$s$fAllMimeRender:a1 ::
+4aaadcc99ef4ff870da950e22f1b2bf1
+  $s$fAllCTRender:a_$dAllMimeRender ::
+    Servant.API.ContentTypes.AllMimeRender
+      '[Servant.API.ContentTypes.JSON] DBHelper.ListOb
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a1 -}
+e5fe1d37da4afc44d219d9bba0140889
+  $s$fAllCTRender:a_$dMimeRender ::
+    Servant.API.ContentTypes.MimeRender
+      Servant.API.ContentTypes.JSON DBHelper.ListOb
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa1 -}
+1a09be2989ddb0009bf037c6fa87a2bc
+  $s$fAllCTRender:a_$s$fAllMimeRender:a0 ::
     Servant.API.ContentTypes.AllMimeRender
       '[Servant.API.ContentTypes.JSON] DBHelper.Log
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -449,23 +425,23 @@ e798649b398ff34fc55e5256f3f2f367
                   (Servant.API.ContentTypes.$fAllMimeRender:a0_$cp1AllMimeRender
                      @ Servant.API.ContentTypes.JSON
                      @ DBHelper.Log
-                     Lib.$s$fAllCTRender:a4)
-                  Lib.$s$fAllCTRender:a3 -}
-ad4aaad811e96527d9b4700c10be2d64
-  $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa ::
-    Servant.API.ContentTypes.MimeRender
-      Servant.API.ContentTypes.JSON [DBHelper.Log]
+                     Lib.$s$fAllCTRender:a3)
+                  Lib.$s$fAllCTRender:a2 -}
+862d5bf2572e134727adfe101f927ed2
+  $s$fAllCTRender:a_$s$fAllMimeRender:a1 ::
+    Servant.API.ContentTypes.AllMimeRender
+      '[Servant.API.ContentTypes.JSON] DBHelper.ListOb
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
-                  @ *
-                  @ Servant.API.ContentTypes.JSON
-                  @ [DBHelper.Log]
-                  (Servant.API.ContentTypes.$fMimeRenderTYPEJSONa_$cp1MimeRender
-                     @ [DBHelper.Log]
-                     Lib.$s$fAllCTRender:a_$dToJSON)
-                  Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender -}
-263a0cd351e27159e92a9411f0f23749
-  $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa1 ::
+                  @ '[Servant.API.ContentTypes.JSON]
+                  @ DBHelper.ListOb
+                  (Servant.API.ContentTypes.$fAllMimeRender:a0_$cp1AllMimeRender
+                     @ Servant.API.ContentTypes.JSON
+                     @ DBHelper.ListOb
+                     Lib.$s$fAllCTRender:a_$dMimeRender)
+                  Lib.$s$fAllCTRender:a5 -}
+2f2c0de3ca46953b42247abc9f1d4ce0
+  $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa ::
     Servant.API.ContentTypes.MimeRender
       Servant.API.ContentTypes.JSON DBHelper.Log
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -476,21 +452,22 @@ ad4aaad811e96527d9b4700c10be2d64
                   (Servant.API.ContentTypes.$fMimeRenderTYPEJSONa_$cp1MimeRender
                      @ DBHelper.Log
                      DBHelper.$fToJSONLog)
+                  Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender -}
+e8c8bcdf91f5a1b6e85dbfb3873cc358
+  $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa1 ::
+    Servant.API.ContentTypes.MimeRender
+      Servant.API.ContentTypes.JSON DBHelper.ListOb
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ *
+                  @ Servant.API.ContentTypes.JSON
+                  @ DBHelper.ListOb
+                  (Servant.API.ContentTypes.$fMimeRenderTYPEJSONa_$cp1MimeRender
+                     @ DBHelper.ListOb
+                     DBHelper.$fToJSONListOb)
                   Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender1 -}
-de91f1400af47abdc696c3d450767cdb
+ede51bbf3df3bd1e6b9abeabbf7b65b3
   $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender ::
-    Data.Proxy.Proxy Servant.API.ContentTypes.JSON
-    -> [DBHelper.Log] -> Data.ByteString.Lazy.Internal.ByteString
-  {- Arity: 2, Strictness: <L,A><L,1*U>,
-     Unfolding: InlineRule (1, True, True)
-                (\ (ds :: Data.Proxy.Proxy Servant.API.ContentTypes.JSON)
-                   (eta :: [DBHelper.Log]) ->
-                 Data.Aeson.encode
-                   @ [DBHelper.Log]
-                   Lib.$s$fAllCTRender:a_$dToJSON
-                   eta) -}
-5bd4dc223fd252a1c137051c088049d1
-  $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender1 ::
     Data.Proxy.Proxy Servant.API.ContentTypes.JSON
     -> DBHelper.Log -> Data.ByteString.Lazy.Internal.ByteString
   {- Arity: 2, Strictness: <L,A><L,1*U(U,U)>,
@@ -498,218 +475,16 @@ de91f1400af47abdc696c3d450767cdb
                 (\ (ds :: Data.Proxy.Proxy Servant.API.ContentTypes.JSON)
                    (eta :: DBHelper.Log) ->
                  Lib.$s$fAllCTRender:a_$sencode eta) -}
-4dd996a71cb30a5eaaeccdb7f8f4b976
-  $s$fAllCTRender:a_$s$fToJSON[] ::
-    Data.Aeson.Types.ToJSON.ToJSON [DBHelper.Log]
-  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ [DBHelper.Log]
-                  DBHelper.$fToJSONLog_$ctoJSONList
-                  DBHelper.$fToJSONLog_$ctoEncodingList
-                  (\ (eta :: [[DBHelper.Log]]) ->
-                   case Data.Vector.Generic.new
-                          @ Data.Vector.Vector
-                          @ Data.Aeson.Types.Internal.Value
-                          (Data.Vector.$fVectorVectora @ Data.Aeson.Types.Internal.Value)
-                          (Data.Vector.Generic.New.unstream
-                             @ Data.Vector.Vector
-                             @ Data.Aeson.Types.Internal.Value
-                             (Data.Vector.$fVectorVectora @ Data.Aeson.Types.Internal.Value)
-                             (Data.Vector.Fusion.Bundle.Monadic.unsafeFromList
-                                @ Data.Vector.Fusion.Util.Id
-                                @ Data.Aeson.Types.Internal.Value
-                                @ Data.Vector.Vector
-                                Data.Vector.Fusion.Util.$fMonadId
-                                Data.Vector.Fusion.Bundle.Size.Unknown
-                                (GHC.Base.build
-                                   @ Data.Aeson.Types.Internal.Value
-                                   (\ @ b1
-                                      (c :: Data.Aeson.Types.Internal.Value -> b1 -> b1)[OneShot]
-                                      (n :: b1)[OneShot] ->
-                                    GHC.Base.foldr
-                                      @ [DBHelper.Log]
-                                      @ b1
-                                      (GHC.Base.mapFB
-                                         @ Data.Aeson.Types.Internal.Value
-                                         @ b1
-                                         @ [DBHelper.Log]
-                                         c
-                                         DBHelper.$fToJSONLog_$ctoJSONList)
-                                      n
-                                      eta)))) of dt1 { Data.Vector.Vector ipv ipv1 ipv2 ->
-                   Data.Aeson.Types.Internal.Array dt1 })
-                  (\ (eta :: [[DBHelper.Log]]) ->
-                   case eta of wild {
-                     [] -> Data.Aeson.Encoding.Internal.emptyArray_
-                     : x xs
-                     -> (Data.ByteString.Builder.Internal.append
-                           (Data.Aeson.Encoding.Internal.openBracket
-                              @ Data.Aeson.Types.Internal.Value)
-                             `cast`
-                           (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                <Data.Aeson.Types.Internal.Value>_P)
-                           (Data.ByteString.Builder.Internal.append
-                              (case x of wild1 {
-                                 []
-                                 -> Data.Aeson.Encoding.Internal.emptyArray_
-                                      `cast`
-                                    (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                         <Data.Aeson.Types.Internal.Value>_P)
-                                 : x1 xs1
-                                 -> Data.ByteString.Builder.Internal.append
-                                      (Data.Aeson.Encoding.Internal.openBracket
-                                         @ Data.Aeson.Types.Internal.Value)
-                                        `cast`
-                                      (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                           <Data.Aeson.Types.Internal.Value>_P)
-                                      (Data.ByteString.Builder.Internal.append
-                                         (Data.Aeson.Encoding.Internal.value
-                                            (DBHelper.$fToJSONLog_$ctoJSON x1))
-                                           `cast`
-                                         (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                              <Data.Aeson.Types.Internal.Value>_P)
-                                         (Data.ByteString.Builder.Internal.append
-                                            (GHC.Base.foldr
-                                               @ DBHelper.Log
-                                               @ (Data.Aeson.Encoding.Internal.Encoding'
-                                                    Data.Aeson.Types.Internal.Value)
-                                               (\ (v :: DBHelper.Log)
-                                                  (vs :: Data.Aeson.Encoding.Internal.Encoding'
-                                                           Data.Aeson.Types.Internal.Value)[OneShot] ->
-                                                Data.ByteString.Builder.Internal.append
-                                                  (Data.Aeson.Encoding.Internal.comma
-                                                     @ Data.Aeson.Types.Internal.Value)
-                                                    `cast`
-                                                  (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                                       <Data.Aeson.Types.Internal.Value>_P)
-                                                  (Data.ByteString.Builder.Internal.append
-                                                     (Data.Aeson.Encoding.Internal.value
-                                                        (DBHelper.$fToJSONLog_$ctoJSON v))
-                                                       `cast`
-                                                     (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                                          <Data.Aeson.Types.Internal.Value>_P)
-                                                     vs
-                                                       `cast`
-                                                     (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                                          <Data.Aeson.Types.Internal.Value>_P)))
-                                                 `cast`
-                                               (<DBHelper.Log>_R
-                                                ->_R <Data.Aeson.Encoding.Internal.Encoding'
-                                                        Data.Aeson.Types.Internal.Value>_R
-                                                ->_R Sym (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                                              <Data.Aeson.Types.Internal.Value>_P))
-                                               (Data.Aeson.Encoding.Internal.empty
-                                                  @ Data.Aeson.Types.Internal.Value)
-                                               xs1)
-                                              `cast`
-                                            (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                                 <Data.Aeson.Types.Internal.Value>_P)
-                                            (Data.Aeson.Encoding.Internal.closeBracket
-                                               @ Data.Aeson.Types.Internal.Value)
-                                              `cast`
-                                            (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                                 <Data.Aeson.Types.Internal.Value>_P))) })
-                              (Data.ByteString.Builder.Internal.append
-                                 (GHC.Base.foldr
-                                    @ [DBHelper.Log]
-                                    @ (Data.Aeson.Encoding.Internal.Encoding'
-                                         Data.Aeson.Types.Internal.Value)
-                                    (\ (v :: [DBHelper.Log])
-                                       (vs :: Data.Aeson.Encoding.Internal.Encoding'
-                                                Data.Aeson.Types.Internal.Value)[OneShot] ->
-                                     Data.ByteString.Builder.Internal.append
-                                       (Data.Aeson.Encoding.Internal.comma
-                                          @ Data.Aeson.Types.Internal.Value)
-                                         `cast`
-                                       (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                            <Data.Aeson.Types.Internal.Value>_P)
-                                       (Data.ByteString.Builder.Internal.append
-                                          (case v of wild1 {
-                                             []
-                                             -> Data.Aeson.Encoding.Internal.emptyArray_
-                                                  `cast`
-                                                (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                                     <Data.Aeson.Types.Internal.Value>_P)
-                                             : x1 xs1
-                                             -> Data.ByteString.Builder.Internal.append
-                                                  (Data.Aeson.Encoding.Internal.openBracket
-                                                     @ Data.Aeson.Types.Internal.Value)
-                                                    `cast`
-                                                  (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                                       <Data.Aeson.Types.Internal.Value>_P)
-                                                  (Data.ByteString.Builder.Internal.append
-                                                     (Data.Aeson.Encoding.Internal.value
-                                                        (DBHelper.$fToJSONLog_$ctoJSON x1))
-                                                       `cast`
-                                                     (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                                          <Data.Aeson.Types.Internal.Value>_P)
-                                                     (Data.ByteString.Builder.Internal.append
-                                                        (GHC.Base.foldr
-                                                           @ DBHelper.Log
-                                                           @ (Data.Aeson.Encoding.Internal.Encoding'
-                                                                Data.Aeson.Types.Internal.Value)
-                                                           (\ (v1 :: DBHelper.Log)
-                                                              (vs1 :: Data.Aeson.Encoding.Internal.Encoding'
-                                                                        Data.Aeson.Types.Internal.Value)[OneShot] ->
-                                                            Data.ByteString.Builder.Internal.append
-                                                              (Data.Aeson.Encoding.Internal.comma
-                                                                 @ Data.Aeson.Types.Internal.Value)
-                                                                `cast`
-                                                              (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                                                   <Data.Aeson.Types.Internal.Value>_P)
-                                                              (Data.ByteString.Builder.Internal.append
-                                                                 (Data.Aeson.Encoding.Internal.value
-                                                                    (DBHelper.$fToJSONLog_$ctoJSON
-                                                                       v1))
-                                                                   `cast`
-                                                                 (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                                                      <Data.Aeson.Types.Internal.Value>_P)
-                                                                 vs1
-                                                                   `cast`
-                                                                 (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                                                      <Data.Aeson.Types.Internal.Value>_P)))
-                                                             `cast`
-                                                           (<DBHelper.Log>_R
-                                                            ->_R <Data.Aeson.Encoding.Internal.Encoding'
-                                                                    Data.Aeson.Types.Internal.Value>_R
-                                                            ->_R Sym (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                                                          <Data.Aeson.Types.Internal.Value>_P))
-                                                           (Data.Aeson.Encoding.Internal.empty
-                                                              @ Data.Aeson.Types.Internal.Value)
-                                                           xs1)
-                                                          `cast`
-                                                        (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                                             <Data.Aeson.Types.Internal.Value>_P)
-                                                        (Data.Aeson.Encoding.Internal.closeBracket
-                                                           @ Data.Aeson.Types.Internal.Value)
-                                                          `cast`
-                                                        (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                                             <Data.Aeson.Types.Internal.Value>_P))) })
-                                          vs
-                                            `cast`
-                                          (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                               <Data.Aeson.Types.Internal.Value>_P)))
-                                      `cast`
-                                    (<[DBHelper.Log]>_R
-                                     ->_R <Data.Aeson.Encoding.Internal.Encoding'
-                                             Data.Aeson.Types.Internal.Value>_R
-                                     ->_R Sym (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                                   <Data.Aeson.Types.Internal.Value>_P))
-                                    (Data.Aeson.Encoding.Internal.empty
-                                       @ Data.Aeson.Types.Internal.Value)
-                                    xs)
-                                   `cast`
-                                 (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                      <Data.Aeson.Types.Internal.Value>_P)
-                                 (Data.Aeson.Encoding.Internal.closeBracket
-                                    @ Data.Aeson.Types.Internal.Value)
-                                   `cast`
-                                 (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                      <Data.Aeson.Types.Internal.Value>_P))))
-                          `cast`
-                        (Sym (Data.Aeson.Encoding.Internal.N:Encoding'[0]
-                                  <Data.Aeson.Types.Internal.Value>_P)) }) -}
-ec1cda8a37a70fc57bf94a60567a2239
+e73cf7cecfdad3fe69d377aa461f84c8
+  $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender1 ::
+    Data.Proxy.Proxy Servant.API.ContentTypes.JSON
+    -> DBHelper.ListOb -> Data.ByteString.Lazy.Internal.ByteString
+  {- Arity: 2, Strictness: <L,A><L,1*U(U,U)>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: Data.Proxy.Proxy Servant.API.ContentTypes.JSON)
+                   (eta :: DBHelper.ListOb) ->
+                 Lib.$s$fAllCTRender:a_$sencode1 eta) -}
+8088aaa11cd20db07913652fbe9ddb64
   $s$fAllCTRender:a_$sencode ::
     DBHelper.Log -> Data.ByteString.Lazy.Internal.ByteString
   {- Arity: 1, Strictness: <L,1*U(U,U)>,
@@ -718,6 +493,18 @@ ec1cda8a37a70fc57bf94a60567a2239
                  Data.ByteString.Builder.toLazyByteString
                    (Data.Aeson.Encoding.Internal.value
                       (DBHelper.$fToJSONLog_$ctoJSON eta))
+                     `cast`
+                   (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                        <Data.Aeson.Types.Internal.Value>_P)) -}
+af1b86f73dcf182f6c62e56424a31a87
+  $s$fAllCTRender:a_$sencode1 ::
+    DBHelper.ListOb -> Data.ByteString.Lazy.Internal.ByteString
+  {- Arity: 1, Strictness: <L,1*U(U,U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: DBHelper.ListOb) ->
+                 Data.ByteString.Builder.toLazyByteString
+                   (Data.Aeson.Encoding.Internal.value
+                      (DBHelper.$fToJSONListOb_$ctoJSON eta))
                      `cast`
                    (Data.Aeson.Encoding.Internal.N:Encoding'[0]
                         <Data.Aeson.Types.Internal.Value>_P)) -}
@@ -734,11 +521,11 @@ ec1cda8a37a70fc57bf94a60567a2239
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "crawler-0.1.0.0-2jLxW5sGj234Y0KdhjvaTi"#) -}
-1b4f82959561a1b0a8769f98415401f2
+a25730976ae774413f2a0b64f0211d27
   type API =
     ("userList"
      Servant.API.Sub.:> Servant.API.Verbs.Get
-                          '[Servant.API.ContentTypes.JSON] [DBHelper.Log])
+                          '[Servant.API.ContentTypes.JSON] DBHelper.ListOb)
     Servant.API.Alternative.:<|> (("token"
                                    Servant.API.Sub.:> (Servant.API.Capture.Capture
                                                          "tkn" GHC.Base.String
@@ -770,7 +557,7 @@ ec1cda8a37a70fc57bf94a60567a2239
     Control.Monad.Trans.Except.ExceptT
       Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO
     :: * -> *
-81c4afbe3cdca6b7bb7f0d1b36bebc18
+4f06bfb5757c3b0829f92a902694ebc9
   app :: Network.Wai.Application
   {- Arity: 3,
      Unfolding: InlineRule (0, True, True)
@@ -781,7 +568,7 @@ ec1cda8a37a70fc57bf94a60567a2239
                        -> GHC.Types.IO Network.Wai.Internal.ResponseReceived>_R
                  ->_R Sym (GHC.Types.N:IO[0]
                                <Network.Wai.Internal.ResponseReceived>_R)) -}
-f4e5a2db22e6306297b9266a4e887468
+8e22908637bcf4cb7ad54752108a3d62
   app1 ::
     Network.Wai.Internal.Request
     -> (Network.Wai.Internal.Response
@@ -791,12 +578,12 @@ f4e5a2db22e6306297b9266a4e887468
           Network.Wai.Internal.ResponseReceived #)
   {- Arity: 3,
      Unfolding: (Network.Wai.Middleware.Cors.simpleCors1 Lib.app2) -}
-afed77288590ca11bc5ff08b643ae81b
+cf97161dfe86fb1f8d0897d60420443b
   app10 ::
     Servant.Server.Internal.Router.Router
       (Data.Text.Internal.Text, (Data.Text.Internal.Text, ()))
   {- Unfolding: (Lib.app21 Lib.app11) -}
-8a1cb9e3346523ef0dc23eb16600351c
+6c8744fc18fdfad403a23da7743afbbe
   app11 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       (Data.Text.Internal.Text, (Data.Text.Internal.Text, ()))
@@ -867,7 +654,7 @@ c2d986c4a8d5f06016d013197bc413d2
                                              GHC.Integer.Type.Integer>_R))
                            (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
                                      <GHC.Integer.Type.Integer>_R))) }) -}
-950646d5c011d3071c3f79474b6817d7
+e3e561e7f30707ca33e5c4f72cb844fd
   app13 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       (Data.Text.Internal.Text, ())
@@ -932,7 +719,7 @@ c2d986c4a8d5f06016d013197bc413d2
                                         [GHC.Types.Char]>_R))
                       (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
                                 <[GHC.Types.Char]>_R))) }) -}
-036fec5a6b1eee8ca4ed4be44ed439d4
+5099d1608ec1f8aaaa7bd793188d3ffd
   app15 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       ()
@@ -997,7 +784,7 @@ c2d986c4a8d5f06016d013197bc413d2
                         (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
                                   <()>_R)))
                    Lib.app16) -}
-c1ea629762005ca39d5d206dcaa548a7
+6c536d61cfbe30d244452c30c6b9ffaf
   app16 ::
     ()
     -> ()
@@ -1019,7 +806,7 @@ c1ea629762005ca39d5d206dcaa548a7
                    (b1 :: ())
                    (req :: Network.Wai.Internal.Request) ->
                  Lib.app17) -}
-730e8cd21e881f256bdc7e060373c9ac
+43fb515f3e72d3b98e7b3bee02e16876
   app17 ::
     Servant.Server.Internal.RoutingApplication.RouteResult
       (Servant.Server.Internal.Server
@@ -1103,7 +890,7 @@ c1ea629762005ca39d5d206dcaa548a7
                                             <Control.Monad.Trans.Except.ExceptT
                                                Servant.Server.Internal.ServantErr.ServantErr
                                                GHC.Types.IO>_N)))))) -}
-de757dfd2f455dd5885df22eb57b3b2b
+0efdb6f5bc8552ed871e3a0acb95f47d
   app18 ::
     GHC.Base.String
     -> GHC.Integer.Type.Integer
@@ -1142,7 +929,7 @@ de757dfd2f455dd5885df22eb57b3b2b
 a533850d5ee98f9864bde6ae7361e448
   app19 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 8#) -}
-e3a82e03d13e172bf0f4add816d238b0
+2f148795da4aa203f2b26751fbfaa839
   app2 :: Network.Wai.Application
   {- Arity: 2,
      Unfolding: (Servant.Server.Internal.RoutingApplication.toApplication
@@ -1150,7 +937,7 @@ e3a82e03d13e172bf0f4add816d238b0
 e2b2a1911701e95a5810fbf91cc97b3d
   app20 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Output"#) -}
-ea212fde66416861f850298f777fe549
+411388ae0788272c8cab6426344b129d
   app21 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       (Data.Text.Internal.Text, (Data.Text.Internal.Text, ()))
@@ -1169,7 +956,7 @@ ea212fde66416861f850298f777fe549
                    @ 'Network.HTTP.Types.Method.GET
                    @ 200
                    @ '[]
-                   Lib.$s$fAllCTRender:a1
+                   Lib.$s$fAllCTRender:a
                    Servant.API.Verbs.$fReflectMethodStdMethodGET_$creflectMethod
                      `cast`
                    (Sym (Servant.API.Verbs.N:ReflectMethod[0]
@@ -1212,7 +999,7 @@ aeadbb031f97e755e03ddae6f2fbead4
 af7749652b14239f99c2f580d0705113
   app24 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "startC"#) -}
-a6fe135dd0f44ee762beef403ec2abca
+49235baab85c71c60b0b301afde2d40d
   app25 ::
     Servant.Server.Internal.Router.Router'
       () Servant.Server.Internal.RoutingApplication.RoutingApplication
@@ -1223,7 +1010,7 @@ a6fe135dd0f44ee762beef403ec2abca
                    (GHC.Types.[]
                       @ (()
                          -> Servant.Server.Internal.RoutingApplication.RoutingApplication))) -}
-f4f18edb1659e4e9121d65927158788f
+7bae6028cc5e153e0bedb63164ebadc8
   app26 ::
     Data.Map.Base.Map
       Data.Text.Internal.Text
@@ -1250,7 +1037,7 @@ f4f18edb1659e4e9121d65927158788f
                       @ (Servant.Server.Internal.Router.Router'
                            ()
                            Servant.Server.Internal.RoutingApplication.RoutingApplication)) } }) -}
-080d26926a40307efb143aaf6af47932
+49cdf13781c24b065264a367f409c0a0
   app27 ::
     Servant.Server.Internal.Router.Router'
       () Servant.Server.Internal.RoutingApplication.RoutingApplication
@@ -1258,7 +1045,7 @@ f4f18edb1659e4e9121d65927158788f
                    @ ()
                    @ Servant.Server.Internal.RoutingApplication.RoutingApplication
                    Lib.app28) -}
-78b61a8a9d2935b250fac26727e7cece
+34571ef9ce9c293c06cf6812492544be
   app28 ::
     Servant.Server.Internal.Router.Router'
       (Data.Text.Internal.Text, ())
@@ -1267,12 +1054,12 @@ f4f18edb1659e4e9121d65927158788f
                    @ (Data.Text.Internal.Text, ())
                    @ Servant.Server.Internal.RoutingApplication.RoutingApplication
                    Lib.app29) -}
-ff39c5f7a1190a0820e3b44dd5cad174
+9ba11d5f670ab39e516eeb14a599da06
   app29 ::
     Servant.Server.Internal.Router.Router
       (Data.Text.Internal.Text, (Data.Text.Internal.Text, ()))
   {- Unfolding: (Lib.app21 Lib.app30) -}
-98443b16aa877a752aae20e5c891d11d
+69cc315f73e8f01600e82101ed2f51ae
   app3 ::
     Network.Wai.Internal.Request
     -> (Servant.Server.Internal.RoutingApplication.RouteResult
@@ -1292,7 +1079,7 @@ ff39c5f7a1190a0820e3b44dd5cad174
                    GHC.Tuple.()
                    eta
                    eta1) -}
-927378673b3de2a371b65bd3351ef21b
+2691123555b7700a3114e31c76300d48
   app30 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       (Data.Text.Internal.Text, (Data.Text.Internal.Text, ()))
@@ -1362,7 +1149,7 @@ ff39c5f7a1190a0820e3b44dd5cad174
                                              GHC.Types.Int>_R))
                            (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
                                      <GHC.Types.Int>_R))) }) -}
-7bcc33530ae7971a801a3b0bc436c89c
+d9a3151511150f4075c71bc87bc0e23a
   app32 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       (Data.Text.Internal.Text, ())
@@ -1407,7 +1194,7 @@ ff39c5f7a1190a0820e3b44dd5cad174
                                         Servant.Server.Internal.ServantErr.ServantErr
                                         GHC.Types.IO>_N))))_R
                    Lib.app14) -}
-b82d8d632536fdc621488e2350c30d9a
+5de0a3adc53a1c156c8f61d2e1bc3601
   app33 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       ()
@@ -1472,7 +1259,7 @@ b82d8d632536fdc621488e2350c30d9a
                         (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
                                   <()>_R)))
                    Lib.app34) -}
-7326e89a83256577896ad66cbdbf42db
+bda7c23c58e15571f194d2e49604552f
   app34 ::
     ()
     -> ()
@@ -1494,7 +1281,7 @@ b82d8d632536fdc621488e2350c30d9a
                    (b1 :: ())
                    (req :: Network.Wai.Internal.Request) ->
                  Lib.app35) -}
-f19c727f981c3d0b38db1edea6fcc3d9
+cdc4892efc94333d937b5ac562d830eb
   app35 ::
     Servant.Server.Internal.RoutingApplication.RouteResult
       (Servant.Server.Internal.Server
@@ -1577,7 +1364,7 @@ f19c727f981c3d0b38db1edea6fcc3d9
                                             <Control.Monad.Trans.Except.ExceptT
                                                Servant.Server.Internal.ServantErr.ServantErr
                                                GHC.Types.IO>_N)))))) -}
-b57e8ac8b66269438c495d54260d1daa
+6630eec8af76fefbfd5382076abeca3b
   app36 ::
     GHC.Base.String
     -> GHC.Types.Int
@@ -1623,7 +1410,7 @@ b57e8ac8b66269438c495d54260d1daa
 74eb17ed0da33a150d2fc5ea8da5e4ac
   app38 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "user"#) -}
-c177afdeafdb7d481ce1b22073cd9423
+4dce0f925dbf7790b2a3c9e68f824485
   app39 ::
     Servant.Server.Internal.Router.Router'
       () Servant.Server.Internal.RoutingApplication.RoutingApplication
@@ -1634,7 +1421,7 @@ c177afdeafdb7d481ce1b22073cd9423
                    (GHC.Types.[]
                       @ (()
                          -> Servant.Server.Internal.RoutingApplication.RoutingApplication))) -}
-36eb7c59a7938313bce45d2a0da8a706
+894a0afc2f777202b0014139de67542c
   app4 ::
     Servant.Server.Internal.Router.Router'
       () Servant.Server.Internal.RoutingApplication.RoutingApplication
@@ -1643,7 +1430,7 @@ c177afdeafdb7d481ce1b22073cd9423
                    @ Servant.Server.Internal.RoutingApplication.RoutingApplication
                    Lib.app39
                    Lib.app5) -}
-7d9e4408a8304bc4a94684ae1f99811d
+a01a4eb298851a7ee183d38fcf02e60b
   app40 ::
     Data.Map.Base.Map
       Data.Text.Internal.Text
@@ -1670,7 +1457,7 @@ c177afdeafdb7d481ce1b22073cd9423
                       @ (Servant.Server.Internal.Router.Router'
                            ()
                            Servant.Server.Internal.RoutingApplication.RoutingApplication)) } }) -}
-bd5715d805289a4b4f9e6040bff70ef3
+5c80b3f6569df1543d871bc868d3ef9c
   app41 ::
     Servant.Server.Internal.Router.Router'
       () Servant.Server.Internal.RoutingApplication.RoutingApplication
@@ -1678,11 +1465,11 @@ bd5715d805289a4b4f9e6040bff70ef3
                    @ ()
                    @ Servant.Server.Internal.RoutingApplication.RoutingApplication
                    Lib.app42) -}
-837c1d0c1dab7799c035bed75420abec
+51cdb88e91f44ef2a1cf46184426dd97
   app42 ::
     Servant.Server.Internal.Router.Router (Data.Text.Internal.Text, ())
   {- Unfolding: (Lib.app51 Lib.app43) -}
-97bb2e39acf82f8eb7656cebc9f6d445
+9b620ab1dee1fdba4b5f19ee20581b55
   app43 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       (Data.Text.Internal.Text, ())
@@ -1730,7 +1517,7 @@ bd5715d805289a4b4f9e6040bff70ef3
                                         Servant.Server.Internal.ServantErr.ServantErr
                                         GHC.Types.IO>_N))))_R
                    Lib.app14) -}
-567902307b3b5a76d97d38e87f3f213a
+bf3cbcf8f80cd72947e6481152b5c08f
   app44 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       ()
@@ -1790,7 +1577,7 @@ bd5715d805289a4b4f9e6040bff70ef3
                         (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
                                   <()>_R)))
                    Lib.app45) -}
-42191e2e64f8febeec915a6c68392e15
+ad3f25c0fcd5ed89f5ea194a13492556
   app45 ::
     ()
     -> ()
@@ -1810,7 +1597,7 @@ bd5715d805289a4b4f9e6040bff70ef3
                    (b1 :: ())
                    (req :: Network.Wai.Internal.Request) ->
                  Lib.app46) -}
-a05f34f89181ab296a080601c1d31a61
+5dd2fef9f30095018e5611c3837c8f40
   app46 ::
     Servant.Server.Internal.RoutingApplication.RouteResult
       (Servant.Server.Internal.Server
@@ -1873,7 +1660,7 @@ a05f34f89181ab296a080601c1d31a61
                                             <Control.Monad.Trans.Except.ExceptT
                                                Servant.Server.Internal.ServantErr.ServantErr
                                                GHC.Types.IO>_N)))))) -}
-27ac113ea181316fc130dfcd5149be23
+672e14f84c263b0def3d16db5c8c38a1
   app47 ::
     GHC.Base.String
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -1895,13 +1682,13 @@ a05f34f89181ab296a080601c1d31a61
                       @ Servant.Server.Internal.ServantErr.ServantErr
                       @ DBHelper.Log
                       Lib.app48 #) } }) -}
-332fd66abff4571f2e3f1af8b69f59a6
+6f416dc3a52d933dad4e714599e691f9
   app48 :: DBHelper.Log
   {- Strictness: m, Unfolding: (DBHelper.Log Lib.app50 Lib.app49) -}
 ed266e0a249db3f5335f98c8182f1e16
   app49 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
-5e5f08582e82d1bb5166940cb787b038
+791667df4b81bc75c6e2e80ee3da3d3a
   app5 ::
     Servant.Server.Internal.Router.Router'
       () Servant.Server.Internal.RoutingApplication.RoutingApplication
@@ -1913,7 +1700,7 @@ ed266e0a249db3f5335f98c8182f1e16
 ba8a161daff9108425a6ab04b3136754
   app50 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "done"#) -}
-3c9fe4b74dc071fb88dd44677529c0f5
+97b6774f8f29929754807dc2d216f09f
   app51 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       (Data.Text.Internal.Text, ())
@@ -1932,7 +1719,7 @@ ba8a161daff9108425a6ab04b3136754
                    @ 'Network.HTTP.Types.Method.GET
                    @ 200
                    @ '[]
-                   Lib.$s$fAllCTRender:a1
+                   Lib.$s$fAllCTRender:a
                    Servant.API.Verbs.$fReflectMethodStdMethodGET_$creflectMethod
                      `cast`
                    (Sym (Servant.API.Verbs.N:ReflectMethod[0]
@@ -1972,7 +1759,7 @@ be9299f1f26b9c0e0c4d266f5fa14320
 3e9708b867919fb833038df1b691d92c
   app53 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "token"#) -}
-ff68fd98eec5ea8976082701bbdb700a
+08f319b45f78beca7bb241b3030e3b6f
   app54 ::
     Servant.Server.Internal.Router.Router'
       () Servant.Server.Internal.RoutingApplication.RoutingApplication
@@ -1983,7 +1770,7 @@ ff68fd98eec5ea8976082701bbdb700a
                    (GHC.Types.[]
                       @ (()
                          -> Servant.Server.Internal.RoutingApplication.RoutingApplication))) -}
-25f1fb6473eade949559f839f575a34e
+5401b13e7bd5cbd544473e2ae7dacd0f
   app55 ::
     Data.Map.Base.Map
       Data.Text.Internal.Text
@@ -1992,7 +1779,7 @@ ff68fd98eec5ea8976082701bbdb700a
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Lib.app71 of ds1 { (#,#) ipv ipv1 ->
+                        Lib.app62 of ds1 { (#,#) ipv ipv1 ->
                  case ipv1 of dt { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
                  Data.Map.Base.Bin
                    @ Data.Text.Internal.Text
@@ -2010,9 +1797,9 @@ ff68fd98eec5ea8976082701bbdb700a
                       @ (Servant.Server.Internal.Router.Router'
                            ()
                            Servant.Server.Internal.RoutingApplication.RoutingApplication)) } }) -}
-49b41ed96f647c5c930c595026c79cd6
+de01d40e57338c311d8e463e405498d8
   app56 :: Servant.Server.Internal.Router.Router ()
-  {- Unfolding: (Lib.app70
+  {- Unfolding: (Lib.app61
                    Lib.app57
                      `cast`
                    (Servant.Server.Internal.RoutingApplication.Delayed
@@ -2023,25 +1810,25 @@ ff68fd98eec5ea8976082701bbdb700a
                                    'Network.HTTP.Types.Method.GET
                                    200
                                    '[Servant.API.ContentTypes.JSON]
-                                   [DBHelper.Log]>_N
+                                   DBHelper.ListOb>_N
                                 <"userList">_N
                                 <Control.Monad.Trans.Except.ExceptT
                                    Servant.Server.Internal.ServantErr.ServantErr
                                    GHC.Types.IO>_N)))_R) -}
-492b5362aafe6955f4ea77932a617cb5
+9ef26aa26e6a1eff84a33b16f6ed4cae
   app57 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       ()
       (Servant.Server.Internal.Server
          ("userList"
           Servant.API.Sub.:> Servant.API.Verbs.Get
-                               '[Servant.API.ContentTypes.JSON] [DBHelper.Log]))
+                               '[Servant.API.ContentTypes.JSON] DBHelper.ListOb))
   {- Unfolding: (Servant.Server.Internal.RoutingApplication.Delayed
                    @ ()
                    @ (Servant.Server.Internal.Server
                         ("userList"
                          Servant.API.Sub.:> Servant.API.Verbs.Get
-                                              '[Servant.API.ContentTypes.JSON] [DBHelper.Log]))
+                                              '[Servant.API.ContentTypes.JSON] DBHelper.ListOb))
                    @ ()
                    @ ()
                    @ ()
@@ -2083,7 +1870,7 @@ ff68fd98eec5ea8976082701bbdb700a
                         (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
                                   <()>_R)))
                    Lib.app58) -}
-73c4f86313cdd083dd9a0b5e556cd22b
+5fbf856138713e7e430f21f0da64dc59
   app58 ::
     ()
     -> ()
@@ -2093,41 +1880,41 @@ ff68fd98eec5ea8976082701bbdb700a
          (Servant.Server.Internal.Server
             ("userList"
              Servant.API.Sub.:> Servant.API.Verbs.Get
-                                  '[Servant.API.ContentTypes.JSON] [DBHelper.Log]))
+                                  '[Servant.API.ContentTypes.JSON] DBHelper.ListOb))
   {- Arity: 4,
      Unfolding: (\ (c :: ())
                    (a1 :: ())
                    (b1 :: ())
                    (req :: Network.Wai.Internal.Request) ->
                  Lib.app59) -}
-a34e746c88974f354b497b91d924e402
+04db863b1531e57b1b59568f907cae32
   app59 ::
     Servant.Server.Internal.RoutingApplication.RouteResult
       (Servant.Server.Internal.Server
          ("userList"
           Servant.API.Sub.:> Servant.API.Verbs.Get
-                               '[Servant.API.ContentTypes.JSON] [DBHelper.Log]))
+                               '[Servant.API.ContentTypes.JSON] DBHelper.ListOb))
   {- Unfolding: (Servant.Server.Internal.RoutingApplication.Route
                    @ (Servant.Server.Internal.Server
                         ("userList"
                          Servant.API.Sub.:> Servant.API.Verbs.Get
-                                              '[Servant.API.ContentTypes.JSON] [DBHelper.Log]))
+                                              '[Servant.API.ContentTypes.JSON] DBHelper.ListOb))
                    Lib.app60
                      `cast`
                    (Trans
                         (Sym (GHC.Types.N:IO[0]
                                   <Data.Either.Either
                                      Servant.Server.Internal.ServantErr.ServantErr
-                                     [DBHelper.Log]>_R))
+                                     DBHelper.ListOb>_R))
                         (Trans
                              (Sym (Control.Monad.Trans.Except.N:ExceptT[0]
                                        <Servant.Server.Internal.ServantErr.ServantErr>_N
                                        <GHC.Types.IO>_R
-                                       <[DBHelper.Log]>_N))
+                                       <DBHelper.ListOb>_N))
                              (Trans
                                   (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPEVerbm0[0]
                                                  <Network.HTTP.Types.Method.StdMethod>_N
-                                                 <[DBHelper.Log]>_N
+                                                 <DBHelper.ListOb>_N
                                                  <'[Servant.API.ContentTypes.JSON]>_N
                                                  <200>_N
                                                  <'Network.HTTP.Types.Method.GET>_N
@@ -2140,12 +1927,12 @@ a34e746c88974f354b497b91d924e402
                                                     'Network.HTTP.Types.Method.GET
                                                     200
                                                     '[Servant.API.ContentTypes.JSON]
-                                                    [DBHelper.Log]>_N
+                                                    DBHelper.ListOb>_N
                                                  <"userList">_N
                                                  <Control.Monad.Trans.Except.ExceptT
                                                     Servant.Server.Internal.ServantErr.ServantErr
                                                     GHC.Types.IO>_N))))))) -}
-7e1823f5e271acdccca400e2ec028ee8
+7aead8f1bc7ab8d7814f0bbbf7f380a8
   app6 ::
     Servant.Server.Internal.Router.Router'
       () Servant.Server.Internal.RoutingApplication.RoutingApplication
@@ -2156,51 +1943,80 @@ a34e746c88974f354b497b91d924e402
                    (GHC.Types.[]
                       @ (()
                          -> Servant.Server.Internal.RoutingApplication.RoutingApplication))) -}
-3dd40b560a04f3d3a02ab9e26c35db19
+c5476d0e1cd037b38df26074f0c32928
   app60 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           Data.Either.Either
-            Servant.Server.Internal.ServantErr.ServantErr [DBHelper.Log] #)
+            Servant.Server.Internal.ServantErr.ServantErr DBHelper.ListOb #)
   {- Arity: 1, Strictness: <S,U>,
-     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 (# s, Lib.app61 #)) -}
-4155a54e273760b5af6358e9fce70797
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case DBHelper.allUsers1 s of ds1 { (#,#) ipv ipv1 ->
+                 (# ipv,
+                    Data.Either.Right
+                      @ Servant.Server.Internal.ServantErr.ServantErr
+                      @ DBHelper.ListOb
+                      (DBHelper.ListOb ipv1 (GHC.Types.[] @ DBHelper.RepoDB)) #) }) -}
+7fb07f29dbe6f90b18c5557b8d761562
   app61 ::
-    Data.Either.Either
-      Servant.Server.Internal.ServantErr.ServantErr [DBHelper.Log]
-  {- Unfolding: (Data.Either.Right
-                   @ Servant.Server.Internal.ServantErr.ServantErr
-                   @ [DBHelper.Log]
-                   Lib.app62) -}
-3edb911d6e8cdc2258601c033524e53c
-  app62 :: [DBHelper.Log]
-  {- Unfolding: (GHC.Types.: @ DBHelper.Log Lib.app67 Lib.app63) -}
-38c3015402eda24820fd2ebfc870f810
-  app63 :: [DBHelper.Log]
-  {- Unfolding: (GHC.Types.:
-                   @ DBHelper.Log
-                   Lib.app64
-                   (GHC.Types.[] @ DBHelper.Log)) -}
-bd8518a544fb58057c556b1b3e55b570
-  app64 :: DBHelper.Log
-  {- Unfolding: (DBHelper.Log Lib.app66 Lib.app65) -}
-b1fcdadba856f8403b8aeb038fe7df8a
-  app65 :: GHC.Types.Int
-  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 2#) -}
-a7531db5b632dd4004474e35516c781d
-  app66 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "Two"#) -}
-cc142be5b8c57f6eb8ea9d232be96bd1
-  app67 :: DBHelper.Log
-  {- Unfolding: (DBHelper.Log Lib.app69 Lib.app68) -}
-42ce862a5d9611bd9704a875f0b2e96b
-  app68 :: GHC.Types.Int
-  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 1#) -}
-bba7ed9964a280fd93348da599e3163e
-  app69 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "One"#) -}
-3db372afc0d5c58feeddcd1d3cb711ef
+    Servant.Server.Internal.RoutingApplication.Delayed
+      ()
+      (Servant.Server.Internal.Server
+         (Servant.API.Verbs.Verb
+            'Network.HTTP.Types.Method.GET
+            200
+            '[Servant.API.ContentTypes.JSON]
+            DBHelper.ListOb))
+    -> Servant.Server.Internal.Router.Router ()
+  {- Unfolding: (Servant.Server.Internal.$w$croute9
+                   @ Network.HTTP.Types.Method.StdMethod
+                   @ '[Servant.API.ContentTypes.JSON]
+                   @ DBHelper.ListOb
+                   @ 'Network.HTTP.Types.Method.GET
+                   @ 200
+                   @ '[]
+                   Lib.$s$fAllCTRender:a4
+                   Servant.API.Verbs.$fReflectMethodStdMethodGET_$creflectMethod
+                     `cast`
+                   (Sym (Servant.API.Verbs.N:ReflectMethod[0]
+                             <Network.HTTP.Types.Method.StdMethod>_N
+                             <'Network.HTTP.Types.Method.GET>_N))
+                   Lib.app22
+                     `cast`
+                   (Trans
+                        (Sym (GHC.TypeLits.N:SNat[0] <200>_P))
+                        (Sym (GHC.TypeLits.N:KnownNat[0]) <200>_N))
+                   @ ()
+                   (Data.Proxy.Proxy
+                      @ *
+                      @ (Servant.API.Verbs.Verb
+                           'Network.HTTP.Types.Method.GET
+                           200
+                           '[Servant.API.ContentTypes.JSON]
+                           DBHelper.ListOb))) -}
+344dcfac9b52c82195ff3192b8adaf2a
+  app62 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Servant.Server.Internal.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Servant.Server.Internal.$fHasServerTYPE:>context20
+                   Lib.app63
+                   0#
+                   ipv }) -}
+9d46b786fef6ec6d82f8fe8fd87b7fa5
+  app63 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "userList"#) -}
+f0123e046036fb041e4151c21087eab6
   app7 ::
     Data.Map.Base.Map
       Data.Text.Internal.Text
@@ -2227,65 +2043,7 @@ bba7ed9964a280fd93348da599e3163e
                       @ (Servant.Server.Internal.Router.Router'
                            ()
                            Servant.Server.Internal.RoutingApplication.RoutingApplication)) } }) -}
-6c96fc8c91b9fbf029ac009429dfbc11
-  app70 ::
-    Servant.Server.Internal.RoutingApplication.Delayed
-      ()
-      (Servant.Server.Internal.Server
-         (Servant.API.Verbs.Verb
-            'Network.HTTP.Types.Method.GET
-            200
-            '[Servant.API.ContentTypes.JSON]
-            [DBHelper.Log]))
-    -> Servant.Server.Internal.Router.Router ()
-  {- Unfolding: (Servant.Server.Internal.$w$croute9
-                   @ Network.HTTP.Types.Method.StdMethod
-                   @ '[Servant.API.ContentTypes.JSON]
-                   @ [DBHelper.Log]
-                   @ 'Network.HTTP.Types.Method.GET
-                   @ 200
-                   @ '[]
-                   Lib.$s$fAllCTRender:a
-                   Servant.API.Verbs.$fReflectMethodStdMethodGET_$creflectMethod
-                     `cast`
-                   (Sym (Servant.API.Verbs.N:ReflectMethod[0]
-                             <Network.HTTP.Types.Method.StdMethod>_N
-                             <'Network.HTTP.Types.Method.GET>_N))
-                   Lib.app22
-                     `cast`
-                   (Trans
-                        (Sym (GHC.TypeLits.N:SNat[0] <200>_P))
-                        (Sym (GHC.TypeLits.N:KnownNat[0]) <200>_N))
-                   @ ()
-                   (Data.Proxy.Proxy
-                      @ *
-                      @ (Servant.API.Verbs.Verb
-                           'Network.HTTP.Types.Method.GET
-                           200
-                           '[Servant.API.ContentTypes.JSON]
-                           [DBHelper.Log]))) -}
-29d736d8ee0692c1ed67c9cb62906c64
-  app71 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Servant.Server.Internal.$wouter
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Servant.Server.Internal.$fHasServerTYPE:>context20
-                   Lib.app72
-                   0#
-                   ipv }) -}
-ec1f15354d47e5cf7157fe5645e77222
-  app72 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "userList"#) -}
-c9740f5e955fcd6e578914ad3d2fdea8
+c5570c85382e5bbe14ba305ccc88d87e
   app8 ::
     Servant.Server.Internal.Router.Router'
       () Servant.Server.Internal.RoutingApplication.RoutingApplication
@@ -2293,7 +2051,7 @@ c9740f5e955fcd6e578914ad3d2fdea8
                    @ ()
                    @ Servant.Server.Internal.RoutingApplication.RoutingApplication
                    Lib.app9) -}
-5722fba9abc5f5af3614a866ec449eb4
+98b0b6e585fcf8c3d03a0868b02030e9
   app9 ::
     Servant.Server.Internal.Router.Router'
       (Data.Text.Internal.Text, ())
@@ -2302,19 +2060,19 @@ c9740f5e955fcd6e578914ad3d2fdea8
                    @ (Data.Text.Internal.Text, ())
                    @ Servant.Server.Internal.RoutingApplication.RoutingApplication
                    Lib.app10) -}
-cf634b094f9f5f8dc5afcf44634a529a
+9ec9b470cb9094ec7f0d6eede634412d
   app_r :: Servant.Server.Internal.Router.Router ()
   {- Unfolding: (Servant.Server.Internal.Router.choice
                    @ ()
                    @ Servant.Server.Internal.RoutingApplication.RoutingApplication
                    Lib.app54
                    Lib.app4) -}
-3283ba5f4c1b2745b64568e3144eb7e1
+b99b8c4713b120746357d1ddcc9aa58d
   startApp :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Lib.startApp1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-860496b18b4d6d825b685a1aaa1e815b
+5f81d65833a987d970a00611f4307531
   startApp1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -2383,6 +2141,20 @@ cf634b094f9f5f8dc5afcf44634a529a
 bbf949da032bde2c5a004beaf2917bbb
   startApp2 :: GHC.Types.Int
   {- HasNoCafRefs, Unfolding: (GHC.Types.I# 8080#) -}
+"SPEC/Lib $fAllCTRender:a @ JSON @ '[] @ ListOb" [ALWAYS] forall ($dAllMimeRender :: Servant.API.ContentTypes.AllMimeRender
+                                                                                       '[Servant.API.ContentTypes.JSON]
+                                                                                       DBHelper.ListOb)
+                                                                 ($dAllMime :: Servant.API.ContentTypes.AllMime
+                                                                                 '[])
+                                                                 ($dAccept :: Servant.API.ContentTypes.Accept
+                                                                                Servant.API.ContentTypes.JSON)
+  Servant.API.ContentTypes.$fAllCTRender:a @ Servant.API.ContentTypes.JSON
+                                           @ '[]
+                                           @ DBHelper.ListOb
+                                           $dAccept
+                                           $dAllMime
+                                           $dAllMimeRender
+  = Lib.$s$fAllCTRender:a4
 "SPEC/Lib $fAllCTRender:a @ JSON @ '[] @ Log" [ALWAYS] forall ($dAllMimeRender :: Servant.API.ContentTypes.AllMimeRender
                                                                                     '[Servant.API.ContentTypes.JSON]
                                                                                     DBHelper.Log)
@@ -2396,66 +2168,45 @@ bbf949da032bde2c5a004beaf2917bbb
                                            $dAccept
                                            $dAllMime
                                            $dAllMimeRender
-  = Lib.$s$fAllCTRender:a1
-"SPEC/Lib $fAllCTRender:a @ JSON @ '[] @ [Log]" [ALWAYS] forall ($dAllMimeRender :: Servant.API.ContentTypes.AllMimeRender
-                                                                                      '[Servant.API.ContentTypes.JSON]
-                                                                                      [DBHelper.Log])
-                                                                ($dAllMime :: Servant.API.ContentTypes.AllMime
-                                                                                '[])
-                                                                ($dAccept :: Servant.API.ContentTypes.Accept
-                                                                               Servant.API.ContentTypes.JSON)
-  Servant.API.ContentTypes.$fAllCTRender:a @ Servant.API.ContentTypes.JSON
-                                           @ '[]
-                                           @ [DBHelper.Log]
-                                           $dAccept
-                                           $dAllMime
-                                           $dAllMimeRender
   = Lib.$s$fAllCTRender:a
+"SPEC/Lib $fAllMimeRender:a0 @ JSON @ ListOb" [ALWAYS] forall ($dMimeRender :: Servant.API.ContentTypes.MimeRender
+                                                                                 Servant.API.ContentTypes.JSON
+                                                                                 DBHelper.ListOb)
+  Servant.API.ContentTypes.$fAllMimeRender:a0 @ Servant.API.ContentTypes.JSON
+                                              @ DBHelper.ListOb
+                                              $dMimeRender
+  = Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a1
 "SPEC/Lib $fAllMimeRender:a0 @ JSON @ Log" [ALWAYS] forall ($dMimeRender :: Servant.API.ContentTypes.MimeRender
                                                                               Servant.API.ContentTypes.JSON
                                                                               DBHelper.Log)
   Servant.API.ContentTypes.$fAllMimeRender:a0 @ Servant.API.ContentTypes.JSON
                                               @ DBHelper.Log
                                               $dMimeRender
-  = Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a1
-"SPEC/Lib $fAllMimeRender:a0 @ JSON @ [Log]" [ALWAYS] forall ($dMimeRender :: Servant.API.ContentTypes.MimeRender
-                                                                                Servant.API.ContentTypes.JSON
-                                                                                [DBHelper.Log])
-  Servant.API.ContentTypes.$fAllMimeRender:a0 @ Servant.API.ContentTypes.JSON
-                                              @ [DBHelper.Log]
-                                              $dMimeRender
   = Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a0
-"SPEC/Lib $fAllMimeRender:a0_$callMimeRender @ JSON @ [Log]" [ALWAYS] forall ($dMimeRender :: Servant.API.ContentTypes.MimeRender
-                                                                                                Servant.API.ContentTypes.JSON
-                                                                                                [DBHelper.Log])
-  Servant.API.ContentTypes.$fAllMimeRender:a0_$callMimeRender @ Servant.API.ContentTypes.JSON
-                                                              @ [DBHelper.Log]
-                                                              $dMimeRender
-  = Lib.$s$fAllCTRender:a_$s$fAllMimeRender:a0_$callMimeRender
+"SPEC/Lib $fMimeRenderTYPEJSONa @ ListOb" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.ToJSON.ToJSON
+                                                                         DBHelper.ListOb)
+  Servant.API.ContentTypes.$fMimeRenderTYPEJSONa @ DBHelper.ListOb
+                                                 $dToJSON
+  = Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa1
 "SPEC/Lib $fMimeRenderTYPEJSONa @ Log" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.ToJSON.ToJSON
                                                                       DBHelper.Log)
   Servant.API.ContentTypes.$fMimeRenderTYPEJSONa @ DBHelper.Log
                                                  $dToJSON
-  = Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa1
-"SPEC/Lib $fMimeRenderTYPEJSONa @ [Log]" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.ToJSON.ToJSON
-                                                                        [DBHelper.Log])
-  Servant.API.ContentTypes.$fMimeRenderTYPEJSONa @ [DBHelper.Log]
-                                                 $dToJSON
   = Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa
+"SPEC/Lib $fMimeRenderTYPEJSONa_$cmimeRender @ ListOb" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.ToJSON.ToJSON
+                                                                                      DBHelper.ListOb)
+  Servant.API.ContentTypes.$fMimeRenderTYPEJSONa_$cmimeRender @ DBHelper.ListOb
+                                                              $dToJSON
+  = Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender1
 "SPEC/Lib $fMimeRenderTYPEJSONa_$cmimeRender @ Log" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.ToJSON.ToJSON
                                                                                    DBHelper.Log)
   Servant.API.ContentTypes.$fMimeRenderTYPEJSONa_$cmimeRender @ DBHelper.Log
                                                               $dToJSON
-  = Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender1
-"SPEC/Lib $fMimeRenderTYPEJSONa_$cmimeRender @ [Log]" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.ToJSON.ToJSON
-                                                                                     [DBHelper.Log])
-  Servant.API.ContentTypes.$fMimeRenderTYPEJSONa_$cmimeRender @ [DBHelper.Log]
-                                                              $dToJSON
   = Lib.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender
-"SPEC/Lib $fToJSON[] @ Log" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.ToJSON.ToJSON
-                                                           DBHelper.Log)
-  Data.Aeson.Types.ToJSON.$fToJSON[] @ DBHelper.Log $dToJSON
-  = Lib.$s$fAllCTRender:a_$s$fToJSON[]
+"SPEC/Lib encode @ ListOb" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.ToJSON.ToJSON
+                                                          DBHelper.ListOb)
+  Data.Aeson.encode @ DBHelper.ListOb $dToJSON
+  = Lib.$s$fAllCTRender:a_$sencode1
 "SPEC/Lib encode @ Log" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.ToJSON.ToJSON
                                                        DBHelper.Log)
   Data.Aeson.encode @ DBHelper.Log $dToJSON

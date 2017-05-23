@@ -52,9 +52,16 @@ formatRepoDB repo = do
     let name = untagName (GitHub.Data.Repos.repoName repo)
     let owner = (GitHub.Data.Repos.repoOwner repo)
     let ownerName = untagName $ GitHub.Data.Definitions.simpleOwnerLogin owner
-    let recent = formatDate $GitHub.Data.Repos.repoUpdatedAt repo
+    recent <- liftIO $ formatDate $GitHub.Data.Repos.repoPushedAt repo
+    lang <- liftIO $ formatLang $GitHub.Data.Repos.repoLanguage repo
     sizeOf <- liftIO $ formatNumber (GitHub.Data.Repos.repoSize repo)
-    return (RepoDB (unpack name) (unpack ownerName) sizeOf)
+    return (RepoDB (unpack name) (unpack ownerName) sizeOf recent lang)
+
+formatLang :: Maybe Language -> IO(String)
+formatLang l =
+    case l of
+        Nothing -> return "NONE"
+        Just lang -> return $ unpack $ getLanguage lang
             
 formatDate :: Maybe UTCTime -> IO(Bool)
 formatDate date = 
