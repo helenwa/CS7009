@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-05-23 11:26:57.2759392 UTC
+2017-05-23 14:52:23.1632398 UTC
 
 interface crawler-0.1.0.0-2jLxW5sGj234Y0KdhjvaTi:GithubHelper 8002
-  interface hash: e97331bd9f58696feed07e9b8ceb36bf
-  ABI hash: 3731937cacb06db18fc9d796921dde17
+  interface hash: 50ad546f1ae32ed42ccea51e194b1f5e
+  ABI hash: 40d4812d2ffff7cf569713ef4f6391b8
   export-list hash: aa09f13c73ce6378036fb6e4bc5ae4ab
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: b40c1800ca63765d1285c272fed17bef
@@ -225,21 +225,21 @@ import  -/  base-4.9.1.0:GHC.Show eca5834daba3b6a2bbbe64ab52056707
 import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
 import  -/  base-4.9.1.0:System.IO 5daf3f384209c11d9566e3409af8ec5d
 import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Char8 53131bf786c5438dfe07ccfe89b878d8
-import  -/  DBHelper 75437a7b5d6246763cd5effd8e4af3c2
-  exports: b85c912410984f2ea4b78a0c5febba15
-  RepoDB d33c80ef02d79997ecad2c668ec9f444
-  RepoDB 90a226e6b6a1f6dc5accd8c206f2d619
-  UserDB bc4c7cb5843c15c69d278068d7776c64
-  UserDB 3babc6eaaf6a17986fd877be40048de5
-  addLink 337733bbcd2f9a91e6518c71cc2344ac
-  addRepo 9971e93678107c0ebd13151bd547306e
-  addUser 93da4d872b44d28f8e48e7d88b5a5e4b
+import  -/  DBHelper 9552efd38bb6418021042bf107635285
+  exports: 18c6ae02d97566a33806aef5cbe9e000
+  RepoDB b997c4dc9e1af6cbc886d568e1354106
+  RepoDB 588aedb5ce1baf732b27c51eca6b775c
+  UserDB 1d20be7340ded9e980a0bb0c9dc2c783
+  UserDB ebf26a54e75207ea617d565db01d7323
+  addLink c689291a8155f66cb5918a5952716e49
+  addRepo 1b06e5c02e0c6e92289829994ff6ee12
+  addUser bd96b3724c942b2f35057541667253cb
   contributesTo 22c691084d66c7dfa4a9bd1a244ea203
-  makeLink e9d7079b093d028738990c1fad9feb31
-  makeLink2 a1d3b595d04bf9cb9b8d14328dafe146
-  repoName eac5f0d853d0afdb0138b0d51a4a3ee4
-  repoOwner 2ab0c843c72545961c7abce7e6d5bbb7
-  userId 682ff6919e93ce5d7815c42c193bda70
+  makeLink 019adc59531a5aca7df8fabf2a385a0d
+  makeLink2 307dca677b2997c0139b8ab90af72ea1
+  repoName 5d04a1896a6284299c3cc2aa72f3e41b
+  repoOwner e3b33e894ff3d198fe624346cc5e5c33
+  userId a47326c2b1d79d889841900fbf14aa3c
   userRepo f719af1feffa18462598af6c2d535a4b
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 16d48e012d23eaef9bca91ccdd572c02
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
@@ -275,7 +275,7 @@ import  -/  vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector 41
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "crawler-0.1.0.0-2jLxW5sGj234Y0KdhjvaTi"#) -}
-25daa62b95cad01ab18ff4fcadbbb10d
+435a286fe7edb60a3fa477237df27c3b
   $wformatRepoDB ::
     GHC.Base.Maybe GHC.Types.Int
     -> GitHub.Data.Name.Name GitHub.Data.Definitions.Owner
@@ -311,7 +311,7 @@ import  -/  vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector 41
           Data.Text.Internal.Text #)
   {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
      Inline: [0] -}
-3436f0f6e7ce009839794dc301408928
+ab5908c83b5bc85b95ccd7c52efbc1bb
   crawlRepo ::
     GHC.Integer.Type.Integer
     -> GitHub.Auth.Auth -> DBHelper.RepoDB -> GHC.Types.IO ()
@@ -323,7 +323,7 @@ import  -/  vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector 41
                  ->_R <GitHub.Auth.Auth>_R
                  ->_R <DBHelper.RepoDB>_R
                  ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-c1c8fd88a74c15d626ff924140764756
+86653b799bf559f5448da743024b03b1
   crawlRepo1 ::
     GHC.Integer.Type.Integer
     -> GitHub.Auth.Auth
@@ -418,7 +418,7 @@ c1c8fd88a74c15d626ff924140764756
 b5dcb9f63b9a20e53644e19c675c89e8
   crawlRepo11 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "repo"#) -}
-a1534f8a5502b58324399553abfd5f9a
+7f0dd89fee86b814d18726f878f7a28d
   crawlRepo2 ::
     GHC.Integer.Type.Integer
     -> GitHub.Auth.Auth
@@ -435,19 +435,19 @@ a549162c77a6756190126ba07550fcdc
 60e573103af73c10efd1a47dfdac5e4d
   crawlRepo5 :: GHC.Integer.Type.Integer
   {- HasNoCafRefs, Unfolding: (0) -}
-d59eb3b8336b5397799336b37d9ccb7d
+fb2d37f4a4a5866719420cb9ed2a6e57
   crawlRepo6 ::
     [DBHelper.LinkDB]
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Base.String] #)
   {- Arity: 2, Strictness: <S,1*U><S,U> -}
-14b2795e6c6d5fac569e465ab53fd779
+673344e2173f870b579de02d80a002d1
   crawlRepo7 ::
     [DBHelper.UserDB]
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Base.String] #)
   {- Arity: 2, Strictness: <S,1*U><S,U> -}
-341e3ca81c67353f56ed0e41f296aaa9
+6f21eebe73117692ac7e3d27cc1105e5
   crawlRepo8 ::
     DBHelper.RepoDB
     -> GitHub.Auth.Auth
@@ -613,7 +613,7 @@ d59eb3b8336b5397799336b37d9ccb7d
                                GHC.Types.True -> GHC.Types.[] @ DBHelper.UserDB }
                          } in
                          $wgo 0# #) } } } } } } }) -}
-bc959089c775dbcdc44b475a86f81a6c
+445cbb289bc36d5e211c7e5f3ce08011
   crawlRepo9 ::
     GitHub.Data.Repos.Contributor
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -743,7 +743,7 @@ bc959089c775dbcdc44b475a86f81a6c
                              GHC.Types.True -> GHC.Types.[] @ GHC.Types.Char }
                        } in
                        $wunfold dt1 }) #) }) -}
-eddeda743802d41b0bdad410a0e41619
+2cc4cddca602a43933a96c3fe1ccf1a1
   crawlUser ::
     GHC.Integer.Type.Integer
     -> GitHub.Auth.Auth -> DBHelper.UserDB -> GHC.Types.IO ()
@@ -929,7 +929,7 @@ efcd6fc6d7405bfe65da221ce750fed1
 0b768d0b169011c29a9b9f6f6a626bdf
   formatNumber2 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
-2c3ba763a0db344151580f7b3c9a9767
+f95d0bf89b97e05f32fee2e576712c9f
   formatRepoDB ::
     GitHub.Data.Repos.Repo -> GHC.Types.IO DBHelper.RepoDB
   {- Arity: 2,
@@ -939,7 +939,7 @@ efcd6fc6d7405bfe65da221ce750fed1
                   `cast`
                 (<GitHub.Data.Repos.Repo>_R
                  ->_R Sym (GHC.Types.N:IO[0] <DBHelper.RepoDB>_R)) -}
-a2d1d0d00cb1bc0005d32e0bc0dbb0b1
+35fd7c15f489d9b574a3bfbf536b91f3
   formatRepoDB1 ::
     GitHub.Data.Repos.Repo
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -965,7 +965,7 @@ a2d1d0d00cb1bc0005d32e0bc0dbb0b1
                    ww17
                    ww19
                    w1 } } }) -}
-207095aa4e90c6db4ecc662259a8da3f
+60b5dba79357e764ebd9033c80d77f42
   formatUserDB ::
     GitHub.Data.Repos.Contributor -> GHC.Types.IO DBHelper.UserDB
   {- Arity: 2, Strictness: <L,1*U><S,U>,
@@ -983,7 +983,7 @@ a2d1d0d00cb1bc0005d32e0bc0dbb0b1
                   `cast`
                 (<Data.Time.Clock.UTC.UTCTime>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)) -}
-6232110a36cd893e8dcc3751ce2db022
+adc8b579d0d9227067f8340155531af7
   reposOf ::
     Data.Text.Internal.Text
     -> GitHub.Auth.Auth -> GHC.Types.IO [DBHelper.RepoDB]
@@ -994,7 +994,7 @@ a2d1d0d00cb1bc0005d32e0bc0dbb0b1
                 (<Data.Text.Internal.Text>_R
                  ->_R <GitHub.Auth.Auth>_R
                  ->_R Sym (GHC.Types.N:IO[0] <[DBHelper.RepoDB]>_R)) -}
-a0af6cbda66359b3a8772f9026b1beff
+b4a07406a69511d6482858f281bec111
   reposOf1 ::
     Data.Text.Internal.Text
     -> GitHub.Auth.Auth
@@ -1029,7 +1029,7 @@ a0af6cbda66359b3a8772f9026b1beff
                               GitHub.Data.Request.FetchAll))
                         s of ds1 { (#,#) ipv ipv1 ->
                  GithubHelper.reposOf2 ipv1 ipv }) -}
-c9b2fb60ee93acbbb3586fe89b1d4887
+af3eb5127c73bef5c1c8b42b6f8eda9b
   reposOf2 ::
     Data.Either.Either
       GitHub.Data.Definitions.Error
@@ -1221,7 +1221,7 @@ df2693f6c61368f9beff6c9d66049ba6
                        } in
                        case GHC.List.$wlenAcc @ GHC.Types.Char cs 0# of ww2 { DEFAULT ->
                        Data.ByteString.Internal.$wunsafePackLenChars ww2 cs } }) #)) -}
-85c44d0a7d58d6405021d3217c62ed37
+5201b129dc56eb836963035eac7882a7
   usersOf ::
     DBHelper.RepoDB
     -> GitHub.Auth.Auth -> GHC.Types.IO [DBHelper.UserDB]

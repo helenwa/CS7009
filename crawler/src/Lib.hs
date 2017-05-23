@@ -15,6 +15,7 @@ import Control.Monad.IO.Class (liftIO)
 
 import DBHelper
 import GithubHelper
+import N4JHelper
 import Servant
 
 type ApiHandler = ExceptT ServantErr IO
@@ -23,6 +24,7 @@ type API = "userList" :> Get '[JSON] ListOb
         :<|> "token" :> Capture "tkn" String :> Get '[JSON] Log
         :<|> "user" :> Capture "id" String :> Capture "hops" Int :> Get '[JSON] Log
         :<|> "startC" :> Capture "usern" String :> Capture "hops" Integer :> Get '[JSON] Log
+        :<|> "fdg" :> Get '[JSON] FDG
 
 startApp :: IO ()
 startApp = run 8080 app
@@ -38,11 +40,21 @@ server = userList
     :<|> token
     :<|> user
     :<|> startC
+    :<|> fdg
+
+fdg :: ApiHandler FDG
+fdg = liftIO $ do
+    users <- allUsers
+    repos <- allRepo
+    links <- allLinks
+    return $fullFDG users repos links
     
 userList :: ApiHandler ListOb
 userList = liftIO $ do
     users <- allUsers
-    return $ListOb users []
+    repos <- allRepo
+    links <- allLinks
+    return $ListOb users repos links
 
 user :: String -> Int -> ApiHandler Log
 user userName ttl =  liftIO $ do

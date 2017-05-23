@@ -16,6 +16,7 @@ import Data.Vector (toList)
 data ListOb = ListOb
  { users :: [UserDB]
  , repos ::[RepoDB]
+ , links :: [LinkDB]
  } deriving (ToJSON, FromJSON, Generic, Eq, Show)
  
 data Log = Log
@@ -77,10 +78,11 @@ toUser record = do
 allRepo :: IO[RepoDB]
 allRepo = do
    pipe <- connect $ def { user = n4user, password = n4password }
-   result <- run pipe $ query "MATCH (n:Repo)  RETURN n"
-   close pipe
+   result <- run pipe $ query "MATCH (n:Repo)  RETURN n.repoName as repoName, n.repoOwner as repoOwner, n.repoSize as repoSize, n.repoLanguage as repoLanguage, n.recent as recent"
+   
    putStrLn $ show result
    x <- mapM toRepo result
+   close pipe
    return x
    
 toRepo :: Record-> IO RepoDB
@@ -93,26 +95,24 @@ toRepo record = do
     putStrLn $ show record
     return $ RepoDB (unpack name) (unpack owner) rSize recent (unpack lang)
    
--- allLinks :: IO [LinkDB]
--- allLinks = do
-   -- pipe <- connect $ def { user = n4user, password = n4password }
-   -- --not quite ideal yet
-   -- result <- run pipe $ query "MATCH (s) OPTIONAL MATCH (n)-[r]-(d) RETURN s,r,d"
-   -- close pipe
-   -- putStrLn $ show result
-   -- x <- mapM toLink result
-   -- return x
+allLinks :: IO [LinkDB]
+allLinks = do
+   pipe <- connect $ def { user = n4user, password = n4password }
+   --not quite ideal yet
+   result <- run pipe $ query "MATCH (s:User) OPTIONAL MATCH (s)-[r]-(d) RETURN s.userId as source, d.repoName as destination"
+   
+   putStrLn $ show result
+   x <- mapM toLink result
+   close pipe
+   return x
 
--- toLink :: Record-> IO LinkDB   
--- toLink record = do    
-    -- L linkParts <- record `at` "_fields"
-    -- T sId <- list[0] `at` "userId"
-    -- T linkType <- list[1] `at` "type"
-    -- T dId <- list[2] `at` "repoId"
-    -- let x =  unpack linkType
-    -- lt <- digitToInt x[0]
-    -- putStrLn $ show record
-    -- return $ LinkDB (lt) (unpack sId) $ unpack dId
+toLink :: Record-> IO LinkDB   
+toLink record = do   
+    T s <- record `at` "source"
+    T d <- record `at` "destination"
+    let link = LinkDB 1 ("Type") (unpack s) (unpack d) 
+    return link
+    
 makeLink :: Int -> String -> UserDB -> RepoDB -> IO LinkDB
 makeLink linkType linkName user repository =  do
     putStrLn "madelink"

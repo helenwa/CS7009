@@ -18,6 +18,7 @@ library
   exposed-modules:     Lib
                      , DBHelper
                      , GithubHelper
+                     , N4JHelper
   build-depends:       base >= 4.7 && < 5
                      , aeson
                      , servant-server
