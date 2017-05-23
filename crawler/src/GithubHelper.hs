@@ -24,6 +24,7 @@ import Data.Text.Internal
 import qualified Data.ByteString.Char8 as BS
 import Data.Time as Clock
 
+
 --Get users repositorys   
 reposOf :: Text -> GitHub.Auth.Auth -> IO[RepoDB]
 reposOf userName auth= do
@@ -57,7 +58,7 @@ formatRepoDB repo = do
     sizeOf <- liftIO $ formatNumber (GitHub.Data.Repos.repoSize repo)
     return (RepoDB (unpack name) (unpack ownerName) sizeOf recent lang)
 
-formatLang :: Maybe Language -> IO(String)
+formatLang :: Maybe GitHub.Endpoints.Repos.Collaborators.Language -> IO(String)
 formatLang l =
     case l of
         Nothing -> return "NONE"
@@ -108,8 +109,10 @@ crawlRepo ttl auth repo  = do
     putStrLn $ show ttl
     ppl <- usersOf repo auth
     x <- mapM addUser ppl
+    
     links <- mapM (makeLink2 userRepo contributesTo repo) ppl
     y <- mapM addLink links
+    langLinks <- mapM (langKnowledge (DBHelper.repoLanguage repo)) ppl
     if (ttl>0)
         then mapM_ (crawlUser (ttl - 1) auth) ppl
         else putStrLn "ended on "

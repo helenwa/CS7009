@@ -13,6 +13,11 @@ import GHC.Generics
 import Data.String
 import Data.Vector (toList)
 
+data Language = Language{
+  name :: String
+, value :: Integer
+} deriving (ToJSON, FromJSON, Generic, Eq, Show)
+
 data ListOb = ListOb
  { users :: [UserDB]
  , repos ::[RepoDB]
@@ -46,10 +51,8 @@ data LinkDB = LinkDB
   
 userRepo :: Int
 userRepo = 1
-userUser :: Int
-userUser = 2
-repoUser :: Int
-repoUser = 3
+userLang :: Int
+userLang = 2
 
 owns = "Owns"
 contributesTo = "ContributesTo"
@@ -63,7 +66,6 @@ allUsers :: IO[UserDB]
 allUsers = do
    pipe <- connect $ def { user = n4user, password = n4password }
    result <- run pipe $ query "MATCH (n:User)  RETURN n.userId"
-   
    putStrLn $ show result
    x <- mapM toUser result
    close pipe
@@ -99,8 +101,7 @@ allLinks :: IO [LinkDB]
 allLinks = do
    pipe <- connect $ def { user = n4user, password = n4password }
    --not quite ideal yet
-   result <- run pipe $ query "MATCH (s:User) OPTIONAL MATCH (s)-[r]-(d) RETURN s.userId as source, d.repoName as destination"
-   
+   result <- run pipe $ query "MATCH (s:User) OPTIONAL MATCH (s)-[r:ContributesTo]-(d) RETURN s.userId as source, d.repoName as destination"
    putStrLn $ show result
    x <- mapM toLink result
    close pipe
@@ -157,7 +158,7 @@ addRepo newRepo = do
    addLanguage $repoLanguage newRepo
    putStrLn $ show result
    close pipe
-   
+--Language     
 addLanguage:: String ->IO()
 addLanguage l = do
    pipe <- connect $ def { user = n4user, password = n4password }
@@ -165,23 +166,48 @@ addLanguage l = do
                                (fromList [("l", T (fromString l))])
    close pipe
    putStrLn $ show result
+
+langKnowledge :: String -> UserDB -> IO()
+langKnowledge lang user = do
+    let link = LinkDB 2 "Knows" (userId user) lang
+    r <- addLink link
+    putStrLn r
+    
+allLanguages :: IO[Language]
+allLanguages = do
+   pipe <- connect $ def { user = n4user, password = n4password }
+   result <- run pipe $ query "MATCH (n:Language)  RETURN n.name"
+   putStrLn $ show result
+   x <- mapM toLang result
+   close pipe
+   return x
    
+   
+
+toLang :: Record-> IO Language   
+toLang record = do   
+    T name <- record `at` "n.name"
+    let link = Language (unpack name) 0
+    return link
+   
+--Links
 addLink :: LinkDB -> IO String
 addLink newLink = do
    pipe <- connect $ def { user = n4user, password = n4password }
    result <- run pipe $ query $ Data.Text.pack $ linkRequest newLink
-   close pipe
    putStrLn $ show result
    let r = show result
+   close pipe
    return r
       
 linkRequest :: LinkDB -> String  
 linkRequest newLink
    | (lt == userRepo) = "MATCH  (s:User {userId: \"" ++ (source newLink) ++ "\"}) MATCH  (d:Repo {repoName: \""++ (destination newLink) ++ "\"}) MERGE (s)-[o:" ++ (linkName newLink) ++ "]->(d)"
-   | (lt == userUser) = "MATCH  (s:User {userId: \"" ++ (source newLink) ++ "\"}) MATCH  (d:User {userId: \""++ (destination newLink)  ++ "\") MERGE (s)-[o:\"" ++ (linkName newLink) ++ "\"]->(d)"
+   | (lt == userLang) = "MATCH  (s:User {userId: \"" ++ (source newLink) ++ "\"}) MATCH  (d:Language {name: \""++ (destination newLink)  ++ "\"}) MERGE (s)-[o:" ++ (linkName newLink) ++ " ]->(d)"
    | otherwise        = "MATCH  (d:User {userId: \"" ++ (source newLink) ++ "\"}) MATCH  (s:Repo {repoName: \""++ (destination newLink)  ++ "\") MERGE (s)-[o:\"" ++ (linkName newLink) ++ "\"]->(d)"
    where lt = linkType newLink
    
+--Auth
 addAuth :: String -> IO()
 addAuth auth = do
    pipe <- connect $ def { user = n4user, password = n4password }

@@ -58,3 +58,10 @@ formatLink l = FDGlink (DBHelper.source l) (destination l) (toInteger (linkType 
 
 fullFDG :: [UserDB] -> [RepoDB] -> [LinkDB] -> FDG
 fullFDG users repos links = FDG ((usersToNodes users) ++ (reposToNodes repos)) (formatLinks links)
+
+--Language List
+data LangList = LangList{
+  all :: [Language]
+, recomened :: [Language]
+, known :: [Language]
+} deriving (ToJSON, FromJSON, Generic, Eq, Show)

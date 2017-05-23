@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2017-05-23 15:50:16.3458434 UTC
+2017-05-23 20:52:07.8538461 UTC
 
 interface crawler-0.1.0.0-2jLxW5sGj234Y0KdhjvaTi:N4JHelper [family instance module] 8002
-  interface hash: 08eed55eabf3dc7777e8f0e36873acce
-  ABI hash: f48cd9777b2a3b5d284334272d86fc5b
-  export-list hash: 89b5702cd42bc13a85cd859562064b57
-  orphan hash: 5f23ee281f014c0f77805ff83b8a6a2a
+  interface hash: d307ff312a4b6d844086fa28f7b07efe
+  ABI hash: 5f45e690e28ddcd8943a8db07728b09c
+  export-list hash: e814042621c31d2dcffaa6a1d6b4fe53
+  orphan hash: 5f06d6da58a84f6ce8234c9059362daf
   flag hash: b40c1800ca63765d1285c272fed17bef
   sig of: Nothing
   used TH splices: False
@@ -22,6 +22,7 @@ exports:
   N4JHelper.FDG{N4JHelper.FDG links nodes}
   N4JHelper.FDGlink{N4JHelper.FDGlink source target value}
   N4JHelper.FDGnode{N4JHelper.FDGnode group id}
+  N4JHelper.LangList{N4JHelper.LangList all known recomened}
 module dependencies: DBHelper GithubHelper
 package dependencies: StateVar-1.1.0.4@StateVar-1.1.0.4-5dJbnTVECtEAhfJXPZKdbO
                       Win32-2.3.1.1@Win32-2.3.1.1
@@ -219,28 +220,29 @@ import  -/  base-4.9.1.0:GHC.Generics 87e8d511f978e043d53db008cc403901
 import  -/  base-4.9.1.0:GHC.Real b88ae4a48c079652623073a5bbf5c9b0
 import  -/  base-4.9.1.0:GHC.Show eca5834daba3b6a2bbbe64ab52056707
 import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
-import  -/  DBHelper e35216a8d069a20663322693800ec97f
-  exports: 18c6ae02d97566a33806aef5cbe9e000
-  LinkDB 2faeca32692fb20b3250d42d11b7b24b
-  RepoDB 588aedb5ce1baf732b27c51eca6b775c
-  UserDB ebf26a54e75207ea617d565db01d7323
-  destination 1672cb713abe5dfb420e333816410dc1
-  linkType eb7d0586b448ec6ff70c8e0ff34fd20d
-  repoName 5d04a1896a6284299c3cc2aa72f3e41b
-  source 70ef4f52a6dc0dbc9ddc8c3d2f388f4f
-  userId a47326c2b1d79d889841900fbf14aa3c
-import  -/  GithubHelper 40d4812d2ffff7cf569713ef4f6391b8
+import  -/  DBHelper fe5907f8f6b4d5b4914032964b6a1341
+  exports: bff7db70658ae05bc05d7cf849f54825
+  Language 22fcaf89b0c8fd808eff81a7771c2399
+  LinkDB f71116c23fab4ac41f3dd6995e814421
+  RepoDB 11c665402619553a2690f82da4927c4a
+  UserDB 9db0ea535878b612e683ecea61ecbd41
+  destination 1615fea8c579ffb84ea881a9ad706de6
+  linkType 74e138c36b6b6e9acb2fa353fdab2441
+  repoName 60a4ed2be53b07758da26a7ad13203c4
+  source 6c13e576f554ba0d3d626f13f994568a
+  userId c05bdbacd407055b4aca2d7985e7f9ec
+import  -/  GithubHelper 76f3aeceaec545f7f8c42d78d5aebeda
   exports: aa09f13c73ce6378036fb6e4bc5ae4ab
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 16d48e012d23eaef9bca91ccdd572c02
 import  -/  hasbolt-0.1.1.1@hasbolt-0.1.1.1-KvGT2iOIRLp44tD9hkaloa:Database.Bolt bcfb1f0ed6fc3ef8a9ea59bd14776df9
 import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 5e60b761569ee353529e98a36b72df11
-32fddc8b5d040a9c0bde8124d1d3d924
+80402c95c22c3fbf9d9dd0d528df7c08
   $fEqFDG :: GHC.Classes.Eq N4JHelper.FDG
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
                   @ N4JHelper.FDG N4JHelper.$fEqFDG_$c== N4JHelper.$fEqFDG_$c/= -}
-32fddc8b5d040a9c0bde8124d1d3d924
+80402c95c22c3fbf9d9dd0d528df7c08
   $fEqFDG_$c/= :: N4JHelper.FDG -> N4JHelper.FDG -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
      Strictness: <S(SL),1*U(1*U,1*U)><S(SL),1*U(1*U,1*U)>,
@@ -249,7 +251,7 @@ import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 5e60b761569ee353529e98a36b72df1
                  case N4JHelper.$fEqFDG_$c== a b of wild {
                    GHC.Types.False -> GHC.Types.True
                    GHC.Types.True -> GHC.Types.False }) -}
-32fddc8b5d040a9c0bde8124d1d3d924
+80402c95c22c3fbf9d9dd0d528df7c08
   $fEqFDG_$c== :: N4JHelper.FDG -> N4JHelper.FDG -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
      Strictness: <S(SL),1*U(1*U,1*U)><S(SL),1*U(1*U,1*U)>,
@@ -259,7 +261,7 @@ import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 5e60b761569ee353529e98a36b72df1
                  case w of ww { N4JHelper.FDG ww1 ww2 ->
                  case w1 of ww3 { N4JHelper.FDG ww4 ww5 ->
                  N4JHelper.$w$c== ww1 ww2 ww4 ww5 } }) -}
-1447b9c0229ba46a639bf54e1ff394ed
+40421eec4d544d3f73d85e282f8b98ad
   $fEqFDGlink :: GHC.Classes.Eq N4JHelper.FDGlink
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -267,7 +269,7 @@ import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 5e60b761569ee353529e98a36b72df1
                   @ N4JHelper.FDGlink
                   N4JHelper.$fEqFDGlink_$c==
                   N4JHelper.$fEqFDGlink_$c/= -}
-1447b9c0229ba46a639bf54e1ff394ed
+40421eec4d544d3f73d85e282f8b98ad
   $fEqFDGlink_$c/= ::
     N4JHelper.FDGlink -> N4JHelper.FDGlink -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
@@ -277,7 +279,7 @@ import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 5e60b761569ee353529e98a36b72df1
                  case N4JHelper.$fEqFDGlink_$c== a b of wild {
                    GHC.Types.False -> GHC.Types.True
                    GHC.Types.True -> GHC.Types.False }) -}
-1447b9c0229ba46a639bf54e1ff394ed
+40421eec4d544d3f73d85e282f8b98ad
   $fEqFDGlink_$c== ::
     N4JHelper.FDGlink -> N4JHelper.FDGlink -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
@@ -288,7 +290,7 @@ import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 5e60b761569ee353529e98a36b72df1
                  case w of ww { N4JHelper.FDGlink ww1 ww2 ww3 ->
                  case w1 of ww4 { N4JHelper.FDGlink ww5 ww6 ww7 ->
                  N4JHelper.$w$c==1 ww1 ww2 ww3 ww5 ww6 ww7 } }) -}
-09f59bdb265dbc71d31a3ee3268ed1bc
+7921c6ee722b8eb7631da61cb337b02b
   $fEqFDGnode :: GHC.Classes.Eq N4JHelper.FDGnode
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -296,7 +298,7 @@ import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 5e60b761569ee353529e98a36b72df1
                   @ N4JHelper.FDGnode
                   N4JHelper.$fEqFDGnode_$c==
                   N4JHelper.$fEqFDGnode_$c/= -}
-09f59bdb265dbc71d31a3ee3268ed1bc
+7921c6ee722b8eb7631da61cb337b02b
   $fEqFDGnode_$c/= ::
     N4JHelper.FDGnode -> N4JHelper.FDGnode -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
@@ -307,7 +309,7 @@ import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 5e60b761569ee353529e98a36b72df1
                  case w of ww { N4JHelper.FDGnode ww1 ww2 ->
                  case w1 of ww3 { N4JHelper.FDGnode ww4 ww5 ->
                  N4JHelper.$w$c/= ww1 ww2 ww4 ww5 } }) -}
-09f59bdb265dbc71d31a3ee3268ed1bc
+7921c6ee722b8eb7631da61cb337b02b
   $fEqFDGnode_$c== ::
     N4JHelper.FDGnode -> N4JHelper.FDGnode -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
@@ -318,7 +320,36 @@ import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 5e60b761569ee353529e98a36b72df1
                  case w of ww { N4JHelper.FDGnode ww1 ww2 ->
                  case w1 of ww3 { N4JHelper.FDGnode ww4 ww5 ->
                  N4JHelper.$w$c==2 ww1 ww2 ww4 ww5 } }) -}
-32fddc8b5d040a9c0bde8124d1d3d924
+a1dd0baf3adafff198e24d1af1a275c9
+  $fEqLangList :: GHC.Classes.Eq N4JHelper.LangList
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ N4JHelper.LangList
+                  N4JHelper.$fEqLangList_$c==
+                  N4JHelper.$fEqLangList_$c/= -}
+a1dd0baf3adafff198e24d1af1a275c9
+  $fEqLangList_$c/= ::
+    N4JHelper.LangList -> N4JHelper.LangList -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLL),1*U(1*U,1*U,1*U)><S(SLL),1*U(1*U,1*U,1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: N4JHelper.LangList) (b :: N4JHelper.LangList) ->
+                 case N4JHelper.$fEqLangList_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+a1dd0baf3adafff198e24d1af1a275c9
+  $fEqLangList_$c== ::
+    N4JHelper.LangList -> N4JHelper.LangList -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLL),1*U(1*U,1*U,1*U)><S(SLL),1*U(1*U,1*U,1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: N4JHelper.LangList) (w1 :: N4JHelper.LangList) ->
+                 case w of ww { N4JHelper.LangList ww1 ww2 ww3 ->
+                 case w1 of ww4 { N4JHelper.LangList ww5 ww6 ww7 ->
+                 N4JHelper.$w$c==3 ww1 ww2 ww3 ww5 ww6 ww7 } }) -}
+80402c95c22c3fbf9d9dd0d528df7c08
   $fFromJSONFDG :: Data.Aeson.Types.FromJSON.FromJSON N4JHelper.FDG
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -326,7 +357,7 @@ import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 5e60b761569ee353529e98a36b72df1
                   @ N4JHelper.FDG
                   N4JHelper.$fFromJSONFDG_$cparseJSON
                   N4JHelper.$fFromJSONFDG_$cparseJSONList -}
-32fddc8b5d040a9c0bde8124d1d3d924
+80402c95c22c3fbf9d9dd0d528df7c08
   $fFromJSONFDG1 ::
     [Data.Aeson.Types.Internal.Parser N4JHelper.FDG]
     -> forall (f :: * -> *) r.
@@ -372,7 +403,7 @@ c83a29cf39eadc9a172904fbc9278da1
 c199445d8c99a8c6ec699f389443984d
   $fFromJSONFDG2 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "[a]"#) -}
-8321e71ec25845cffd59e14077d784b0
+714fa45348b9bc84d8aba7b4ecb574fd
   $fFromJSONFDG3 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -631,10 +662,10 @@ c199445d8c99a8c6ec699f389443984d
                                           (GHC.Generics.Rec0 [N4JHelper.FDGlink]))
                                        a1>_R)) } } }
                  } in
-                 (\ @ (f6 :: * -> *)
+                 (\ @ (f7 :: * -> *)
                     @ r
                     (path :: Data.Aeson.Types.Internal.JSONPath)
-                    (kf :: Data.Aeson.Types.Internal.Failure f6 r)
+                    (kf :: Data.Aeson.Types.Internal.Failure f7 r)
                     (ks :: Data.Aeson.Types.Internal.Success
                              (GHC.Generics.M1
                                 GHC.Generics.D
@@ -662,7 +693,7 @@ c199445d8c99a8c6ec699f389443984d
                                                           'GHC.Generics.DecidedLazy)
                                                        (GHC.Generics.Rec0 [N4JHelper.FDGlink])))
                                 a1)
-                             f6
+                             f7
                              r) ->
                   m `cast`
                   (Data.Aeson.Types.Internal.N:Parser[0]
@@ -682,7 +713,7 @@ c199445d8c99a8c6ec699f389443984d
                                 'GHC.Generics.DecidedLazy)
                              (GHC.Generics.Rec0 [N4JHelper.FDGlink]))
                           a1>_R)
-                    @ f6
+                    @ f7
                     @ r
                     path
                     kf
@@ -779,7 +810,7 @@ c199445d8c99a8c6ec699f389443984d
                                                         'GHC.Generics.DecidedLazy)
                                                      (GHC.Generics.Rec0 [N4JHelper.FDGlink])))
                               a1>_R))) -}
-cc519d10816bd72efa3520b14eb6ce64
+f12dacacd58d6bf72e62f4ef5b3ce846
   $fFromJSONFDG4 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -835,7 +866,7 @@ cc519d10816bd72efa3520b14eb6ce64
 fe58f96565fd47c3227884ef222643c3
   $fFromJSONFDG8 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "links"#) -}
-ab405f197f70e55c5d1f07f0f6e2bdc3
+a1112352e645a7f9b6a6648fa033f1c3
   $fFromJSONFDG9 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -857,7 +888,7 @@ ab405f197f70e55c5d1f07f0f6e2bdc3
                    N4JHelper.$fFromJSONFDG_$s$fFromJSON[]1
                    @ a1
                    w3) -}
-32fddc8b5d040a9c0bde8124d1d3d924
+80402c95c22c3fbf9d9dd0d528df7c08
   $fFromJSONFDG_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser N4JHelper.FDG
@@ -897,15 +928,15 @@ ab405f197f70e55c5d1f07f0f6e2bdc3
                        (Data.Aeson.Types.FromJSON.$WNoFromArgs @ GHC.Prim.Any)
                        x
                  } in
-                 (\ @ (f6 :: * -> *)
+                 (\ @ (f7 :: * -> *)
                     @ r
                     (path :: Data.Aeson.Types.Internal.JSONPath)
-                    (kf :: Data.Aeson.Types.Internal.Failure f6 r)
-                    (ks :: Data.Aeson.Types.Internal.Success N4JHelper.FDG f6 r) ->
+                    (kf :: Data.Aeson.Types.Internal.Failure f7 r)
+                    (ks :: Data.Aeson.Types.Internal.Success N4JHelper.FDG f7 r) ->
                   m `cast`
                   (Data.Aeson.Types.Internal.N:Parser[0]
                        (Sub (Sym (N4JHelper.Rep_FDG[0])) <GHC.Prim.Any>_N))
-                    @ f6
+                    @ f7
                     @ r
                     path
                     kf
@@ -1001,7 +1032,7 @@ ab405f197f70e55c5d1f07f0f6e2bdc3
                                     <GHC.Prim.Any>_P)) })))
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0] <N4JHelper.FDG>_R))) -}
-32fddc8b5d040a9c0bde8124d1d3d924
+80402c95c22c3fbf9d9dd0d528df7c08
   $fFromJSONFDG_$cparseJSONList ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser [N4JHelper.FDG]
@@ -1038,7 +1069,7 @@ ab405f197f70e55c5d1f07f0f6e2bdc3
                         `cast`
                       (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                                 <[N4JHelper.FDG]>_R)) } }) -}
-141472fa3b71235d003da8297981fd77
+85cfac20f75639fb70e568f0b8284c4c
   $fFromJSONFDG_$s$fFromJSON[] ::
     Data.Aeson.Types.FromJSON.FromJSON [N4JHelper.FDGlink]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -1050,7 +1081,7 @@ ab405f197f70e55c5d1f07f0f6e2bdc3
                   (Data.Aeson.Types.FromJSON.$fFromJSONKey[]_$cparseJSONList
                      @ N4JHelper.FDGlink
                      N4JHelper.$fFromJSONFDGlink) -}
-c2ec7e84f9bdeee7c9566a835f50fa78
+1389f669b59dad4309807f2c2f31b90d
   $fFromJSONFDG_$s$fFromJSON[]1 ::
     Data.Aeson.Types.FromJSON.FromJSON [N4JHelper.FDGnode]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -1234,13 +1265,13 @@ d4d148c9d7efece9f81c51ac4dc1e621
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
                  N4JHelper.$fFromJSONFDG13) -}
-32fddc8b5d040a9c0bde8124d1d3d924
+80402c95c22c3fbf9d9dd0d528df7c08
   $fFromJSONFDG_go ::
     GHC.Prim.Int#
     -> [Data.Aeson.Types.Internal.Value]
     -> [Data.Aeson.Types.Internal.Parser N4JHelper.FDG]
   {- Arity: 2, Strictness: <L,U><S,1*U> -}
-1447b9c0229ba46a639bf54e1ff394ed
+40421eec4d544d3f73d85e282f8b98ad
   $fFromJSONFDGlink ::
     Data.Aeson.Types.FromJSON.FromJSON N4JHelper.FDGlink
   DFunId
@@ -1249,7 +1280,7 @@ d4d148c9d7efece9f81c51ac4dc1e621
                   @ N4JHelper.FDGlink
                   N4JHelper.$fFromJSONFDGlink_$cparseJSON
                   N4JHelper.$fFromJSONFDGlink_$cparseJSONList -}
-1447b9c0229ba46a639bf54e1ff394ed
+40421eec4d544d3f73d85e282f8b98ad
   $fFromJSONFDGlink1 ::
     [Data.Aeson.Types.Internal.Parser N4JHelper.FDGlink]
     -> forall (f :: * -> *) r.
@@ -1328,7 +1359,7 @@ d4d148c9d7efece9f81c51ac4dc1e621
 e801af747ca6720c76c62eaf1a9b561e
   $fFromJSONFDGlink16 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "source"#) -}
-d63df2da9660b3efc7fba5f30004742f
+3dd628937a7c1cd3331383b5dd918c3d
   $fFromJSONFDGlink2 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -1705,10 +1736,10 @@ d63df2da9660b3efc7fba5f30004742f
                                                               GHC.Integer.Type.Integer))
                                        a1>_R)) } } }
                  } in
-                 (\ @ (f6 :: * -> *)
+                 (\ @ (f7 :: * -> *)
                     @ r
                     (path :: Data.Aeson.Types.Internal.JSONPath)
-                    (kf :: Data.Aeson.Types.Internal.Failure f6 r)
+                    (kf :: Data.Aeson.Types.Internal.Failure f7 r)
                     (ks :: Data.Aeson.Types.Internal.Success
                              (GHC.Generics.M1
                                 GHC.Generics.D
@@ -1744,7 +1775,7 @@ d63df2da9660b3efc7fba5f30004742f
                                                                          (GHC.Generics.Rec0
                                                                             GHC.Integer.Type.Integer))))
                                 a1)
-                             f6
+                             f7
                              r) ->
                   m `cast`
                   (Data.Aeson.Types.Internal.N:Parser[0]
@@ -1771,7 +1802,7 @@ d63df2da9660b3efc7fba5f30004742f
                                                  'GHC.Generics.DecidedLazy)
                                               (GHC.Generics.Rec0 GHC.Integer.Type.Integer))
                           a1>_R)
-                    @ f6
+                    @ f7
                     @ r
                     path
                     kf
@@ -1977,7 +2008,7 @@ e9200dbec4b77a93c322e55730cc6e86
                    N4JHelper.$fFromJSONFDGlink10
                      `cast`
                    (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"target">_N)) -}
-1447b9c0229ba46a639bf54e1ff394ed
+40421eec4d544d3f73d85e282f8b98ad
   $fFromJSONFDGlink_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser N4JHelper.FDGlink
@@ -2025,15 +2056,15 @@ e9200dbec4b77a93c322e55730cc6e86
                        (Data.Aeson.Types.FromJSON.$WNoFromArgs @ GHC.Prim.Any)
                        x
                  } in
-                 (\ @ (f6 :: * -> *)
+                 (\ @ (f7 :: * -> *)
                     @ r
                     (path :: Data.Aeson.Types.Internal.JSONPath)
-                    (kf :: Data.Aeson.Types.Internal.Failure f6 r)
-                    (ks :: Data.Aeson.Types.Internal.Success N4JHelper.FDGlink f6 r) ->
+                    (kf :: Data.Aeson.Types.Internal.Failure f7 r)
+                    (ks :: Data.Aeson.Types.Internal.Success N4JHelper.FDGlink f7 r) ->
                   m `cast`
                   (Data.Aeson.Types.Internal.N:Parser[0]
                        (Sub (Sym (N4JHelper.Rep_FDGlink[0])) <GHC.Prim.Any>_N))
-                    @ f6
+                    @ f7
                     @ r
                     path
                     kf
@@ -2042,7 +2073,7 @@ e9200dbec4b77a93c322e55730cc6e86
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <N4JHelper.FDGlink>_R))) -}
-1447b9c0229ba46a639bf54e1ff394ed
+40421eec4d544d3f73d85e282f8b98ad
   $fFromJSONFDGlink_$cparseJSONList ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser [N4JHelper.FDGlink]
@@ -2079,7 +2110,7 @@ e9200dbec4b77a93c322e55730cc6e86
                         `cast`
                       (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                                 <[N4JHelper.FDGlink]>_R)) } }) -}
-1447b9c0229ba46a639bf54e1ff394ed
+40421eec4d544d3f73d85e282f8b98ad
   $fFromJSONFDGlink_$cto ::
     GHC.Generics.Rep N4JHelper.FDGlink x -> N4JHelper.FDGlink
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(U,1*U(U,U))>m,
@@ -2472,13 +2503,13 @@ e9200dbec4b77a93c322e55730cc6e86
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
                  N4JHelper.$fFromJSONFDGlink16) -}
-1447b9c0229ba46a639bf54e1ff394ed
+40421eec4d544d3f73d85e282f8b98ad
   $fFromJSONFDGlink_go ::
     GHC.Prim.Int#
     -> [Data.Aeson.Types.Internal.Value]
     -> [Data.Aeson.Types.Internal.Parser N4JHelper.FDGlink]
   {- Arity: 2, Strictness: <L,U><S,1*U> -}
-09f59bdb265dbc71d31a3ee3268ed1bc
+7921c6ee722b8eb7631da61cb337b02b
   $fFromJSONFDGnode ::
     Data.Aeson.Types.FromJSON.FromJSON N4JHelper.FDGnode
   DFunId
@@ -2487,7 +2518,7 @@ e9200dbec4b77a93c322e55730cc6e86
                   @ N4JHelper.FDGnode
                   N4JHelper.$fFromJSONFDGnode_$cparseJSON
                   N4JHelper.$fFromJSONFDGnode_$cparseJSONList -}
-09f59bdb265dbc71d31a3ee3268ed1bc
+7921c6ee722b8eb7631da61cb337b02b
   $fFromJSONFDGnode1 ::
     [Data.Aeson.Types.Internal.Parser N4JHelper.FDGnode]
     -> forall (f :: * -> *) r.
@@ -2499,7 +2530,7 @@ e9200dbec4b77a93c322e55730cc6e86
 fe2d5b902f8b7119a652c3b1bdf58cd8
   $fFromJSONFDGnode10 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "id"#) -}
-71e9365420b67067bceeee21dab77ef6
+9965e36d6d5be9bec1131957d4a228c9
   $fFromJSONFDGnode2 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -2759,10 +2790,10 @@ fe2d5b902f8b7119a652c3b1bdf58cd8
                                           (GHC.Generics.Rec0 GHC.Integer.Type.Integer))
                                        a1>_R)) } } }
                  } in
-                 (\ @ (f6 :: * -> *)
+                 (\ @ (f7 :: * -> *)
                     @ r
                     (path :: Data.Aeson.Types.Internal.JSONPath)
-                    (kf :: Data.Aeson.Types.Internal.Failure f6 r)
+                    (kf :: Data.Aeson.Types.Internal.Failure f7 r)
                     (ks :: Data.Aeson.Types.Internal.Success
                              (GHC.Generics.M1
                                 GHC.Generics.D
@@ -2791,7 +2822,7 @@ fe2d5b902f8b7119a652c3b1bdf58cd8
                                                        (GHC.Generics.Rec0
                                                           GHC.Integer.Type.Integer)))
                                 a1)
-                             f6
+                             f7
                              r) ->
                   m `cast`
                   (Data.Aeson.Types.Internal.N:Parser[0]
@@ -2811,7 +2842,7 @@ fe2d5b902f8b7119a652c3b1bdf58cd8
                                 'GHC.Generics.DecidedLazy)
                              (GHC.Generics.Rec0 GHC.Integer.Type.Integer))
                           a1>_R)
-                    @ f6
+                    @ f7
                     @ r
                     path
                     kf
@@ -2973,7 +3004,7 @@ e32dcdec406a5171dc32ba061aa6d522
                    (Trans
                         (Sym (GHC.TypeLits.N:SSymbol[0] <"id">_P))
                         (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"id">_N))) -}
-09f59bdb265dbc71d31a3ee3268ed1bc
+7921c6ee722b8eb7631da61cb337b02b
   $fFromJSONFDGnode_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser N4JHelper.FDGnode
@@ -3013,15 +3044,15 @@ e32dcdec406a5171dc32ba061aa6d522
                        (Data.Aeson.Types.FromJSON.$WNoFromArgs @ GHC.Prim.Any)
                        x
                  } in
-                 (\ @ (f6 :: * -> *)
+                 (\ @ (f7 :: * -> *)
                     @ r
                     (path :: Data.Aeson.Types.Internal.JSONPath)
-                    (kf :: Data.Aeson.Types.Internal.Failure f6 r)
-                    (ks :: Data.Aeson.Types.Internal.Success N4JHelper.FDGnode f6 r) ->
+                    (kf :: Data.Aeson.Types.Internal.Failure f7 r)
+                    (ks :: Data.Aeson.Types.Internal.Success N4JHelper.FDGnode f7 r) ->
                   m `cast`
                   (Data.Aeson.Types.Internal.N:Parser[0]
                        (Sub (Sym (N4JHelper.Rep_FDGnode[0])) <GHC.Prim.Any>_N))
-                    @ f6
+                    @ f7
                     @ r
                     path
                     kf
@@ -3117,7 +3148,7 @@ e32dcdec406a5171dc32ba061aa6d522
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <N4JHelper.FDGnode>_R))) -}
-09f59bdb265dbc71d31a3ee3268ed1bc
+7921c6ee722b8eb7631da61cb337b02b
   $fFromJSONFDGnode_$cparseJSONList ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser [N4JHelper.FDGnode]
@@ -3326,13 +3357,1229 @@ b035d3f4a2eb8fd124020a0442db5c33
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
                  N4JHelper.$fFromJSONFDGnode10) -}
-09f59bdb265dbc71d31a3ee3268ed1bc
+7921c6ee722b8eb7631da61cb337b02b
   $fFromJSONFDGnode_go ::
     GHC.Prim.Int#
     -> [Data.Aeson.Types.Internal.Value]
     -> [Data.Aeson.Types.Internal.Parser N4JHelper.FDGnode]
   {- Arity: 2, Strictness: <L,U><S,1*U> -}
-32fddc8b5d040a9c0bde8124d1d3d924
+a1dd0baf3adafff198e24d1af1a275c9
+  $fFromJSONLangList ::
+    Data.Aeson.Types.FromJSON.FromJSON N4JHelper.LangList
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ N4JHelper.LangList
+                  N4JHelper.$fFromJSONLangList_$cparseJSON
+                  N4JHelper.$fFromJSONLangList_$cparseJSONList -}
+a1dd0baf3adafff198e24d1af1a275c9
+  $fFromJSONLangList1 ::
+    [Data.Aeson.Types.Internal.Parser N4JHelper.LangList]
+    -> forall (f :: * -> *) r.
+       Data.Aeson.Types.Internal.JSONPath
+       -> Data.Aeson.Types.Internal.Failure f r
+       -> Data.Aeson.Types.Internal.Success [N4JHelper.LangList] f r
+       -> f r
+  {- Arity: 4, HasNoCafRefs, Strictness: <S,1*U><L,U><L,U><L,C(U)> -}
+01ea3d7827ef5402d31ade65e58707e6
+  $fFromJSONLangList10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "recomened"#) -}
+532eb086293c3cc7f796fc6339229328
+  $fFromJSONLangList11 ::
+    Data.Aeson.Types.Internal.Options
+    -> Data.Aeson.Types.FromJSON.FromArgs
+         Data.Aeson.Types.Generic.Zero a1
+    -> Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser
+         (GHC.Generics.K1 GHC.Generics.R [DBHelper.Language] a1)
+  {- Arity: 3, Strictness: <L,A><L,A><L,U>,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ a1
+                   (w1 :: Data.Aeson.Types.Internal.Options)
+                   (w2 :: Data.Aeson.Types.FromJSON.FromArgs
+                            Data.Aeson.Types.Generic.Zero a1)
+                   (w3 :: Data.Aeson.Types.Internal.Value) ->
+                 Data.Aeson.Types.FromJSON.$w$cgParseJSON2
+                   @ [DBHelper.Language]
+                   @ Data.Aeson.Types.Generic.Zero
+                   @ GHC.Generics.R
+                   N4JHelper.$fFromJSONLangList_$s$fFromJSON[]
+                   @ a1
+                   w3) -}
+e06a277a44e1aadad562cf2d94f5bc2a
+  $fFromJSONLangList12 :: GHC.Generics.SingI ('GHC.Base.Just "all")
+  {- Unfolding: InlineRule (0, True, True)
+                N4JHelper.$fFromJSONLangList13
+                  `cast`
+                (Trans
+                     (Sym (GHC.Generics.D:R:SingMaybeb0[0] <GHC.Types.Symbol>_N))
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Base.Maybe
+                                                       GHC.Types.Symbol>_N) <'GHC.Base.Just
+                                                                               "all">_N) -}
+6dc129a6f3b1e2ebc5fb16cf2d2de7d9
+  $fFromJSONLangList13 ::
+    GHC.Generics.R:SingMaybeb GHC.Types.Symbol ('GHC.Base.Just "all")
+  {- Unfolding: (GHC.Generics.SJust
+                   @ GHC.Types.Symbol
+                   @ ('GHC.Base.Just "all")
+                   @ "all"
+                   @~ <'GHC.Base.Just "all">_N
+                   N4JHelper.$fFromJSONLangList14
+                     `cast`
+                   (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"all">_N)) -}
+2c3f126486905dd3a4eea7bcfd4e82f7
+  $fFromJSONLangList14 :: GHC.Generics.R:SingSymbols "all"
+  {- Strictness: m,
+     Unfolding: (GHC.Generics.SSym
+                   @ "all"
+                   N4JHelper.$fFromJSONLangList15
+                     `cast`
+                   (Trans
+                        (Sym (GHC.TypeLits.N:SSymbol[0] <"all">_P))
+                        (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"all">_N))) -}
+2aa931c9e10fd9d7c46eaafeee94ad14
+  $fFromJSONLangList15 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "all"#) -}
+e1462d1e25a02fcb50f6258badff2354
+  $fFromJSONLangList2 ::
+    Data.Aeson.Types.Internal.Options
+    -> Data.Aeson.Types.FromJSON.FromArgs
+         Data.Aeson.Types.Generic.Zero a1
+    -> Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser
+         (GHC.Generics.M1
+            GHC.Generics.D
+            ('GHC.Generics.MetaData
+               "LangList"
+               "N4JHelper"
+               "crawler-0.1.0.0-2jLxW5sGj234Y0KdhjvaTi"
+               'GHC.Types.False)
+            (GHC.Generics.M1
+               GHC.Generics.C
+               ('GHC.Generics.MetaCons
+                  "LangList" 'GHC.Generics.PrefixI 'GHC.Types.True)
+               (GHC.Generics.S1
+                  ('GHC.Generics.MetaSel
+                     ('GHC.Base.Just "all")
+                     'GHC.Generics.NoSourceUnpackedness
+                     'GHC.Generics.NoSourceStrictness
+                     'GHC.Generics.DecidedLazy)
+                  (GHC.Generics.Rec0 [DBHelper.Language])
+                GHC.Generics.:*: (GHC.Generics.S1
+                                    ('GHC.Generics.MetaSel
+                                       ('GHC.Base.Just "recomened")
+                                       'GHC.Generics.NoSourceUnpackedness
+                                       'GHC.Generics.NoSourceStrictness
+                                       'GHC.Generics.DecidedLazy)
+                                    (GHC.Generics.Rec0 [DBHelper.Language])
+                                  GHC.Generics.:*: GHC.Generics.S1
+                                                     ('GHC.Generics.MetaSel
+                                                        ('GHC.Base.Just "known")
+                                                        'GHC.Generics.NoSourceUnpackedness
+                                                        'GHC.Generics.NoSourceStrictness
+                                                        'GHC.Generics.DecidedLazy)
+                                                     (GHC.Generics.Rec0 [DBHelper.Language]))))
+            a1)
+  {- Arity: 3, Strictness: <L,1*U(U,U,U,U,U,U)><L,U><L,1*U>,
+     Unfolding: (\ @ a1
+                   (opts :: Data.Aeson.Types.Internal.Options)
+                   (fargs :: Data.Aeson.Types.FromJSON.FromArgs
+                               Data.Aeson.Types.Generic.Zero a1)
+                   (x :: Data.Aeson.Types.Internal.Value) ->
+                 let {
+                   m :: Data.Aeson.Types.Internal.Parser
+                          ((GHC.Generics.:*:)
+                             (GHC.Generics.S1
+                                ('GHC.Generics.MetaSel
+                                   ('GHC.Base.Just "all")
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                                (GHC.Generics.Rec0 [DBHelper.Language]))
+                             (GHC.Generics.S1
+                                ('GHC.Generics.MetaSel
+                                   ('GHC.Base.Just "recomened")
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                                (GHC.Generics.Rec0 [DBHelper.Language])
+                              GHC.Generics.:*: GHC.Generics.S1
+                                                 ('GHC.Generics.MetaSel
+                                                    ('GHC.Base.Just "known")
+                                                    'GHC.Generics.NoSourceUnpackedness
+                                                    'GHC.Generics.NoSourceStrictness
+                                                    'GHC.Generics.DecidedLazy)
+                                                 (GHC.Generics.Rec0 [DBHelper.Language]))
+                             a1)
+                   = case opts of wild { Data.Aeson.Types.Internal.Options ds1 ds2 ds3 ds4 ds5 ds6 ->
+                     case ds6 of wild1 { DEFAULT ->
+                     case x of wild2 {
+                       DEFAULT
+                       -> Data.Aeson.Types.FromJSON.typeMismatch
+                            @ ((GHC.Generics.:*:)
+                                 (GHC.Generics.S1
+                                    ('GHC.Generics.MetaSel
+                                       ('GHC.Base.Just "all")
+                                       'GHC.Generics.NoSourceUnpackedness
+                                       'GHC.Generics.NoSourceStrictness
+                                       'GHC.Generics.DecidedLazy)
+                                    (GHC.Generics.Rec0 [DBHelper.Language]))
+                                 (GHC.Generics.S1
+                                    ('GHC.Generics.MetaSel
+                                       ('GHC.Base.Just "recomened")
+                                       'GHC.Generics.NoSourceUnpackedness
+                                       'GHC.Generics.NoSourceStrictness
+                                       'GHC.Generics.DecidedLazy)
+                                    (GHC.Generics.Rec0 [DBHelper.Language])
+                                  GHC.Generics.:*: GHC.Generics.S1
+                                                     ('GHC.Generics.MetaSel
+                                                        ('GHC.Base.Just "known")
+                                                        'GHC.Generics.NoSourceUnpackedness
+                                                        'GHC.Generics.NoSourceStrictness
+                                                        'GHC.Generics.DecidedLazy)
+                                                     (GHC.Generics.Rec0 [DBHelper.Language]))
+                                 a1)
+                            Data.Aeson.Types.FromJSON.$fConsFromJSON'TYPEarityfTrue1
+                            wild2
+                       Data.Aeson.Types.Internal.Object obj
+                       -> let {
+                            m1 :: Data.Aeson.Types.Internal.Parser
+                                    (GHC.Generics.M1
+                                       GHC.Generics.S
+                                       ('GHC.Generics.MetaSel
+                                          ('GHC.Base.Just "all")
+                                          'GHC.Generics.NoSourceUnpackedness
+                                          'GHC.Generics.NoSourceStrictness
+                                          'GHC.Generics.DecidedLazy)
+                                       (GHC.Generics.Rec0 [DBHelper.Language])
+                                       a1)
+                            = Data.Aeson.Types.FromJSON.$fFromRecordarityM10_$cparseRecord
+                                @ ('GHC.Generics.MetaSel
+                                     ('GHC.Base.Just "all")
+                                     'GHC.Generics.NoSourceUnpackedness
+                                     'GHC.Generics.NoSourceStrictness
+                                     'GHC.Generics.DecidedLazy)
+                                @ Data.Aeson.Types.Generic.Zero
+                                @ (GHC.Generics.K1 GHC.Generics.R [DBHelper.Language])
+                                N4JHelper.$fFromJSONLangList_$s$fSelectorMetaMetaSel2
+                                N4JHelper.$fFromJSONLangList11
+                                  `cast`
+                                (Sym (Data.Aeson.Types.FromJSON.N:GFromJSON[0]
+                                          <Data.Aeson.Types.Generic.Zero>_N
+                                          <GHC.Generics.K1 GHC.Generics.R [DBHelper.Language]>_N))
+                                @ a1
+                                wild
+                                fargs
+                                (GHC.Base.Nothing @ Data.Text.Internal.Text)
+                                obj
+                          } in
+                          let {
+                            m2 :: Data.Aeson.Types.Internal.Parser
+                                    (GHC.Generics.M1
+                                       GHC.Generics.S
+                                       ('GHC.Generics.MetaSel
+                                          ('GHC.Base.Just "recomened")
+                                          'GHC.Generics.NoSourceUnpackedness
+                                          'GHC.Generics.NoSourceStrictness
+                                          'GHC.Generics.DecidedLazy)
+                                       (GHC.Generics.Rec0 [DBHelper.Language])
+                                       a1)
+                            = Data.Aeson.Types.FromJSON.$fFromRecordarityM10_$cparseRecord
+                                @ ('GHC.Generics.MetaSel
+                                     ('GHC.Base.Just "recomened")
+                                     'GHC.Generics.NoSourceUnpackedness
+                                     'GHC.Generics.NoSourceStrictness
+                                     'GHC.Generics.DecidedLazy)
+                                @ Data.Aeson.Types.Generic.Zero
+                                @ (GHC.Generics.K1 GHC.Generics.R [DBHelper.Language])
+                                N4JHelper.$fFromJSONLangList_$s$fSelectorMetaMetaSel1
+                                N4JHelper.$fFromJSONLangList11
+                                  `cast`
+                                (Sym (Data.Aeson.Types.FromJSON.N:GFromJSON[0]
+                                          <Data.Aeson.Types.Generic.Zero>_N
+                                          <GHC.Generics.K1 GHC.Generics.R [DBHelper.Language]>_N))
+                                @ a1
+                                wild
+                                fargs
+                                (GHC.Base.Nothing @ Data.Text.Internal.Text)
+                                obj
+                          } in
+                          let {
+                            e :: Data.Aeson.Types.Internal.Parser
+                                   (GHC.Generics.M1
+                                      GHC.Generics.S
+                                      ('GHC.Generics.MetaSel
+                                         ('GHC.Base.Just "known")
+                                         'GHC.Generics.NoSourceUnpackedness
+                                         'GHC.Generics.NoSourceStrictness
+                                         'GHC.Generics.DecidedLazy)
+                                      (GHC.Generics.Rec0 [DBHelper.Language])
+                                      a1)
+                            = Data.Aeson.Types.FromJSON.$fFromRecordarityM10_$cparseRecord
+                                @ ('GHC.Generics.MetaSel
+                                     ('GHC.Base.Just "known")
+                                     'GHC.Generics.NoSourceUnpackedness
+                                     'GHC.Generics.NoSourceStrictness
+                                     'GHC.Generics.DecidedLazy)
+                                @ Data.Aeson.Types.Generic.Zero
+                                @ (GHC.Generics.K1 GHC.Generics.R [DBHelper.Language])
+                                N4JHelper.$fFromJSONLangList_$s$fSelectorMetaMetaSel
+                                N4JHelper.$fFromJSONLangList11
+                                  `cast`
+                                (Sym (Data.Aeson.Types.FromJSON.N:GFromJSON[0]
+                                          <Data.Aeson.Types.Generic.Zero>_N
+                                          <GHC.Generics.K1 GHC.Generics.R [DBHelper.Language]>_N))
+                                @ a1
+                                wild
+                                fargs
+                                (GHC.Base.Nothing @ Data.Text.Internal.Text)
+                                obj
+                          } in
+                          (\ @ (f :: * -> *)
+                             @ r
+                             (path :: Data.Aeson.Types.Internal.JSONPath)
+                             (kf :: Data.Aeson.Types.Internal.Failure f r)
+                             (ks :: Data.Aeson.Types.Internal.Success
+                                      ((GHC.Generics.:*:)
+                                         (GHC.Generics.M1
+                                            GHC.Generics.S
+                                            ('GHC.Generics.MetaSel
+                                               ('GHC.Base.Just "all")
+                                               'GHC.Generics.NoSourceUnpackedness
+                                               'GHC.Generics.NoSourceStrictness
+                                               'GHC.Generics.DecidedLazy)
+                                            (GHC.Generics.Rec0 [DBHelper.Language]))
+                                         (GHC.Generics.S1
+                                            ('GHC.Generics.MetaSel
+                                               ('GHC.Base.Just "recomened")
+                                               'GHC.Generics.NoSourceUnpackedness
+                                               'GHC.Generics.NoSourceStrictness
+                                               'GHC.Generics.DecidedLazy)
+                                            (GHC.Generics.Rec0 [DBHelper.Language])
+                                          GHC.Generics.:*: GHC.Generics.S1
+                                                             ('GHC.Generics.MetaSel
+                                                                ('GHC.Base.Just "known")
+                                                                'GHC.Generics.NoSourceUnpackedness
+                                                                'GHC.Generics.NoSourceStrictness
+                                                                'GHC.Generics.DecidedLazy)
+                                                             (GHC.Generics.Rec0
+                                                                [DBHelper.Language]))
+                                         a1)
+                                      f
+                                      r) ->
+                           m1
+                             `cast`
+                           (Data.Aeson.Types.Internal.N:Parser[0]
+                                <GHC.Generics.M1
+                                   GHC.Generics.S
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "all")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 [DBHelper.Language])
+                                   a1>_R)
+                             @ f
+                             @ r
+                             path
+                             kf
+                             (\ (a2 :: GHC.Generics.M1
+                                         GHC.Generics.S
+                                         ('GHC.Generics.MetaSel
+                                            ('GHC.Base.Just "all")
+                                            'GHC.Generics.NoSourceUnpackedness
+                                            'GHC.Generics.NoSourceStrictness
+                                            'GHC.Generics.DecidedLazy)
+                                         (GHC.Generics.Rec0 [DBHelper.Language])
+                                         a1) ->
+                              m2
+                                `cast`
+                              (Data.Aeson.Types.Internal.N:Parser[0]
+                                   <GHC.Generics.M1
+                                      GHC.Generics.S
+                                      ('GHC.Generics.MetaSel
+                                         ('GHC.Base.Just "recomened")
+                                         'GHC.Generics.NoSourceUnpackedness
+                                         'GHC.Generics.NoSourceStrictness
+                                         'GHC.Generics.DecidedLazy)
+                                      (GHC.Generics.Rec0 [DBHelper.Language])
+                                      a1>_R)
+                                @ f
+                                @ r
+                                path
+                                kf
+                                (\ (a4 :: GHC.Generics.M1
+                                            GHC.Generics.S
+                                            ('GHC.Generics.MetaSel
+                                               ('GHC.Base.Just "recomened")
+                                               'GHC.Generics.NoSourceUnpackedness
+                                               'GHC.Generics.NoSourceStrictness
+                                               'GHC.Generics.DecidedLazy)
+                                            (GHC.Generics.Rec0 [DBHelper.Language])
+                                            a1) ->
+                                 e `cast`
+                                 (Data.Aeson.Types.Internal.N:Parser[0]
+                                      <GHC.Generics.M1
+                                         GHC.Generics.S
+                                         ('GHC.Generics.MetaSel
+                                            ('GHC.Base.Just "known")
+                                            'GHC.Generics.NoSourceUnpackedness
+                                            'GHC.Generics.NoSourceStrictness
+                                            'GHC.Generics.DecidedLazy)
+                                         (GHC.Generics.Rec0 [DBHelper.Language])
+                                         a1>_R)
+                                   @ f
+                                   @ r
+                                   path
+                                   kf
+                                   (\ (a3 :: GHC.Generics.M1
+                                               GHC.Generics.S
+                                               ('GHC.Generics.MetaSel
+                                                  ('GHC.Base.Just "known")
+                                                  'GHC.Generics.NoSourceUnpackedness
+                                                  'GHC.Generics.NoSourceStrictness
+                                                  'GHC.Generics.DecidedLazy)
+                                               (GHC.Generics.Rec0 [DBHelper.Language])
+                                               a1) ->
+                                    ks
+                                      (GHC.Generics.:*:
+                                         @ (GHC.Generics.M1
+                                              GHC.Generics.S
+                                              ('GHC.Generics.MetaSel
+                                                 ('GHC.Base.Just "all")
+                                                 'GHC.Generics.NoSourceUnpackedness
+                                                 'GHC.Generics.NoSourceStrictness
+                                                 'GHC.Generics.DecidedLazy)
+                                              (GHC.Generics.Rec0 [DBHelper.Language]))
+                                         @ (GHC.Generics.S1
+                                              ('GHC.Generics.MetaSel
+                                                 ('GHC.Base.Just "recomened")
+                                                 'GHC.Generics.NoSourceUnpackedness
+                                                 'GHC.Generics.NoSourceStrictness
+                                                 'GHC.Generics.DecidedLazy)
+                                              (GHC.Generics.Rec0 [DBHelper.Language])
+                                            GHC.Generics.:*: GHC.Generics.S1
+                                                               ('GHC.Generics.MetaSel
+                                                                  ('GHC.Base.Just "known")
+                                                                  'GHC.Generics.NoSourceUnpackedness
+                                                                  'GHC.Generics.NoSourceStrictness
+                                                                  'GHC.Generics.DecidedLazy)
+                                                               (GHC.Generics.Rec0
+                                                                  [DBHelper.Language]))
+                                         @ a1
+                                         a2
+                                         (GHC.Generics.:*:
+                                            @ (GHC.Generics.M1
+                                                 GHC.Generics.S
+                                                 ('GHC.Generics.MetaSel
+                                                    ('GHC.Base.Just "recomened")
+                                                    'GHC.Generics.NoSourceUnpackedness
+                                                    'GHC.Generics.NoSourceStrictness
+                                                    'GHC.Generics.DecidedLazy)
+                                                 (GHC.Generics.Rec0 [DBHelper.Language]))
+                                            @ (GHC.Generics.M1
+                                                 GHC.Generics.S
+                                                 ('GHC.Generics.MetaSel
+                                                    ('GHC.Base.Just "known")
+                                                    'GHC.Generics.NoSourceUnpackedness
+                                                    'GHC.Generics.NoSourceStrictness
+                                                    'GHC.Generics.DecidedLazy)
+                                                 (GHC.Generics.Rec0 [DBHelper.Language]))
+                                            @ a1
+                                            a4
+                                            a3))))))
+                            `cast`
+                          (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                                    <(GHC.Generics.:*:)
+                                       (GHC.Generics.M1
+                                          GHC.Generics.S
+                                          ('GHC.Generics.MetaSel
+                                             ('GHC.Base.Just "all")
+                                             'GHC.Generics.NoSourceUnpackedness
+                                             'GHC.Generics.NoSourceStrictness
+                                             'GHC.Generics.DecidedLazy)
+                                          (GHC.Generics.Rec0 [DBHelper.Language]))
+                                       (GHC.Generics.S1
+                                          ('GHC.Generics.MetaSel
+                                             ('GHC.Base.Just "recomened")
+                                             'GHC.Generics.NoSourceUnpackedness
+                                             'GHC.Generics.NoSourceStrictness
+                                             'GHC.Generics.DecidedLazy)
+                                          (GHC.Generics.Rec0 [DBHelper.Language])
+                                        GHC.Generics.:*: GHC.Generics.S1
+                                                           ('GHC.Generics.MetaSel
+                                                              ('GHC.Base.Just "known")
+                                                              'GHC.Generics.NoSourceUnpackedness
+                                                              'GHC.Generics.NoSourceStrictness
+                                                              'GHC.Generics.DecidedLazy)
+                                                           (GHC.Generics.Rec0 [DBHelper.Language]))
+                                       a1>_R)) } } }
+                 } in
+                 (\ @ (f7 :: * -> *)
+                    @ r
+                    (path :: Data.Aeson.Types.Internal.JSONPath)
+                    (kf :: Data.Aeson.Types.Internal.Failure f7 r)
+                    (ks :: Data.Aeson.Types.Internal.Success
+                             (GHC.Generics.M1
+                                GHC.Generics.D
+                                ('GHC.Generics.MetaData
+                                   "LangList"
+                                   "N4JHelper"
+                                   "crawler-0.1.0.0-2jLxW5sGj234Y0KdhjvaTi"
+                                   'GHC.Types.False)
+                                (GHC.Generics.M1
+                                   GHC.Generics.C
+                                   ('GHC.Generics.MetaCons
+                                      "LangList" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                   (GHC.Generics.S1
+                                      ('GHC.Generics.MetaSel
+                                         ('GHC.Base.Just "all")
+                                         'GHC.Generics.NoSourceUnpackedness
+                                         'GHC.Generics.NoSourceStrictness
+                                         'GHC.Generics.DecidedLazy)
+                                      (GHC.Generics.Rec0 [DBHelper.Language])
+                                    GHC.Generics.:*: (GHC.Generics.S1
+                                                        ('GHC.Generics.MetaSel
+                                                           ('GHC.Base.Just "recomened")
+                                                           'GHC.Generics.NoSourceUnpackedness
+                                                           'GHC.Generics.NoSourceStrictness
+                                                           'GHC.Generics.DecidedLazy)
+                                                        (GHC.Generics.Rec0 [DBHelper.Language])
+                                                      GHC.Generics.:*: GHC.Generics.S1
+                                                                         ('GHC.Generics.MetaSel
+                                                                            ('GHC.Base.Just "known")
+                                                                            'GHC.Generics.NoSourceUnpackedness
+                                                                            'GHC.Generics.NoSourceStrictness
+                                                                            'GHC.Generics.DecidedLazy)
+                                                                         (GHC.Generics.Rec0
+                                                                            [DBHelper.Language]))))
+                                a1)
+                             f7
+                             r) ->
+                  m `cast`
+                  (Data.Aeson.Types.Internal.N:Parser[0]
+                       <(GHC.Generics.:*:)
+                          (GHC.Generics.S1
+                             ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "all")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy)
+                             (GHC.Generics.Rec0 [DBHelper.Language]))
+                          (GHC.Generics.S1
+                             ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "recomened")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy)
+                             (GHC.Generics.Rec0 [DBHelper.Language])
+                           GHC.Generics.:*: GHC.Generics.S1
+                                              ('GHC.Generics.MetaSel
+                                                 ('GHC.Base.Just "known")
+                                                 'GHC.Generics.NoSourceUnpackedness
+                                                 'GHC.Generics.NoSourceStrictness
+                                                 'GHC.Generics.DecidedLazy)
+                                              (GHC.Generics.Rec0 [DBHelper.Language]))
+                          a1>_R)
+                    @ f7
+                    @ r
+                    path
+                    kf
+                    (\ (a2 :: (GHC.Generics.:*:)
+                                (GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "all")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 [DBHelper.Language]))
+                                (GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "recomened")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 [DBHelper.Language])
+                                 GHC.Generics.:*: GHC.Generics.S1
+                                                    ('GHC.Generics.MetaSel
+                                                       ('GHC.Base.Just "known")
+                                                       'GHC.Generics.NoSourceUnpackedness
+                                                       'GHC.Generics.NoSourceStrictness
+                                                       'GHC.Generics.DecidedLazy)
+                                                    (GHC.Generics.Rec0 [DBHelper.Language]))
+                                a1) ->
+                     ks
+                       a2
+                         `cast`
+                       (Trans
+                            (Sym (GHC.Generics.N:M1[0]
+                                      <GHC.Generics.C>_P
+                                      <'GHC.Generics.MetaCons
+                                         "LangList" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                                      <GHC.Generics.S1
+                                         ('GHC.Generics.MetaSel
+                                            ('GHC.Base.Just "all")
+                                            'GHC.Generics.NoSourceUnpackedness
+                                            'GHC.Generics.NoSourceStrictness
+                                            'GHC.Generics.DecidedLazy)
+                                         (GHC.Generics.Rec0 [DBHelper.Language])
+                                       GHC.Generics.:*: (GHC.Generics.S1
+                                                           ('GHC.Generics.MetaSel
+                                                              ('GHC.Base.Just "recomened")
+                                                              'GHC.Generics.NoSourceUnpackedness
+                                                              'GHC.Generics.NoSourceStrictness
+                                                              'GHC.Generics.DecidedLazy)
+                                                           (GHC.Generics.Rec0 [DBHelper.Language])
+                                                         GHC.Generics.:*: GHC.Generics.S1
+                                                                            ('GHC.Generics.MetaSel
+                                                                               ('GHC.Base.Just
+                                                                                  "known")
+                                                                               'GHC.Generics.NoSourceUnpackedness
+                                                                               'GHC.Generics.NoSourceStrictness
+                                                                               'GHC.Generics.DecidedLazy)
+                                                                            (GHC.Generics.Rec0
+                                                                               [DBHelper.Language]))>_R))
+                            (Sym (GHC.Generics.N:M1[0]
+                                      <GHC.Generics.D>_P
+                                      <'GHC.Generics.MetaData
+                                         "LangList"
+                                         "N4JHelper"
+                                         "crawler-0.1.0.0-2jLxW5sGj234Y0KdhjvaTi"
+                                         'GHC.Types.False>_P
+                                      <GHC.Generics.M1
+                                         GHC.Generics.C
+                                         ('GHC.Generics.MetaCons
+                                            "LangList" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                         (GHC.Generics.S1
+                                            ('GHC.Generics.MetaSel
+                                               ('GHC.Base.Just "all")
+                                               'GHC.Generics.NoSourceUnpackedness
+                                               'GHC.Generics.NoSourceStrictness
+                                               'GHC.Generics.DecidedLazy)
+                                            (GHC.Generics.Rec0 [DBHelper.Language])
+                                          GHC.Generics.:*: (GHC.Generics.S1
+                                                              ('GHC.Generics.MetaSel
+                                                                 ('GHC.Base.Just "recomened")
+                                                                 'GHC.Generics.NoSourceUnpackedness
+                                                                 'GHC.Generics.NoSourceStrictness
+                                                                 'GHC.Generics.DecidedLazy)
+                                                              (GHC.Generics.Rec0
+                                                                 [DBHelper.Language])
+                                                            GHC.Generics.:*: GHC.Generics.S1
+                                                                               ('GHC.Generics.MetaSel
+                                                                                  ('GHC.Base.Just
+                                                                                     "known")
+                                                                                  'GHC.Generics.NoSourceUnpackedness
+                                                                                  'GHC.Generics.NoSourceStrictness
+                                                                                  'GHC.Generics.DecidedLazy)
+                                                                               (GHC.Generics.Rec0
+                                                                                  [DBHelper.Language])))>_R)) <a1>_N)))
+                   `cast`
+                 (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                           <GHC.Generics.M1
+                              GHC.Generics.D
+                              ('GHC.Generics.MetaData
+                                 "LangList"
+                                 "N4JHelper"
+                                 "crawler-0.1.0.0-2jLxW5sGj234Y0KdhjvaTi"
+                                 'GHC.Types.False)
+                              (GHC.Generics.M1
+                                 GHC.Generics.C
+                                 ('GHC.Generics.MetaCons
+                                    "LangList" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                 (GHC.Generics.S1
+                                    ('GHC.Generics.MetaSel
+                                       ('GHC.Base.Just "all")
+                                       'GHC.Generics.NoSourceUnpackedness
+                                       'GHC.Generics.NoSourceStrictness
+                                       'GHC.Generics.DecidedLazy)
+                                    (GHC.Generics.Rec0 [DBHelper.Language])
+                                  GHC.Generics.:*: (GHC.Generics.S1
+                                                      ('GHC.Generics.MetaSel
+                                                         ('GHC.Base.Just "recomened")
+                                                         'GHC.Generics.NoSourceUnpackedness
+                                                         'GHC.Generics.NoSourceStrictness
+                                                         'GHC.Generics.DecidedLazy)
+                                                      (GHC.Generics.Rec0 [DBHelper.Language])
+                                                    GHC.Generics.:*: GHC.Generics.S1
+                                                                       ('GHC.Generics.MetaSel
+                                                                          ('GHC.Base.Just "known")
+                                                                          'GHC.Generics.NoSourceUnpackedness
+                                                                          'GHC.Generics.NoSourceStrictness
+                                                                          'GHC.Generics.DecidedLazy)
+                                                                       (GHC.Generics.Rec0
+                                                                          [DBHelper.Language]))))
+                              a1>_R))) -}
+f39658a19a2f42c3e41fde47188850ea
+  $fFromJSONLangList3 :: GHC.Generics.SingI ('GHC.Base.Just "known")
+  {- Unfolding: InlineRule (0, True, True)
+                N4JHelper.$fFromJSONLangList4
+                  `cast`
+                (Trans
+                     (Sym (GHC.Generics.D:R:SingMaybeb0[0] <GHC.Types.Symbol>_N))
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Base.Maybe
+                                                       GHC.Types.Symbol>_N) <'GHC.Base.Just
+                                                                               "known">_N) -}
+07390432c97bfb574d56f6065505fe15
+  $fFromJSONLangList4 ::
+    GHC.Generics.R:SingMaybeb GHC.Types.Symbol ('GHC.Base.Just "known")
+  {- Unfolding: (GHC.Generics.SJust
+                   @ GHC.Types.Symbol
+                   @ ('GHC.Base.Just "known")
+                   @ "known"
+                   @~ <'GHC.Base.Just "known">_N
+                   N4JHelper.$fFromJSONLangList5
+                     `cast`
+                   (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"known">_N)) -}
+9792b61ceb8657af95a2c69ec17046f7
+  $fFromJSONLangList5 :: GHC.Generics.R:SingSymbols "known"
+  {- Strictness: m,
+     Unfolding: (GHC.Generics.SSym
+                   @ "known"
+                   N4JHelper.$fFromJSONLangList6
+                     `cast`
+                   (Trans
+                        (Sym (GHC.TypeLits.N:SSymbol[0] <"known">_P))
+                        (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"known">_N))) -}
+bc09ceb4be422db6bb1a9b069718e5fb
+  $fFromJSONLangList6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "known"#) -}
+eec4d922b98a8753c9d46351f96c016c
+  $fFromJSONLangList7 ::
+    GHC.Generics.SingI ('GHC.Base.Just "recomened")
+  {- Unfolding: InlineRule (0, True, True)
+                N4JHelper.$fFromJSONLangList8
+                  `cast`
+                (Trans
+                     (Sym (GHC.Generics.D:R:SingMaybeb0[0] <GHC.Types.Symbol>_N))
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Base.Maybe
+                                                       GHC.Types.Symbol>_N) <'GHC.Base.Just
+                                                                               "recomened">_N) -}
+1c2381fbcd72ab4cb3c11369cf032401
+  $fFromJSONLangList8 ::
+    GHC.Generics.R:SingMaybeb
+      GHC.Types.Symbol ('GHC.Base.Just "recomened")
+  {- Unfolding: (GHC.Generics.SJust
+                   @ GHC.Types.Symbol
+                   @ ('GHC.Base.Just "recomened")
+                   @ "recomened"
+                   @~ <'GHC.Base.Just "recomened">_N
+                   N4JHelper.$fFromJSONLangList9
+                     `cast`
+                   (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"recomened">_N)) -}
+64c652ac71dab649ef703028abacd2dd
+  $fFromJSONLangList9 :: GHC.Generics.R:SingSymbols "recomened"
+  {- Strictness: m,
+     Unfolding: (GHC.Generics.SSym
+                   @ "recomened"
+                   N4JHelper.$fFromJSONLangList10
+                     `cast`
+                   (Trans
+                        (Sym (GHC.TypeLits.N:SSymbol[0] <"recomened">_P))
+                        (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"recomened">_N))) -}
+a1dd0baf3adafff198e24d1af1a275c9
+  $fFromJSONLangList_$cparseJSON ::
+    Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser N4JHelper.LangList
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ (x :: Data.Aeson.Types.Internal.Value) ->
+                 let {
+                   m :: Data.Aeson.Types.Internal.Parser
+                          (GHC.Generics.M1
+                             GHC.Generics.D
+                             ('GHC.Generics.MetaData
+                                "LangList"
+                                "N4JHelper"
+                                "crawler-0.1.0.0-2jLxW5sGj234Y0KdhjvaTi"
+                                'GHC.Types.False)
+                             (GHC.Generics.M1
+                                GHC.Generics.C
+                                ('GHC.Generics.MetaCons
+                                   "LangList" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                (GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "all")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 [DBHelper.Language])
+                                 GHC.Generics.:*: (GHC.Generics.S1
+                                                     ('GHC.Generics.MetaSel
+                                                        ('GHC.Base.Just "recomened")
+                                                        'GHC.Generics.NoSourceUnpackedness
+                                                        'GHC.Generics.NoSourceStrictness
+                                                        'GHC.Generics.DecidedLazy)
+                                                     (GHC.Generics.Rec0 [DBHelper.Language])
+                                                   GHC.Generics.:*: GHC.Generics.S1
+                                                                      ('GHC.Generics.MetaSel
+                                                                         ('GHC.Base.Just "known")
+                                                                         'GHC.Generics.NoSourceUnpackedness
+                                                                         'GHC.Generics.NoSourceStrictness
+                                                                         'GHC.Generics.DecidedLazy)
+                                                                      (GHC.Generics.Rec0
+                                                                         [DBHelper.Language]))))
+                             GHC.Prim.Any)
+                   = N4JHelper.$fFromJSONLangList2
+                       @ GHC.Prim.Any
+                       Data.Aeson.Types.Internal.defaultOptions
+                       (Data.Aeson.Types.FromJSON.$WNoFromArgs @ GHC.Prim.Any)
+                       x
+                 } in
+                 (\ @ (f7 :: * -> *)
+                    @ r
+                    (path :: Data.Aeson.Types.Internal.JSONPath)
+                    (kf :: Data.Aeson.Types.Internal.Failure f7 r)
+                    (ks :: Data.Aeson.Types.Internal.Success
+                             N4JHelper.LangList f7 r) ->
+                  m `cast`
+                  (Data.Aeson.Types.Internal.N:Parser[0]
+                       (Sub (Sym (N4JHelper.Rep_LangList[0])) <GHC.Prim.Any>_N))
+                    @ f7
+                    @ r
+                    path
+                    kf
+                    (\ (a1 :: GHC.Generics.Rep N4JHelper.LangList GHC.Prim.Any) ->
+                     ks (N4JHelper.$fFromJSONLangList_$cto @ GHC.Prim.Any a1)))
+                   `cast`
+                 (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                           <N4JHelper.LangList>_R))) -}
+a1dd0baf3adafff198e24d1af1a275c9
+  $fFromJSONLangList_$cparseJSONList ::
+    Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser [N4JHelper.LangList]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: Data.Aeson.Types.Internal.Value) ->
+                 case ds of wild {
+                   DEFAULT
+                   -> Data.Aeson.Types.FromJSON.typeMismatch
+                        @ [N4JHelper.LangList]
+                        N4JHelper.$fFromJSONFDG2
+                        wild
+                   Data.Aeson.Types.Internal.Array a1
+                   -> case a1 of wild1 { Data.Vector.Vector dt dt1 dt2 ->
+                      (N4JHelper.$fFromJSONLangList1
+                         (letrec {
+                            $wgo :: GHC.Prim.Int# -> [Data.Aeson.Types.Internal.Value]
+                              {- Arity: 1, Strictness: <S,U>, Inline: [0] -}
+                            = \ (ww :: GHC.Prim.Int#) ->
+                              case GHC.Prim.tagToEnum#
+                                     @ GHC.Types.Bool
+                                     (GHC.Prim.>=# ww dt1) of wild2 {
+                                GHC.Types.False
+                                -> case GHC.Prim.indexArray#
+                                          @ Data.Aeson.Types.Internal.Value
+                                          dt2
+                                          (GHC.Prim.+# dt ww) of ds2 { Unit# ipv ->
+                                   GHC.Types.:
+                                     @ Data.Aeson.Types.Internal.Value
+                                     ipv
+                                     ($wgo (GHC.Prim.+# ww 1#)) }
+                                GHC.Types.True -> GHC.Types.[] @ Data.Aeson.Types.Internal.Value }
+                          } in
+                          N4JHelper.$fFromJSONLangList_go 0# ($wgo 0#)))
+                        `cast`
+                      (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                                <[N4JHelper.LangList]>_R)) } }) -}
+a1dd0baf3adafff198e24d1af1a275c9
+  $fFromJSONLangList_$cto ::
+    GHC.Generics.Rep N4JHelper.LangList x -> N4JHelper.LangList
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(U,1*U(U,U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ x (ds :: GHC.Generics.Rep N4JHelper.LangList x) ->
+                 case ds
+                        `cast`
+                      (Trans
+                           (Sub (N4JHelper.Rep_LangList[0]))
+                           (Trans
+                                (GHC.Generics.N:M1[0]
+                                     <GHC.Generics.D>_P
+                                     <'GHC.Generics.MetaData
+                                        "LangList"
+                                        "N4JHelper"
+                                        "crawler-0.1.0.0-2jLxW5sGj234Y0KdhjvaTi"
+                                        'GHC.Types.False>_P
+                                     <GHC.Generics.M1
+                                        GHC.Generics.C
+                                        ('GHC.Generics.MetaCons
+                                           "LangList" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                        (GHC.Generics.M1
+                                           GHC.Generics.S
+                                           ('GHC.Generics.MetaSel
+                                              ('GHC.Base.Just "all")
+                                              'GHC.Generics.NoSourceUnpackedness
+                                              'GHC.Generics.NoSourceStrictness
+                                              'GHC.Generics.DecidedLazy)
+                                           (GHC.Generics.K1 GHC.Generics.R [DBHelper.Language])
+                                         GHC.Generics.:*: (GHC.Generics.M1
+                                                             GHC.Generics.S
+                                                             ('GHC.Generics.MetaSel
+                                                                ('GHC.Base.Just "recomened")
+                                                                'GHC.Generics.NoSourceUnpackedness
+                                                                'GHC.Generics.NoSourceStrictness
+                                                                'GHC.Generics.DecidedLazy)
+                                                             (GHC.Generics.K1
+                                                                GHC.Generics.R [DBHelper.Language])
+                                                           GHC.Generics.:*: GHC.Generics.M1
+                                                                              GHC.Generics.S
+                                                                              ('GHC.Generics.MetaSel
+                                                                                 ('GHC.Base.Just
+                                                                                    "known")
+                                                                                 'GHC.Generics.NoSourceUnpackedness
+                                                                                 'GHC.Generics.NoSourceStrictness
+                                                                                 'GHC.Generics.DecidedLazy)
+                                                                              (GHC.Generics.K1
+                                                                                 GHC.Generics.R
+                                                                                 [DBHelper.Language])))>_R)
+                                (GHC.Generics.N:M1[0]
+                                     <GHC.Generics.C>_P
+                                     <'GHC.Generics.MetaCons
+                                        "LangList" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                                     <GHC.Generics.M1
+                                        GHC.Generics.S
+                                        ('GHC.Generics.MetaSel
+                                           ('GHC.Base.Just "all")
+                                           'GHC.Generics.NoSourceUnpackedness
+                                           'GHC.Generics.NoSourceStrictness
+                                           'GHC.Generics.DecidedLazy)
+                                        (GHC.Generics.K1 GHC.Generics.R [DBHelper.Language])
+                                      GHC.Generics.:*: (GHC.Generics.M1
+                                                          GHC.Generics.S
+                                                          ('GHC.Generics.MetaSel
+                                                             ('GHC.Base.Just "recomened")
+                                                             'GHC.Generics.NoSourceUnpackedness
+                                                             'GHC.Generics.NoSourceStrictness
+                                                             'GHC.Generics.DecidedLazy)
+                                                          (GHC.Generics.K1
+                                                             GHC.Generics.R [DBHelper.Language])
+                                                        GHC.Generics.:*: GHC.Generics.M1
+                                                                           GHC.Generics.S
+                                                                           ('GHC.Generics.MetaSel
+                                                                              ('GHC.Base.Just
+                                                                                 "known")
+                                                                              'GHC.Generics.NoSourceUnpackedness
+                                                                              'GHC.Generics.NoSourceStrictness
+                                                                              'GHC.Generics.DecidedLazy)
+                                                                           (GHC.Generics.K1
+                                                                              GHC.Generics.R
+                                                                              [DBHelper.Language]))>_R)) <x>_N) of wild { GHC.Generics.:*: ds1 ds2 ->
+                 case ds2 of wild1 { GHC.Generics.:*: ds3 ds4 ->
+                 N4JHelper.LangList
+                   ds1
+                     `cast`
+                   (Trans
+                        (GHC.Generics.N:M1[0]
+                             <GHC.Generics.S>_P
+                             <'GHC.Generics.MetaSel
+                                ('GHC.Base.Just "all")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy>_P
+                             <GHC.Generics.K1 GHC.Generics.R [DBHelper.Language]>_R <x>_N)
+                        (GHC.Generics.N:K1[0]
+                             <GHC.Generics.R>_P <[DBHelper.Language]>_R <x>_P))
+                   ds3
+                     `cast`
+                   (Trans
+                        (GHC.Generics.N:M1[0]
+                             <GHC.Generics.S>_P
+                             <'GHC.Generics.MetaSel
+                                ('GHC.Base.Just "recomened")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy>_P
+                             <GHC.Generics.K1 GHC.Generics.R [DBHelper.Language]>_R <x>_N)
+                        (GHC.Generics.N:K1[0]
+                             <GHC.Generics.R>_P <[DBHelper.Language]>_R <x>_P))
+                   ds4
+                     `cast`
+                   (Trans
+                        (GHC.Generics.N:M1[0]
+                             <GHC.Generics.S>_P
+                             <'GHC.Generics.MetaSel
+                                ('GHC.Base.Just "known")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy>_P
+                             <GHC.Generics.K1 GHC.Generics.R [DBHelper.Language]>_R <x>_N)
+                        (GHC.Generics.N:K1[0]
+                             <GHC.Generics.R>_P <[DBHelper.Language]>_R <x>_P)) } }) -}
+e9f6ce97bb8aa79fafacab8d440a7b4f
+  $fFromJSONLangList_$s$fFromJSON[] ::
+    Data.Aeson.Types.FromJSON.FromJSON [DBHelper.Language]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ [DBHelper.Language]
+                  (Data.Aeson.Types.FromJSON.$dmfromJSONKeyList_$cparseJSON
+                     @ DBHelper.Language
+                     DBHelper.$fFromJSONLanguage)
+                  (Data.Aeson.Types.FromJSON.$fFromJSONKey[]_$cparseJSONList
+                     @ DBHelper.Language
+                     DBHelper.$fFromJSONLanguage) -}
+9435c198caba6b08ac9ab3132df352ff
+  $fFromJSONLangList_$s$fSelectorMetaMetaSel ::
+    GHC.Generics.Selector
+      ('GHC.Generics.MetaSel
+         ('GHC.Base.Just "known")
+         'GHC.Generics.NoSourceUnpackedness
+         'GHC.Generics.NoSourceStrictness
+         'GHC.Generics.DecidedLazy)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ GHC.Generics.Meta
+                  @ ('GHC.Generics.MetaSel
+                       ('GHC.Base.Just "known")
+                       'GHC.Generics.NoSourceUnpackedness
+                       'GHC.Generics.NoSourceStrictness
+                       'GHC.Generics.DecidedLazy)
+                  N4JHelper.$fFromJSONLangList_$s$fSelectorMetaMetaSel_$cselName
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceUnpackedness
+                     @ ('GHC.Base.Just "known")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     N4JHelper.$fFromJSONLangList3
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceStrictness
+                     @ ('GHC.Base.Just "known")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     N4JHelper.$fFromJSONLangList3
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselDecidedStrictness
+                     @ ('GHC.Base.Just "known")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     N4JHelper.$fFromJSONLangList3
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N)) -}
+84b69c5818fcde42deed6a968f4091bf
+  $fFromJSONLangList_$s$fSelectorMetaMetaSel1 ::
+    GHC.Generics.Selector
+      ('GHC.Generics.MetaSel
+         ('GHC.Base.Just "recomened")
+         'GHC.Generics.NoSourceUnpackedness
+         'GHC.Generics.NoSourceStrictness
+         'GHC.Generics.DecidedLazy)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ GHC.Generics.Meta
+                  @ ('GHC.Generics.MetaSel
+                       ('GHC.Base.Just "recomened")
+                       'GHC.Generics.NoSourceUnpackedness
+                       'GHC.Generics.NoSourceStrictness
+                       'GHC.Generics.DecidedLazy)
+                  N4JHelper.$fFromJSONLangList_$s$fSelectorMetaMetaSel_$cselName1
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceUnpackedness
+                     @ ('GHC.Base.Just "recomened")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     N4JHelper.$fFromJSONLangList7
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceStrictness
+                     @ ('GHC.Base.Just "recomened")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     N4JHelper.$fFromJSONLangList7
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselDecidedStrictness
+                     @ ('GHC.Base.Just "recomened")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     N4JHelper.$fFromJSONLangList7
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N)) -}
+0bac55350ae6e7fb06901a4429d77a4e
+  $fFromJSONLangList_$s$fSelectorMetaMetaSel2 ::
+    GHC.Generics.Selector
+      ('GHC.Generics.MetaSel
+         ('GHC.Base.Just "all")
+         'GHC.Generics.NoSourceUnpackedness
+         'GHC.Generics.NoSourceStrictness
+         'GHC.Generics.DecidedLazy)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ GHC.Generics.Meta
+                  @ ('GHC.Generics.MetaSel
+                       ('GHC.Base.Just "all")
+                       'GHC.Generics.NoSourceUnpackedness
+                       'GHC.Generics.NoSourceStrictness
+                       'GHC.Generics.DecidedLazy)
+                  N4JHelper.$fFromJSONLangList_$s$fSelectorMetaMetaSel_$cselName2
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceUnpackedness
+                     @ ('GHC.Base.Just "all")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     N4JHelper.$fFromJSONLangList12
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceStrictness
+                     @ ('GHC.Base.Just "all")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     N4JHelper.$fFromJSONLangList12
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselDecidedStrictness
+                     @ ('GHC.Base.Just "all")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     N4JHelper.$fFromJSONLangList12
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N)) -}
+a3a0b1594b223477f25d3f3338ed63e5
+  $fFromJSONLangList_$s$fSelectorMetaMetaSel_$cselName ::
+    forall k (t :: GHC.Generics.Meta
+                   -> (GHC.Types.* -> GHC.Types.*) -> k -> *) (f :: GHC.Types.*
+                                                                    -> GHC.Types.*) (a :: k).
+    t ('GHC.Generics.MetaSel
+         ('GHC.Base.Just "known")
+         'GHC.Generics.NoSourceUnpackedness
+         'GHC.Generics.NoSourceStrictness
+         'GHC.Generics.DecidedLazy) f a
+    -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ k
+                   @ (t :: GHC.Generics.Meta
+                           -> (GHC.Types.* -> GHC.Types.*) -> k -> *)
+                   @ (f :: GHC.Types.* -> GHC.Types.*)
+                   @ (a :: k)
+                   (ds1 :: t ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "known")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy) f a) ->
+                 N4JHelper.$fFromJSONLangList6) -}
+8ed2a92d301dd11c28e9207e2ce31ae9
+  $fFromJSONLangList_$s$fSelectorMetaMetaSel_$cselName1 ::
+    forall k (t :: GHC.Generics.Meta
+                   -> (GHC.Types.* -> GHC.Types.*) -> k -> *) (f :: GHC.Types.*
+                                                                    -> GHC.Types.*) (a :: k).
+    t ('GHC.Generics.MetaSel
+         ('GHC.Base.Just "recomened")
+         'GHC.Generics.NoSourceUnpackedness
+         'GHC.Generics.NoSourceStrictness
+         'GHC.Generics.DecidedLazy) f a
+    -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ k
+                   @ (t :: GHC.Generics.Meta
+                           -> (GHC.Types.* -> GHC.Types.*) -> k -> *)
+                   @ (f :: GHC.Types.* -> GHC.Types.*)
+                   @ (a :: k)
+                   (ds1 :: t ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "recomened")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy) f a) ->
+                 N4JHelper.$fFromJSONLangList10) -}
+2bb14e92fbd2690e9eb4ab35b4514255
+  $fFromJSONLangList_$s$fSelectorMetaMetaSel_$cselName2 ::
+    forall k (t :: GHC.Generics.Meta
+                   -> (GHC.Types.* -> GHC.Types.*) -> k -> *) (f :: GHC.Types.*
+                                                                    -> GHC.Types.*) (a :: k).
+    t ('GHC.Generics.MetaSel
+         ('GHC.Base.Just "all")
+         'GHC.Generics.NoSourceUnpackedness
+         'GHC.Generics.NoSourceStrictness
+         'GHC.Generics.DecidedLazy) f a
+    -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ k
+                   @ (t :: GHC.Generics.Meta
+                           -> (GHC.Types.* -> GHC.Types.*) -> k -> *)
+                   @ (f :: GHC.Types.* -> GHC.Types.*)
+                   @ (a :: k)
+                   (ds1 :: t ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "all")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy) f a) ->
+                 N4JHelper.$fFromJSONLangList15) -}
+a1dd0baf3adafff198e24d1af1a275c9
+  $fFromJSONLangList_go ::
+    GHC.Prim.Int#
+    -> [Data.Aeson.Types.Internal.Value]
+    -> [Data.Aeson.Types.Internal.Parser N4JHelper.LangList]
+  {- Arity: 2, Strictness: <L,U><S,1*U> -}
+80402c95c22c3fbf9d9dd0d528df7c08
   $fGenericFDG :: GHC.Generics.Generic N4JHelper.FDG
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -3340,7 +4587,7 @@ b035d3f4a2eb8fd124020a0442db5c33
                   @ N4JHelper.FDG
                   N4JHelper.$fGenericFDG_$cfrom
                   N4JHelper.$fGenericFDG_$cto -}
-32fddc8b5d040a9c0bde8124d1d3d924
+80402c95c22c3fbf9d9dd0d528df7c08
   $fGenericFDG1 ::
     N4JHelper.FDG
     -> GHC.Generics.M1
@@ -3435,7 +4682,7 @@ b035d3f4a2eb8fd124020a0442db5c33
                                                (GHC.Generics.K1
                                                   GHC.Generics.R
                                                   [N4JHelper.FDGlink])>_R) <x>_N) }) -}
-32fddc8b5d040a9c0bde8124d1d3d924
+80402c95c22c3fbf9d9dd0d528df7c08
   $fGenericFDG_$cfrom ::
     N4JHelper.FDG -> GHC.Generics.Rep N4JHelper.FDG x
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
@@ -3475,7 +4722,7 @@ b035d3f4a2eb8fd124020a0442db5c33
                                                               GHC.Generics.R
                                                               [N4JHelper.FDGlink]))>_R))
                           (Sub (Sym (N4JHelper.Rep_FDG[0]))) <x>_N) -}
-32fddc8b5d040a9c0bde8124d1d3d924
+80402c95c22c3fbf9d9dd0d528df7c08
   $fGenericFDG_$cto ::
     GHC.Generics.Rep N4JHelper.FDG x -> N4JHelper.FDG
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
@@ -3564,7 +4811,7 @@ b035d3f4a2eb8fd124020a0442db5c33
                              <GHC.Generics.K1 GHC.Generics.R [N4JHelper.FDGlink]>_R <x>_N)
                         (GHC.Generics.N:K1[0]
                              <GHC.Generics.R>_P <[N4JHelper.FDGlink]>_R <x>_P)) }) -}
-1447b9c0229ba46a639bf54e1ff394ed
+40421eec4d544d3f73d85e282f8b98ad
   $fGenericFDGlink :: GHC.Generics.Generic N4JHelper.FDGlink
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -3572,7 +4819,7 @@ b035d3f4a2eb8fd124020a0442db5c33
                   @ N4JHelper.FDGlink
                   N4JHelper.$fGenericFDGlink_$cfrom
                   N4JHelper.$fFromJSONFDGlink_$cto -}
-1447b9c0229ba46a639bf54e1ff394ed
+40421eec4d544d3f73d85e282f8b98ad
   $fGenericFDGlink1 ::
     N4JHelper.FDGlink
     -> GHC.Generics.M1
@@ -3724,7 +4971,7 @@ b035d3f4a2eb8fd124020a0442db5c33
                                                                  (GHC.Generics.K1
                                                                     GHC.Generics.R
                                                                     GHC.Integer.Type.Integer))>_R) <x>_N) }) -}
-1447b9c0229ba46a639bf54e1ff394ed
+40421eec4d544d3f73d85e282f8b98ad
   $fGenericFDGlink_$cfrom ::
     N4JHelper.FDGlink -> GHC.Generics.Rep N4JHelper.FDGlink x
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U,U)>m,
@@ -3774,7 +5021,7 @@ b035d3f4a2eb8fd124020a0442db5c33
                                                                                 GHC.Generics.R
                                                                                 GHC.Integer.Type.Integer)))>_R))
                           (Sub (Sym (N4JHelper.Rep_FDGlink[0]))) <x>_N) -}
-09f59bdb265dbc71d31a3ee3268ed1bc
+7921c6ee722b8eb7631da61cb337b02b
   $fGenericFDGnode :: GHC.Generics.Generic N4JHelper.FDGnode
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -3782,7 +5029,7 @@ b035d3f4a2eb8fd124020a0442db5c33
                   @ N4JHelper.FDGnode
                   N4JHelper.$fGenericFDGnode_$cfrom
                   N4JHelper.$fGenericFDGnode_$cto -}
-09f59bdb265dbc71d31a3ee3268ed1bc
+7921c6ee722b8eb7631da61cb337b02b
   $fGenericFDGnode1 ::
     N4JHelper.FDGnode
     -> GHC.Generics.M1
@@ -3878,7 +5125,7 @@ b035d3f4a2eb8fd124020a0442db5c33
                                                (GHC.Generics.K1
                                                   GHC.Generics.R
                                                   GHC.Integer.Type.Integer)>_R) <x>_N) }) -}
-09f59bdb265dbc71d31a3ee3268ed1bc
+7921c6ee722b8eb7631da61cb337b02b
   $fGenericFDGnode_$cfrom ::
     N4JHelper.FDGnode -> GHC.Generics.Rep N4JHelper.FDGnode x
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
@@ -3918,7 +5165,7 @@ b035d3f4a2eb8fd124020a0442db5c33
                                                               GHC.Generics.R
                                                               GHC.Integer.Type.Integer))>_R))
                           (Sub (Sym (N4JHelper.Rep_FDGnode[0]))) <x>_N) -}
-09f59bdb265dbc71d31a3ee3268ed1bc
+7921c6ee722b8eb7631da61cb337b02b
   $fGenericFDGnode_$cto ::
     GHC.Generics.Rep N4JHelper.FDGnode x -> N4JHelper.FDGnode
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
@@ -4007,7 +5254,218 @@ b035d3f4a2eb8fd124020a0442db5c33
                              <GHC.Generics.K1 GHC.Generics.R GHC.Integer.Type.Integer>_R <x>_N)
                         (GHC.Generics.N:K1[0]
                              <GHC.Generics.R>_P <GHC.Integer.Type.Integer>_R <x>_P)) }) -}
-32fddc8b5d040a9c0bde8124d1d3d924
+a1dd0baf3adafff198e24d1af1a275c9
+  $fGenericLangList :: GHC.Generics.Generic N4JHelper.LangList
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ N4JHelper.LangList
+                  N4JHelper.$fGenericLangList_$cfrom
+                  N4JHelper.$fFromJSONLangList_$cto -}
+a1dd0baf3adafff198e24d1af1a275c9
+  $fGenericLangList1 ::
+    N4JHelper.LangList
+    -> GHC.Generics.M1
+         GHC.Generics.C
+         ('GHC.Generics.MetaCons
+            "LangList" 'GHC.Generics.PrefixI 'GHC.Types.True)
+         (GHC.Generics.M1
+            GHC.Generics.S
+            ('GHC.Generics.MetaSel
+               ('GHC.Base.Just "all")
+               'GHC.Generics.NoSourceUnpackedness
+               'GHC.Generics.NoSourceStrictness
+               'GHC.Generics.DecidedLazy)
+            (GHC.Generics.K1 GHC.Generics.R [DBHelper.Language])
+          GHC.Generics.:*: (GHC.Generics.M1
+                              GHC.Generics.S
+                              ('GHC.Generics.MetaSel
+                                 ('GHC.Base.Just "recomened")
+                                 'GHC.Generics.NoSourceUnpackedness
+                                 'GHC.Generics.NoSourceStrictness
+                                 'GHC.Generics.DecidedLazy)
+                              (GHC.Generics.K1 GHC.Generics.R [DBHelper.Language])
+                            GHC.Generics.:*: GHC.Generics.M1
+                                               GHC.Generics.S
+                                               ('GHC.Generics.MetaSel
+                                                  ('GHC.Base.Just "known")
+                                                  'GHC.Generics.NoSourceUnpackedness
+                                                  'GHC.Generics.NoSourceStrictness
+                                                  'GHC.Generics.DecidedLazy)
+                                               (GHC.Generics.K1
+                                                  GHC.Generics.R [DBHelper.Language])))
+         x
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U,U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ x (x1 :: N4JHelper.LangList) ->
+                 case x1 of wild { N4JHelper.LangList g1 g2 g3 ->
+                 (GHC.Generics.:*:
+                    @ (GHC.Generics.M1
+                         GHC.Generics.S
+                         ('GHC.Generics.MetaSel
+                            ('GHC.Base.Just "all")
+                            'GHC.Generics.NoSourceUnpackedness
+                            'GHC.Generics.NoSourceStrictness
+                            'GHC.Generics.DecidedLazy)
+                         (GHC.Generics.K1 GHC.Generics.R [DBHelper.Language]))
+                    @ (GHC.Generics.M1
+                         GHC.Generics.S
+                         ('GHC.Generics.MetaSel
+                            ('GHC.Base.Just "recomened")
+                            'GHC.Generics.NoSourceUnpackedness
+                            'GHC.Generics.NoSourceStrictness
+                            'GHC.Generics.DecidedLazy)
+                         (GHC.Generics.K1 GHC.Generics.R [DBHelper.Language])
+                       GHC.Generics.:*: GHC.Generics.M1
+                                          GHC.Generics.S
+                                          ('GHC.Generics.MetaSel
+                                             ('GHC.Base.Just "known")
+                                             'GHC.Generics.NoSourceUnpackedness
+                                             'GHC.Generics.NoSourceStrictness
+                                             'GHC.Generics.DecidedLazy)
+                                          (GHC.Generics.K1 GHC.Generics.R [DBHelper.Language]))
+                    @ x
+                    g1
+                      `cast`
+                    (Trans
+                         (Sym (GHC.Generics.N:K1[0]
+                                   <GHC.Generics.R>_P <[DBHelper.Language]>_R <x>_P))
+                         (Sym (GHC.Generics.N:M1[0]
+                                   <GHC.Generics.S>_P
+                                   <'GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "all")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy>_P
+                                   <GHC.Generics.K1 GHC.Generics.R [DBHelper.Language]>_R) <x>_N))
+                    (GHC.Generics.:*:
+                       @ (GHC.Generics.M1
+                            GHC.Generics.S
+                            ('GHC.Generics.MetaSel
+                               ('GHC.Base.Just "recomened")
+                               'GHC.Generics.NoSourceUnpackedness
+                               'GHC.Generics.NoSourceStrictness
+                               'GHC.Generics.DecidedLazy)
+                            (GHC.Generics.K1 GHC.Generics.R [DBHelper.Language]))
+                       @ (GHC.Generics.M1
+                            GHC.Generics.S
+                            ('GHC.Generics.MetaSel
+                               ('GHC.Base.Just "known")
+                               'GHC.Generics.NoSourceUnpackedness
+                               'GHC.Generics.NoSourceStrictness
+                               'GHC.Generics.DecidedLazy)
+                            (GHC.Generics.K1 GHC.Generics.R [DBHelper.Language]))
+                       @ x
+                       g2
+                         `cast`
+                       (Trans
+                            (Sym (GHC.Generics.N:K1[0]
+                                      <GHC.Generics.R>_P <[DBHelper.Language]>_R <x>_P))
+                            (Sym (GHC.Generics.N:M1[0]
+                                      <GHC.Generics.S>_P
+                                      <'GHC.Generics.MetaSel
+                                         ('GHC.Base.Just "recomened")
+                                         'GHC.Generics.NoSourceUnpackedness
+                                         'GHC.Generics.NoSourceStrictness
+                                         'GHC.Generics.DecidedLazy>_P
+                                      <GHC.Generics.K1
+                                         GHC.Generics.R [DBHelper.Language]>_R) <x>_N))
+                       g3
+                         `cast`
+                       (Trans
+                            (Sym (GHC.Generics.N:K1[0]
+                                      <GHC.Generics.R>_P <[DBHelper.Language]>_R <x>_P))
+                            (Sym (GHC.Generics.N:M1[0]
+                                      <GHC.Generics.S>_P
+                                      <'GHC.Generics.MetaSel
+                                         ('GHC.Base.Just "known")
+                                         'GHC.Generics.NoSourceUnpackedness
+                                         'GHC.Generics.NoSourceStrictness
+                                         'GHC.Generics.DecidedLazy>_P
+                                      <GHC.Generics.K1
+                                         GHC.Generics.R [DBHelper.Language]>_R) <x>_N))))
+                   `cast`
+                 (Sym (GHC.Generics.N:M1[0]
+                           <GHC.Generics.C>_P
+                           <'GHC.Generics.MetaCons
+                              "LangList" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                           <GHC.Generics.M1
+                              GHC.Generics.S
+                              ('GHC.Generics.MetaSel
+                                 ('GHC.Base.Just "all")
+                                 'GHC.Generics.NoSourceUnpackedness
+                                 'GHC.Generics.NoSourceStrictness
+                                 'GHC.Generics.DecidedLazy)
+                              (GHC.Generics.K1 GHC.Generics.R [DBHelper.Language])
+                            GHC.Generics.:*: (GHC.Generics.M1
+                                                GHC.Generics.S
+                                                ('GHC.Generics.MetaSel
+                                                   ('GHC.Base.Just "recomened")
+                                                   'GHC.Generics.NoSourceUnpackedness
+                                                   'GHC.Generics.NoSourceStrictness
+                                                   'GHC.Generics.DecidedLazy)
+                                                (GHC.Generics.K1 GHC.Generics.R [DBHelper.Language])
+                                              GHC.Generics.:*: GHC.Generics.M1
+                                                                 GHC.Generics.S
+                                                                 ('GHC.Generics.MetaSel
+                                                                    ('GHC.Base.Just "known")
+                                                                    'GHC.Generics.NoSourceUnpackedness
+                                                                    'GHC.Generics.NoSourceStrictness
+                                                                    'GHC.Generics.DecidedLazy)
+                                                                 (GHC.Generics.K1
+                                                                    GHC.Generics.R
+                                                                    [DBHelper.Language]))>_R) <x>_N) }) -}
+a1dd0baf3adafff198e24d1af1a275c9
+  $fGenericLangList_$cfrom ::
+    N4JHelper.LangList -> GHC.Generics.Rep N4JHelper.LangList x
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U,U)>m,
+     Unfolding: InlineRule (0, True, True)
+                N4JHelper.$fGenericLangList1
+                  `cast`
+                (forall (x :: <GHC.Types.*>_N).
+                 <N4JHelper.LangList>_R
+                 ->_R Trans
+                          (Sym (GHC.Generics.N:M1[0]
+                                    <GHC.Generics.D>_P
+                                    <'GHC.Generics.MetaData
+                                       "LangList"
+                                       "N4JHelper"
+                                       "crawler-0.1.0.0-2jLxW5sGj234Y0KdhjvaTi"
+                                       'GHC.Types.False>_P
+                                    <GHC.Generics.M1
+                                       GHC.Generics.C
+                                       ('GHC.Generics.MetaCons
+                                          "LangList" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                       (GHC.Generics.M1
+                                          GHC.Generics.S
+                                          ('GHC.Generics.MetaSel
+                                             ('GHC.Base.Just "all")
+                                             'GHC.Generics.NoSourceUnpackedness
+                                             'GHC.Generics.NoSourceStrictness
+                                             'GHC.Generics.DecidedLazy)
+                                          (GHC.Generics.K1 GHC.Generics.R [DBHelper.Language])
+                                        GHC.Generics.:*: (GHC.Generics.M1
+                                                            GHC.Generics.S
+                                                            ('GHC.Generics.MetaSel
+                                                               ('GHC.Base.Just "recomened")
+                                                               'GHC.Generics.NoSourceUnpackedness
+                                                               'GHC.Generics.NoSourceStrictness
+                                                               'GHC.Generics.DecidedLazy)
+                                                            (GHC.Generics.K1
+                                                               GHC.Generics.R [DBHelper.Language])
+                                                          GHC.Generics.:*: GHC.Generics.M1
+                                                                             GHC.Generics.S
+                                                                             ('GHC.Generics.MetaSel
+                                                                                ('GHC.Base.Just
+                                                                                   "known")
+                                                                                'GHC.Generics.NoSourceUnpackedness
+                                                                                'GHC.Generics.NoSourceStrictness
+                                                                                'GHC.Generics.DecidedLazy)
+                                                                             (GHC.Generics.K1
+                                                                                GHC.Generics.R
+                                                                                [DBHelper.Language])))>_R))
+                          (Sub (Sym (N4JHelper.Rep_LangList[0]))) <x>_N) -}
+80402c95c22c3fbf9d9dd0d528df7c08
   $fShowFDG :: GHC.Show.Show N4JHelper.FDG
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -4016,13 +5474,13 @@ b035d3f4a2eb8fd124020a0442db5c33
                   N4JHelper.$fShowFDG_$cshowsPrec
                   N4JHelper.$fShowFDG_$cshow
                   N4JHelper.$fShowFDG_$cshowList -}
-32fddc8b5d040a9c0bde8124d1d3d924
+80402c95c22c3fbf9d9dd0d528df7c08
   $fShowFDG1 :: N4JHelper.FDG -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (\ (w :: N4JHelper.FDG) (w1 :: GHC.Base.String) ->
                  case w of ww { N4JHelper.FDG ww1 ww2 ->
                  N4JHelper.$w$cshowsPrec 0# ww1 ww2 w1 }) -}
-32fddc8b5d040a9c0bde8124d1d3d924
+80402c95c22c3fbf9d9dd0d528df7c08
   $fShowFDG_$cshow :: N4JHelper.FDG -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
      Unfolding: InlineRule (1, True, False)
@@ -4031,13 +5489,13 @@ b035d3f4a2eb8fd124020a0442db5c33
                    GHC.Show.shows22
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-32fddc8b5d040a9c0bde8124d1d3d924
+80402c95c22c3fbf9d9dd0d528df7c08
   $fShowFDG_$cshowList :: [N4JHelper.FDG] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ N4JHelper.FDG
                    N4JHelper.$fShowFDG1) -}
-32fddc8b5d040a9c0bde8124d1d3d924
+80402c95c22c3fbf9d9dd0d528df7c08
   $fShowFDG_$cshowsPrec ::
     GHC.Types.Int -> N4JHelper.FDG -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U)><L,U>,
@@ -4049,7 +5507,7 @@ b035d3f4a2eb8fd124020a0442db5c33
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { N4JHelper.FDG ww3 ww4 ->
                  N4JHelper.$w$cshowsPrec ww1 ww3 ww4 w2 } }) -}
-1447b9c0229ba46a639bf54e1ff394ed
+40421eec4d544d3f73d85e282f8b98ad
   $fShowFDGlink :: GHC.Show.Show N4JHelper.FDGlink
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -4058,7 +5516,7 @@ b035d3f4a2eb8fd124020a0442db5c33
                   N4JHelper.$fShowFDGlink_$cshowsPrec
                   N4JHelper.$fShowFDGlink_$cshow
                   N4JHelper.$fShowFDGlink_$cshowList -}
-1447b9c0229ba46a639bf54e1ff394ed
+40421eec4d544d3f73d85e282f8b98ad
   $fShowFDGlink1 :: N4JHelper.FDGlink -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (\ (w :: N4JHelper.FDGlink) (w1 :: GHC.Base.String) ->
@@ -4082,7 +5540,7 @@ c30bb88f7e93edc631be1df577c9b8af
 a42954ca8cf27f16582166a980d4b9a7
   $fShowFDGlink7 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "FDGlink {"#) -}
-1447b9c0229ba46a639bf54e1ff394ed
+40421eec4d544d3f73d85e282f8b98ad
   $fShowFDGlink_$cshow :: N4JHelper.FDGlink -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U,U)>,
      Unfolding: InlineRule (1, True, False)
@@ -4091,13 +5549,13 @@ a42954ca8cf27f16582166a980d4b9a7
                    GHC.Show.shows22
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-1447b9c0229ba46a639bf54e1ff394ed
+40421eec4d544d3f73d85e282f8b98ad
   $fShowFDGlink_$cshowList :: [N4JHelper.FDGlink] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ N4JHelper.FDGlink
                    N4JHelper.$fShowFDGlink1) -}
-1447b9c0229ba46a639bf54e1ff394ed
+40421eec4d544d3f73d85e282f8b98ad
   $fShowFDGlink_$cshowsPrec ::
     GHC.Types.Int -> N4JHelper.FDGlink -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U,U)><L,U>,
@@ -4109,7 +5567,7 @@ a42954ca8cf27f16582166a980d4b9a7
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { N4JHelper.FDGlink ww3 ww4 ww5 ->
                  N4JHelper.$w$cshowsPrec1 ww1 ww3 ww4 ww5 w2 } }) -}
-09f59bdb265dbc71d31a3ee3268ed1bc
+7921c6ee722b8eb7631da61cb337b02b
   $fShowFDGnode :: GHC.Show.Show N4JHelper.FDGnode
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -4118,7 +5576,7 @@ a42954ca8cf27f16582166a980d4b9a7
                   N4JHelper.$fShowFDGnode_$cshowsPrec
                   N4JHelper.$fShowFDGnode_$cshow
                   N4JHelper.$fShowFDGnode_$cshowList -}
-09f59bdb265dbc71d31a3ee3268ed1bc
+7921c6ee722b8eb7631da61cb337b02b
   $fShowFDGnode1 :: N4JHelper.FDGnode -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (\ (w :: N4JHelper.FDGnode) (w1 :: GHC.Base.String) ->
@@ -4133,7 +5591,7 @@ a42954ca8cf27f16582166a980d4b9a7
 5ef30e08c9b2fa16ebb40b6731d58b12
   $fShowFDGnode4 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "FDGnode {"#) -}
-09f59bdb265dbc71d31a3ee3268ed1bc
+7921c6ee722b8eb7631da61cb337b02b
   $fShowFDGnode_$cshow :: N4JHelper.FDGnode -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U,U)>,
      Unfolding: InlineRule (1, True, False)
@@ -4142,13 +5600,13 @@ a42954ca8cf27f16582166a980d4b9a7
                    GHC.Show.shows22
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-09f59bdb265dbc71d31a3ee3268ed1bc
+7921c6ee722b8eb7631da61cb337b02b
   $fShowFDGnode_$cshowList :: [N4JHelper.FDGnode] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ N4JHelper.FDGnode
                    N4JHelper.$fShowFDGnode1) -}
-09f59bdb265dbc71d31a3ee3268ed1bc
+7921c6ee722b8eb7631da61cb337b02b
   $fShowFDGnode_$cshowsPrec ::
     GHC.Types.Int -> N4JHelper.FDGnode -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U,U)><L,U>,
@@ -4160,7 +5618,49 @@ a42954ca8cf27f16582166a980d4b9a7
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { N4JHelper.FDGnode ww3 ww4 ->
                  N4JHelper.$w$cshowsPrec2 ww1 ww3 ww4 w2 } }) -}
-32fddc8b5d040a9c0bde8124d1d3d924
+a1dd0baf3adafff198e24d1af1a275c9
+  $fShowLangList :: GHC.Show.Show N4JHelper.LangList
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ N4JHelper.LangList
+                  N4JHelper.$fShowLangList_$cshowsPrec
+                  N4JHelper.$fShowLangList_$cshow
+                  N4JHelper.$fShowLangList_$cshowList -}
+a1dd0baf3adafff198e24d1af1a275c9
+  $fShowLangList1 :: N4JHelper.LangList -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ (w :: N4JHelper.LangList) (w1 :: GHC.Base.String) ->
+                 case w of ww { N4JHelper.LangList ww1 ww2 ww3 ->
+                 N4JHelper.$w$cshowsPrec3 0# ww1 ww2 ww3 w1 }) -}
+a1dd0baf3adafff198e24d1af1a275c9
+  $fShowLangList_$cshow :: N4JHelper.LangList -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U,1*U,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: N4JHelper.LangList) ->
+                 N4JHelper.$fShowLangList_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+a1dd0baf3adafff198e24d1af1a275c9
+  $fShowLangList_$cshowList :: [N4JHelper.LangList] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ N4JHelper.LangList
+                   N4JHelper.$fShowLangList1) -}
+a1dd0baf3adafff198e24d1af1a275c9
+  $fShowLangList_$cshowsPrec ::
+    GHC.Types.Int -> N4JHelper.LangList -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U,1*U)><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: N4JHelper.LangList)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { N4JHelper.LangList ww3 ww4 ww5 ->
+                 N4JHelper.$w$cshowsPrec3 ww1 ww3 ww4 ww5 w2 } }) -}
+80402c95c22c3fbf9d9dd0d528df7c08
   $fToJSONFDG :: Data.Aeson.Types.ToJSON.ToJSON N4JHelper.FDG
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -4170,7 +5670,7 @@ a42954ca8cf27f16582166a980d4b9a7
                   N4JHelper.$fToJSONFDG_$ctoEncoding
                   N4JHelper.$fToJSONFDG_$ctoJSONList
                   N4JHelper.$fToJSONFDG_$ctoEncodingList -}
-32fddc8b5d040a9c0bde8124d1d3d924
+80402c95c22c3fbf9d9dd0d528df7c08
   $fToJSONFDG1 ::
     N4JHelper.FDG
     -> Data.Tagged.Tagged
@@ -4186,7 +5686,7 @@ a42954ca8cf27f16582166a980d4b9a7
                            <*>_N
                            <Data.Aeson.Types.Generic.True>_P
                            <Data.Aeson.Types.Internal.Value>_R)) } }) -}
-09f59bdb265dbc71d31a3ee3268ed1bc
+7921c6ee722b8eb7631da61cb337b02b
   $fToJSONFDG10 ::
     N4JHelper.FDGnode
     -> Data.Tagged.Tagged
@@ -4235,7 +5735,7 @@ dc7056b16b24122273a8fa758d49410f
              Data.Aeson.Types.Internal.Value,
            GHC.Types.Int) #)
   {- Arity: 4, Strictness: <S,1*U><L,U(U(U,U,U),U(U))><S,1*U><S,U> -}
-1f8f350dbdf2d7f02ddfbd0e7108fc8d
+9a476d99079379da681b2d40363fb472
   $fToJSONFDG2 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.ToJSON.ToArgs
@@ -4251,7 +5751,7 @@ dc7056b16b24122273a8fa758d49410f
                    (w2 :: GHC.Generics.K1 GHC.Generics.R [N4JHelper.FDGlink] a1) ->
                  case N4JHelper.$w$dGToJSON @ a1 w2 of ww { Unit# ww1 ->
                  Data.Aeson.Types.Internal.Array ww1 }) -}
-1447b9c0229ba46a639bf54e1ff394ed
+40421eec4d544d3f73d85e282f8b98ad
   $fToJSONFDG3 ::
     N4JHelper.FDGlink
     -> Data.Tagged.Tagged
@@ -4329,7 +5829,7 @@ ed104e895f85da9e7d9b27ecf16dc5a5
              Data.Aeson.Types.Internal.Value,
            GHC.Types.Int) #)
   {- Arity: 4, Strictness: <S,1*U><L,U(U(U,U,U),U(U))><S,1*U><S,U> -}
-7bb091c285432f1a4656d2bd8dadf2ae
+0e1268677d2ca82990f994d5c830f408
   $fToJSONFDG9 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.ToJSON.ToArgs
@@ -4345,7 +5845,7 @@ ed104e895f85da9e7d9b27ecf16dc5a5
                    (w2 :: GHC.Generics.K1 GHC.Generics.R [N4JHelper.FDGnode] a1) ->
                  case N4JHelper.$w$dGToJSON2 @ a1 w2 of ww { Unit# ww1 ->
                  Data.Aeson.Types.Internal.Array ww1 }) -}
-32fddc8b5d040a9c0bde8124d1d3d924
+80402c95c22c3fbf9d9dd0d528df7c08
   $fToJSONFDG_$ctoEncoding ::
     N4JHelper.FDG -> Data.Aeson.Encoding.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U(U,U)>, Inline: INLINE (sat-args=0),
@@ -4353,7 +5853,7 @@ ed104e895f85da9e7d9b27ecf16dc5a5
                 (\ (eta :: N4JHelper.FDG) ->
                  Data.Aeson.Encoding.Internal.value
                    (N4JHelper.$fToJSONFDG_$ctoJSON eta)) -}
-32fddc8b5d040a9c0bde8124d1d3d924
+80402c95c22c3fbf9d9dd0d528df7c08
   $fToJSONFDG_$ctoEncodingList ::
     [N4JHelper.FDG] -> Data.Aeson.Encoding.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U>, Inline: INLINE (sat-args=0),
@@ -4418,7 +5918,7 @@ ed104e895f85da9e7d9b27ecf16dc5a5
                         `cast`
                       (Sym (Data.Aeson.Encoding.Internal.N:Encoding'[0]
                                 <Data.Aeson.Types.Internal.Value>_P)) }) -}
-32fddc8b5d040a9c0bde8124d1d3d924
+80402c95c22c3fbf9d9dd0d528df7c08
   $fToJSONFDG_$ctoJSON ::
     N4JHelper.FDG -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U(U,U)>m1,
@@ -4430,7 +5930,7 @@ ed104e895f85da9e7d9b27ecf16dc5a5
                           <*>_N
                           <Data.Aeson.Types.Generic.True>_P
                           <Data.Aeson.Types.Internal.Value>_R) -}
-32fddc8b5d040a9c0bde8124d1d3d924
+80402c95c22c3fbf9d9dd0d528df7c08
   $fToJSONFDG_$ctoJSONList ::
     [N4JHelper.FDG] -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U>m2, Inline: INLINE (sat-args=0),
@@ -4477,7 +5977,7 @@ ed104e895f85da9e7d9b27ecf16dc5a5
                    GHC.Types.False
                    Data.Aeson.Types.Internal.defaultTaggedObject
                    GHC.Types.False) -}
-1447b9c0229ba46a639bf54e1ff394ed
+40421eec4d544d3f73d85e282f8b98ad
   $fToJSONFDGlink :: Data.Aeson.Types.ToJSON.ToJSON N4JHelper.FDGlink
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -4487,7 +5987,7 @@ ed104e895f85da9e7d9b27ecf16dc5a5
                   N4JHelper.$fToJSONFDGlink_$ctoEncoding
                   N4JHelper.$fToJSONFDGlink_$ctoJSONList
                   N4JHelper.$fToJSONFDGlink_$ctoEncodingList -}
-1447b9c0229ba46a639bf54e1ff394ed
+40421eec4d544d3f73d85e282f8b98ad
   $fToJSONFDGlink_$ctoEncoding ::
     N4JHelper.FDGlink -> Data.Aeson.Encoding.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U(U,U,U)>,
@@ -4496,7 +5996,7 @@ ed104e895f85da9e7d9b27ecf16dc5a5
                 (\ (eta :: N4JHelper.FDGlink) ->
                  Data.Aeson.Encoding.Internal.value
                    (N4JHelper.$fToJSONFDGlink_$ctoJSON eta)) -}
-1447b9c0229ba46a639bf54e1ff394ed
+40421eec4d544d3f73d85e282f8b98ad
   $fToJSONFDGlink_$ctoEncodingList ::
     [N4JHelper.FDGlink] -> Data.Aeson.Encoding.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U>, Inline: INLINE (sat-args=0),
@@ -4561,7 +6061,7 @@ ed104e895f85da9e7d9b27ecf16dc5a5
                         `cast`
                       (Sym (Data.Aeson.Encoding.Internal.N:Encoding'[0]
                                 <Data.Aeson.Types.Internal.Value>_P)) }) -}
-1447b9c0229ba46a639bf54e1ff394ed
+40421eec4d544d3f73d85e282f8b98ad
   $fToJSONFDGlink_$ctoJSON ::
     N4JHelper.FDGlink -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U(U,U,U)>m1,
@@ -4573,7 +6073,7 @@ ed104e895f85da9e7d9b27ecf16dc5a5
                           <*>_N
                           <Data.Aeson.Types.Generic.True>_P
                           <Data.Aeson.Types.Internal.Value>_R) -}
-1447b9c0229ba46a639bf54e1ff394ed
+40421eec4d544d3f73d85e282f8b98ad
   $fToJSONFDGlink_$ctoJSONList ::
     [N4JHelper.FDGlink] -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U>m2, Inline: INLINE (sat-args=0),
@@ -4610,7 +6110,7 @@ ed104e895f85da9e7d9b27ecf16dc5a5
                                     n
                                     eta)))) of dt1 { Data.Vector.Vector ipv ipv1 ipv2 ->
                  Data.Aeson.Types.Internal.Array dt1 }) -}
-09f59bdb265dbc71d31a3ee3268ed1bc
+7921c6ee722b8eb7631da61cb337b02b
   $fToJSONFDGnode :: Data.Aeson.Types.ToJSON.ToJSON N4JHelper.FDGnode
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -4620,7 +6120,7 @@ ed104e895f85da9e7d9b27ecf16dc5a5
                   N4JHelper.$fToJSONFDGnode_$ctoEncoding
                   N4JHelper.$fToJSONFDGnode_$ctoJSONList
                   N4JHelper.$fToJSONFDGnode_$ctoEncodingList -}
-09f59bdb265dbc71d31a3ee3268ed1bc
+7921c6ee722b8eb7631da61cb337b02b
   $fToJSONFDGnode_$ctoEncoding ::
     N4JHelper.FDGnode -> Data.Aeson.Encoding.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U(U,U)>, Inline: INLINE (sat-args=0),
@@ -4628,7 +6128,7 @@ ed104e895f85da9e7d9b27ecf16dc5a5
                 (\ (eta :: N4JHelper.FDGnode) ->
                  Data.Aeson.Encoding.Internal.value
                    (N4JHelper.$fToJSONFDGnode_$ctoJSON eta)) -}
-09f59bdb265dbc71d31a3ee3268ed1bc
+7921c6ee722b8eb7631da61cb337b02b
   $fToJSONFDGnode_$ctoEncodingList ::
     [N4JHelper.FDGnode] -> Data.Aeson.Encoding.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U>, Inline: INLINE (sat-args=0),
@@ -4693,7 +6193,7 @@ ed104e895f85da9e7d9b27ecf16dc5a5
                         `cast`
                       (Sym (Data.Aeson.Encoding.Internal.N:Encoding'[0]
                                 <Data.Aeson.Types.Internal.Value>_P)) }) -}
-09f59bdb265dbc71d31a3ee3268ed1bc
+7921c6ee722b8eb7631da61cb337b02b
   $fToJSONFDGnode_$ctoJSON ::
     N4JHelper.FDGnode -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U(U,U)>m1,
@@ -4705,7 +6205,7 @@ ed104e895f85da9e7d9b27ecf16dc5a5
                           <*>_N
                           <Data.Aeson.Types.Generic.True>_P
                           <Data.Aeson.Types.Internal.Value>_R) -}
-09f59bdb265dbc71d31a3ee3268ed1bc
+7921c6ee722b8eb7631da61cb337b02b
   $fToJSONFDGnode_$ctoJSONList ::
     [N4JHelper.FDGnode] -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U>m2, Inline: INLINE (sat-args=0),
@@ -4739,6 +6239,189 @@ ed104e895f85da9e7d9b27ecf16dc5a5
                                        @ N4JHelper.FDGnode
                                        c
                                        N4JHelper.$fToJSONFDGnode_$ctoJSON)
+                                    n
+                                    eta)))) of dt1 { Data.Vector.Vector ipv ipv1 ipv2 ->
+                 Data.Aeson.Types.Internal.Array dt1 }) -}
+a1dd0baf3adafff198e24d1af1a275c9
+  $fToJSONLangList ::
+    Data.Aeson.Types.ToJSON.ToJSON N4JHelper.LangList
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ N4JHelper.LangList
+                  N4JHelper.$fToJSONLangList_$ctoJSON
+                  N4JHelper.$fToJSONLangList_$ctoEncoding
+                  N4JHelper.$fToJSONLangList_$ctoJSONList
+                  N4JHelper.$fToJSONLangList_$ctoEncodingList -}
+a1dd0baf3adafff198e24d1af1a275c9
+  $fToJSONLangList1 ::
+    N4JHelper.LangList
+    -> Data.Tagged.Tagged
+         Data.Aeson.Types.Generic.True Data.Aeson.Types.Internal.Value
+  {- Arity: 1, Strictness: <S,1*U(U,U,U)>m1, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: N4JHelper.LangList) ->
+                 case w of ww { N4JHelper.LangList ww1 ww2 ww3 ->
+                 case N4JHelper.$w$ctoJSON3 ww1 ww2 ww3 of ww4 { Unit# ww5 ->
+                 (Data.Aeson.Types.Internal.Object ww5)
+                   `cast`
+                 (Sym (Data.Tagged.N:Tagged[0]
+                           <*>_N
+                           <Data.Aeson.Types.Generic.True>_P
+                           <Data.Aeson.Types.Internal.Value>_R)) } }) -}
+24060f3f1f65dd6728af513d85f7d479
+  $fToJSONLangList2 ::
+    Data.Aeson.Types.Internal.Options
+    -> Data.Aeson.Types.ToJSON.ToArgs
+         Data.Aeson.Types.Internal.Value Data.Aeson.Types.Generic.Zero a1
+    -> GHC.Generics.K1 GHC.Generics.R [DBHelper.Language] a1
+    -> Data.Aeson.Types.Internal.Value
+  {- Arity: 3, Strictness: <L,A><L,A><S,1*U>m2, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a1
+                   (w :: Data.Aeson.Types.Internal.Options)
+                   (w1 :: Data.Aeson.Types.ToJSON.ToArgs
+                            Data.Aeson.Types.Internal.Value Data.Aeson.Types.Generic.Zero a1)
+                   (w2 :: GHC.Generics.K1 GHC.Generics.R [DBHelper.Language] a1) ->
+                 case N4JHelper.$w$dGToJSON4 @ a1 w2 of ww { Unit# ww1 ->
+                 Data.Aeson.Types.Internal.Array ww1 }) -}
+6d661f73bffac80660e7dbbeab7b3c86
+  $fToJSONLangList3 ::
+    GHC.Types.SPEC
+    -> (Data.Vector.Generic.Base.Mutable
+          Data.Vector.Vector
+          (Control.Monad.Primitive.PrimState (GHC.ST.ST GHC.Prim.RealWorld))
+          Data.Aeson.Types.Internal.Value,
+        GHC.Types.Int)
+    -> [Data.Aeson.Types.Internal.Value]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          (Data.Vector.Generic.Base.Mutable
+             Data.Vector.Vector
+             (Control.Monad.Primitive.PrimState (GHC.ST.ST GHC.Prim.RealWorld))
+             Data.Aeson.Types.Internal.Value,
+           GHC.Types.Int) #)
+  {- Arity: 4, Strictness: <S,1*U><L,U(U(U,U,U),U(U))><S,1*U><S,U> -}
+a1dd0baf3adafff198e24d1af1a275c9
+  $fToJSONLangList_$ctoEncoding ::
+    N4JHelper.LangList -> Data.Aeson.Encoding.Internal.Encoding
+  {- Arity: 1, Strictness: <S,1*U(U,U,U)>,
+     Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, False)
+                (\ (eta :: N4JHelper.LangList) ->
+                 Data.Aeson.Encoding.Internal.value
+                   (N4JHelper.$fToJSONLangList_$ctoJSON eta)) -}
+a1dd0baf3adafff198e24d1af1a275c9
+  $fToJSONLangList_$ctoEncodingList ::
+    [N4JHelper.LangList] -> Data.Aeson.Encoding.Internal.Encoding
+  {- Arity: 1, Strictness: <S,1*U>, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, False)
+                (\ (eta :: [N4JHelper.LangList]) ->
+                 case eta of wild {
+                   [] -> Data.Aeson.Encoding.Internal.emptyArray_
+                   : x xs
+                   -> (Data.ByteString.Builder.Internal.append
+                         (Data.Aeson.Encoding.Internal.openBracket
+                            @ Data.Aeson.Types.Internal.Value)
+                           `cast`
+                         (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                              <Data.Aeson.Types.Internal.Value>_P)
+                         (Data.ByteString.Builder.Internal.append
+                            (Data.Aeson.Encoding.Internal.value
+                               (N4JHelper.$fToJSONLangList_$ctoJSON x))
+                              `cast`
+                            (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                 <Data.Aeson.Types.Internal.Value>_P)
+                            (Data.ByteString.Builder.Internal.append
+                               (GHC.Base.foldr
+                                  @ N4JHelper.LangList
+                                  @ (Data.Aeson.Encoding.Internal.Encoding'
+                                       Data.Aeson.Types.Internal.Value)
+                                  (\ (v :: N4JHelper.LangList)
+                                     (vs :: Data.Aeson.Encoding.Internal.Encoding'
+                                              Data.Aeson.Types.Internal.Value)[OneShot] ->
+                                   Data.ByteString.Builder.Internal.append
+                                     (Data.Aeson.Encoding.Internal.comma
+                                        @ Data.Aeson.Types.Internal.Value)
+                                       `cast`
+                                     (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                          <Data.Aeson.Types.Internal.Value>_P)
+                                     (Data.ByteString.Builder.Internal.append
+                                        (Data.Aeson.Encoding.Internal.value
+                                           (N4JHelper.$fToJSONLangList_$ctoJSON v))
+                                          `cast`
+                                        (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                             <Data.Aeson.Types.Internal.Value>_P)
+                                        vs
+                                          `cast`
+                                        (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                             <Data.Aeson.Types.Internal.Value>_P)))
+                                    `cast`
+                                  (<N4JHelper.LangList>_R
+                                   ->_R <Data.Aeson.Encoding.Internal.Encoding'
+                                           Data.Aeson.Types.Internal.Value>_R
+                                   ->_R Sym (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                                 <Data.Aeson.Types.Internal.Value>_P))
+                                  (Data.Aeson.Encoding.Internal.empty
+                                     @ Data.Aeson.Types.Internal.Value)
+                                  xs)
+                                 `cast`
+                               (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                    <Data.Aeson.Types.Internal.Value>_P)
+                               (Data.Aeson.Encoding.Internal.closeBracket
+                                  @ Data.Aeson.Types.Internal.Value)
+                                 `cast`
+                               (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                    <Data.Aeson.Types.Internal.Value>_P))))
+                        `cast`
+                      (Sym (Data.Aeson.Encoding.Internal.N:Encoding'[0]
+                                <Data.Aeson.Types.Internal.Value>_P)) }) -}
+a1dd0baf3adafff198e24d1af1a275c9
+  $fToJSONLangList_$ctoJSON ::
+    N4JHelper.LangList -> Data.Aeson.Types.Internal.Value
+  {- Arity: 1, Strictness: <S,1*U(U,U,U)>m1,
+     Unfolding: InlineRule (0, True, True)
+                N4JHelper.$fToJSONLangList1
+                  `cast`
+                (<N4JHelper.LangList>_R
+                 ->_R Data.Tagged.N:Tagged[0]
+                          <*>_N
+                          <Data.Aeson.Types.Generic.True>_P
+                          <Data.Aeson.Types.Internal.Value>_R) -}
+a1dd0baf3adafff198e24d1af1a275c9
+  $fToJSONLangList_$ctoJSONList ::
+    [N4JHelper.LangList] -> Data.Aeson.Types.Internal.Value
+  {- Arity: 1, Strictness: <S,1*U>m2, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, False)
+                (\ (eta :: [N4JHelper.LangList]) ->
+                 case Data.Vector.Generic.new
+                        @ Data.Vector.Vector
+                        @ Data.Aeson.Types.Internal.Value
+                        (Data.Vector.$fVectorVectora @ Data.Aeson.Types.Internal.Value)
+                        (Data.Vector.Generic.New.unstream
+                           @ Data.Vector.Vector
+                           @ Data.Aeson.Types.Internal.Value
+                           (Data.Vector.$fVectorVectora @ Data.Aeson.Types.Internal.Value)
+                           (Data.Vector.Fusion.Bundle.Monadic.unsafeFromList
+                              @ Data.Vector.Fusion.Util.Id
+                              @ Data.Aeson.Types.Internal.Value
+                              @ Data.Vector.Vector
+                              Data.Vector.Fusion.Util.$fMonadId
+                              Data.Vector.Fusion.Bundle.Size.Unknown
+                              (GHC.Base.build
+                                 @ Data.Aeson.Types.Internal.Value
+                                 (\ @ b1
+                                    (c :: Data.Aeson.Types.Internal.Value -> b1 -> b1)[OneShot]
+                                    (n :: b1)[OneShot] ->
+                                  GHC.Base.foldr
+                                    @ N4JHelper.LangList
+                                    @ b1
+                                    (GHC.Base.mapFB
+                                       @ Data.Aeson.Types.Internal.Value
+                                       @ b1
+                                       @ N4JHelper.LangList
+                                       c
+                                       N4JHelper.$fToJSONLangList_$ctoJSON)
                                     n
                                     eta)))) of dt1 { Data.Vector.Vector ipv ipv1 ipv2 ->
                  Data.Aeson.Types.Internal.Array dt1 }) -}
@@ -4778,6 +6461,18 @@ cd69add04064fd1e14b841cd6f9fa6de
   $tc'FDGnode1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "'FDGnode"#) -}
+c5d1f5f0ae85fece29c8ac8cb3e7c983
+  $tc'LangList :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11224528571609222411##
+                   6080248750637945501##
+                   N4JHelper.$trModule
+                   N4JHelper.$tc'LangList1) -}
+53678512cd3f4488ff8e5b668625d3d0
+  $tc'LangList1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'LangList"#) -}
 084dd261cad06c384ca9a7379798ab8f
   $tcFDG :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
@@ -4814,6 +6509,18 @@ cd69add04064fd1e14b841cd6f9fa6de
   $tcFDGnode1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "FDGnode"#) -}
+a98efa0566026d9f62d250c500e85784
+  $tcLangList :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5501333704819168233##
+                   15224328399116353046##
+                   N4JHelper.$trModule
+                   N4JHelper.$tcLangList1) -}
+61cc040a5b5e8ce994f3bac8a092093c
+  $tcLangList1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "LangList"#) -}
 25f8a2f099017edb83a78d8c9f4909b8
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
@@ -4849,7 +6556,7 @@ c41ab9a5697358eaba013080a9a408e7
                       case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild1 of wild2 {
                         GHC.Types.False -> GHC.Types.True
                         GHC.Types.True -> GHC.Types.False } } }) -}
-569fa8e085cc75bb0231a35f49523ceb
+f8cffcee5ecde4a28da274ff616d139d
   $w$c== ::
     [N4JHelper.FDGnode]
     -> [N4JHelper.FDGlink]
@@ -4914,7 +6621,44 @@ c4e01f2c4ffd9874f1b49365f460be45
                  case GHC.Base.eqString ww ww2 of wild {
                    GHC.Types.False -> GHC.Types.False
                    GHC.Types.True -> GHC.Integer.Type.eqInteger ww1 ww3 }) -}
-f718f270e6eb60b7c16127a749eda48e
+55f618e902db6fcd6338b8b637eec34b
+  $w$c==3 ::
+    [DBHelper.Language]
+    -> [DBHelper.Language]
+    -> [DBHelper.Language]
+    -> [DBHelper.Language]
+    -> [DBHelper.Language]
+    -> [DBHelper.Language]
+    -> GHC.Types.Bool
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U><L,1*U><S,1*U><L,1*U><L,1*U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: [DBHelper.Language])
+                   (ww1 :: [DBHelper.Language])
+                   (ww2 :: [DBHelper.Language])
+                   (ww3 :: [DBHelper.Language])
+                   (ww4 :: [DBHelper.Language])
+                   (ww5 :: [DBHelper.Language]) ->
+                 case GHC.Classes.$fEq[]_$c==
+                        @ DBHelper.Language
+                        DBHelper.$fEqLanguage
+                        ww
+                        ww3 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case GHC.Classes.$fEq[]_$c==
+                             @ DBHelper.Language
+                             DBHelper.$fEqLanguage
+                             ww1
+                             ww4 of wild1 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True
+                        -> GHC.Classes.$fEq[]_$c==
+                             @ DBHelper.Language
+                             DBHelper.$fEqLanguage
+                             ww2
+                             ww5 } }) -}
+8233f2197c81136ade4aed0689c9c3ce
   $w$cshowsPrec ::
     GHC.Prim.Int#
     -> [N4JHelper.FDGnode]
@@ -5048,7 +6792,17 @@ b45770265a3dc10d58bcde701ea3e2e6
                         @ GHC.Types.Char
                         GHC.Show.shows7
                         (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows4 w)) }) -}
-9eb7811e7e64aa46160d567ad1ef95b3
+5aeb46dce113758dd0734c59866d736c
+  $w$cshowsPrec3 ::
+    GHC.Prim.Int#
+    -> [DBHelper.Language]
+    -> [DBHelper.Language]
+    -> [DBHelper.Language]
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 5, Strictness: <S,U><L,1*U><L,1*U><L,1*U><L,U>,
+     Inline: [0] -}
+0ba9bd208204c41ec0027603f4199607
   $w$ctoJSON ::
     [N4JHelper.FDGnode]
     -> [N4JHelper.FDGlink] -> (# Data.Aeson.Types.Internal.Object #)
@@ -5342,7 +7096,132 @@ a2c0cb8600ff6348078c19eb310cd2a8
                            @ Data.Text.Internal.Text
                            @ Data.Aeson.Types.Internal.Value) of dt1 { DEFAULT ->
                  (# dt1 #) }) -}
-18604b77cdf155ee18a2dcbc4c493b02
+67bb56f3768c1e9cd0d37e34e6102432
+  $w$ctoJSON3 ::
+    [DBHelper.Language]
+    -> [DBHelper.Language]
+    -> [DBHelper.Language]
+    -> (# Data.Aeson.Types.Internal.Object #)
+  {- Arity: 3, Strictness: <L,U><L,U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: [DBHelper.Language])
+                   (ww1 :: [DBHelper.Language])
+                   (ww2 :: [DBHelper.Language]) ->
+                 case Data.Aeson.Types.Internal.$sfromList1
+                        @ Data.Aeson.Types.Internal.Value
+                        (Data.Aeson.Types.ToJSON.$fRecordToPairsarityM2
+                           @ ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "all")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy)
+                           @ Data.Aeson.Types.Generic.Zero
+                           @ (GHC.Generics.K1 GHC.Generics.R [DBHelper.Language])
+                           N4JHelper.$fFromJSONLangList_$s$fSelectorMetaMetaSel2
+                           N4JHelper.$fToJSONLangList2
+                             `cast`
+                           (Sym (Data.Aeson.Types.ToJSON.N:GToJSON[0]
+                                     <Data.Aeson.Types.Generic.Zero>_N
+                                     <GHC.Generics.K1 GHC.Generics.R [DBHelper.Language]>_N))
+                           @ GHC.Prim.Any
+                           N4JHelper.$fToJSONFDG_w2
+                           (Data.Aeson.Types.ToJSON.$WNoToArgs
+                              @ Data.Aeson.Types.Internal.Value
+                              @ GHC.Prim.Any)
+                           ww
+                             `cast`
+                           (Trans
+                                (Sym (GHC.Generics.N:K1[0]
+                                          <GHC.Generics.R>_P
+                                          <[DBHelper.Language]>_R
+                                          <GHC.Prim.Any>_P))
+                                (Sym (GHC.Generics.N:M1[0]
+                                          <GHC.Generics.S>_P
+                                          <'GHC.Generics.MetaSel
+                                             ('GHC.Base.Just "all")
+                                             'GHC.Generics.NoSourceUnpackedness
+                                             'GHC.Generics.NoSourceStrictness
+                                             'GHC.Generics.DecidedLazy>_P
+                                          <GHC.Generics.K1
+                                             GHC.Generics.R
+                                             [DBHelper.Language]>_R) <GHC.Prim.Any>_N))
+                           (Data.Aeson.Types.ToJSON.$fRecordToPairsarityM2
+                              @ ('GHC.Generics.MetaSel
+                                   ('GHC.Base.Just "recomened")
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                              @ Data.Aeson.Types.Generic.Zero
+                              @ (GHC.Generics.K1 GHC.Generics.R [DBHelper.Language])
+                              N4JHelper.$fFromJSONLangList_$s$fSelectorMetaMetaSel1
+                              N4JHelper.$fToJSONLangList2
+                                `cast`
+                              (Sym (Data.Aeson.Types.ToJSON.N:GToJSON[0]
+                                        <Data.Aeson.Types.Generic.Zero>_N
+                                        <GHC.Generics.K1 GHC.Generics.R [DBHelper.Language]>_N))
+                              @ GHC.Prim.Any
+                              N4JHelper.$fToJSONFDG_w2
+                              (Data.Aeson.Types.ToJSON.$WNoToArgs
+                                 @ Data.Aeson.Types.Internal.Value
+                                 @ GHC.Prim.Any)
+                              ww1
+                                `cast`
+                              (Trans
+                                   (Sym (GHC.Generics.N:K1[0]
+                                             <GHC.Generics.R>_P
+                                             <[DBHelper.Language]>_R
+                                             <GHC.Prim.Any>_P))
+                                   (Sym (GHC.Generics.N:M1[0]
+                                             <GHC.Generics.S>_P
+                                             <'GHC.Generics.MetaSel
+                                                ('GHC.Base.Just "recomened")
+                                                'GHC.Generics.NoSourceUnpackedness
+                                                'GHC.Generics.NoSourceStrictness
+                                                'GHC.Generics.DecidedLazy>_P
+                                             <GHC.Generics.K1
+                                                GHC.Generics.R
+                                                [DBHelper.Language]>_R) <GHC.Prim.Any>_N))
+                              (Data.Aeson.Types.ToJSON.$fRecordToPairsarityM2
+                                 @ ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "known")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                 @ Data.Aeson.Types.Generic.Zero
+                                 @ (GHC.Generics.K1 GHC.Generics.R [DBHelper.Language])
+                                 N4JHelper.$fFromJSONLangList_$s$fSelectorMetaMetaSel
+                                 N4JHelper.$fToJSONLangList2
+                                   `cast`
+                                 (Sym (Data.Aeson.Types.ToJSON.N:GToJSON[0]
+                                           <Data.Aeson.Types.Generic.Zero>_N
+                                           <GHC.Generics.K1 GHC.Generics.R [DBHelper.Language]>_N))
+                                 @ GHC.Prim.Any
+                                 N4JHelper.$fToJSONFDG_w2
+                                 (Data.Aeson.Types.ToJSON.$WNoToArgs
+                                    @ Data.Aeson.Types.Internal.Value
+                                    @ GHC.Prim.Any)
+                                 ww2
+                                   `cast`
+                                 (Trans
+                                      (Sym (GHC.Generics.N:K1[0]
+                                                <GHC.Generics.R>_P
+                                                <[DBHelper.Language]>_R
+                                                <GHC.Prim.Any>_P))
+                                      (Sym (GHC.Generics.N:M1[0]
+                                                <GHC.Generics.S>_P
+                                                <'GHC.Generics.MetaSel
+                                                   ('GHC.Base.Just "known")
+                                                   'GHC.Generics.NoSourceUnpackedness
+                                                   'GHC.Generics.NoSourceStrictness
+                                                   'GHC.Generics.DecidedLazy>_P
+                                                <GHC.Generics.K1
+                                                   GHC.Generics.R
+                                                   [DBHelper.Language]>_R) <GHC.Prim.Any>_N))
+                                 (GHC.Types.[] @ Data.Aeson.Types.Internal.Pair))))
+                        (Data.HashMap.Base.Empty
+                           @ Data.Text.Internal.Text
+                           @ Data.Aeson.Types.Internal.Value) of dt1 { DEFAULT ->
+                 (# dt1 #) }) -}
+755be2470defc8f1c2461826eaf67d4e
   $w$dGToJSON ::
     GHC.Generics.K1 GHC.Generics.R [N4JHelper.FDGlink] a1
     -> (# Data.Aeson.Types.Internal.Array #)
@@ -5451,7 +7330,7 @@ b8baf5defaf04964eeac565a802773f2
                            ipv }) of ds1 { (#,#) ipv ipv1 ->
                  case ipv1 of dt1 { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
                  (# dt1 #) } }) -}
-80096568cc61af7b127ffd5215624e59
+16c159aaecd6265efcc3155d1d042d63
   $w$dGToJSON2 ::
     GHC.Generics.K1 GHC.Generics.R [N4JHelper.FDGnode] a1
     -> (# Data.Aeson.Types.Internal.Array #)
@@ -5560,7 +7439,91 @@ b05fff0ece168d2f13f36730293124fe
                            ipv }) of ds1 { (#,#) ipv ipv1 ->
                  case ipv1 of dt1 { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
                  (# dt1 #) } }) -}
-8a713d028dad04099dca798befe75ab9
+943262c46358dacf7d5a8a5468f3465a
+  $w$dGToJSON4 ::
+    GHC.Generics.K1 GHC.Generics.R [DBHelper.Language] a1
+    -> (# Data.Aeson.Types.Internal.Array #)
+  {- Arity: 1, Strictness: <S,1*U>, Inline: [0],
+     Unfolding: (\ @ a1
+                   (w :: GHC.Generics.K1 GHC.Generics.R [DBHelper.Language] a1) ->
+                 case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ (Data.Vector.Vector Data.Aeson.Types.Internal.Value)
+                        (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                         case GHC.Prim.newArray#
+                                @ Data.Aeson.Types.Internal.Value
+                                @ (Control.Monad.Primitive.PrimState
+                                     (GHC.ST.ST GHC.Prim.RealWorld))
+                                0#
+                                (Data.Vector.Mutable.uninitialised
+                                   @ Data.Aeson.Types.Internal.Value)
+                                s1
+                                  `cast`
+                                (GHC.Prim.State#
+                                   (Sym (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                             <GHC.Prim.RealWorld>_N)))_R of ds1 { (#,#) ipv ipv1 ->
+                         case N4JHelper.$fToJSONLangList3
+                                GHC.Types.SPEC
+                                ((Data.Vector.Mutable.MVector
+                                    @ (Control.Monad.Primitive.PrimState
+                                         (GHC.ST.ST GHC.Prim.RealWorld))
+                                    @ Data.Aeson.Types.Internal.Value
+                                    0#
+                                    0#
+                                    ipv1)
+                                   `cast`
+                                 (Sub (Sym (Data.Vector.D:R:MutableVector[0])) <Control.Monad.Primitive.PrimState
+                                                                                  (GHC.ST.ST
+                                                                                     GHC.Prim.RealWorld)>_N <Data.Aeson.Types.Internal.Value>_N),
+                                 N4JHelper.$fToJSONFDG7)
+                                (GHC.Base.map
+                                   @ DBHelper.Language
+                                   @ Data.Aeson.Types.Internal.Value
+                                   DBHelper.$fToJSONLanguage1
+                                     `cast`
+                                   (<DBHelper.Language>_R
+                                    ->_R Data.Tagged.N:Tagged[0]
+                                             <*>_N
+                                             <Data.Aeson.Types.Generic.True>_P
+                                             <Data.Aeson.Types.Internal.Value>_R)
+                                   w `cast`
+                                   (GHC.Generics.N:K1[0]
+                                        <GHC.Generics.R>_P <[DBHelper.Language]>_R <a1>_P))
+                                ipv
+                                  `cast`
+                                (GHC.Prim.State#
+                                   (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                        <GHC.Prim.RealWorld>_N))_R of ds2 { (#,#) ipv6 ipv7 ->
+                         case ipv7 of wild5 { (,) v' n ->
+                         case v'
+                                `cast`
+                              (Sub (Data.Vector.D:R:MutableVector[0]) <Control.Monad.Primitive.PrimState
+                                                                         (GHC.ST.ST
+                                                                            GHC.Prim.RealWorld)>_N <Data.Aeson.Types.Internal.Value>_N) of wild { Data.Vector.Mutable.MVector dt dt1 dt2 ->
+                         case n of dt5 { GHC.Types.I# dt6 ->
+                         case GHC.Prim.unsafeFreezeArray#
+                                @ (Control.Monad.Primitive.PrimState
+                                     (GHC.ST.ST GHC.Prim.RealWorld))
+                                @ Data.Aeson.Types.Internal.Value
+                                dt2
+                                ipv6
+                                  `cast`
+                                (GHC.Prim.State#
+                                   (Sym (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                             <GHC.Prim.RealWorld>_N)))_R of ds4 { (#,#) ipv2 ipv3 ->
+                         (# ipv2
+                              `cast`
+                            (GHC.Prim.State#
+                               (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                    <GHC.Prim.RealWorld>_N))_R,
+                            Data.Vector.Vector
+                              @ Data.Aeson.Types.Internal.Value
+                              dt
+                              dt6
+                              ipv3 #) } } } } } }) of ds1 { (#,#) ipv1 ipv2 ->
+                 case ipv2 of dt1 { Data.Vector.Vector ipv ipv4 ipv5 ->
+                 (# dt1 #) } }) -}
+312e0ffeeb97486edaf42e496467c892
   $wfullFDG ::
     [DBHelper.UserDB]
     -> [DBHelper.RepoDB]
@@ -5580,7 +7543,7 @@ b05fff0ece168d2f13f36730293124fe
                           w1
                     } in
                     letrec {
-                      go23 :: [DBHelper.UserDB] -> [N4JHelper.FDGnode]
+                      go32 :: [DBHelper.UserDB] -> [N4JHelper.FDGnode]
                         {- Arity: 1, Strictness: <S,1*U> -}
                       = \ (ds :: [DBHelper.UserDB]) ->
                         case ds of wild {
@@ -5589,9 +7552,9 @@ b05fff0ece168d2f13f36730293124fe
                           -> GHC.Types.:
                                @ N4JHelper.FDGnode
                                (N4JHelper.userToNode y)
-                               (go23 ys) }
+                               (go32 ys) }
                     } in
-                    go23 w,
+                    go32 w,
                     N4JHelper.formatLinks w2 #)) -}
 d19bfc8b88eb4e8718293c75fb28a666
   $wouter ::
@@ -5615,19 +7578,24 @@ ae4863ddca31dca7f386f2776668cf95
           Data.Text.Internal.Text #)
   {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
      Inline: [0] -}
-32fddc8b5d040a9c0bde8124d1d3d924
+80402c95c22c3fbf9d9dd0d528df7c08
   data FDG
     = FDG {nodes :: [N4JHelper.FDGnode], links :: [N4JHelper.FDGlink]}
-1447b9c0229ba46a639bf54e1ff394ed
+40421eec4d544d3f73d85e282f8b98ad
   data FDGlink
     = FDGlink {source :: GHC.Base.String,
                target :: GHC.Base.String,
                value :: GHC.Integer.Type.Integer}
-09f59bdb265dbc71d31a3ee3268ed1bc
+7921c6ee722b8eb7631da61cb337b02b
   data FDGnode
     = FDGnode {id :: GHC.Base.String,
                group :: GHC.Integer.Type.Integer}
-32fddc8b5d040a9c0bde8124d1d3d924
+a1dd0baf3adafff198e24d1af1a275c9
+  data LangList
+    = LangList {all :: [DBHelper.Language],
+                recomened :: [DBHelper.Language],
+                known :: [DBHelper.Language]}
+80402c95c22c3fbf9d9dd0d528df7c08
   axiom Rep_FDG::
       GHC.Generics.Rep N4JHelper.FDG
         = GHC.Generics.D1
@@ -5653,7 +7621,7 @@ ae4863ddca31dca7f386f2776668cf95
                                       'GHC.Generics.NoSourceStrictness
                                       'GHC.Generics.DecidedLazy)
                                    (GHC.Generics.Rec0 [N4JHelper.FDGlink])))
-1447b9c0229ba46a639bf54e1ff394ed
+40421eec4d544d3f73d85e282f8b98ad
   axiom Rep_FDGlink::
       GHC.Generics.Rep N4JHelper.FDGlink
         = GHC.Generics.D1
@@ -5686,7 +7654,7 @@ ae4863ddca31dca7f386f2776668cf95
                                                         'GHC.Generics.NoSourceStrictness
                                                         'GHC.Generics.DecidedLazy)
                                                      (GHC.Generics.Rec0 GHC.Integer.Type.Integer))))
-09f59bdb265dbc71d31a3ee3268ed1bc
+7921c6ee722b8eb7631da61cb337b02b
   axiom Rep_FDGnode::
       GHC.Generics.Rep N4JHelper.FDGnode
         = GHC.Generics.D1
@@ -5712,7 +7680,47 @@ ae4863ddca31dca7f386f2776668cf95
                                       'GHC.Generics.NoSourceStrictness
                                       'GHC.Generics.DecidedLazy)
                                    (GHC.Generics.Rec0 GHC.Integer.Type.Integer)))
-dee02975c882c8eff81960568fc2bea8
+a1dd0baf3adafff198e24d1af1a275c9
+  axiom Rep_LangList::
+      GHC.Generics.Rep N4JHelper.LangList
+        = GHC.Generics.D1
+            ('GHC.Generics.MetaData
+               "LangList"
+               "N4JHelper"
+               "crawler-0.1.0.0-2jLxW5sGj234Y0KdhjvaTi"
+               'GHC.Types.False)
+            (GHC.Generics.C1
+               ('GHC.Generics.MetaCons
+                  "LangList" 'GHC.Generics.PrefixI 'GHC.Types.True)
+               (GHC.Generics.S1
+                  ('GHC.Generics.MetaSel
+                     ('GHC.Base.Just "all")
+                     'GHC.Generics.NoSourceUnpackedness
+                     'GHC.Generics.NoSourceStrictness
+                     'GHC.Generics.DecidedLazy)
+                  (GHC.Generics.Rec0 [DBHelper.Language])
+                GHC.Generics.:*: (GHC.Generics.S1
+                                    ('GHC.Generics.MetaSel
+                                       ('GHC.Base.Just "recomened")
+                                       'GHC.Generics.NoSourceUnpackedness
+                                       'GHC.Generics.NoSourceStrictness
+                                       'GHC.Generics.DecidedLazy)
+                                    (GHC.Generics.Rec0 [DBHelper.Language])
+                                  GHC.Generics.:*: GHC.Generics.S1
+                                                     ('GHC.Generics.MetaSel
+                                                        ('GHC.Base.Just "known")
+                                                        'GHC.Generics.NoSourceUnpackedness
+                                                        'GHC.Generics.NoSourceStrictness
+                                                        'GHC.Generics.DecidedLazy)
+                                                     (GHC.Generics.Rec0 [DBHelper.Language]))))
+1a4d27cc974ce7044b1ff7d8cb9701d2
+  all :: N4JHelper.LangList -> [DBHelper.Language]
+  RecSel Left N4JHelper.LangList
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: N4JHelper.LangList) ->
+                 case ds of wild { N4JHelper.LangList ds1 ds2 ds3 -> ds1 }) -}
+7ce8f37b84dc5ae4a62b7f93e8c51236
   formatLink :: DBHelper.LinkDB -> N4JHelper.FDGlink
   {- Arity: 1, HasNoCafRefs, Strictness: <L,U(1*U(U),A,1*U,1*U)>m,
      Inline: INLINE[0],
@@ -5724,7 +7732,7 @@ dee02975c882c8eff81960568fc2bea8
                    (case w of wild { DBHelper.LinkDB ds1 ds2 ds3 ds4 ->
                     case ds1 of wild1 { GHC.Types.I# i ->
                     GHC.Integer.Type.smallInteger i } })) -}
-f94c941d44a14511d39eb3de8aa86277
+67153fbd11c447cb98458088d26f4200
   formatLinks :: [DBHelper.LinkDB] -> [N4JHelper.FDGlink]
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
      Unfolding: InlineRule (1, True, False)
@@ -5745,7 +7753,7 @@ f94c941d44a14511d39eb3de8aa86277
                          N4JHelper.formatLink)
                       n
                       links1)) -}
-d347b9dd5109eae215205d81910b9597
+1d0ad19e3186bf58c8980cebdd990fe9
   fullFDG ::
     [DBHelper.UserDB]
     -> [DBHelper.RepoDB] -> [DBHelper.LinkDB] -> N4JHelper.FDG
@@ -5757,35 +7765,49 @@ d347b9dd5109eae215205d81910b9597
                    (w2 :: [DBHelper.LinkDB]) ->
                  case N4JHelper.$wfullFDG w w1 w2 of ww { (#,#) ww1 ww2 ->
                  N4JHelper.FDG ww1 ww2 }) -}
-8b95711a76806021b4b17a532ac0ea55
+17c55e6e80e89c62c8cb518fab305b75
   group :: N4JHelper.FDGnode -> GHC.Integer.Type.Integer
   RecSel Left N4JHelper.FDGnode
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: N4JHelper.FDGnode) ->
                  case ds of wild { N4JHelper.FDGnode ds1 ds2 -> ds2 }) -}
-3b8047627a007fa38c80b1f11957b3b2
+dc5bd8bb4c85901a6311390bd5005590
   id :: N4JHelper.FDGnode -> GHC.Base.String
   RecSel Left N4JHelper.FDGnode
   {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: N4JHelper.FDGnode) ->
                  case ds of wild { N4JHelper.FDGnode ds1 ds2 -> ds1 }) -}
-754c44526e3e8dd24ade66dc046ee051
+ffa7e67ff8ddfce64a92fa932e166692
+  known :: N4JHelper.LangList -> [DBHelper.Language]
+  RecSel Left N4JHelper.LangList
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: N4JHelper.LangList) ->
+                 case ds of wild { N4JHelper.LangList ds1 ds2 ds3 -> ds3 }) -}
+e0eb9ec1cef9437eeacc2f0374dda004
   links :: N4JHelper.FDG -> [N4JHelper.FDGlink]
   RecSel Left N4JHelper.FDG
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: N4JHelper.FDG) ->
                  case ds of wild { N4JHelper.FDG ds1 ds2 -> ds2 }) -}
-43ef50103d8c6b05f930f59dc3355ddd
+948b64cbd1654ae7366ffb5ea9535ea3
   nodes :: N4JHelper.FDG -> [N4JHelper.FDGnode]
   RecSel Left N4JHelper.FDG
   {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: N4JHelper.FDG) ->
                  case ds of wild { N4JHelper.FDG ds1 ds2 -> ds1 }) -}
-c7dd932ed7ddd7d0b5b2a3287de12bc0
+5d6da57e8764c6f5cb325fb6ff08f9bd
+  recomened :: N4JHelper.LangList -> [DBHelper.Language]
+  RecSel Left N4JHelper.LangList
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: N4JHelper.LangList) ->
+                 case ds of wild { N4JHelper.LangList ds1 ds2 ds3 -> ds2 }) -}
+5c875d4915d72f0d9aadf2587faa1b68
   repoToNode :: DBHelper.RepoDB -> N4JHelper.FDGnode
   {- Arity: 1, HasNoCafRefs, Strictness: <L,1*U(1*U,A,A,A,A)>m,
      Unfolding: InlineRule (1, True, False)
@@ -5794,7 +7816,7 @@ c7dd932ed7ddd7d0b5b2a3287de12bc0
 38481e5ebf5b2f92b0b82c9b92890839
   repoToNode1 :: GHC.Integer.Type.Integer
   {- HasNoCafRefs, Unfolding: (6) -}
-ca3acfad331fed15b85571609567e77f
+b9a7c22015ba01d447dc0ce60498400c
   reposToNodes :: [DBHelper.RepoDB] -> [N4JHelper.FDGnode]
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
      Unfolding: InlineRule (1, True, False)
@@ -5815,21 +7837,21 @@ ca3acfad331fed15b85571609567e77f
                          N4JHelper.repoToNode)
                       n
                       repos)) -}
-9a95b3ee08e3294210e7b8cfa680004e
+785f4ce1a757b91af5c91ced844f8b0f
   source :: N4JHelper.FDGlink -> GHC.Base.String
   RecSel Left N4JHelper.FDGlink
   {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U,A,A)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: N4JHelper.FDGlink) ->
                  case ds of wild { N4JHelper.FDGlink ds1 ds2 ds3 -> ds1 }) -}
-dbdc7ba5ec4cb15df216aab80ba90a59
+fb702bf76426c5489c258efec1ef0584
   target :: N4JHelper.FDGlink -> GHC.Base.String
   RecSel Left N4JHelper.FDGlink
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U,A)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: N4JHelper.FDGlink) ->
                  case ds of wild { N4JHelper.FDGlink ds1 ds2 ds3 -> ds2 }) -}
-6655583cc23a5cf20b66d56da156cce5
+f82c8f2c84fd260de7a2d845980cabc3
   userToNode :: DBHelper.UserDB -> N4JHelper.FDGnode
   {- Arity: 1, HasNoCafRefs, Strictness: <L,1*U(1*U)>m,
      Unfolding: InlineRule (1, True, False)
@@ -5838,7 +7860,7 @@ dbdc7ba5ec4cb15df216aab80ba90a59
 fbf3a5a7bb5e9d8dff389fb37912aa75
   userToNode1 :: GHC.Integer.Type.Integer
   {- HasNoCafRefs, Unfolding: (1) -}
-004d3232a7348d33d4990e3bed6f5e0b
+c85f3a52add4beb18d6c1691d7f63db7
   usersToNodes :: [DBHelper.UserDB] -> [N4JHelper.FDGnode]
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
      Unfolding: InlineRule (1, True, False)
@@ -5859,7 +7881,7 @@ fbf3a5a7bb5e9d8dff389fb37912aa75
                          N4JHelper.userToNode)
                       n
                       users)) -}
-c9d6ebfe2ba9c7889197f58784957274
+bf9c9313284bde109dbfc0df45fa2439
   value :: N4JHelper.FDGlink -> GHC.Integer.Type.Integer
   RecSel Left N4JHelper.FDGlink
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U)>,
@@ -5869,29 +7891,41 @@ c9d6ebfe2ba9c7889197f58784957274
 instance GHC.Classes.Eq [N4JHelper.FDG] = N4JHelper.$fEqFDG
 instance GHC.Classes.Eq [N4JHelper.FDGlink] = N4JHelper.$fEqFDGlink
 instance GHC.Classes.Eq [N4JHelper.FDGnode] = N4JHelper.$fEqFDGnode
+instance GHC.Classes.Eq [N4JHelper.LangList]
+  = N4JHelper.$fEqLangList
 instance Data.Aeson.Types.FromJSON.FromJSON [N4JHelper.FDG]
   = N4JHelper.$fFromJSONFDG
 instance Data.Aeson.Types.FromJSON.FromJSON [N4JHelper.FDGlink]
   = N4JHelper.$fFromJSONFDGlink
 instance Data.Aeson.Types.FromJSON.FromJSON [N4JHelper.FDGnode]
   = N4JHelper.$fFromJSONFDGnode
+instance Data.Aeson.Types.FromJSON.FromJSON [N4JHelper.LangList]
+  = N4JHelper.$fFromJSONLangList
 instance GHC.Generics.Generic [N4JHelper.FDG]
   = N4JHelper.$fGenericFDG
 instance GHC.Generics.Generic [N4JHelper.FDGlink]
   = N4JHelper.$fGenericFDGlink
 instance GHC.Generics.Generic [N4JHelper.FDGnode]
   = N4JHelper.$fGenericFDGnode
+instance GHC.Generics.Generic [N4JHelper.LangList]
+  = N4JHelper.$fGenericLangList
 instance GHC.Show.Show [N4JHelper.FDG] = N4JHelper.$fShowFDG
 instance GHC.Show.Show [N4JHelper.FDGlink]
   = N4JHelper.$fShowFDGlink
 instance GHC.Show.Show [N4JHelper.FDGnode]
   = N4JHelper.$fShowFDGnode
+instance GHC.Show.Show [N4JHelper.LangList]
+  = N4JHelper.$fShowLangList
 instance Data.Aeson.Types.ToJSON.ToJSON [N4JHelper.FDG]
   = N4JHelper.$fToJSONFDG
 instance Data.Aeson.Types.ToJSON.ToJSON [N4JHelper.FDGlink]
   = N4JHelper.$fToJSONFDGlink
 instance Data.Aeson.Types.ToJSON.ToJSON [N4JHelper.FDGnode]
   = N4JHelper.$fToJSONFDGnode
+instance Data.Aeson.Types.ToJSON.ToJSON [N4JHelper.LangList]
+  = N4JHelper.$fToJSONLangList
+family instance GHC.Generics.Rep [N4JHelper.LangList]
+  = N4JHelper.Rep_LangList
 family instance GHC.Generics.Rep [N4JHelper.FDG]
   = N4JHelper.Rep_FDG
 family instance GHC.Generics.Rep [N4JHelper.FDGlink]
@@ -5912,6 +7946,30 @@ family instance GHC.Generics.Rep [N4JHelper.FDGnode]
   Data.Aeson.Types.FromJSON.$fFromJSON[] @ N4JHelper.FDGnode
                                          $dFromJSON
   = N4JHelper.$fFromJSONFDG_$s$fFromJSON[]1
+"SPEC/N4JHelper $fFromJSON[] @ Language" [ALWAYS] forall ($dFromJSON :: Data.Aeson.Types.FromJSON.FromJSON
+                                                                          DBHelper.Language)
+  Data.Aeson.Types.FromJSON.$fFromJSON[] @ DBHelper.Language
+                                         $dFromJSON
+  = N4JHelper.$fFromJSONLangList_$s$fFromJSON[]
+"SPEC/N4JHelper $fSelectorMetaMetaSel @ ('Just
+                                          "all") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI3 :: GHC.Generics.SingI
+                                                                                                                                                                                             'GHC.Generics.DecidedLazy)
+                                                                                                                                                                              ($dSingI2 :: GHC.Generics.SingI
+                                                                                                                                                                                             'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                              ($dSingI1 :: GHC.Generics.SingI
+                                                                                                                                                                                             'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                              ($dSingI :: GHC.Generics.SingI
+                                                                                                                                                                                            ('GHC.Base.Just
+                                                                                                                                                                                               "all"))
+  GHC.Generics.$fSelectorMetaMetaSel @ ('GHC.Base.Just "all")
+                                     @ 'GHC.Generics.NoSourceUnpackedness
+                                     @ 'GHC.Generics.NoSourceStrictness
+                                     @ 'GHC.Generics.DecidedLazy
+                                     $dSingI
+                                     $dSingI1
+                                     $dSingI2
+                                     $dSingI3
+  = N4JHelper.$fFromJSONLangList_$s$fSelectorMetaMetaSel2
 "SPEC/N4JHelper $fSelectorMetaMetaSel @ ('Just
                                           "group") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI3 :: GHC.Generics.SingI
                                                                                                                                                                                                'GHC.Generics.DecidedLazy)
@@ -5951,6 +8009,25 @@ family instance GHC.Generics.Rep [N4JHelper.FDGnode]
                                      $dSingI3
   = N4JHelper.$fFromJSONFDGnode_$s$fSelectorMetaMetaSel1
 "SPEC/N4JHelper $fSelectorMetaMetaSel @ ('Just
+                                          "known") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI3 :: GHC.Generics.SingI
+                                                                                                                                                                                               'GHC.Generics.DecidedLazy)
+                                                                                                                                                                                ($dSingI2 :: GHC.Generics.SingI
+                                                                                                                                                                                               'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                                ($dSingI1 :: GHC.Generics.SingI
+                                                                                                                                                                                               'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                                ($dSingI :: GHC.Generics.SingI
+                                                                                                                                                                                              ('GHC.Base.Just
+                                                                                                                                                                                                 "known"))
+  GHC.Generics.$fSelectorMetaMetaSel @ ('GHC.Base.Just "known")
+                                     @ 'GHC.Generics.NoSourceUnpackedness
+                                     @ 'GHC.Generics.NoSourceStrictness
+                                     @ 'GHC.Generics.DecidedLazy
+                                     $dSingI
+                                     $dSingI1
+                                     $dSingI2
+                                     $dSingI3
+  = N4JHelper.$fFromJSONLangList_$s$fSelectorMetaMetaSel
+"SPEC/N4JHelper $fSelectorMetaMetaSel @ ('Just
                                           "links") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI3 :: GHC.Generics.SingI
                                                                                                                                                                                                'GHC.Generics.DecidedLazy)
                                                                                                                                                                                 ($dSingI2 :: GHC.Generics.SingI
@@ -5988,6 +8065,25 @@ family instance GHC.Generics.Rep [N4JHelper.FDGnode]
                                      $dSingI2
                                      $dSingI3
   = N4JHelper.$fFromJSONFDG_$s$fSelectorMetaMetaSel1
+"SPEC/N4JHelper $fSelectorMetaMetaSel @ ('Just
+                                          "recomened") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI3 :: GHC.Generics.SingI
+                                                                                                                                                                                                   'GHC.Generics.DecidedLazy)
+                                                                                                                                                                                    ($dSingI2 :: GHC.Generics.SingI
+                                                                                                                                                                                                   'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                                    ($dSingI1 :: GHC.Generics.SingI
+                                                                                                                                                                                                   'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                                    ($dSingI :: GHC.Generics.SingI
+                                                                                                                                                                                                  ('GHC.Base.Just
+                                                                                                                                                                                                     "recomened"))
+  GHC.Generics.$fSelectorMetaMetaSel @ ('GHC.Base.Just "recomened")
+                                     @ 'GHC.Generics.NoSourceUnpackedness
+                                     @ 'GHC.Generics.NoSourceStrictness
+                                     @ 'GHC.Generics.DecidedLazy
+                                     $dSingI
+                                     $dSingI1
+                                     $dSingI2
+                                     $dSingI3
+  = N4JHelper.$fFromJSONLangList_$s$fSelectorMetaMetaSel1
 "SPEC/N4JHelper $fSelectorMetaMetaSel @ ('Just
                                           "source") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI3 :: GHC.Generics.SingI
                                                                                                                                                                                                 'GHC.Generics.DecidedLazy)
@@ -6046,6 +8142,26 @@ family instance GHC.Generics.Rep [N4JHelper.FDGnode]
                                      $dSingI3
   = N4JHelper.$fFromJSONFDGlink_$s$fSelectorMetaMetaSel
 "SPEC/N4JHelper $fSelectorMetaMetaSel_$cselName @ ('Just
+                                                    "all") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI3 :: GHC.Generics.SingI
+                                                                                                                                                                                                                 'GHC.Generics.DecidedLazy)
+                                                                                                                                                                                                  ($dSingI2 :: GHC.Generics.SingI
+                                                                                                                                                                                                                 'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                                                  ($dSingI1 :: GHC.Generics.SingI
+                                                                                                                                                                                                                 'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                                                  ($dSingI :: GHC.Generics.SingI
+                                                                                                                                                                                                                ('GHC.Base.Just
+                                                                                                                                                                                                                   "all"))
+  GHC.Generics.$fSelectorMetaMetaSel_$cselName @ ('GHC.Base.Just
+                                                    "all")
+                                               @ 'GHC.Generics.NoSourceUnpackedness
+                                               @ 'GHC.Generics.NoSourceStrictness
+                                               @ 'GHC.Generics.DecidedLazy
+                                               $dSingI
+                                               $dSingI1
+                                               $dSingI2
+                                               $dSingI3
+  = N4JHelper.$fFromJSONLangList_$s$fSelectorMetaMetaSel_$cselName2
+"SPEC/N4JHelper $fSelectorMetaMetaSel_$cselName @ ('Just
                                                     "group") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI3 :: GHC.Generics.SingI
                                                                                                                                                                                                                    'GHC.Generics.DecidedLazy)
                                                                                                                                                                                                     ($dSingI2 :: GHC.Generics.SingI
@@ -6086,6 +8202,26 @@ family instance GHC.Generics.Rep [N4JHelper.FDGnode]
                                                $dSingI3
   = N4JHelper.$fFromJSONFDGnode_$s$fSelectorMetaMetaSel_$cselName1
 "SPEC/N4JHelper $fSelectorMetaMetaSel_$cselName @ ('Just
+                                                    "known") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI3 :: GHC.Generics.SingI
+                                                                                                                                                                                                                   'GHC.Generics.DecidedLazy)
+                                                                                                                                                                                                    ($dSingI2 :: GHC.Generics.SingI
+                                                                                                                                                                                                                   'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                                                    ($dSingI1 :: GHC.Generics.SingI
+                                                                                                                                                                                                                   'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                                                    ($dSingI :: GHC.Generics.SingI
+                                                                                                                                                                                                                  ('GHC.Base.Just
+                                                                                                                                                                                                                     "known"))
+  GHC.Generics.$fSelectorMetaMetaSel_$cselName @ ('GHC.Base.Just
+                                                    "known")
+                                               @ 'GHC.Generics.NoSourceUnpackedness
+                                               @ 'GHC.Generics.NoSourceStrictness
+                                               @ 'GHC.Generics.DecidedLazy
+                                               $dSingI
+                                               $dSingI1
+                                               $dSingI2
+                                               $dSingI3
+  = N4JHelper.$fFromJSONLangList_$s$fSelectorMetaMetaSel_$cselName
+"SPEC/N4JHelper $fSelectorMetaMetaSel_$cselName @ ('Just
                                                     "links") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI3 :: GHC.Generics.SingI
                                                                                                                                                                                                                    'GHC.Generics.DecidedLazy)
                                                                                                                                                                                                     ($dSingI2 :: GHC.Generics.SingI
@@ -6125,6 +8261,26 @@ family instance GHC.Generics.Rep [N4JHelper.FDGnode]
                                                $dSingI2
                                                $dSingI3
   = N4JHelper.$fFromJSONFDG_$s$fSelectorMetaMetaSel_$cselName1
+"SPEC/N4JHelper $fSelectorMetaMetaSel_$cselName @ ('Just
+                                                    "recomened") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI3 :: GHC.Generics.SingI
+                                                                                                                                                                                                                       'GHC.Generics.DecidedLazy)
+                                                                                                                                                                                                        ($dSingI2 :: GHC.Generics.SingI
+                                                                                                                                                                                                                       'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                                                        ($dSingI1 :: GHC.Generics.SingI
+                                                                                                                                                                                                                       'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                                                        ($dSingI :: GHC.Generics.SingI
+                                                                                                                                                                                                                      ('GHC.Base.Just
+                                                                                                                                                                                                                         "recomened"))
+  GHC.Generics.$fSelectorMetaMetaSel_$cselName @ ('GHC.Base.Just
+                                                    "recomened")
+                                               @ 'GHC.Generics.NoSourceUnpackedness
+                                               @ 'GHC.Generics.NoSourceStrictness
+                                               @ 'GHC.Generics.DecidedLazy
+                                               $dSingI
+                                               $dSingI1
+                                               $dSingI2
+                                               $dSingI3
+  = N4JHelper.$fFromJSONLangList_$s$fSelectorMetaMetaSel_$cselName1
 "SPEC/N4JHelper $fSelectorMetaMetaSel_$cselName @ ('Just
                                                     "source") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI3 :: GHC.Generics.SingI
                                                                                                                                                                                                                     'GHC.Generics.DecidedLazy)
