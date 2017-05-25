@@ -1,24 +1,14 @@
 <div .ui.container>
 
     <h1>
-      Access granted!
+      Hi #{textName}
 
     <p>
-      This page is protected and access is allowed only for authenticated users.
-
-    <p>
-      Your data is protected with us <strong><span class="username">#{textName}</span></strong>! 
-    <p id="fromGet">
       
+    <p>Graph of network of GitHub repositories and users.
     <svg width="960" height="600">
+    <p>Chart of popularity of languages according to number of users who have knowledge of them.
+    <svg .svg>
     <script src="https://d3js.org/d3.v4.min.js">
-    <script>
-        
-    <p>
-      <br>#{show sess}>
-      <br>#{textName} has #{repNo} repositorys
-      <br>#{show repositorys}
-      
-      <br>#{stared}
       
      

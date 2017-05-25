@@ -1,9 +1,8 @@
-<div .masthead>
     <div .container>
         <div .row>
             <h1 .header>
                 What to Learn Next
             <h2>
                 Levering data from git to tell you what language to learn next.
-            <a class="btn btn-info btn-lg" href="http://localhost:3000/auth/login">To Start Please Log in</a>
+            <a class="btn btn-info btn-lg" href="http://localhost:3000/auth/page/github/forward">To Start Please Log in</a>
                   

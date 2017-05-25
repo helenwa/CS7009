@@ -98,6 +98,7 @@ crawlUser ttl auth user  = do
     repositorys <- reposOf (pack ( DBHelper.userId user)) auth
     x <- mapM addRepo repositorys
     links <- mapM (makeLink userRepo contributesTo user) repositorys
+    ll <- mapM (langKnowledgeur user) (repositorys) 
     y <- mapM addLink links
     if (ttl>0)  
              then  mapM_ (crawlRepo (ttl - 1) auth) repositorys 

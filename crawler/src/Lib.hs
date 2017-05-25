@@ -1,5 +1,7 @@
 {-# LANGUAGE DataKinds       #-}
 {-# LANGUAGE TypeOperators   #-}
+{-# LANGUAGE OverloadedStrings      #-}
+{-# LANGUAGE ExtendedDefaultRules   #-}
 
 module Lib
     ( startApp
@@ -77,5 +79,7 @@ startC usern hops=  liftIO $ do
     
 userLanguages :: String -> ApiHandler LangList
 userLanguages useId = liftIO $ do
-    let lang = LangList [] [] []
+    all <- allLanguages
+    users <- userLanguageList useId
+    let lang = LangList all [] users
     return lang

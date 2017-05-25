@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2017-05-23 20:51:31.3458967 UTC
+2017-05-24 10:05:24.4798864 UTC
 
 interface crawler-0.1.0.0-2jLxW5sGj234Y0KdhjvaTi:GithubHelper 8002
-  interface hash: 49d5f9602f095f35a52e3af0edfa9bde
+  interface hash: eb3d710f29ec6dcd5209ebe2d100105e
   ABI hash: 76f3aeceaec545f7f8c42d78d5aebeda
   export-list hash: aa09f13c73ce6378036fb6e4bc5ae4ab
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
@@ -225,8 +225,8 @@ import  -/  base-4.9.1.0:GHC.Show eca5834daba3b6a2bbbe64ab52056707
 import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
 import  -/  base-4.9.1.0:System.IO 5daf3f384209c11d9566e3409af8ec5d
 import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Char8 53131bf786c5438dfe07ccfe89b878d8
-import  -/  DBHelper fe5907f8f6b4d5b4914032964b6a1341
-  exports: bff7db70658ae05bc05d7cf849f54825
+import  -/  DBHelper cd4d9bae5b06001a77648f7592859dd1
+  exports: 37c782b3fdb5a3b6ba42a5bf3a6fc5fe
   RepoDB 58c77e1ac15364f22941ea0e18556630
   RepoDB 11c665402619553a2690f82da4927c4a
   UserDB 1ed67281bfa5d868af57a4119a0ce594
@@ -236,6 +236,7 @@ import  -/  DBHelper fe5907f8f6b4d5b4914032964b6a1341
   addUser 13c05ac81ed299ec0c1807719cec4e63
   contributesTo 22c691084d66c7dfa4a9bd1a244ea203
   langKnowledge 517e719794934f7b96fb244d8854f12d
+  langKnowledgeur 654f1e37f94d0c2c2c0d4baf771da743
   makeLink 0a4133548aec433610c1c6e9130ec976
   makeLink2 bd7b17842031888179dfe4bc4dce9d1a
   repoLanguage fc268c286e711cba15ca367b0d66cac2
