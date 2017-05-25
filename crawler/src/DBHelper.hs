@@ -102,17 +102,29 @@ allLinks = do
    pipe <- connect $ def { user = n4user, password = n4password }
    --not quite ideal yet
    result <- run pipe $ query "MATCH (s:User) OPTIONAL MATCH (s)-[r:ContributesTo]-(d) RETURN s.userId as source, d.repoName as destination"
-   putStrLn $ show result
    x <- mapM toLink result
    close pipe
    return x
 
 toLink :: Record-> IO LinkDB   
 toLink record = do   
+    
     T s <- record `at` "source"
-    T d <- record `at` "destination"
-    let link = LinkDB 1 ("Type") (unpack s) (unpack d) 
+     -- can be null
+    des <- sortDest record
+    let link = LinkDB 1 ("Type") (unpack s) (unpack des)
     return link
+
+sortDest :: Record -> IO Text
+sortDest record = do
+        d <- record `at` "destination"
+        T s <- record `at` "source"
+        if((show d) == "N ()")
+            then return s
+            else do
+                T des <- record `at` "destination"
+                return des
+
     
 makeLink :: Int -> String -> UserDB -> RepoDB -> IO LinkDB
 makeLink linkType linkName user repository =  do

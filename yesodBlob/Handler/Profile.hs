@@ -40,7 +40,7 @@ getProfileR = do
     let token = lookup "access_token" sess
     let tkString = unpack $ Data.Text.Encoding.decodeUtf8 (fromJust token)
     let textName = Data.Text.Encoding.decodeUtf8 (fromJust log)
-    let auth = Just $ GitHub.Auth.OAuth $ fromJust token 
+    --let auth = Just $ GitHub.Auth.OAuth $ fromJust token 
     call <- liftIO $ callCrawler tkString
     --putStrLn "token"
     --repositorys <- liftIO $ repos textName
