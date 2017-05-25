@@ -27,6 +27,7 @@ type API = "fullList" :> Get '[JSON] ListOb
         :<|> "startC" :> Capture "usern" String :> Capture "hops" Integer :> Get '[JSON] Log
         :<|> "fdg" :> Get '[JSON] FDG
         :<|> "userLanguages" :> Capture "id" String :> Get '[JSON] LangList
+        :<|> "pie" :> Capture "id" String :> Get '[JSON] [Pie]
 
 startApp :: IO ()
 startApp = run 8080 app
@@ -43,6 +44,7 @@ server = fullList
     :<|> startC
     :<|> fdg
     :<|> userLanguages
+    :<|> pie
 
 fdg :: ApiHandler FDG
 fdg = liftIO $ do
@@ -80,6 +82,29 @@ startC usern hops=  liftIO $ do
 userLanguages :: String -> ApiHandler LangList
 userLanguages useId = liftIO $ do
     all <- allLanguages
-    users <- userLanguageList useId
-    let lang = LangList all [] users
+    inUse <- recentLanguages
+    users <- userLanguageList useId    
+    let lang = LangList all inUse users
     return lang
+
+
+pie :: String -> ApiHandler [Pie]
+pie useId = liftIO $ do
+    all <- allLanguages
+    inUse <- recentLanguages
+    users <- userLanguageList useId    
+    let lang = LangList all inUse users
+    res <- formatToPie lang
+    return res 
+
+pieList :: [Pie]
+pieList = [
+    Pie "East" "Apples" 53245,
+    Pie "West" "Apples" 28479,
+    Pie "South" "Apples" 19697,
+    Pie "North" "Apples" 24037,
+    Pie "Central" "Apples" 40245,
+    Pie "East" "Oranges" 200,
+    Pie "South" "Oranges" 200,
+    Pie "Central" "Oranges" 200
+    ]

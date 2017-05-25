@@ -6,9 +6,11 @@
     <p>
       
     <p>Graph of network of GitHub repositories and users.
-    <svg width="960" height="600">
+    <svg width="960" height="600" .fdg>
     <p>Chart of popularity of languages according to number of users who have knowledge of them.
-    <svg .svg>
+    <form>
+    <div #label>
+    <svg .pie id="chart">
     <script src="https://d3js.org/d3.v4.min.js">
       
      

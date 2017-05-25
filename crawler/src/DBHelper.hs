@@ -191,11 +191,38 @@ langKnowledgeur  user repo= do
     let link = LinkDB 2 "Knows" (userId user) (DBHelper.repoLanguage  repo)
     r <- addLink link
     putStrLn r
+
+recentKnowledge :: Bool -> String ->  UserDB -> IO()
+recentKnowledge inUse lang user = do
+    if(inUse)
+        then do
+            let link = LinkDB 2 "Using" (userId user) lang
+            r <- addLink link
+            putStrLn r
+        else putStrLn "outOfUse"
+
+recentKnowledgeur :: Bool -> UserDB -> RepoDB -> IO()
+recentKnowledgeur inUse user repo= do
+    if(inUse)
+        then do
+            let link = LinkDB 2 "Using" (userId user) (DBHelper.repoLanguage  repo)
+            r <- addLink link
+            putStrLn r
+        else putStrLn "outOfUse"
     
 allLanguages :: IO[Language]
 allLanguages = do
    pipe <- connect $ def { user = n4user, password = n4password }
    result <- run pipe $ query "Match ()-[r:Knows]-(n:Language) return n.name as name, count(r) as rel_count order by rel_count desc"
+   putStrLn $ show result
+   x <- mapM toRankedLang result
+   close pipe
+   return x
+   
+recentLanguages :: IO[Language]
+recentLanguages = do
+   pipe <- connect $ def { user = n4user, password = n4password }
+   result <- run pipe $ query "Match ()-[r:Using]-(n:Language) return n.name as name, count(r) as rel_count order by rel_count desc"
    putStrLn $ show result
    x <- mapM toRankedLang result
    close pipe
@@ -221,7 +248,7 @@ toRankedLang record = do
 toLang :: Record-> IO Language   
 toLang record = do   
     T name <- record `at` "n.name"
-    let link = Language (unpack name) 0
+    let link = Language (unpack name) 1
     return link
    
 --Links

@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-05-25 09:03:39.1070025 UTC
+2017-05-25 17:35:59.0622657 UTC
 
 interface crawler-0.1.0.0-2jLxW5sGj234Y0KdhjvaTi:GithubHelper 8002
-  interface hash: a56899c2dc4215724205c26ba1ce6f0d
-  ABI hash: 76f3aeceaec545f7f8c42d78d5aebeda
+  interface hash: d50b67fb73b278f6e53ddbe56376d970
+  ABI hash: 61c60d900fd8ca55dd19c85cf1c2d5b2
   export-list hash: aa09f13c73ce6378036fb6e4bc5ae4ab
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: b40c1800ca63765d1285c272fed17bef
@@ -225,8 +225,8 @@ import  -/  base-4.9.1.0:GHC.Show eca5834daba3b6a2bbbe64ab52056707
 import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
 import  -/  base-4.9.1.0:System.IO 5daf3f384209c11d9566e3409af8ec5d
 import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Char8 53131bf786c5438dfe07ccfe89b878d8
-import  -/  DBHelper c37cc627d5c2e1316606d4d6c21093ec
-  exports: 73eac5920f8deab9832cf3ff19c0b8a2
+import  -/  DBHelper bd169d29a9691c9a1cee68294a1510ae
+  exports: 2b4169d841bd7d9d5a9f51e4e826cccd
   RepoDB 58c77e1ac15364f22941ea0e18556630
   RepoDB 11c665402619553a2690f82da4927c4a
   UserDB 1ed67281bfa5d868af57a4119a0ce594
@@ -239,6 +239,8 @@ import  -/  DBHelper c37cc627d5c2e1316606d4d6c21093ec
   langKnowledgeur 654f1e37f94d0c2c2c0d4baf771da743
   makeLink 0a4133548aec433610c1c6e9130ec976
   makeLink2 bd7b17842031888179dfe4bc4dce9d1a
+  recent dc9718988a4ce54b5da87c50439e65b4
+  recentKnowledge c38b63964e9832794721dfa852b18ac6
   repoLanguage fc268c286e711cba15ca367b0d66cac2
   repoName 60a4ed2be53b07758da26a7ad13203c4
   repoOwner 1bb6d483cc8f299118c453117f329e8b
@@ -314,11 +316,11 @@ import  -/  vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector 41
           Data.Text.Internal.Text #)
   {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
      Inline: [0] -}
-5172379cdccbdb6e8c3f9a9d9ec097fb
+c1cf67f8c322e620575232540c0e0cb4
   crawlRepo ::
     GHC.Integer.Type.Integer
     -> GitHub.Auth.Auth -> DBHelper.RepoDB -> GHC.Types.IO ()
-  {- Arity: 4, Strictness: <L,U><L,U><L,U(U,U,A,A,1*U)><S,U>,
+  {- Arity: 4, Strictness: <L,U><L,U><L,U(U,U,A,1*U,U)><S,U>,
      Unfolding: InlineRule (0, True, True)
                 GithubHelper.crawlRepo1
                   `cast`
@@ -326,14 +328,14 @@ import  -/  vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector 41
                  ->_R <GitHub.Auth.Auth>_R
                  ->_R <DBHelper.RepoDB>_R
                  ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-aa309b14b2c7f691f5732db1b0c291d5
+7862964f9ea4de5a631bc0b2ef9dd95a
   crawlRepo1 ::
     GHC.Integer.Type.Integer
     -> GitHub.Auth.Auth
     -> DBHelper.RepoDB
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 4, Strictness: <L,U><L,U><L,U(U,U,A,A,1*U)><S,U> -}
+  {- Arity: 4, Strictness: <L,U><L,U><L,U(U,U,A,1*U,U)><S,U> -}
 c10188d6484b485731cae5a8045d922a
   crawlUser ::
     GHC.Integer.Type.Integer

@@ -114,6 +114,7 @@ crawlRepo ttl auth repo  = do
     links <- mapM (makeLink2 userRepo contributesTo repo) ppl
     y <- mapM addLink links
     langLinks <- mapM (langKnowledge (DBHelper.repoLanguage repo)) ppl
+    recLinks<- mapM (recentKnowledge (DBHelper.recent repo) (DBHelper.repoLanguage repo)) ppl
     if (ttl>0)
         then mapM_ (crawlUser (ttl - 1) auth) ppl
         else putStrLn "ended on "

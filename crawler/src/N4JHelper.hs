@@ -61,7 +61,27 @@ fullFDG users repos links = FDG ((usersToNodes users) ++ (reposToNodes repos)) (
 
 --Language List
 data LangList = LangList{
-  all :: [Language]
-, recomened :: [Language]
+  allTime :: [Language]
+, recent :: [Language]
 , known :: [Language]
 } deriving (ToJSON, FromJSON, Generic, Eq, Show)
+
+data Pie = Pie
+  { language :: String
+  , view :: String
+  , count :: Int
+  } deriving (ToJSON, FromJSON, Generic, Eq, Show)
+  
+formatToPie :: LangList -> IO[Pie]
+formatToPie lists = do
+    let a = map (langToPie "allTime") (allTime lists)
+    let b = map (langToPie "recent") (N4JHelper.recent lists)
+    let c = map (langToPie "Your") (known lists)
+    let d = a ++ b
+    putStrLn $ show d
+    let e = d ++ c
+    putStrLn $ show e
+    return e
+    
+langToPie :: String -> Language -> Pie
+langToPie v l = Pie (name l) v (fromEnum (DBHelper.value l))

@@ -8,19 +8,10 @@
 module Handler.Profile where
 
 import Import hiding (unpack, pack, Auth)
-import Data.List hiding(intercalate, map, lookup)
 import Data.Maybe
 import Data.Text.Encoding
-import Data.Vector hiding(map, mapM)
-import Data.Text hiding(intercalate, map, lookup)
-
-import GitHub
-import GitHub.Data.Repos
-import GitHub.Endpoints.Repos
-import GitHub.Endpoints.Activity.Starring
-import GitHub.Auth
-
-
+import Data.Text hiding(intercalate, map)
+import Text.Julius (RawJS (..))
 
 import Handler.Req
 
@@ -40,7 +31,6 @@ getProfileR = do
     let token = lookup "access_token" sess
     let tkString = unpack $ Data.Text.Encoding.decodeUtf8 (fromJust token)
     let textName = Data.Text.Encoding.decodeUtf8 (fromJust log)
-    --let auth = Just $ GitHub.Auth.OAuth $ fromJust token 
     call <- liftIO $ callCrawler tkString
     --putStrLn "token"
     --repositorys <- liftIO $ repos textName
@@ -64,9 +54,9 @@ getProfileR = do
          
 -- formatRepo :: GitHub.Repo -> IO(RepoInfo)
 -- formatRepo repo = do
-	-- let name = untagName (GitHub.Data.Repos.repoName repo)
+    -- let name = untagName (GitHub.Data.Repos.repoName repo)
 	-- size <- liftIO $ formatNumber (GitHub.Data.Repos.repoSize repo)
-	-- return (RepoInfo name size)
+    -- return (RepoInfo name size)
             
 -- formatNumber :: Maybe Int -> IO(Integer)
 -- formatNumber n =
