@@ -28,6 +28,7 @@ type API = "fullList" :> Get '[JSON] ListOb
         :<|> "fdg" :> Get '[JSON] FDG
         :<|> "userLanguages" :> Capture "id" String :> Get '[JSON] LangList
         :<|> "pie" :> Capture "id" String :> Get '[JSON] [Pie]
+        :<|> "list" :> Capture "id" String :> Get '[JSON] [String]
 
 startApp :: IO ()
 startApp = run 8080 app
@@ -45,6 +46,10 @@ server = fullList
     :<|> fdg
     :<|> userLanguages
     :<|> pie
+    :<|> list
+    
+    
+
 
 fdg :: ApiHandler FDG
 fdg = liftIO $ do
@@ -62,13 +67,13 @@ fullList = liftIO $ do
     
 token :: String -> ApiHandler Log
 token tkn =  liftIO $ do
-    putStrLn "Output" 
+    putStrLn "Token Recived" 
     b <- addAuth tkn
     return (Log "done" 0)
 
 startC :: String -> Integer-> ApiHandler Log
 startC usern hops=  liftIO $ do 
-    putStrLn "Output"
+    putStrLn "Starting Crawler"
     let startingUser = UserDB usern
     b <- addUser startingUser
     authDb <- getAuth
@@ -96,7 +101,12 @@ pie useId = liftIO $ do
     let lang = LangList all inUse users
     res <- formatToPie lang
     return res 
-
+    
+list :: String -> ApiHandler [String]
+list user = liftIO $ do
+    lang <- getNextLang user
+    return lang
+    
 pieList :: [Pie]
 pieList = [
     Pie "East" "Apples" 53245,

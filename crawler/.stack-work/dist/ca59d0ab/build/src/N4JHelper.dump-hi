@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2017-05-25 20:47:13.6021063 UTC
+2017-05-26 08:36:50.5099508 UTC
 
 interface crawler-0.1.0.0-2jLxW5sGj234Y0KdhjvaTi:N4JHelper [family instance module] 8002
-  interface hash: a3a7007374e2cdcd469d6f11ce6c028f
+  interface hash: df430157305a7eb9b815d080b81f7d1a
   ABI hash: 89b300e01642158f7fce5d6209eee24c
   export-list hash: 7bd9473343d44be4b806c22b8152e628
   orphan hash: 3c57a2ce1cdb397e321ac77c85d13513
@@ -225,8 +225,8 @@ import  -/  base-4.9.1.0:GHC.Real b88ae4a48c079652623073a5bbf5c9b0
 import  -/  base-4.9.1.0:GHC.Show eca5834daba3b6a2bbbe64ab52056707
 import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
 import  -/  base-4.9.1.0:System.IO 5daf3f384209c11d9566e3409af8ec5d
-import  -/  DBHelper 82b52f85de350453c71aa5bcbf46f377
-  exports: 2b4169d841bd7d9d5a9f51e4e826cccd
+import  -/  DBHelper c2dd3b25e1de3c8c5bc5108c558b1b1f
+  exports: 754e273f28d04afaeb82a7eabeaa23fd
   Language 22fcaf89b0c8fd808eff81a7771c2399
   LinkDB f71116c23fab4ac41f3dd6995e814421
   RepoDB 11c665402619553a2690f82da4927c4a

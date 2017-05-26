@@ -11,6 +11,8 @@
     <form>
     <div #label>
     <svg .pie id="chart">
+    <p>List of Languages you should know
+    
     <script src="https://d3js.org/d3.v4.min.js">
       
      

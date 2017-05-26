@@ -136,6 +136,22 @@ makeLink2 :: Int -> String -> RepoDB -> UserDB -> IO LinkDB
 makeLink2 linkType linkName repository user=  do
     let link = LinkDB linkType linkName (userId user) (repoName repository)
     return link
+
+getNextLang :: String -> IO [String]
+getNextLang userId = do
+   pipe <- connect $ def { user = n4user, password = n4password }
+   let q = Data.Text.pack $ "MATCH (n:User {userId: \"" ++ userId ++ "\"}) MATCH (l:Language) MATCH p=(n)-[:Using*3]-(l) RETURN Distinct( l.name) as name, length(p) ORDER BY length(p)"
+   result <- run pipe $ query q
+   putStrLn $ show result
+   x <- mapM toLog result
+   close pipe
+   return x
+   
+toLog :: Record-> IO String
+toLog record = do    
+    T name <- record `at` "name"
+    putStrLn $ show record
+    return $unpack name
       
 --Empty
 clearDB :: IO String

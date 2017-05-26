@@ -1,3 +1,16 @@
+var response2 = $.ajax({
+          url: "http://localhost:8080/startC/#{rawJS textName}/2",
+          type: "get",
+          contentType: "text/plain",
+          dataType: "json",
+          crossDomain:true,
+          success: function( data ) {
+            console.log(data);},
+          error: function( status ) {
+            console.log("failed");
+          }
+  });
+
 var svg = d3.select("svg.fdg"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
@@ -273,3 +286,16 @@ function cloneObj(obj) {
 }
     
 var div = d3.select("div#label").append("div").attr("class", "toolTip").html("");
+
+
+d3.json("http://localhost:8080/list/#{rawJS textName}", function(error, data) {
+var names = ['Frank', 'Tom', 'Peter', 'Mary'];
+
+	var ul = d3.select('body').append('ul');
+
+	ul.selectAll('li')
+	.data(data)
+	.enter()
+	.append('li')
+	.html(String);
+});
